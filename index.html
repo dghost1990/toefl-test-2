@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>اختبار التوفل ITP - النموذج الجديد</title>
+    <title>TOEFL ITP Test</title>
     <style>
         /* تنسيق رأس الصفحة - معدل */
         .header {
@@ -321,6 +321,30 @@
             border: 1px solid #ddd;
             cursor: pointer;
         }
+        
+        /* تنسيقات جديدة */
+        .score-section {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #e8f5e9;
+            border-radius: 5px;
+        }
+        
+        .progress-container {
+            width: 100%;
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        
+        .progress-bar {
+            height: 20px;
+            background-color: #4CAF50;
+            border-radius: 5px;
+            text-align: center;
+            line-height: 20px;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -342,10 +366,10 @@
             </div>
         </div>
         
-        <h1>اختبار التوفل ITP - النموذج الجديد</h1>
+        <h1>TOEFL ITP Test</h1>
         
         <div class="tab">
-            <button class="tablinks active" onclick="openSection(event, 'structure')">Structure (20 سؤالاً)</button>
+            <button class="tablinks active" onclick="openSection(event, 'structure')">Structure (120 سؤالاً)</button>
             <button class="tablinks" onclick="openSection(event, 'reading')">Reading (20 سؤالاً)</button>
             <button class="tablinks" onclick="openSection(event, 'listening')">Listening (10 أسئلة)</button>
         </div>
@@ -421,129 +445,729 @@
             document.getElementById('timer').style.color = '#8b0000';
         }
 
-        // Structure and Written Expression (20 سؤالاً)
+        // Structure and Written Expression (120 سؤالاً)
         const structureQuestions = [
-            {
-        question: "1. The Pacific Ocean is deeper than ___ ocean in the world.",
-        options: ["A) any", "B) any other", "C) other", "D) another"],
-        correctAnswer: 1,
-        explanation: "الإجابة الصحيحة: B) any other<br><br>الشرح: عند المقارنة مع بقية نفس المجموعة نستخدم 'any other'."
-    },
-    {
-        question: "2. ____ the light rain, the baseball game continued.",
-        options: ["A) Although", "B) Even though", "C) Despite", "D) Because"],
-        correctAnswer: 2,
-        explanation: "الإجابة الصحيحة: C) Despite<br><br>الشرح: 'Despite' يليها اسم أو عبارة اسمية، مثل 'the light rain'."
-    },
-    {
-        question: "3. Some birds, such as pigeons, are believed ___ the Earth’s magnetic field to navigate.",
-        options: ["A) using", "B) use", "C) to use", "D) to using"],
-        correctAnswer: 2,
-        explanation: "الإجابة الصحيحة: C) to use<br><br>الشرح: 'are believed' يتبعها مصدر كامل (to + verb)."
-    },
-    {
-        question: "4. The larger the city, ___ the crime rate tends to be.",
-        options: ["A) highest", "B) higher", "C) the higher", "D) the highest"],
-        correctAnswer: 2,
-        explanation: "الإجابة الصحيحة: C) the higher<br><br>الشرح: تركيبة the + comparative لبيان العلاقة الطردية."
-    },
-    {
-        question: "5. There are many theories about ___ dinosaurs became extinct.",
-        options: ["A) why", "B) that", "C) what", "D) how come"],
-        correctAnswer: 0,
-        explanation: "الإجابة الصحيحة: A) why<br><br>الشرح: 'why' تستخدم بعد 'about' للتعبير عن السبب."
-    },
-    {
-        question: "6. Neither the teacher nor the students ___ ready for the presentation.",
-        options: ["A) was", "B) were", "C) is", "D) be"],
-        correctAnswer: 1,
-        explanation: "الإجابة الصحيحة: B) were<br><br>الشرح: الفعل يتبع الفاعل الأقرب وهو 'students'."
-    },
-    {
-        question: "7. The painting was so beautiful that I couldn’t take my eyes ___ it.",
-        options: ["A) at", "B) over", "C) of", "D) off"],
-        correctAnswer: 3,
-        explanation: "الإجابة الصحيحة: D) off<br><br>الشرح: التعبير الصحيح هو 'take my eyes off'."
-    },
-    {
-        question: "8. Not only ___ all the tickets, but they also gave away free posters.",
-        options: ["A) they sold", "B) sold they", "C) did they sell", "D) do they sell"],
-        correctAnswer: 2,
-        explanation: "الإجابة الصحيحة: C) did they sell<br><br>الشرح: بعد 'Not only' نستخدم صيغة السؤال (did + فاعل + فعل)."
-    },
-    {
-        question: "9. ___ its small size, the device is very powerful.",
-        options: ["A) Although", "B) Due to", "C) Because of", "D) Despite"],
-        correctAnswer: 3,
-        explanation: "الإجابة الصحيحة: D) Despite<br><br>الشرح: 'Despite' يليها اسم وليس جملة."
-    },
-    {
-        question: "10. She asked me ___ I had seen her notebook.",
-        options: ["A) that", "B) if", "C) what", "D) how"],
-        correctAnswer: 1,
-        explanation: "الإجابة الصحيحة: B) if<br><br>الشرح: 'if' تُستخدم للسؤال غير المباشر بنعم أو لا."
-    },
-    {
-        question: "11. The company has been successful ___ its recent challenges.",
-        options: ["A) because", "B) although", "C) in spite of", "D) due"],
-        correctAnswer: 2,
-        explanation: "الإجابة الصحيحة: C) in spite of<br><br>الشرح: 'in spite of' يليها اسم وتُستخدم لبيان التناقض."
-    },
-    {
-        question: "12. The teacher explained the lesson clearly, ___ helped the students understand better.",
-        options: ["A) which", "B) who", "C) whom", "D) that"],
-        correctAnswer: 0,
-        explanation: "الإجابة الصحيحة: A) which<br><br>الشرح: 'which' تشير للجملة السابقة وتربطها بالتفسير."
-    },
-    {
-        question: "13. Tom runs faster than ___ in his class.",
-        options: ["A) any boys", "B) any boy", "C) other boy", "D) every boy"],
-        correctAnswer: 1,
-        explanation: "الإجابة الصحيحة: B) any boy<br><br>الشرح: نستخدم المفرد بعد 'any' في المقارنة داخل نفس المجموعة."
-    },
-    {
-        question: "14. It was not until she arrived ___ the meeting began.",
-        options: ["A) when", "B) that", "C) then", "D) so"],
-        correctAnswer: 1,
-        explanation: "الإجابة الصحيحة: B) that<br><br>الشرح: التركيب الصحيح هو 'It was not until... that...'."
-    },
-    {
-        question: "15. The cake tastes ___ than it looks.",
-        options: ["A) well", "B) good", "C) better", "D) best"],
-        correctAnswer: 2,
-        explanation: "الإجابة الصحيحة: C) better<br><br>الشرح: 'tastes' يليها صفة، و'better' للمقارنة."
-    },
-    {
-        question: "16. This is the restaurant ___ we had our first date.",
-        options: ["A) which", "B) that", "C) where", "D) what"],
-        correctAnswer: 2,
-        explanation: "الإجابة الصحيحة: C) where<br><br>الشرح: نستخدم 'where' للإشارة إلى مكان."
-    },
-    {
-        question: "17. He hardly ___ his family since he moved abroad.",
-        options: ["A) saw", "B) has seen", "C) sees", "D) is seeing"],
-        correctAnswer: 1,
-        explanation: "الإجابة الصحيحة: B) has seen<br><br>الشرح: 'since' يتطلب present perfect."
-    },
-    {
-        question: "18. The scientist, along with his assistants, ___ working on the new vaccine.",
-        options: ["A) are", "B) were", "C) is", "D) have"],
-        correctAnswer: 2,
-        explanation: "الإجابة الصحيحة: C) is<br><br>الشرح: الفعل يتبع الفاعل الأساسي وليس الجزء المضاف."
-    },
-    {
-        question: "19. We won’t start the meeting ___ the manager arrives.",
-        options: ["A) after", "B) until", "C) when", "D) during"],
-        correctAnswer: 1,
-        explanation: "الإجابة الصحيحة: B) until<br><br>الشرح: نستخدم 'until' للدلالة على تأجيل الحدث حتى يحدث آخر."
-    },
-    {
-        question: "20. Jane prefers tea ___ coffee in the morning.",
-        options: ["A) to", "B) over", "C) than", "D) from"],
-        correctAnswer: 0,
-        explanation: "الإجابة الصحيحة: A) to<br><br>الشرح: التركيب الصحيح هو 'prefer X to Y'."
-    }
-];
+           {
+    question: "1. ____ the light rain, the baseball game continued.",
+    options: ["A) Although", "B) Even though", "C) Despite", "D) Because"],
+    correctAnswer: 2,
+    explanation: "الإجابة الصحيحة: C) Despite<br><br>الشرح: 'Despite' يليها اسم أو عبارة اسمية، مثل 'the light rain'."
+},
+{
+    question: "2. She ____ to school every day.",
+    options: ["A) go", "B) going", "C) goes", "D) gone"],
+    correctAnswer: 2,
+    explanation: "الإجابة الصحيحة: C) goes<br><br>الشرح: الفعل في المضارع البسيط مع 'she' يأخذ s في نهايته."
+},
+{
+    question: "3. I have been living here ____ five years.",
+    options: ["A) since", "B) for", "C) from", "D) during"],
+    correctAnswer: 1,
+    explanation: "الإجابة الصحيحة: B) for<br><br>الشرح: 'for' تُستخدم مع فترة زمنية، مثل 'five years'."
+},
+{
+    question: "4. If I ____ you, I would apologize.",
+    options: ["A) was", "B) were", "C) am", "D) be"],
+    correctAnswer: 1,
+    explanation: "الإجابة الصحيحة: B) were<br><br>الشرح: في الجمل الشرطية من النوع الثاني نستخدم 'were' مع جميع الضمائر."
+},
+{
+    question: "5. The book ____ on the table.",
+    options: ["A) is", "B) are", "C) were", "D) be"],
+    correctAnswer: 0,
+    explanation: "الإجابة الصحيحة: A) is<br><br>الشرح: الفاعل مفرد 'the book' لذلك نستخدم 'is'."
+},
+{
+    question: "6. We ____ dinner when the phone rang.",
+    options: ["A) had", "B) were having", "C) have", "D) has"],
+    correctAnswer: 1,
+    explanation: "الإجابة الصحيحة: B) were having<br><br>الشرح: نستخدم الماضي المستمر للتعبير عن حدث كان مستمراً عندما قاطعته حادثة أخرى."
+},
+{
+    question: "7. This is the man ____ car was stolen.",
+    options: ["A) who", "B) whom", "C) which", "D) whose"],
+    correctAnswer: 3,
+    explanation: "الإجابة الصحيحة: D) whose<br><br>الشرح: 'whose' تُستخدم للدلالة على الملكية."
+},
+{
+    question: "8. Not only ____ late, but he also forgot his homework.",
+    options: ["A) he was", "B) was he", "C) he is", "D) is he"],
+    correctAnswer: 1,
+    explanation: "الإجابة الصحيحة: B) was he<br><br>الشرح: بعد 'Not only' يأتي تركيب مقلوب (فعل ثم فاعل)."
+},
+{
+    question: "9. I don't have ____ money left.",
+    options: ["A) some", "B) many", "C) any", "D) few"],
+    correctAnswer: 2,
+    explanation: "الإجابة الصحيحة: C) any<br><br>الشرح: 'any' تُستخدم في الجمل المنفية."
+},
+{
+    question: "10. He is ____ than his brother.",
+    options: ["A) taller", "B) more tall", "C) tallest", "D) tall"],
+    correctAnswer: 0,
+    explanation: "الإجابة الصحيحة: A) taller<br><br>الشرح: نستخدم صيغة المقارنة -er مع الصفات القصيرة."
+},
+{
+    question: "11. A lot of tourists visit Paris ____ the summer.",
+    options: ["A) at", "B) on", "C) in", "D) by"],
+    correctAnswer: 2,
+    explanation: "الإجابة الصحيحة: C) in<br><br>الشرح: نستخدم 'in' مع الأشهر والفصول."
+},
+{
+    question: "12. She speaks English ____ than I do.",
+    options: ["A) good", "B) more good", "C) better", "D) best"],
+    correctAnswer: 2,
+    explanation: "الإجابة الصحيحة: C) better<br><br>الشرح: 'better' هي صيغة المقارنة الشاذة لـ 'good'."
+},
+{
+    question: "13. He has lived in London ____ 2015.",
+    options: ["A) for", "B) from", "C) since", "D) during"],
+    correctAnswer: 2,
+    explanation: "الإجابة الصحيحة: C) since<br><br>الشرح: 'since' تُستخدم مع نقطة بداية زمنية محددة."
+},
+{
+    question: "14. Neither the teacher nor the students ____ in the room.",
+    options: ["A) is", "B) are", "C) were", "D) be"],
+    correctAnswer: 1,
+    explanation: "الإجابة الصحيحة: B) are<br><br>الشرح: في 'neither...nor' يتبع الفعل الجزء الأقرب من الفاعل."
+},
+{
+    question: "15. He will call you when he ____ home.",
+    options: ["A) gets", "B) got", "C) will get", "D) get"],
+    correctAnswer: 0,
+    explanation: "الإجابة الصحيحة: A) gets<br><br>الشرح: في الجمل الزمنية، نستخدم المضارع البسيط مع 'when'."
+},
+{
+    question: "16. I prefer tea ____ coffee.",
+    options: ["A) than", "B) from", "C) over", "D) to"],
+    correctAnswer: 3,
+    explanation: "الإجابة الصحيحة: D) to<br><br>الشرح: نستخدم 'prefer X to Y'."
+},
+{
+    question: "17. She can't afford ____ a new car.",
+    options: ["A) buy", "B) to buy", "C) buying", "D) bought"],
+    correctAnswer: 1,
+    explanation: "الإجابة الصحيحة: B) to buy<br><br>الشرح: 'afford' يتبعها مصدر مع 'to'."
+},
+{
+    question: "18. The cake was ____ by my mother.",
+    options: ["A) make", "B) made", "C) making", "D) makes"],
+    correctAnswer: 1,
+    explanation: "الإجابة الصحيحة: B) made<br><br>الشرح: صيغة المبني للمجهول في الماضي البسيط: was + past participle."
+},
+{
+    question: "19. He apologized ____ being late.",
+    options: ["A) for", "B) of", "C) about", "D) to"],
+    correctAnswer: 0,
+    explanation: "الإجابة الصحيحة: A) for<br><br>الشرح: 'apologize for' تُستخدم مع الأفعال أو الأسماء."
+},
+{
+    question: "20. It's important ____ learn English.",
+    options: ["A) to", "B) that", "C) to be", "D) to"],
+    correctAnswer: 0,
+    explanation: "الإجابة الصحيحة: A) to<br><br>الشرح: بعد الصفات مثل 'important' يأتي مصدر مع 'to'."
+},
+{
+    question: "21. He usually ____ up at 7 AM.",
+    options: ["A) get", "B) gets", "C) getting", "D) got"],
+    correctAnswer: 1,
+    explanation: "الإجابة الصحيحة: B) gets<br><br>الشرح: مع الفاعل المفرد 'he' نستخدم 'gets' في المضارع البسيط."
+},
+{
+    question: "22. By the time we arrived, the movie ____.",
+    options: ["A) starts", "B) started", "C) had started", "D) has started"],
+    correctAnswer: 2,
+    explanation: "الإجابة الصحيحة: C) had started<br><br>الشرح: نستخدم الماضي التام للتعبير عن حدث وقع قبل حدث آخر في الماضي."
+},
+{
+    question: "23. This is the house ____ I grew up.",
+    options: ["A) when", "B) which", "C) where", "D) what"],
+    correctAnswer: 2,
+    explanation: "الإجابة الصحيحة: C) where<br><br>الشرح: 'where' تُستخدم للدلالة على المكان."
+},
+{
+    question: "24. I saw him ____ the building.",
+    options: ["A) enter", "B) entered", "C) entering", "D) to enter"],
+    correctAnswer: 0,
+    explanation: "الإجابة الصحيحة: A) enter<br><br>الشرح: بعد أفعال الحواس نستخدم المصدر بدون 'to'."
+},
+{
+    question: "25. The book is ____ interesting than the movie.",
+    options: ["A) more", "B) most", "C) much", "D) many"],
+    correctAnswer: 0,
+    explanation: "الإجابة الصحيحة: A) more<br><br>الشرح: نستخدم 'more' للمقارنة مع الصفات الطويلة مثل 'interesting'."
+},
+{
+    question: "26. He didn't know ____ to say.",
+    options: ["A) what", "B) which", "C) who", "D) that"],
+    correctAnswer: 0,
+    explanation: "الإجابة الصحيحة: A) what<br><br>الشرح: نستخدم 'what' للسؤال عن شيء غير معروف تحديدًا."
+},
+{
+    question: "27. I have never seen ____ elephant before.",
+    options: ["A) a", "B) an", "C) the", "D) one"],
+    correctAnswer: 1,
+    explanation: "الإجابة الصحيحة: B) an<br><br>الشرح: نستخدم 'an' قبل الكلمات التي تبدأ بحرف صوتي."
+},
+{
+    question: "28. He is interested ____ learning Spanish.",
+    options: ["A) to", "B) in", "C) on", "D) at"],
+    correctAnswer: 1,
+    explanation: "الإجابة الصحيحة: B) in<br><br>الشرح: 'interested in' هو التعبير الصحيح."
+},
+{
+    question: "29. There isn’t ____ milk left in the fridge.",
+    options: ["A) some", "B) much", "C) many", "D) a few"],
+    correctAnswer: 1,
+    explanation: "الإجابة الصحيحة: B) much<br><br>الشرح: 'milk' اسم غير معدود، نستخدم معه 'much' في النفي."
+},
+{
+    question: "30. How long ____ you lived here?",
+    options: ["A) do", "B) did", "C) have", "D) had"],
+    correctAnswer: 2,
+    explanation: "الإجابة الصحيحة: C) have<br><br>الشرح: نستخدم المضارع التام للسؤال عن مدة مستمرة حتى الآن."
+},
+{
+    question: "31. He was tired ____ he had worked all day.",
+    options: ["A) so", "B) because", "C) but", "D) although"],
+    correctAnswer: 1,
+    explanation: "الإجابة الصحيحة: B) because<br><br>الشرح: 'because' تُستخدم لتوضيح السبب."
+},
+{
+    question: "32. If she ____ earlier, she wouldn’t have missed the train.",
+    options: ["A) leave", "B) left", "C) had left", "D) leaves"],
+    correctAnswer: 2,
+    explanation: "الإجابة الصحيحة: C) had left<br><br>الشرح: هذا شرط من النوع الثالث (حدث لم يقع)."
+},
+{
+    question: "33. That was the ____ movie I’ve ever seen.",
+    options: ["A) bad", "B) worse", "C) worst", "D) badly"],
+    correctAnswer: 2,
+    explanation: "الإجابة الصحيحة: C) worst<br><br>الشرح: 'worst' هي صيغة التفضيل من 'bad'."
+},
+{
+    question: "34. I will help you after I ____ my homework.",
+    options: ["A) finish", "B) finished", "C) will finish", "D) finishes"],
+    correctAnswer: 0,
+    explanation: "الإجابة الصحيحة: A) finish<br><br>الشرح: بعد أدوات الزمن المستقبلية نستخدم المضارع البسيط."
+},
+{
+    question: "35. There are too ____ people in the room.",
+    options: ["A) much", "B) many", "C) more", "D) most"],
+    correctAnswer: 1,
+    explanation: "الإجابة الصحيحة: B) many<br><br>الشرح: 'people' اسم جمع نستخدم معه 'many'."
+},
+{
+    question: "36. Would you mind ____ the window?",
+    options: ["A) close", "B) to close", "C) closing", "D) closed"],
+    correctAnswer: 2,
+    explanation: "الإجابة الصحيحة: C) closing<br><br>الشرح: بعد 'Would you mind' يأتي فعل بإضافة ing."
+},
+{
+    question: "37. The teacher asked if we ____ our homework.",
+    options: ["A) do", "B) did", "C) have done", "D) had done"],
+    correctAnswer: 3,
+    explanation: "الإجابة الصحيحة: D) had done<br><br>الشرح: في الكلام غير المباشر نستخدم الماضي التام."
+},
+{
+    question: "38. He plays tennis ____ than his brother.",
+    options: ["A) more well", "B) weller", "C) better", "D) best"],
+    correctAnswer: 2,
+    explanation: "الإجابة الصحيحة: C) better<br><br>الشرح: 'better' هي المقارنة الصحيحة للفعل 'well'."
+},
+{
+    question: "39. ____ I was tired, I finished the work.",
+    options: ["A) Although", "B) Because", "C) Despite", "D) However"],
+    correctAnswer: 0,
+    explanation: "الإجابة الصحيحة: A) Although<br><br>الشرح: تُستخدم لربط جملتين متضادتين."
+},
+{
+    question: "40. I’m looking forward to ____ from you.",
+    options: ["A) hear", "B) hearing", "C) heard", "D) be hearing"],
+    correctAnswer: 1,
+    explanation: "الإجابة الصحيحة: B) hearing<br><br>الشرح: بعد 'look forward to' نستخدم الفعل + ing."
+},
+{
+    question: "41. She sings as ____ as a professional.",
+    options: ["A) good", "B) well", "C) better", "D) best"],
+    correctAnswer: 1,
+    explanation: "الإجابة الصحيحة: B) well<br><br>الشرح: 'well' هي الحال المناسب للفعل 'sings'."
+},
+{
+    question: "42. If I were you, I ____ take the job.",
+    options: ["A) will", "B) would", "C) can", "D) shall"],
+    correctAnswer: 1,
+    explanation: "الإجابة الصحيحة: B) would<br><br>الشرح: في الحالة الثانية الشرطية نستخدم 'would + base verb'."
+},
+{
+    question: "43. She has been working here ____ 2015.",
+    options: ["A) for", "B) since", "C) in", "D) from"],
+    correctAnswer: 1,
+    explanation: "الإجابة الصحيحة: B) since<br><br>الشرح: نستخدم 'since' مع نقطة بداية زمنية محددة."
+},
+{
+    question: "44. I don’t have ____ money left.",
+    options: ["A) some", "B) a few", "C) any", "D) few"],
+    correctAnswer: 2,
+    explanation: "الإجابة الصحيحة: C) any<br><br>الشرح: نستخدم 'any' في الجمل المنفية مع الأسماء غير المعدودة."
+},
+{
+    question: "45. They ____ a new car last week.",
+    options: ["A) buy", "B) bought", "C) have bought", "D) had bought"],
+    correctAnswer: 1,
+    explanation: "الإجابة الصحيحة: B) bought<br><br>الشرح: حدث مكتمل في الماضي يُستخدم معه الماضي البسيط."
+},
+{
+    question: "46. That’s the man ____ helped me.",
+    options: ["A) which", "B) whose", "C) who", "D) whom"],
+    correctAnswer: 2,
+    explanation: "الإجابة الصحيحة: C) who<br><br>الشرح: نستخدم 'who' مع الفاعل العاقل."
+},
+{
+    question: "47. We ____ to the mall when it started raining.",
+    options: ["A) went", "B) were going", "C) have gone", "D) go"],
+    correctAnswer: 1,
+    explanation: "الإجابة الصحيحة: B) were going<br><br>الشرح: يعبر عن حدث كان مستمرًا عندما قاطعته حادثة أخرى."
+},
+{
+    question: "48. The test was ____ difficult for most students.",
+    options: ["A) too", "B) so", "C) very", "D) enough"],
+    correctAnswer: 0,
+    explanation: "الإجابة الصحيحة: A) too<br><br>الشرح: 'too difficult' تعني أن الاختبار صعب جدًا بدرجة تمنع النجاح."
+},
+{
+    question: "49. I enjoy ____ to music in my free time.",
+    options: ["A) listen", "B) listening", "C) to listen", "D) listened"],
+    correctAnswer: 1,
+    explanation: "الإجابة الصحيحة: B) listening<br><br>الشرح: بعد 'enjoy' نستخدم الفعل + ing."
+},
+{
+    question: "50. She doesn’t like coffee, and I don’t ____.",
+    options: ["A) too", "B) also", "C) either", "D) neither"],
+    correctAnswer: 2,
+    explanation: "الإجابة الصحيحة: C) either<br><br>الشرح: 'either' تُستخدم في الجمل المنفية بمعنى 'أيضًا'."
+},
+{
+    question: "51. They arrived ____ time to catch the train.",
+    options: ["A) on", "B) in", "C) at", "D) by"],
+    correctAnswer: 0,
+    explanation: "الإجابة الصحيحة: A) on<br><br>الشرح: 'on time' تعني في الوقت المحدد تمامًا."
+},
+{
+    question: "52. My brother is taller ____ I am.",
+    options: ["A) as", "B) like", "C) than", "D) then"],
+    correctAnswer: 2,
+    explanation: "الإجابة الصحيحة: C) than<br><br>الشرح: 'than' تُستخدم للمقارنة بين شخصين."
+},
+{
+    question: "53. This is the pen with ____ I wrote the letter.",
+    options: ["A) which", "B) who", "C) that", "D) where"],
+    correctAnswer: 0,
+    explanation: "الإجابة الصحيحة: A) which<br><br>الشرح: 'which' تُستخدم مع الأشياء."
+},
+{
+    question: "54. We have lived here ____ five years.",
+    options: ["A) since", "B) for", "C) from", "D) during"],
+    correctAnswer: 1,
+    explanation: "الإجابة الصحيحة: B) for<br><br>الشرح: 'for' تُستخدم مع مدة زمنية."
+},
+{
+    question: "55. He’s the boy ____ father is a doctor.",
+    options: ["A) who", "B) whom", "C) which", "D) whose"],
+    correctAnswer: 3,
+    explanation: "الإجابة الصحيحة: D) whose<br><br>الشرح: 'whose' تُستخدم للدلالة على الملكية."
+},
+{
+    question: "56. Not only ____ smart, but also hardworking.",
+    options: ["A) he is", "B) is he", "C) he was", "D) was he"],
+    correctAnswer: 1,
+    explanation: "الإجابة الصحيحة: B) is he<br><br>الشرح: بعد 'Not only' يأتي التقديم inversion."
+},
+{
+    question: "57. She prefers tea ____ coffee.",
+    options: ["A) from", "B) than", "C) over", "D) to"],
+    correctAnswer: 3,
+    explanation: "الإجابة الصحيحة: D) to<br><br>الشرح: 'prefer' يتبعها 'to' عند المقارنة بين شيئين."
+},
+{
+    question: "58. This box is too heavy for me ____.",
+    options: ["A) carry", "B) to carry", "C) carrying", "D) carried"],
+    correctAnswer: 1,
+    explanation: "الإجابة الصحيحة: B) to carry<br><br>الشرح: التركيب الصحيح هو 'too + adjective + to + verb'."
+},
+{
+    question: "59. He always speaks ____ in class.",
+    options: ["A) polite", "B) politely", "C) politeness", "D) politeful"],
+    correctAnswer: 1,
+    explanation: "الإجابة الصحيحة: B) politely<br><br>الشرح: نستخدم الحال (adverb) لوصف الفعل 'speaks'."
+},
+{
+    question: "60. I haven’t seen her ____ Monday.",
+    options: ["A) since", "B) for", "C) during", "D) from"],
+    correctAnswer: 0,
+    explanation: "الإجابة الصحيحة: A) since<br><br>الشرح: نستخدم 'since' مع نقطة زمنية محددة."
+},
+{
+    question: "61. The movie was so boring that I ____ asleep.",
+    options: ["A) fall", "B) fell", "C) had fallen", "D) was falling"],
+    correctAnswer: 1,
+    explanation: "الإجابة الصحيحة: B) fell<br><br>الشرح: 'so...that' followed by past simple for a completed past action."
+},
+{
+    question: "62. If she had studied harder, she ____ the exam.",
+    options: ["A) will pass", "B) would pass", "C) would have passed", "D) passes"],
+    correctAnswer: 2,
+    explanation: "الإجابة الصحيحة: C) would have passed<br><br>الشرح: هذا النوع الثالث من الجمل الشرطية يستخدم للتعبير عن الندم."
+},
+{
+    question: "63. Let’s go out for dinner, ____?",
+    options: ["A) shall we", "B) do we", "C) will we", "D) don’t we"],
+    correctAnswer: 0,
+    explanation: "الإجابة الصحيحة: A) shall we<br><br>الشرح: بعد الاقتراح باستخدام 'Let's' نستخدم 'shall we' في السؤال التذييلي."
+},
+{
+    question: "64. He’s interested ____ learning Spanish.",
+    options: ["A) to", "B) in", "C) on", "D) at"],
+    correctAnswer: 1,
+    explanation: "الإجابة الصحيحة: B) in<br><br>الشرح: 'interested in' هو التعبير الصحيح."
+},
+{
+    question: "65. Neither the students nor the teacher ____ happy.",
+    options: ["A) are", "B) were", "C) is", "D) be"],
+    correctAnswer: 2,
+    explanation: "الإجابة الصحيحة: C) is<br><br>الشرح: الفعل يتبع الفاعل الأقرب وهو 'teacher'."
+},
+{
+    question: "66. There ____ a lot of traffic today.",
+    options: ["A) is", "B) are", "C) were", "D) have"],
+    correctAnswer: 0,
+    explanation: "الإجابة الصحيحة: A) is<br><br>الشرح: 'traffic' اسم غير معدود، نستخدم معه 'is'."
+},
+{
+    question: "67. She said that she ____ busy.",
+    options: ["A) is", "B) was", "C) has been", "D) will be"],
+    correctAnswer: 1,
+    explanation: "الإجابة الصحيحة: B) was<br><br>الشرح: عند تحويل الكلام المباشر إلى غير مباشر، يتحول المضارع إلى ماضي."
+},
+{
+    question: "68. I’d rather you ____ me the truth.",
+    options: ["A) tell", "B) told", "C) have told", "D) tells"],
+    correctAnswer: 1,
+    explanation: "الإجابة الصحيحة: B) told<br><br>الشرح: بعد 'I'd rather you' نستخدم الماضي البسيط رغم أن المعنى للمضارع."
+},
+{
+    question: "69. How long ____ you lived here?",
+    options: ["A) did", "B) do", "C) have", "D) are"],
+    correctAnswer: 2,
+    explanation: "الإجابة الصحيحة: C) have<br><br>الشرح: السؤال في المضارع التام لأنه يتحدث عن مدة مستمرة حتى الآن."
+},
+{
+    question: "70. The cake smells ____.",
+    options: ["A) delicious", "B) deliciously", "C) well", "D) goodly"],
+    correctAnswer: 0,
+    explanation: "الإجابة الصحيحة: A) delicious<br><br>الشرح: مع أفعال الحواس نستخدم الصفات وليس الظروف."
+},
+{
+    question: "71. He came late ____ the heavy traffic.",
+    options: ["A) because", "B) because of", "C) due", "D) so that"],
+    correctAnswer: 1,
+    explanation: "الإجابة الصحيحة: B) because of<br><br>الشرح: 'because of' يتبعها اسم وليس جملة."
+},
+{
+    question: "72. Not until he apologized ____ her forgive him.",
+    options: ["A) did", "B) was", "C) had", "D) does"],
+    correctAnswer: 0,
+    explanation: "الإجابة الصحيحة: A) did<br><br>الشرح: بعد 'Not until' نستخدم التقديم (inversion) للفعل المساعد."
+},
+{
+    question: "73. I have difficulty ____ his handwriting.",
+    options: ["A) to read", "B) read", "C) reading", "D) in read"],
+    correctAnswer: 2,
+    explanation: "الإجابة الصحيحة: C) reading<br><br>الشرح: بعد 'have difficulty' نستخدم الفعل + ing."
+},
+{
+    question: "74. The man ____ wallet was stolen reported to the police.",
+    options: ["A) who", "B) which", "C) whose", "D) whom"],
+    correctAnswer: 2,
+    explanation: "الإجابة الصحيحة: C) whose<br><br>الشرح: 'whose' تُستخدم للدلالة على الملكية."
+},
+{
+    question: "75. I wish I ____ more time to relax.",
+    options: ["A) have", "B) had", "C) will have", "D) has"],
+    correctAnswer: 1,
+    explanation: "الإجابة الصحيحة: B) had<br><br>الشرح: بعد 'I wish' نستخدم الماضي للتعبير عن التمني."
+},
+{
+    question: "76. The news ____ surprising.",
+    options: ["A) are", "B) were", "C) is", "D) be"],
+    correctAnswer: 2,
+    explanation: "الإجابة الصحيحة: C) is<br><br>الشرح: 'news' اسم غير معدود ويعامل كمفرد."
+},
+{
+    question: "77. He acted as if he ____ the boss.",
+    options: ["A) is", "B) was", "C) were", "D) has been"],
+    correctAnswer: 2,
+    explanation: "الإجابة الصحيحة: C) were<br><br>الشرح: بعد 'as if' نستخدم 'were' للتعبير عن موقف غير حقيقي."
+},
+{
+    question: "78. I haven’t finished my homework ____.",
+    options: ["A) already", "B) still", "C) yet", "D) anymore"],
+    correctAnswer: 2,
+    explanation: "الإجابة الصحيحة: C) yet<br><br>الشرح: 'yet' تُستخدم في النفي والأسئلة في المضارع التام."
+},
+{
+    question: "79. She was absent ____ she was sick.",
+    options: ["A) because", "B) because of", "C) due", "D) so"],
+    correctAnswer: 0,
+    explanation: "الإجابة الصحيحة: A) because<br><br>الشرح: 'because' يتبعها جملة كاملة."
+},
+{
+    question: "80. We’ll go for a walk ____ it doesn’t rain.",
+    options: ["A) if", "B) unless", "C) though", "D) although"],
+    correctAnswer: 0,
+    explanation: "الإجابة الصحيحة: A) if<br><br>الشرح: نستخدم 'if' للتعبير عن شرط محتمل الحدوث."
+},
+{
+    question: "81. By the time we arrived, the movie ____.",
+    options: ["A) has started", "B) had started", "C) started", "D) was starting"],
+    correctAnswer: 1,
+    explanation: "الإجابة الصحيحة: B) had started<br><br>الشرح: 'By the time' تستخدم مع الماضي التام لتوضيح أن الحدث وقع قبل نقطة زمنية في الماضي."
+},
+{
+    question: "82. She hardly ever ____ to parties.",
+    options: ["A) go", "B) goes", "C) going", "D) gone"],
+    correctAnswer: 1,
+    explanation: "الإجابة الصحيحة: B) goes<br><br>الشرح: الفاعل مفرد لذلك نستخدم 'goes' مع 'hardly ever'."
+},
+{
+    question: "83. I’d rather ____ at home tonight.",
+    options: ["A) staying", "B) stayed", "C) stay", "D) to stay"],
+    correctAnswer: 2,
+    explanation: "الإجابة الصحيحة: C) stay<br><br>الشرح: بعد 'I’d rather' نستخدم الفعل في صورته الأساسية (المجردة)."
+},
+{
+    question: "84. I won’t go out ____ it stops raining.",
+    options: ["A) if", "B) unless", "C) when", "D) although"],
+    correctAnswer: 1,
+    explanation: "الإجابة الصحيحة: B) unless<br><br>الشرح: 'unless' تعني 'if not'."
+},
+{
+    question: "85. The teacher asked if we ____ any questions.",
+    options: ["A) have", "B) had", "C) has", "D) having"],
+    correctAnswer: 1,
+    explanation: "الإجابة الصحيحة: B) had<br><br>الشرح: بعد أفعال الكلام مثل 'asked' نستخدم الماضي في reported speech."
+},
+{
+    question: "86. He hasn’t called me ____ last week.",
+    options: ["A) for", "B) during", "C) since", "D) from"],
+    correctAnswer: 2,
+    explanation: "الإجابة الصحيحة: C) since<br><br>الشرح: 'since' تُستخدم مع نقطة زمنية محددة."
+},
+{
+    question: "87. This soup tastes ____.",
+    options: ["A) well", "B) good", "C) better", "D) nicely"],
+    correctAnswer: 1,
+    explanation: "الإجابة الصحيحة: B) good<br><br>الشرح: مع أفعال الحواس نستخدم الصفات وليس الظروف."
+},
+{
+    question: "88. They ____ in this city for five years now.",
+    options: ["A) are living", "B) have lived", "C) live", "D) lives"],
+    correctAnswer: 1,
+    explanation: "الإجابة الصحيحة: B) have lived<br><br>الشرح: المضارع التام يُستخدم مع مدة زمنية بدأت في الماضي وما زالت مستمرة."
+},
+{
+    question: "89. I remember ____ him at the party.",
+    options: ["A) meet", "B) met", "C) to meet", "D) meeting"],
+    correctAnswer: 3,
+    explanation: "الإجابة الصحيحة: D) meeting<br><br>الشرح: 'remember' + verb-ing تشير لحدث وقع في الماضي."
+},
+{
+    question: "90. She is not tall enough ____ the shelf.",
+    options: ["A) reaching", "B) reach", "C) to reach", "D) reaches"],
+    correctAnswer: 2,
+    explanation: "الإجابة الصحيحة: C) to reach<br><br>الشرح: 'enough' يتبعها 'to + base verb' للتعبير عن القدرة."
+},
+{
+    question: "91. I don’t know what ____.",
+    options: ["A) do", "B) to do", "C) doing", "D) did"],
+    correctAnswer: 1,
+    explanation: "الإجابة الصحيحة: B) to do<br><br>الشرح: بعد 'what' نستخدم 'to + verb' عند عدم وجود فعل رئيسي."
+},
+{
+    question: "92. Would you mind ____ the window?",
+    options: ["A) close", "B) to close", "C) closing", "D) closed"],
+    correctAnswer: 2,
+    explanation: "الإجابة الصحيحة: C) closing<br><br>الشرح: بعد 'Would you mind' نستخدم الفعل + ing."
+},
+{
+    question: "93. I have two sisters. One is a teacher and ____ is a doctor.",
+    options: ["A) other", "B) the other", "C) another", "D) others"],
+    correctAnswer: 1,
+    explanation: "الإجابة الصحيحة: B) the other<br><br>الشرح: عندما تتحدث عن اثنين، نستخدم 'the other' للثاني."
+},
+{
+    question: "94. If I were you, I ____ take that job.",
+    options: ["A) will", "B) would", "C) should", "D) can"],
+    correctAnswer: 1,
+    explanation: "الإجابة الصحيحة: B) would<br><br>الشرح: الحالة الثانية من الجمل الشرطية (تخيّلية)."
+},
+{
+    question: "95. There is no point in ____ again.",
+    options: ["A) try", "B) trying", "C) to try", "D) tried"],
+    correctAnswer: 1,
+    explanation: "الإجابة الصحيحة: B) trying<br><br>الشرح: بعد 'no point in' نستخدم الفعل + ing."
+},
+{
+    question: "96. We’re used to ____ early.",
+    options: ["A) wake up", "B) waking up", "C) woke up", "D) to wake up"],
+    correctAnswer: 1,
+    explanation: "الإجابة الصحيحة: B) waking up<br><br>الشرح: 'used to' متبوعة بـ verb-ing تعني عادة حالية."
+},
+{
+    question: "97. She prefers tea ____ coffee.",
+    options: ["A) for", "B) than", "C) over", "D) to"],
+    correctAnswer: 3,
+    explanation: "الإجابة الصحيحة: D) to<br><br>الشرح: 'prefer X to Y' هو الاستخدام الصحيح."
+},
+{
+    question: "98. I saw him ____ the building.",
+    options: ["A) enters", "B) entered", "C) entering", "D) enter"],
+    correctAnswer: 3,
+    explanation: "الإجابة الصحيحة: D) enter<br><br>الشرح: بعد أفعال الإدراك نستخدم الفعل في صورته الأساسية بدون 'to'."
+},
+{
+    question: "99. The book was ____ by many people.",
+    options: ["A) writing", "B) wrote", "C) written", "D) write"],
+    correctAnswer: 2,
+    explanation: "الإجابة الصحيحة: C) written<br><br>الشرح: الجملة في المبني للمجهول (passive)."
+},
+{
+    question: "100. That’s the restaurant ____ we had dinner.",
+    options: ["A) which", "B) where", "C) that", "D) in which"],
+    correctAnswer: 1,
+    explanation: "الإجابة الصحيحة: B) where<br><br>الشرح: 'where' تُستخدم للدلالة على المكان في الجمل الموصولة."
+},
+{
+    question: "101. We couldn’t go out because it was snowing ____.",
+    options: ["A) heavy", "B) heavily", "C) heaviness", "D) heaviest"],
+    correctAnswer: 1,
+    explanation: "الإجابة الصحيحة: B) heavily<br><br>الشرح: نحتاج إلى حال (adverb) لوصف الفعل 'was snowing'."
+},
+{
+    question: "102. Not only ____ late, but he also forgot his homework.",
+    options: ["A) he was", "B) was he", "C) he is", "D) is he"],
+    correctAnswer: 1,
+    explanation: "الإجابة الصحيحة: B) was he<br><br>الشرح: بعد 'Not only' نستخدم تركيب الجملة المعكوس (inversion)."
+},
+{
+    question: "103. He apologized ____ being late.",
+    options: ["A) of", "B) about", "C) for", "D) to"],
+    correctAnswer: 2,
+    explanation: "الإجابة الصحيحة: C) for<br><br>الشرح: 'apologized for' هو الاستخدام الصحيح مع الفعل ing."
+},
+{
+    question: "104. The more you practice, the ____ you become.",
+    options: ["A) best", "B) better", "C) good", "D) well"],
+    correctAnswer: 1,
+    explanation: "الإجابة الصحيحة: B) better<br><br>الشرح: نستخدم 'the more..., the better' للمقارنة المتزايدة."
+},
+{
+    question: "105. It took me a long time to get used to ____ on the night shift.",
+    options: ["A) work", "B) working", "C) worked", "D) to work"],
+    correctAnswer: 1,
+    explanation: "الإجابة الصحيحة: B) working<br><br>الشرح: بعد 'get used to' نستخدم الفعل + ing."
+},
+{
+    question: "106. She asked me where ____ the keys.",
+    options: ["A) did I put", "B) I did put", "C) I had put", "D) had I put"],
+    correctAnswer: 2,
+    explanation: "الإجابة الصحيحة: C) I had put<br><br>الشرح: في الكلام غير المباشر نستخدم الماضي التام."
+},
+{
+    question: "107. He didn’t study; ____, he failed the test.",
+    options: ["A) although", "B) therefore", "C) because", "D) unless"],
+    correctAnswer: 1,
+    explanation: "الإجابة الصحيحة: B) therefore<br><br>الشرح: 'therefore' تعني 'لذلك' وتربط السبب بالنتيجة."
+},
+{
+    question: "108. If I had known, I ____ you.",
+    options: ["A) will tell", "B) would tell", "C) would have told", "D) told"],
+    correctAnswer: 2,
+    explanation: "الإجابة الصحيحة: C) would have told<br><br>الشرح: الحالة الثالثة من الجملة الشرطية (past unreal)."
+},
+{
+    question: "109. He works as a teacher, ____?",
+    options: ["A) does he", "B) doesn’t he", "C) is he", "D) isn’t he"],
+    correctAnswer: 1,
+    explanation: "الإجابة الصحيحة: B) doesn’t he<br><br>الشرح: نستخدم question tag مع الفعل الأساسي 'works'."
+},
+{
+    question: "110. Let’s go out, ____?",
+    options: ["A) shall we", "B) don’t we", "C) will we", "D) won’t we"],
+    correctAnswer: 0,
+    explanation: "الإجابة الصحيحة: A) shall we<br><br>الشرح: بعد الاقتراح باستخدام 'let’s' نستخدم 'shall we'."
+},
+{
+    question: "111. He is the man ____ car was stolen.",
+    options: ["A) which", "B) who", "C) whose", "D) whom"],
+    correctAnswer: 2,
+    explanation: "الإجابة الصحيحة: C) whose<br><br>الشرح: 'whose' تُستخدم للملكية."
+},
+{
+    question: "112. They made me ____ the form again.",
+    options: ["A) to fill", "B) filled", "C) filling", "D) fill"],
+    correctAnswer: 3,
+    explanation: "الإجابة الصحيحة: D) fill<br><br>الشرح: بعد make + مفعول، نستخدم الفعل مجردًا."
+},
+{
+    question: "113. I’ll keep studying ____ I pass the test.",
+    options: ["A) until", "B) during", "C) while", "D) when"],
+    correctAnswer: 0,
+    explanation: "الإجابة الصحيحة: A) until<br><br>الشرح: 'until' تعني 'حتى'."
+},
+{
+    question: "114. He’s interested ____ learning Spanish.",
+    options: ["A) in", "B) on", "C) at", "D) to"],
+    correctAnswer: 0,
+    explanation: "الإجابة الصحيحة: A) in<br><br>الشرح: 'interested in' هو الاستخدام الصحيح."
+},
+{
+    question: "115. I’m looking forward to ____ you.",
+    options: ["A) meet", "B) meeting", "C) met", "D) to meet"],
+    correctAnswer: 1,
+    explanation: "الإجابة الصحيحة: B) meeting<br><br>الشرح: بعد 'looking forward to' نستخدم الفعل + ing."
+},
+{
+    question: "116. This is the first time I ____ sushi.",
+    options: ["A) try", "B) tried", "C) have tried", "D) had tried"],
+    correctAnswer: 2,
+    explanation: "الإجابة الصحيحة: C) have tried<br><br>الشرح: بعد 'the first time' نستخدم المضارع التام."
+},
+{
+    question: "117. She has too many clothes ____.",
+    options: ["A) to wear", "B) wearing", "C) wear", "D) wore"],
+    correctAnswer: 0,
+    explanation: "الإجابة الصحيحة: A) to wear<br><br>الشرح: 'too many + noun + to + verb'."
+},
+{
+    question: "118. He denied ____ the vase.",
+    options: ["A) break", "B) to break", "C) breaking", "D) broke"],
+    correctAnswer: 2,
+    explanation: "الإجابة الصحيحة: C) breaking<br><br>الشرح: بعد 'deny' نستخدم الفعل + ing."
+},
+{
+    question: "119. ____ being tired, he finished the project.",
+    options: ["A) Although", "B) Because", "C) Despite", "D) Since"],
+    correctAnswer: 2,
+    explanation: "الإجابة الصحيحة: C) Despite<br><br>الشرح: 'Despite' يليها اسم أو gerund."
+},
+{
+    question: "120. I wish I ____ more money.",
+    options: ["A) have", "B) had", "C) will have", "D) has"],
+    correctAnswer: 1,
+    explanation: "الإجابة الصحيحة: B) had<br><br>الشرح: في جمل التمني (wish) نستخدم الماضي."
+}
+        ];
 
         // Reading Comprehension (20 سؤالاً)
         const readingData = [
@@ -691,12 +1315,13 @@
                         explanation: "الإجابة الصحيحة: C) Leonardo da Vinci<br><br>الشرح: النص يذكر ليوناردو دا فينشي كأحد أعلام عصر النهضة."
                     }
                 ]
-            }
+            },
+            // ... (بقية المقاطع بنفس الهيكل)
         ];
 
         // Listening Comprehension (10 أسئلة)
         const listeningQuestions = [
-           {
+            {
     "audioText": "Man: Where did you put the keys? Woman: They’re on the kitchen counter, next to the fruit bowl.",
     "question": "1. Where are the keys?",
     "options": ["A) In the drawer", "B) On the table", "C) On the kitchen counter", "D) In the car"],
@@ -770,40 +1395,70 @@
 
         // دالة تحويل النص إلى كلام
         function speakText(text) {
+            if (!('speechSynthesis' in window)) {
+                alert('عذرًا، هذه الميزة غير مدعومة في متصفحك');
+                return;
+            }
+            
             window.speechSynthesis.cancel();
             const utterance = new SpeechSynthesisUtterance(text);
             utterance.lang = "en-US";
             utterance.rate = 0.9;
             utterance.pitch = 1;
             
-            const voices = window.speechSynthesis.getVoices();
-            const googleVoice = voices.find(voice => 
-                voice.lang === 'en-US' && voice.name.includes('Google'));
-            utterance.voice = googleVoice || voices.find(voice => voice.lang === 'en-US');
+            // انتظر حتى يتم تحميل الأصوات
+            const speak = () => {
+                const voices = window.speechSynthesis.getVoices();
+                const googleVoice = voices.find(voice => 
+                    voice.lang === 'en-US' && voice.name.includes('Google'));
+                utterance.voice = googleVoice || voices.find(voice => voice.lang === 'en-US');
+                window.speechSynthesis.speak(utterance);
+            };
             
-            window.speechSynthesis.speak(utterance);
+            if (speechSynthesis.getVoices().length > 0) {
+                speak();
+            } else {
+                speechSynthesis.onvoiceschanged = speak;
+            }
         }
 
         // عرض الأسئلة عند تحميل الصفحة
-        document.addEventListener('DOMContentLoaded', function() {
+        window.onload = function() {
             displayQuestions();
-            
-            if (speechSynthesis.onvoiceschanged !== undefined) {
-                speechSynthesis.onvoiceschanged = loadVoices;
+            // تحميل الأصوات عند بدء الصفحة
+            if ('speechSynthesis' in window) {
+                speechSynthesis.onvoiceschanged = function() {
+                    console.log("الأصوات جاهزة");
+                };
             }
-        });
-
-        function loadVoices() {
-            const voices = window.speechSynthesis.getVoices();
-            console.log("الأصوات المتاحة:", voices);
-        }
+        };
 
         function displayQuestions() {
+            // عرض أسئلة Structure
             const structureContainer = document.getElementById('structure-container');
             structureQuestions.forEach((q, index) => {
-                createQuestionElement(structureContainer, q, index, 'structure');
+                const questionDiv = document.createElement('div');
+                questionDiv.className = 'question';
+                questionDiv.id = `structure-question-${index}`;
+                
+                let optionsHTML = q.options.map((option, i) => `
+                    <div class="option">
+                        <input type="radio" name="structure-${index}" id="structure-${index}-${i}" value="${i}">
+                        <label for="structure-${index}-${i}">${option}</label>
+                    </div>
+                `).join('');
+                
+                questionDiv.innerHTML = `
+                    <p>${q.question}</p>
+                    <div class="options">${optionsHTML}</div>
+                    <span class="show-explanation" onclick="toggleExplanation('structure-${index}')">عرض الشرح</span>
+                    <div class="explanation" id="explanation-structure-${index}">${q.explanation}</div>
+                `;
+                
+                structureContainer.appendChild(questionDiv);
             });
 
+            // عرض أسئلة Reading
             const readingContainer = document.getElementById('reading-container');
             readingData.forEach((section, sectionIndex) => {
                 const passageDiv = document.createElement('div');
@@ -812,24 +1467,51 @@
                 readingContainer.appendChild(passageDiv);
 
                 section.questions.forEach((q, qIndex) => {
-                    createQuestionElement(readingContainer, q, qIndex + (sectionIndex * 4), 'reading');
+                    const globalIndex = sectionIndex * section.questions.length + qIndex;
+                    const questionDiv = document.createElement('div');
+                    questionDiv.className = 'question';
+                    questionDiv.id = `reading-question-${globalIndex}`;
+                    
+                    let optionsHTML = q.options.map((option, i) => `
+                        <div class="option">
+                            <input type="radio" name="reading-${globalIndex}" id="reading-${globalIndex}-${i}" value="${i}">
+                            <label for="reading-${globalIndex}-${i}">${option}</label>
+                        </div>
+                    `).join('');
+                    
+                    questionDiv.innerHTML = `
+                        <p>${q.question}</p>
+                        <div class="options">${optionsHTML}</div>
+                        <span class="show-explanation" onclick="toggleExplanation('reading-${globalIndex}')">عرض الشرح</span>
+                        <div class="explanation" id="explanation-reading-${globalIndex}">${q.explanation}</div>
+                    `;
+                    
+                    readingContainer.appendChild(questionDiv);
                 });
             });
 
+            // عرض أسئلة Listening
             const listeningContainer = document.getElementById('listening-container');
             listeningQuestions.forEach((q, index) => {
                 const questionDiv = document.createElement('div');
                 questionDiv.className = 'question';
                 questionDiv.id = `listening-question-${index}`;
                 
+                let optionsHTML = q.options.map((option, i) => `
+                    <div class="option">
+                        <input type="radio" name="listening-${index}" id="listening-${index}-${i}" value="${i}">
+                        <label for="listening-${index}-${i}">${option}</label>
+                    </div>
+                `).join('');
+                
                 questionDiv.innerHTML = `
                     <div class="hidden-audio-text">${q.audioText}</div>
                     <div class="tts-container">
-                        <button class="play-btn" onclick="speakText(this.parentNode.previousElementSibling.textContent)">
+                        <button class="play-btn" onclick="speakText('${q.audioText.replace(/'/g, "\\'")}')">
                             تشغيل السؤال ${index + 1}
                         </button>
                         <div class="audio-controls">
-                            <button class="control-btn" onclick="speakText(this.parentNode.parentNode.previousElementSibling.textContent)">
+                            <button class="control-btn" onclick="speakText('${q.audioText.replace(/'/g, "\\'")}')">
                                 إعادة
                             </button>
                             <button class="control-btn" onclick="window.speechSynthesis.cancel()">
@@ -838,14 +1520,7 @@
                         </div>
                     </div>
                     <p>${q.question}</p>
-                    <div class="options">
-                        ${q.options.map((option, i) => `
-                            <div class="option">
-                                <input type="radio" name="listening-${index}" id="listening-${index}-${i}" value="${i}">
-                                <label for="listening-${index}-${i}">${option}</label>
-                            </div>
-                        `).join('')}
-                    </div>
+                    <div class="options">${optionsHTML}</div>
                     <span class="show-explanation" onclick="toggleExplanation('listening-${index}')">عرض الشرح</span>
                     <div class="explanation" id="explanation-listening-${index}">${q.explanation}</div>
                 `;
@@ -854,33 +1529,11 @@
             });
         }
 
-        function createQuestionElement(container, q, index, section) {
-            if (section === 'listening') return;
-            
-            const questionDiv = document.createElement('div');
-            questionDiv.className = 'question';
-            questionDiv.id = `${section}-question-${index}`;
-
-            questionDiv.innerHTML = `
-                <p>${q.question}</p>
-                <div class="options">
-                    ${q.options.map((option, i) => `
-                        <div class="option">
-                            <input type="radio" name="${section}-${index}" id="${section}-${index}-${i}" value="${i}">
-                            <label for="${section}-${index}-${i}">${option}</label>
-                        </div>
-                    `).join('')}
-                </div>
-                <span class="show-explanation" onclick="toggleExplanation('${section}-${index}')">عرض الشرح</span>
-                <div class="explanation" id="explanation-${section}-${index}">${q.explanation}</div>
-            `;
-
-            container.appendChild(questionDiv);
-        }
-
         function toggleExplanation(id) {
             const explanation = document.getElementById(`explanation-${id}`);
-            explanation.style.display = explanation.style.display === 'block' ? 'none' : 'block';
+            if (explanation) {
+                explanation.style.display = explanation.style.display === 'block' ? 'none' : 'block';
+            }
         }
 
         function openSection(evt, sectionName) {
@@ -910,11 +1563,12 @@
 
                 if (selectedOption && parseInt(selectedOption.value) === q.correctAnswer) {
                     structureScore++;
-                    questionDiv.style.borderLeft = '4px solid #2e7d32';
+                    if (questionDiv) questionDiv.style.borderLeft = '4px solid #2e7d32';
                 } else {
-                    questionDiv.style.borderLeft = '4px solid #c62828';
+                    if (questionDiv) questionDiv.style.borderLeft = '4px solid #c62828';
                 }
-                document.getElementById(`explanation-structure-${index}`).style.display = 'block';
+                const explanation = document.getElementById(`explanation-structure-${index}`);
+                if (explanation) explanation.style.display = 'block';
             });
 
             // حساب نتيجة Reading
@@ -926,11 +1580,12 @@
 
                     if (selectedOption && parseInt(selectedOption.value) === q.correctAnswer) {
                         readingScore++;
-                        questionDiv.style.borderLeft = '4px solid #2e7d32';
+                        if (questionDiv) questionDiv.style.borderLeft = '4px solid #2e7d32';
                     } else {
-                        questionDiv.style.borderLeft = '4px solid #c62828';
+                        if (questionDiv) questionDiv.style.borderLeft = '4px solid #c62828';
                     }
-                    document.getElementById(`explanation-reading-${readingIndex}`).style.display = 'block';
+                    const explanation = document.getElementById(`explanation-reading-${readingIndex}`);
+                    if (explanation) explanation.style.display = 'block';
                     readingIndex++;
                 });
             });
@@ -942,24 +1597,36 @@
 
                 if (selectedOption && parseInt(selectedOption.value) === q.correctAnswer) {
                     listeningScore++;
-                    questionDiv.style.borderLeft = '4px solid #2e7d32';
+                    if (questionDiv) questionDiv.style.borderLeft = '4px solid #2e7d32';
                 } else {
-                    questionDiv.style.borderLeft = '4px solid #c62828';
+                    if (questionDiv) questionDiv.style.borderLeft = '4px solid #c62828';
                 }
-                document.getElementById(`explanation-listening-${index}`).style.display = 'block';
+                const explanation = document.getElementById(`explanation-listening-${index}`);
+                if (explanation) explanation.style.display = 'block';
             });
 
             // عرض النتيجة النهائية
             const totalScore = structureScore + readingScore + listeningScore;
-            const percentage = (totalScore / 50) * 100;
+            const percentage = (totalScore / 150) * 100;
             const resultDiv = document.getElementById('result');
             
             resultDiv.innerHTML = `
-                <p>النتيجة النهائية: ${totalScore} / 50</p>
-                <p>النسبة المئوية: ${percentage.toFixed(1)}%</p>
-                <p>Structure: ${structureScore} / 20</p>
-                <p>Reading: ${readingScore} / 20</p>
-                <p>Listening: ${listeningScore} / 10</p>
+                <h3>النتيجة النهائية</h3>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: ${percentage}%">${percentage.toFixed(1)}%</div>
+                </div>
+                
+                <div class="score-section">
+                    <p>إجمالي النقاط: <strong>${totalScore} / 150</strong></p>
+                    <p>النسبة المئوية: <strong>${percentage.toFixed(1)}%</strong></p>
+                </div>
+                
+                <div class="score-section">
+                    <h4>تفصيل النتائج:</h4>
+                    <p>Structure: ${structureScore} / 120 (${(structureScore/120*100).toFixed(1)}%)</p>
+                    <p>Reading: ${readingScore} / 20 (${(readingScore/20*100).toFixed(1)}%)</p>
+                    <p>Listening: ${listeningScore} / 10 (${(listeningScore/10*100).toFixed(1)}%)</p>
+                </div>
             `;
             
             resultDiv.style.display = 'block';
