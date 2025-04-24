@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html dir="ltr" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TOEFL ITP Test</title>
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TOEFL ITP Test</title>
+<style>
         /* تنسيق رأس الصفحة - معدل */
         .header {
             display: flex;
@@ -345,65 +345,157 @@
             line-height: 20px;
             color: white;
         }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <!-- رأس الصفحة مع الشعار والمؤقت -->
-        <div class="header">
-            <div class="logo-container">
-                <img src="https://i.postimg.cc/R6Xj8PRc/logo.png" alt="شعار اختبار التوفل" class="logo">
-            </div>
-            
-            <div class="timer-controls">
-                <div id="timer-container">
-                    <div id="timer">00:00:00</div>
-                </div>
-                <div class="timer-buttons">
-                    <button class="timer-btn" onclick="startTimer()">بدء</button>
-                    <button class="timer-btn stop" onclick="stopTimer()">إيقاف</button>
-                </div>
-            </div>
-        </div>
-        
-        <h1>TOEFL ITP Test</h1>
-        
-        <div class="tab">
-            <button class="tablinks active" onclick="openSection(event, 'structure')">Structure (120 سؤالاً)</button>
-            <button class="tablinks" onclick="openSection(event, 'reading')">Reading (20 سؤالاً)</button>
-            <button class="tablinks" onclick="openSection(event, 'listening')">Listening (10 أسئلة)</button>
-        </div>
-        
-        <div id="structure" class="tabcontent" style="display: block;">
-            <h2>القسم الأول: Structure and Written Expression</h2>
-            <div class="section-info">
-                <p>اختر الإجابة الصحيحة لاستكمال الجملة أو تصحيح الخطأ النحوي.</p>
-            </div>
-            <div id="structure-container"></div>
-        </div>
-        
-        <div id="reading" class="tabcontent">
-            <h2>القسم الثاني: Reading Comprehension</h2>
-            <div class="section-info">
-                <p>اقرأ النصوص التالية ثم اختر الإجابة الصحيحة للأسئلة.</p>
-            </div>
-            <div id="reading-container"></div>
-        </div>
-        
-        <div id="listening" class="tabcontent">
-            <h2>القسم الثالث: Listening Comprehension</h2>
-            <div class="section-info">
-                <p>انقر على زر التشغيل للاستماع إلى كل مقطع ثم اختر الإجابة الصحيحة.</p>
-            </div>
-            <div id="listening-container"></div>
-        </div>
-        
-        <button onclick="calculateScore()">عرض النتيجة النهائية</button>
-        
-        <div id="result"></div>
-    </div>
+    
 
-    <script>
+    body, h1, h2, h3, h4, h5, h6, p, div, button {
+        font-family: 'Cairo', 'Roboto', Arial, sans-serif;
+    }
+    
+    #info {
+        direction: rtl;
+        text-align: right;
+    }
+    </style>
+<link href="https://fonts.googleapis.com/css2?family=Cairo&amp;family=Roboto&amp;display=swap" rel="stylesheet"/><style>
+@media (max-width: 768px) {
+    #info img {
+        width: 100%;
+        height: auto;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        margin: 10px 0;
+    }
+    #info img[src='https://i.postimg.cc/R6Xj8PRc/logo.png'] {
+        width: auto;  /* استبعاد صورة اللوقو من التعديل */
+    }
+}
+</style><style>
+@media (max-width: 768px) {
+    #info img {
+        width: 100%;
+        height: auto;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        margin: 10px 0;
+    }
+    #info img[src='https://i.postimg.cc/R6Xj8PRc/logo.png'] {
+        width: auto;  /* استبعاد صورة اللوقو */
+    }
+    #info img[src='https://i.postimg.cc/hjwTddfk/9.jpg'] {
+        width: auto;  /* استبعاد الصورة التاسعة */
+    }
+}
+</style><style>
+#info img {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+</style><style>
+@media (max-width: 768px) {
+    #info img {
+        width: 100%;
+        height: auto;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        margin: 10px 0;
+    }
+    #info img[src='https://i.postimg.cc/R6Xj8PRc/logo.png'] {
+        width: auto;  /* استبعاد صورة اللوقو */
+    }
+    #info img[src='https://i.postimg.cc/hjwTddfk/9.jpg'] {
+        width: auto;  /* استبعاد الصورة التاسعة */
+    }
+}
+</style><style>
+@media (max-width: 768px) {
+    #info img[src='https://i.postimg.cc/hjwTddfk/9.jpg'] {
+        width: 100%;  /* فقط هذه الصورة ستكون متجاوبة */
+        height: auto;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        margin: 10px 0;
+    }
+}
+</style></head>
+<body>
+<div class="container">
+<!-- رأس الصفحة مع الشعار والمؤقت -->
+<div class="header">
+<div class="logo-container">
+<img alt="شعار اختبار التوفل" class="logo" src="https://i.postimg.cc/R6Xj8PRc/logo.png" style=""/>
+</div>
+<div class="timer-controls">
+<div id="timer-container">
+<div id="timer">00:00:00</div>
+</div>
+<div class="timer-buttons">
+<button class="timer-btn" onclick="startTimer()">بدء</button>
+<button class="timer-btn stop" onclick="stopTimer()">إيقاف</button>
+</div>
+</div>
+</div>
+<h1>TOEFL ITP Test</h1>
+<div class="tab">
+<button class="tablinks active" onclick="openSection(event, 'structure')">Structure (120 سؤالاً)</button>
+<button class="tablinks" onclick="openSection(event, 'reading')">Reading (20 سؤالاً)</button>
+<button class="tablinks" onclick="openSection(event, 'listening')">Listening (10 أسئلة)</button>
+<button class="tablinks" onclick="openSection(event, 'info')">شرح ومعلومات</button>
+<button class="tablinks" onclick="openSection(event, 'kornferry')">اختبار Korn-Ferry (40 سؤالاً)</button>
+</div>
+
+<!-- قسم Structure -->
+<div class="tabcontent" id="structure" style="display: block;">
+<h2>القسم الأول: Structure and Written Expression</h2>
+<div class="section-info">
+<p>اختر الإجابة الصحيحة لاستكمال الجملة أو تصحيح الخطأ النحوي.</p>
+</div>
+<div id="structure-container"></div>
+</div>
+
+<!-- قسم Reading -->
+<div class="tabcontent" id="reading">
+<h2>القسم الثاني: Reading Comprehension</h2>
+<div class="section-info">
+<p>اقرأ النصوص التالية ثم اختر الإجابة الصحيحة للأسئلة.</p>
+</div>
+<div id="reading-container"></div>
+</div>
+
+<!-- قسم Listening -->
+<div class="tabcontent" id="listening">
+<h2>القسم الثالث: Listening Comprehension</h2>
+<div class="section-info">
+<p>انقر على زر التشغيل للاستماع إلى كل مقطع ثم اختر الإجابة الصحيحة.</p>
+</div>
+<div id="listening-container"></div>
+</div>
+
+<!-- قسم المعلومات -->
+<div class="tabcontent" id="info">
+
+<div><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span><span dir="ltr" style="font-weight:bold"><span dir="ltr"></span>TOEFL ITP (Institutional Testing Program)</span><span style="font-weight:bold"><span dir="rtl"></span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">يقيس مهاراتك في اللغة الإنجليزية الأكاديمية، ويتكون من ثلاث أقسام</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold">1. </span><span dir="ltr" style="font-weight:bold"><span dir="ltr"></span>Listening Comprehension</span><span style="font-weight:bold"><span dir="rtl"></span> (</span><span style="font-family:Arial; font-weight:bold">الاستماع</span><span style="font-weight:bold">)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold">2. </span><span dir="ltr" style="font-weight:bold"><span dir="ltr"></span>Structure and Written Expression</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold">(</span><span style="font-family:Arial; font-weight:bold">التركيب والتعبير الكتابي</span><span style="font-weight:bold">)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold">3. </span><span dir="ltr" style="font-weight:bold"><span dir="ltr"></span>Reading Comprehension</span><span style="font-weight:bold"><span dir="rtl"></span> (</span><span style="font-family:Arial; font-weight:bold">القراءة</span><span style="font-weight:bold">)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">راح أشرح لك كل قسم، وأعطيك نصائح مهمة تساعدك في التحضير</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial; font-weight:bold; text-decoration:underline">أولاً</span><span style="font-weight:bold; text-decoration:underline">: </span><span dir="ltr" style="font-weight:bold; text-decoration:underline"><span dir="ltr"></span>Listening Comprehension</span><span><span dir="rtl"></span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">محادثات قصيرة </span><span>(</span><span dir="ltr"><span dir="ltr"></span>Short Conversations</span><span><span dir="rtl"></span>)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">محادثات طويلة </span><span>(</span><span dir="ltr"><span dir="ltr"></span>Long Conversations</span><span><span dir="rtl"></span>)</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">نصائح</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">ركز على الفكرة الرئيسية</span><span>: </span><span style="font-family:Arial">لا تحاول فهم كل كلمة، أهم شيء تستوعب الموضوع العام</span><span>.</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">استمع بتركيز للموقف</span><span>: </span><span style="font-family:Arial">مثلاً إذا شخص يسأل عن شيء، ما هو رد الطرف الآخر؟ هل يوافق؟ يرفض؟ يعطي حل؟</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">تدرب على الأسئلة الشائعة</span><span>: </span><span style="font-family:Arial">مثل</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span>"</span><span dir="ltr"><span dir="ltr"></span>What does the woman mean</span><span><span dir="rtl"></span>?" </span><span style="font-family:Arial">أو</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span>"</span><span dir="ltr"><span dir="ltr"></span>What will the man probably do next</span><span><span dir="rtl"></span>?"</span><br/><span style="-aw-import:ignore"> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial; font-weight:bold; text-decoration:underline">ثانياً</span><span style="font-weight:bold; text-decoration:underline">: </span><span dir="ltr" style="font-weight:bold; text-decoration:underline"><span dir="ltr"></span>Structure and Written Expression</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial; font-weight:bold; text-decoration:underline">ينقسم إلى قسمين</span><span style="font-weight:bold; text-decoration:underline">:</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr" style="font-weight:bold">Structure</span><span style="font-weight:bold"><span dir="rtl"></span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">تختار الكلمة أو العبارة الصحيحة لتكمل الجملة</span><span>.</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr" style="font-weight:bold">Written Expression</span><span style="font-weight:bold"><span dir="rtl"></span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">تحدد الخطأ في الجملة</span><span>.</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">نصائح</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">راجع قواعد أساسية مثل</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">ترتيب الجملة الإنجليزية </span><span>(</span><span style="font-family:Arial">فاعل </span><span>+ </span><span style="font-family:Arial">فعل </span><span>+ </span><span style="font-family:Arial">مفعول</span><span>)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">الفرق بين الجمل المبنية للمعلوم والمجهول</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">الأزمنة</span><span>: </span><span style="font-family:Arial">خاصة الماضي البسيط والمضارع التام</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">أدوات الربط </span><span>(</span><span dir="ltr"><span><span dir="ltr"></span>because, although, however, </span><span>etc</span></span><span><span dir="rtl"></span>.)</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="-aw-import:ignore"> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial; font-weight:bold">احذر من الأخطاء الشائعة</span><span style="font-weight:bold">:</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">مطابقة الفعل مع الفاعل </span><span>(</span><span dir="ltr"><span dir="ltr"></span>Singular vs. Plural</span><span><span dir="rtl"></span>)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">استخدام أدوات التعريف </span><span>(</span><span dir="ltr"><span dir="ltr"></span>a, an, the</span><span><span dir="rtl"></span>)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">أخطاء الضمائر والملكية </span><span>(</span><span dir="ltr"><span dir="ltr"></span>he/him, their/there/they</span><span><span dir="rtl"></span>’</span><span dir="ltr"><span dir="ltr"></span>re</span><span><span dir="rtl"></span>)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span><br/><span style="-aw-import:ignore"> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial; font-weight:bold; text-decoration:underline">ثالثاً</span><span style="font-weight:bold; text-decoration:underline">: </span><span dir="ltr" style="font-weight:bold; text-decoration:underline"><span dir="ltr"></span>Reading Comprehension</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">تعتمد على فقرات أكاديمية تليها أسئلة متنوعة</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">نصائح</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">اقرأ السؤال أولاً قبل الفقرة</span><span>: </span><span style="font-family:Arial">عشان تعرف تدور على إيش</span><span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">استخدم تقنية </span><span dir="ltr"><span dir="ltr"></span>Skimming</span><span><span dir="rtl"></span> </span><span style="font-family:Arial">و</span><span dir="ltr"><span dir="ltr"></span>Scanning</span><span><span dir="rtl"></span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">Skimming</span><span><span dir="rtl"></span>: </span><span style="font-family:Arial">تقرأ الفقرة بسرعة لالتقاط الفكرة العامة</span><span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">Scanning</span><span><span dir="rtl"></span>: </span><span style="font-family:Arial">تبحث عن معلومة محددة </span><span>(</span><span style="font-family:Arial">مثلاً رقم أو اسم</span><span>).</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">احذر من أسئلة الكلمات</span><span>: </span><span style="font-family:Arial">ممكن يسألونك</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span>"</span><span dir="ltr"><span dir="ltr"></span>What is the meaning of the word 'X</span><span><span dir="rtl"></span>'</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">in line Y</span><span><span dir="rtl"></span>?"</span><span style="font-family:Arial">،</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span><span style="font-family:Arial">حاول تتوقع المعنى من السياق</span><span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="-aw-import:ignore"> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial; font-weight:bold">أهم القواعد والنقاط اللي لازم تركز عليها قبل اختبار </span><span dir="ltr" style="font-weight:bold"><span dir="ltr"></span>TOEFL ITP</span><span style="font-family:Arial; font-weight:bold"><span dir="rtl"></span>، مع شرح بسيط وسهل</span><span style="font-weight:bold">:</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="-aw-import:ignore"> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="-aw-import:ignore"> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold; text-decoration:underline">1. </span><span style="font-family:Arial; font-weight:bold; text-decoration:underline">الضمائر </span><span style="font-weight:bold; text-decoration:underline">(</span><span dir="ltr" style="font-weight:bold; text-decoration:underline"><span dir="ltr"></span>Pronouns</span><span style="font-weight:bold; text-decoration:underline"><span dir="rtl"></span>)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial; font-weight:bold">أ</span><span style="font-weight:bold">. </span><span style="font-family:Arial; font-weight:bold">ضمائر الفاعل </span><span style="font-weight:bold">(</span><span dir="ltr" style="font-weight:bold"><span dir="ltr"></span>Subject Pronouns</span><span style="font-weight:bold"><span dir="rtl"></span>)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">تأتي قبل الفعل وتدل على من يقوم بالفعل</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">I, You, He, She, It, We, They</span><span><span dir="rtl"></span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">مثال</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">She goes to school</span><span><span dir="rtl"></span>. → </span><span style="font-family:Arial">هي تذهب للمدرسة</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial; font-weight:bold">ب</span><span style="font-weight:bold">. </span><span style="font-family:Arial; font-weight:bold">ضمائر المفعول </span><span style="font-weight:bold">(</span><span dir="ltr" style="font-weight:bold"><span dir="ltr"></span>Object Pronouns</span><span style="font-weight:bold"><span dir="rtl"></span>)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">تأتي بعد الفعل أو حرف الجر وتدل على من وقع عليه الفعل</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">Me, You, Him, Her, It, Us, Them</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">مثال</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">I saw him yesterday</span><span><span dir="rtl"></span>. → </span><span style="font-family:Arial">رأيته أمس</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial; font-weight:bold">ج</span><span style="font-weight:bold">. </span><span style="font-family:Arial; font-weight:bold">ضمائر الملكية</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">My, Your, His, Her, Our, Their</span><span><span dir="rtl"></span> → </span><span style="font-family:Arial">قبل الاسم</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">Mine, Yours, His, Hers, Ours, Theirs</span><span><span dir="rtl"></span> →</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span><span style="font-family:Arial">بدون اسم بعدها</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">مثال</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">That is my book</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">That book is mine</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="-aw-import:ignore"> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold; text-decoration:underline">2. </span><span style="font-family:Arial; font-weight:bold; text-decoration:underline">الأفعال المساعدة </span><span style="font-weight:bold; text-decoration:underline">(</span><span dir="ltr" style="font-weight:bold; text-decoration:underline"><span dir="ltr"></span>Helping Verbs</span><span style="font-weight:bold; text-decoration:underline"><span dir="rtl"></span>)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">تُستخدم لتكوين الأزمنة أو الأسئلة أو النفي</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">Be: am, is, are, was, were</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">Have: have, has, had</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr"><span>Do: do, does, did</span></span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">Modals: can, will, would, should, might, must</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">مثال</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">She is cooking</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">They have finished</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">Do you like tea</span><span><span dir="rtl"></span>?</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="-aw-import:ignore"> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold; text-decoration:underline">3. </span><span style="font-family:Arial; font-weight:bold; text-decoration:underline">ترتيب الجملة </span><span style="font-weight:bold; text-decoration:underline">(</span><span dir="ltr" style="font-weight:bold; text-decoration:underline"><span dir="ltr"></span>Sentence Order</span><span style="font-weight:bold; text-decoration:underline"><span dir="rtl"></span>)</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">الترتيب الطبيعي للجملة في اللغة الإنجليزية</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">فاعل </span><span>+ </span><span style="font-family:Arial">فعل </span><span>+ </span><span style="font-family:Arial">مفعول به</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">مثال</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">They play football</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">She drinks water</span><span><span dir="rtl"></span>.</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold; text-decoration:underline">4. </span><span style="font-family:Arial; font-weight:bold; text-decoration:underline">الأزمنة الأساسية </span><span style="font-weight:bold; text-decoration:underline">(</span><span dir="ltr" style="font-weight:bold; text-decoration:underline"><span dir="ltr"></span>Key Tenses</span><span style="font-weight:bold; text-decoration:underline"><span dir="rtl"></span>)</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">الأزمنة الأساسية في اللغة الإنجليزية وهي</span><span>: </span><span style="font-family:Arial">الماضي </span><span>(</span><span dir="ltr"><span dir="ltr"></span>Past</span><span><span dir="rtl"></span>)</span><span style="font-family:Arial">، الحاضر </span><span>(</span><span dir="ltr"><span dir="ltr"></span>Present</span><span><span dir="rtl"></span>)</span><span style="font-family:Arial">، والمستقبل </span><span>(</span><span dir="ltr"><span dir="ltr"></span>Future</span><span><span dir="rtl"></span>)</span><span style="font-family:Arial">، مع أمثلة وتفاصيل لكل زمن</span><span>.</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="-aw-import:ignore"> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold; text-decoration:underline">1. </span><span style="font-family:Arial; font-weight:bold; text-decoration:underline">الزمن الحاضر </span><span style="font-weight:bold; text-decoration:underline">(</span><span dir="ltr" style="font-weight:bold; text-decoration:underline"><span dir="ltr"></span>Present</span><span style="font-weight:bold; text-decoration:underline"><span dir="rtl"></span>)</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial; font-weight:bold">أ</span><span style="font-weight:bold">. </span><span dir="ltr" style="font-weight:bold"><span dir="ltr"></span>Present Simple</span><span style="font-weight:bold"><span dir="rtl"></span> – </span><span style="font-family:Arial; font-weight:bold">المضارع البسيط</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">الاستخدام</span><span>: </span><span style="font-family:Arial">للحقائق، العادات، والجداول</span><span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span><span style="font-family:Arial">التركيب</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span>(</span><span dir="ltr"><span dir="ltr"></span>Subject + base verb</span><span><span dir="rtl"></span>)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">نضيف </span><span dir="ltr"><span dir="ltr"></span>s</span><span><span dir="rtl"></span> </span><span style="font-family:Arial">للفعل إذا كان الفاعل مفردًا </span><span>(</span><span dir="ltr"><span dir="ltr"></span>He/She/It</span><span><span dir="rtl"></span>)</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">أمثلة</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">I go to school every day</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">He plays football on Fridays</span><span><span dir="rtl"></span>.</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial; font-weight:bold">ب</span><span style="font-weight:bold">. </span><span dir="ltr" style="font-weight:bold"><span dir="ltr"></span>Present Continuous</span><span style="font-weight:bold"><span dir="rtl"></span> – </span><span style="font-family:Arial; font-weight:bold">المضارع المستمر</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">الاستخدام</span><span>: </span><span style="font-family:Arial">لحدث يحدث الآن</span><span>.</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">التركيب</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span>(</span><span dir="ltr"><span><span dir="ltr"></span>Subject + am/is/are + </span><span>verb+ing</span></span><span><span dir="rtl"></span>)</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">أمثلة</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">I am studying English now</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">She is cooking dinner</span><span><span dir="rtl"></span>.</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial; font-weight:bold">ج</span><span style="font-weight:bold">. </span><span dir="ltr" style="font-weight:bold"><span dir="ltr"></span>Present Perfect</span><span style="font-weight:bold"><span dir="rtl"></span> – </span><span style="font-family:Arial; font-weight:bold">المضارع التام</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">الاستخدام</span><span>: </span><span style="font-family:Arial">لحدث بدأ في الماضي وما زال مستمرًا أو نتيجته ظاهرة الآن</span><span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">التركيب</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span>(</span><span dir="ltr"><span dir="ltr"></span>Subject + has/have + past participle</span><span><span dir="rtl"></span>)</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">أمثلة</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">I have finished my homework</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">He has lived here for 5 years</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold; text-decoration:underline">2. </span><span style="font-family:Arial; font-weight:bold; text-decoration:underline">الزمن الماضي </span><span style="font-weight:bold; text-decoration:underline">(</span><span dir="ltr" style="font-weight:bold; text-decoration:underline"><span dir="ltr"></span>Past</span><span style="font-weight:bold; text-decoration:underline"><span dir="rtl"></span>)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial; font-weight:bold">أ</span><span style="font-weight:bold">. </span><span dir="ltr" style="font-weight:bold"><span dir="ltr"></span>Past Simple</span><span style="font-weight:bold"><span dir="rtl"></span> – </span><span style="font-family:Arial; font-weight:bold">الماضي البسيط</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">الاستخدام</span><span>: </span><span style="font-family:Arial">لحدث وقع وانتهى في الماضي</span><span>.</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">التركيب</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span>(</span><span dir="ltr"><span dir="ltr"></span>Subject + past form of verb</span><span><span dir="rtl"></span>)</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">أمثلة</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">I visited my grandmother yesterday</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">They watched a movie last night</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial; font-weight:bold">ب</span><span style="font-weight:bold">. </span><span dir="ltr" style="font-weight:bold"><span dir="ltr"></span>Past Continuous</span><span style="font-weight:bold"><span dir="rtl"></span> – </span><span style="font-family:Arial; font-weight:bold">الماضي المستمر</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">الاستخدام</span><span>: </span><span style="font-family:Arial">لحدث كان مستمرًا في وقت معين بالماضي</span><span>.</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">التركيب</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span>(</span><span dir="ltr"><span><span dir="ltr"></span>Subject + was/were + </span><span>verb+ing</span></span><span><span dir="rtl"></span>)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">أمثلة</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">I was reading at 8 PM</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">They were playing when it started to rain</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial; font-weight:bold">ج</span><span style="font-weight:bold">. </span><span dir="ltr" style="font-weight:bold"><span dir="ltr"></span>Past Perfect</span><span style="font-weight:bold"><span dir="rtl"></span> – </span><span style="font-family:Arial; font-weight:bold">الماضي التام</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">الاستخدام</span><span>: </span><span style="font-family:Arial">لحدث وقع قبل حدث آخر في الماضي</span><span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">التركيب</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span>(</span><span dir="ltr"><span dir="ltr"></span>Subject + had + past participle</span><span><span dir="rtl"></span>)</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">أمثلة</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">I had eaten before they arrived</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">She had finished her work before noon</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold">3. </span><span style="font-family:Arial; font-weight:bold">الزمن المستقبل </span><span style="font-weight:bold">(</span><span dir="ltr" style="font-weight:bold"><span dir="ltr"></span>Future</span><span style="font-weight:bold"><span dir="rtl"></span>)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial; font-weight:bold">أ</span><span style="font-weight:bold">. </span><span dir="ltr" style="font-weight:bold"><span dir="ltr"></span>Future Simple</span><span style="font-weight:bold"><span dir="rtl"></span> – </span><span style="font-family:Arial; font-weight:bold">المستقبل البسيط</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">الاستخدام</span><span>: </span><span style="font-family:Arial">لحدث سيقع في المستقبل</span><span>.</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">التركيب</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span>(</span><span dir="ltr"><span dir="ltr"></span>Subject + will + base verb</span><span><span dir="rtl"></span>)</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">أمثلة</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">I will travel tomorrow</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">She will help you</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial; font-weight:bold">ب</span><span style="font-weight:bold">. </span><span dir="ltr" style="font-weight:bold"><span dir="ltr"></span>Be going to</span><span style="font-weight:bold"><span dir="rtl"></span> – </span><span style="font-family:Arial; font-weight:bold">نية مسبقة أو شيء مخطط له</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">الاستخدام</span><span>: </span><span style="font-family:Arial">لخطط مؤكدة في المستقبل أو توقع بناء على دليل</span><span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">التركيب</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span>(</span><span dir="ltr"><span dir="ltr"></span>Subject + am/is/are going to + base verb</span><span><span dir="rtl"></span>)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">أمثلة</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">I am going to start a new job next week</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">It is going to rain soon</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial; font-weight:bold">ج</span><span style="font-weight:bold">. </span><span dir="ltr" style="font-weight:bold"><span dir="ltr"></span>Future Continuous</span><span style="font-weight:bold"><span dir="rtl"></span> – </span><span style="font-family:Arial; font-weight:bold">المستقبل المستمر</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">الاستخدام</span><span>: </span><span style="font-family:Arial">لحدث سيكون مستمرًا في وقت معين بالمستقبل</span><span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">التركيب</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span>(</span><span dir="ltr"><span><span dir="ltr"></span>Subject + will be + </span><span>verb+ing</span></span><span><span dir="rtl"></span>)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">أمثلة</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">I will be studying at 10 PM</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">They will be waiting for you</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold; text-decoration:underline">5. </span><span style="font-family:Arial; font-weight:bold; text-decoration:underline">أدوات الربط </span><span style="font-weight:bold; text-decoration:underline">(</span><span dir="ltr" style="font-weight:bold; text-decoration:underline"><span dir="ltr"></span>Conjunctions</span><span style="font-weight:bold; text-decoration:underline"><span dir="rtl"></span>)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">and</span><span><span dir="rtl"></span> = </span><span style="font-family:Arial">و</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">but</span><span><span dir="rtl"></span> = </span><span style="font-family:Arial">لكن</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">because</span><span><span dir="rtl"></span> = </span><span style="font-family:Arial">لأن</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">although</span><span><span dir="rtl"></span> = </span><span style="font-family:Arial">رغم أن</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">مثال</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">I</span><span><span dir="rtl"></span>’</span><span dir="ltr"><span dir="ltr"></span>m tired but I</span><span><span dir="rtl"></span>’</span><span dir="ltr"><span><span dir="ltr"></span>ll</span><span> study</span></span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">She stayed home because she was sick</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold; text-decoration:underline">6. </span><span style="font-family:Arial; font-weight:bold; text-decoration:underline">المبني للمجهول </span><span style="font-weight:bold; text-decoration:underline">(</span><span dir="ltr" style="font-weight:bold; text-decoration:underline"><span dir="ltr"></span>Passive Voice</span><span style="font-weight:bold; text-decoration:underline"><span dir="rtl"></span>)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">القاعدة</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">Object + be + past participle</span><span><span dir="rtl"></span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">مثال</span><span>:</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">The cake was eaten</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">English is spoken worldwide</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold; text-decoration:underline">7. </span><span style="font-family:Arial; font-weight:bold; text-decoration:underline">أدوات التعريف </span><span style="font-weight:bold; text-decoration:underline">(</span><span dir="ltr" style="font-weight:bold; text-decoration:underline"><span dir="ltr"></span>Articles</span><span style="font-weight:bold; text-decoration:underline"><span dir="rtl"></span>)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">a / an</span><span><span dir="rtl"></span>: </span><span style="font-family:Arial">لأول مرة ولشيء غير معروف</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">a book, an orange</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">the</span><span><span dir="rtl"></span>: </span><span style="font-family:Arial">لشيء معروف</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">The sun, the teacher</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold; text-decoration:underline">8. </span><span style="font-family:Arial; font-weight:bold; text-decoration:underline">أسماء تعد وغير تعد</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold; text-decoration:underline">(</span><span dir="ltr" style="font-weight:bold; text-decoration:underline"><span dir="ltr"></span>Countable vs. Uncountable Nouns</span><span><span dir="rtl"></span>)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr" style="font-weight:bold">Countable</span><span style="font-weight:bold"><span dir="rtl"></span>: </span><span dir="ltr"><span dir="ltr"></span>book, apple</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">تستعمل</span><span>: </span><span dir="ltr"><span dir="ltr"></span>a, many, few</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr" style="font-weight:bold">Uncountable</span><span style="font-weight:bold"><span dir="rtl"></span>:</span><span> </span><span dir="ltr"><span dir="ltr"></span>water, advice</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">تستعمل</span><span>: </span><span dir="ltr"><span dir="ltr"></span>much, little</span><span><span dir="rtl"></span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">خطأ شائع</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr"><span>I have many advices</span></span><span><span dir="rtl"></span> </span><span style="font-family:'Segoe UI Emoji'">❌</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">I have much advice</span><span><span dir="rtl"></span> </span><span style="font-family:'Segoe UI Emoji'">✅</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold; text-decoration:underline">9. </span><span style="font-family:Arial; font-weight:bold; text-decoration:underline">الصفات والظروف </span><span style="font-weight:bold; text-decoration:underline">(</span><span dir="ltr" style="font-weight:bold; text-decoration:underline"><span dir="ltr"></span>Adjectives vs. Adverbs</span><span style="font-weight:bold; text-decoration:underline"><span dir="rtl"></span>)</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">Adjective</span><span><span dir="rtl"></span> (</span><span style="font-family:Arial">صفة</span><span>): </span><span style="font-family:Arial">تصف اسم </span><span>– </span><span dir="ltr"><span dir="ltr"></span>She is happy</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">Adverb</span><span><span dir="rtl"></span> (</span><span style="font-family:Arial">حال</span><span>): </span><span style="font-family:Arial">تصف فعل </span><span>– </span><span dir="ltr"><span dir="ltr"></span>She sings beautifully</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold; text-decoration:underline">10. </span><span style="font-family:Arial; font-weight:bold; text-decoration:underline">حروف الجر المهمة </span><span style="font-weight:bold; text-decoration:underline">(</span><span dir="ltr" style="font-weight:bold; text-decoration:underline"><span dir="ltr"></span>Prepositions</span><span style="font-weight:bold; text-decoration:underline"><span dir="rtl"></span>)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><img alt="A white grid with black text" height="292" src="https://i.postimg.cc/G3VPMnHR/1.jpg" style="" width="282"/><span> </span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial; font-weight:bold">نصائح سريعة لحروف الجر في الاختبار</span><span style="font-weight:bold">:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">دائمًا راجع التعبيرات الثابتة </span><span>(</span><span dir="ltr"><span dir="ltr"></span>Fixed Expressions</span><span><span dir="rtl"></span>)</span><span style="font-family:Arial">، مثل</span><span>:</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">good at</span><span><span dir="rtl"></span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">interested in</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">afraid of</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">depend on</span><span><span dir="rtl"></span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span><span style="font-family:Arial">احفظ الاستخدام مع الكلمات، مثل</span><span>:</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">arrive at a place</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">arrive in a city/country</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr"><span>think about something</span></span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">listen to music</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span><span> </span><span style="font-weight:bold; text-decoration:underline">11. </span><span style="font-family:Arial; font-weight:bold; text-decoration:underline">المقارنة والتفضيل</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold; text-decoration:underline">(</span><span dir="ltr" style="font-weight:bold; text-decoration:underline"><span dir="ltr"></span>Comparative</span><span style="font-weight:bold; text-decoration:underline"><span dir="rtl"></span> &amp; </span><span dir="ltr" style="font-weight:bold; text-decoration:underline"><span dir="ltr"></span>Superlative</span><span style="font-weight:bold; text-decoration:underline"><span dir="rtl"></span>)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr" style="font-weight:bold">Comparative</span><span style="font-weight:bold"><span dir="rtl"></span> (</span><span style="font-family:Arial; font-weight:bold">مقارنة بين اثنين</span><span style="font-weight:bold">):</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">taller, more expensive</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">مثال</span><span>: </span><span dir="ltr"><span dir="ltr"></span>Ali is</span><span><span dir="rtl"></span> </span><span dir="ltr" style="font-weight:bold"><span dir="ltr"></span>taller</span><span><span dir="rtl"></span> </span><span dir="ltr"><span dir="ltr"></span>than Omar</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr" style="font-weight:bold">Superlative</span><span style="font-weight:bold"><span dir="rtl"></span> (</span><span style="font-family:Arial; font-weight:bold">الأفضل بين مجموعة</span><span style="font-weight:bold">):</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr"><span>the tallest, the most expensive</span></span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">مثال</span><span>: </span><span dir="ltr"><span dir="ltr"></span>This is</span><span><span dir="rtl"></span> </span><span dir="ltr" style="font-weight:bold"><span dir="ltr"></span>the best</span><span><span dir="rtl"></span> </span><span dir="ltr"><span dir="ltr"></span>movie</span><span><span dir="rtl"></span>.</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold; text-decoration:underline">12. </span><span style="font-family:Arial; font-weight:bold; text-decoration:underline">النفي </span><span style="font-weight:bold; text-decoration:underline">(</span><span dir="ltr" style="font-weight:bold; text-decoration:underline"><span dir="ltr"></span>Negation</span><span style="font-weight:bold; text-decoration:underline"><span dir="rtl"></span>)</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr" style="font-weight:bold">Present Simple</span><span style="font-weight:bold"><span dir="rtl"></span>:</span><span> </span><span dir="ltr"><span><span dir="ltr"></span>He </span><span>doesn</span></span><span><span dir="rtl"></span>’</span><span dir="ltr"><span dir="ltr"></span>t like tea</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr" style="font-weight:bold">Past Simple</span><span style="font-weight:bold"><span dir="rtl"></span>:</span><span> </span><span dir="ltr"><span><span dir="ltr"></span>She </span><span>didn</span></span><span><span dir="rtl"></span>’</span><span dir="ltr"><span dir="ltr"></span>t go out</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr" style="font-weight:bold">To be</span><span style="font-weight:bold"><span dir="rtl"></span>:</span><span> </span><span dir="ltr"><span><span dir="ltr"></span>They </span><span>aren</span></span><span><span dir="rtl"></span>’</span><span dir="ltr"><span dir="ltr"></span>t here</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr" style="font-weight:bold">Modals</span><span style="font-weight:bold"><span dir="rtl"></span>: </span><span dir="ltr"><span dir="ltr"></span>You can</span><span><span dir="rtl"></span>’</span><span dir="ltr"><span dir="ltr"></span>t do that</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold; text-decoration:underline">13. </span><span style="font-family:Arial; font-weight:bold; text-decoration:underline">الأسئلة </span><span style="font-weight:bold; text-decoration:underline">(</span><span dir="ltr" style="font-weight:bold; text-decoration:underline"><span dir="ltr"></span>Questions</span><span style="font-weight:bold; text-decoration:underline"><span dir="rtl"></span>)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr"><span style="font-weight:bold">Wh-Questions</span></span><span style="font-weight:bold"><span dir="rtl"></span>:</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr"><span>What, Where, When, Why, How</span></span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">مثال</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">Where do you live</span><span><span dir="rtl"></span>?</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr" style="font-weight:bold">Yes/No Questions</span><span style="font-weight:bold"><span dir="rtl"></span>:</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">Do you like coffee</span><span><span dir="rtl"></span>?</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">Is she your sister</span><span><span dir="rtl"></span>?</span><span> </span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="-aw-import:ignore"> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial; font-weight:bold; text-decoration:underline">نصائح عامة مهمة جداً</span><span style="font-weight:bold; text-decoration:underline">:</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold; text-decoration:underline">1. </span><span style="font-family:Arial; font-weight:bold; text-decoration:underline">ركز على الزمن في الأسئلة </span><span style="font-weight:bold; text-decoration:underline">(</span><span dir="ltr" style="font-weight:bold; text-decoration:underline"><span dir="ltr"></span>past, present, future</span><span style="font-weight:bold; text-decoration:underline"><span dir="rtl"></span>):</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span>&gt; </span><span style="font-family:Arial">إذا شفت </span><span>"</span><span dir="ltr"><span dir="ltr"></span>yesterday</span><span><span dir="rtl"></span>" → </span><span style="font-family:Arial">الماضي</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">إذا شفت </span><span>"</span><span dir="ltr"><span dir="ltr"></span>will</span><span><span dir="rtl"></span>" </span><span style="font-family:Arial">أو </span><span>"</span><span dir="ltr"><span dir="ltr"></span>tomorrow</span><span><span dir="rtl"></span>" → </span><span style="font-family:Arial">المستقبل</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">إذا ما في مؤشرات </span><span>→ </span><span style="font-family:Arial">الغالب المضارع البسيط</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold; text-decoration:underline">2. </span><span style="font-family:Arial; font-weight:bold; text-decoration:underline">الضمائر</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span>(</span><span dir="ltr"><span dir="ltr"></span>he, she, it, they</span><span><span dir="rtl"></span>...) → </span><span style="font-family:Arial">احذر من الخطأ في التوافق مع الأفعال </span><span>(</span><span dir="ltr"><span dir="ltr"></span>he wants / they want</span><span><span dir="rtl"></span>)</span><span> </span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold; text-decoration:underline">3. </span><span style="font-family:Arial; font-weight:bold; text-decoration:underline">الأفعال المساعدة</span><span style="font-weight:bold; text-decoration:underline">:</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span>&gt; </span><span dir="ltr"><span dir="ltr"></span>do/does</span><span><span dir="rtl"></span> → </span><span style="font-family:Arial">للمضارع</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">did</span><span><span dir="rtl"></span> → </span><span style="font-family:Arial">للماضي</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">will</span><span><span dir="rtl"></span> → </span><span style="font-family:Arial">للمستقبل</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">don't</span><span><span dir="rtl"></span> </span><span style="font-family:Arial">تستخدم فعل ثاني بعدهم بصيغة مجردة</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span><span>(</span><span dir="ltr"><span dir="ltr"></span>He does not eat, NOT eats</span><span><span dir="rtl"></span>)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold; text-decoration:underline">4. </span><span style="font-family:Arial; font-weight:bold; text-decoration:underline">الربط بين الجمل</span><span style="font-weight:bold; text-decoration:underline">:</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span>&gt; </span><span dir="ltr"><span dir="ltr"></span>because</span><span><span dir="rtl"></span> = </span><span style="font-family:Arial">لأن</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">although</span><span><span dir="rtl"></span> = </span><span style="font-family:Arial">رغم أن</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">so</span><span><span dir="rtl"></span> = </span><span style="font-family:Arial">لذلك</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">however</span><span><span dir="rtl"></span> = </span><span style="font-family:Arial">مع ذلك</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold; text-decoration:underline">5. </span><span style="font-family:Arial; font-weight:bold; text-decoration:underline">كلمات تجيك كثير بالاختبار</span><span style="font-weight:bold; text-decoration:underline">:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">according to</span><span><span dir="rtl"></span> = </span><span style="font-family:Arial">وفقاً لـ</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr"><span>for example</span></span><span><span dir="rtl"></span> = </span><span style="font-family:Arial">على سبيل المثال</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">in contrast</span><span><span dir="rtl"></span> = </span><span style="font-family:Arial">في المقابل</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr"><span>in addition</span></span><span><span dir="rtl"></span> = </span><span style="font-family:Arial">بالإضافة إلى</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">such as</span><span><span dir="rtl"></span> = </span><span style="font-family:Arial">مثل</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial; font-weight:bold; text-decoration:underline">الاستماع </span><span dir="ltr" style="font-weight:bold; text-decoration:underline"><span dir="ltr"></span>Listening</span><span style="font-weight:bold; text-decoration:underline"><span dir="rtl"></span>:</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">ركز على الفكرة العامة وليس كل كلمة</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">حاول تميز النبرة </span><span>(</span><span style="font-family:Arial">هل الشخص متفاجئ؟ ينصح؟ يرفض؟</span><span>)</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">راقب الكلمات المفتاحية زي</span><span>: </span><span dir="ltr"><span dir="ltr"></span>I think, maybe, should, let's</span><span><span dir="rtl"></span>...</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial; font-weight:bold; text-decoration:underline">القراءة </span><span dir="ltr" style="font-weight:bold; text-decoration:underline"><span dir="ltr"></span>Reading</span><span style="font-weight:bold; text-decoration:underline"><span dir="rtl"></span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">اقرأ السؤال أولاً قبل القطعة</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">خذ نظرة عامة على القطعة </span><span>(</span><span style="font-family:Arial">لا تحاول تترجم كل شيء</span><span>)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">ابحث عن الكلمات المطابقة من السؤال في النص</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">الاختيارات الخادعة</span><span>:</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">غالباً يكون في خيار </span><span>"</span><span style="font-family:Arial">يشبه الجواب الصح بس في كلمة وحدة تغير المعنى</span><span>"</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">لا تختار الجواب بسرعة إلا إذا كنت متأكد</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial; font-weight:bold; text-decoration:underline">أخطاء شائعة تجنبها</span><span style="font-weight:bold; text-decoration:underline">:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><img alt="" height="340" src="https://i.postimg.cc/W45ggQQQ/2.jpg" style="" width="342"/></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="-aw-import:ignore"> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span><img alt="" height="302" src="https://i.postimg.cc/JngXdj7x/3.jpg" style="" width="322"/></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="-aw-import:ignore"> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><img alt="" height="321" src="https://i.postimg.cc/nVC1hHX8/4.jpg" style="" width="376"/></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><img alt="" height="285" src="https://i.postimg.cc/44qQKrcY/5.jpg" style="" width="355"/></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><img alt="" height="508" src="https://i.postimg.cc/bwj0gk38/6.jpg" style="" width="339"/><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><img alt="" height="293" src="https://i.postimg.cc/bvyxcP7B/7.jpg" style="" width="324"/></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial; font-weight:bold; text-decoration:underline">أشياء غالبًا يغفل عنها</span><span style="font-weight:bold; text-decoration:underline">:</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">أ</span><span>) </span><span style="font-family:Arial; font-weight:bold">الكلمات الانتقالية </span><span style="font-weight:bold">(</span><span dir="ltr" style="font-weight:bold"><span dir="ltr"></span>Transition Words</span><span style="font-weight:bold"><span dir="rtl"></span>)</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">too, either, although, in fact, instead of</span><span><span dir="rtl"></span>,</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">such as</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">سبب أهميتها؟ تسهل فهم السياق في الاستماع والقراءة </span><span>+ </span><span style="font-family:Arial">تساعدك تفهم معنى الجملة بدقة</span><span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">ب</span><span>) </span><span style="font-family:Arial; font-weight:bold">العبارات الاصطلاحية </span><span style="font-weight:bold">(</span><span dir="ltr" style="font-weight:bold"><span dir="ltr"></span>Idioms</span><span style="font-weight:bold"><span dir="rtl"></span>)</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">أشهر </span><span>20 </span><span dir="ltr"><span dir="ltr"></span>Idiom</span><span><span dir="rtl"></span> </span><span style="font-family:Arial">مع المعنى العربي</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span><span> </span><span> </span><img alt="" height="518" src="https://i.postimg.cc/2504CJm8/8.jpg" style="" width="624"/></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="-aw-import:ignore"> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><img alt="" height="240" src="https://i.postimg.cc/hjwTddfk/9.jpg" style="width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px; margin: 10px 0;" width="624"/></p><p dir="rtl" style="margin-right:36pt; text-align:left"><img alt="" height="184" src="https://i.postimg.cc/NG91wpnB/10.jpg" style="" width="624"/></p><p dir="rtl" style="margin-right:36pt; text-align:left"><img alt="" height="275" src="https://i.postimg.cc/3rs2r2Mp/11.jpg" style="" width="544"/></p><p dir="rtl" style="margin-right:36pt; text-align:left"><img alt="" height="364" src="https://i.postimg.cc/CLbkRdY2/12.jpg" style="" width="448"/><img alt="A close-up of a stamp
+
+AI-generated content may be incorrect." height="92" src="https://i.postimg.cc/Sxq8Cqxx/13.jpg" style="" width="586"/></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr" style="-aw-import:ignore"> </span></p></div></div><button onclick="calculateScore()">عرض النتيجة النهائية</button>
+<div id="result"></div>
+</div>
+
+<!-- قسم Korn-Ferry الجديد -->
+<div class="tabcontent" id="kornferry">
+<h2>اختبار Korn-Ferry</h2>
+<div class="section-info">
+<p>اختبار كفاءات لقياس المهارات القيادية والتحليلية (لا يدخل في نتيجة TOEFL).</p>
+</div>
+<div id="kornferry-container"></div>
+<button onclick="calculateKornFerryScore()">حساب نتيجة Korn-Ferry</button>
+<div id="kornferry-result"></div>
+</div>
+
+<button onclick="calculateScore()">عرض النتيجة النهائية</button>
+<div id="result"></div>
+</div>
+
+<script>
         // متغيرات المؤقت
         let seconds = 0;
         let minutes = 0;
@@ -1393,6 +1485,451 @@
   }
         ];
 
+        // أسئلة اختبار Korn-Ferry (40 سؤالاً)
+        const kornFerryQuestions = [    
+    {
+        question: "1. عند مواجهة مشكلة معقدة، ما هو أول شيء تقوم به؟",
+        options: [
+            "A) تجمع أكبر قدر من المعلومات حول المشكلة",
+            "B) تبحث عن حلول سريعة ومباشرة",
+            "C) تستشير زملاءك للحصول على آرائهم",
+            "D) تحلل المشكلة إلى أجزاء أصغر لفهمها بشكل أفضل"
+        ],
+        correctAnswer: 3,
+        explanation: "الإجابة الصحيحة: D) تحلل المشكلة إلى أجزاء أصغر لفهمها بشكل أفضل."
+    },
+    {
+        question: "2. كيف تتعامل مع المواقف التي تحتاج إلى اتخاذ قرار سريع؟",
+        options: [
+            "A) أتخذ القرار بناءً على خبرتي السريعة",
+            "B) أطلب المزيد من الوقت للتفكير",
+            "C) أستشير رئيسي في العمل قبل اتخاذ أي قرار",
+            "D) أحلل الخيارات المتاحة بسرعة ثم أتخذ القرار"
+        ],
+        correctAnswer: 3,
+        explanation: "الإجابة الصحيحة: D) القدرة على التحليل السريع واتخاذ قرار حاسم هي سمة قيادية مهمة."
+    },
+    {
+        question: "3. في العمل الجماعي، ما هو دورك الأكثر تفضيلًا؟",
+        options: [
+            "A) القيادة والتوجيه",
+            "B) تقديم أفكار جديدة",
+            "C) تنظيم العمل وتنفيذه",
+            "D) التعاون والتواصل مع الزملاء"
+        ],
+        correctAnswer: 0,
+        explanation: "الإجابة الصحيحة: A) القيادة الفعّالة تساهم في نجاح الفريق."
+    },
+    {
+        question: "4. عند مواجهة أزمة في العمل، كيف تتصرف؟",
+        options: [
+            "A) أعمل على إيجاد حل فوري",
+            "B) أبحث عن مزيد من البيانات حول الوضع",
+            "C) أطلب من الفريق إيجاد الحلول",
+            "D) أتجنب اتخاذ أي قرار حتى أكون متأكدًا"
+        ],
+        correctAnswer: 1,
+        explanation: "الإجابة الصحيحة: B) البحث عن بيانات إضافية يعكس التفكير المنهجي."
+    },
+    {
+        question: "5. إذا كنت تعمل على مشروع مع فريق، كيف تتعامل مع الصراع بين الأعضاء؟",
+        options: [
+            "A) أتجاهل الصراع وأواصل العمل",
+            "B) أتدخل وأحاول حل المشكلة بسرعة",
+            "C) أطلب من كل عضو أن يعبّر عن رأيه بوضوح",
+            "D) أطلب من المدير التدخل لحل المشكلة"
+        ],
+        correctAnswer: 2,
+        explanation: "الإجابة الصحيحة: C) التفاعل المباشر يساعد على تسوية الصراعات."
+    },
+    {
+        question: "6. كيف تدير وقتك عند وجود مهام متعددة ذات مواعيد نهائية ضيقة؟",
+        options: [
+            "A) أركز على المهمة الأكثر إلحاحًا أولاً",
+            "B) أعمل على المهام بالتوازي وأخصص وقتًا لكل واحدة",
+            "C) أؤجل المهام التي يمكن تأجيلها",
+            "D) أستعين بفريق العمل للمساعدة"
+        ],
+        correctAnswer: 1,
+        explanation: "الإجابة الصحيحة: B) إدارة المهام بالتوازي تساعد في تنظيم الوقت بشكل فعال."
+    },
+    {
+        question: "7. عند العمل في بيئة تتغير باستمرار، كيف تتعامل؟",
+        options: [
+            "A) أتجاهل التغييرات وأواصل العمل كما هو",
+            "B) أقبل التغيير وأتكيف معه بسرعة",
+            "C) أطلب من الزملاء مساعدتي في التكيف",
+            "D) أبحث عن حلول مبتكرة للتكيف مع التغيير"
+        ],
+        correctAnswer: 1,
+        explanation: "الإجابة الصحيحة: B) التكيف السريع مع التغيير يعد سمة من سمات القيادة الفعّالة."
+    },
+    {
+        question: "8. كيف تتعامل مع مشكلات تحتاج إلى حلول مبتكرة؟",
+        options: [
+            "A) أبحث عن حلول مبتكرة ضمن الفريق",
+            "B) أتبع الطرق التقليدية لحل المشكلة",
+            "C) أستعين بخبراء خارجيين لحل المشكلة",
+            "D) أحاول إيجاد حلول منفردة"
+        ],
+        correctAnswer: 0,
+        explanation: "الإجابة الصحيحة: A) التعاون مع الفريق يؤدي إلى حلول مبتكرة."
+    },
+    {
+        question: "9. كيف تقيّم مستوى الأداء في الفريق؟",
+        options: [
+            "A) أقيّم الأداء بناءً على النتائج فقط",
+            "B) أستعرض الأداء مع الفريق بشكل دوري",
+            "C) أركز على تحسين نقاط الضعف في الفريق",
+            "D) أضع معايير واضحة للأداء وأتابعها"
+        ],
+        correctAnswer: 1,
+        explanation: "الإجابة الصحيحة: B) التقييم الدوري يساعد على تحسين الأداء."
+    },
+    {
+        question: "10. عندما تواجه مشروعًا جديدًا، كيف تبدأ؟",
+        options: [
+            "A) أضع خطة تفصيلية وأبدأ في تنفيذها",
+            "B) أبحث عن معلومات إضافية لتطوير فكرة المشروع",
+            "C) أستشير الزملاء للحصول على آرائهم",
+            "D) أضع أهدافًا محددة وأبدأ بتنفيذها مباشرة"
+        ],
+        correctAnswer: 0,
+        explanation: "الإجابة الصحيحة: A) التخطيط الفعّال يعد بداية جيدة للمشروع."
+    },
+    {
+        question: "11. عند التعامل مع مشكلة في الفريق، ما أول خطوة تتخذها؟",
+        options: [
+            "A) أستمع إلى جميع الأعضاء",
+            "B) أطلب من الفريق إيجاد الحل",
+            "C) أبحث عن بيانات جديدة لحل المشكلة",
+            "D) أترك الفريق يحل المشكلة وحده"
+        ],
+        correctAnswer: 0,
+        explanation: "الإجابة الصحيحة: A) الاستماع للجميع يعزز الفهم المتبادل."
+    },
+    {
+        question: "12. كيف تتعامل مع تغيير في خطط العمل؟",
+        options: [
+            "A) أقبل التغيير وأتكيف بسرعة",
+            "B) أعارض التغيير وأبذل جهدًا لتأخير تطبيقه",
+            "C) أبحث عن بدائل للتعامل مع التغيير",
+            "D) ألتزم بالخطط الأصلية بغض النظر عن التغيير"
+        ],
+        correctAnswer: 0,
+        explanation: "الإجابة الصحيحة: A) التكيف السريع مع التغيير يعكس مهارات القيادة."
+    },
+    {
+        question: "13. عندما تواجه فريقًا من الأشخاص الذين لديهم وجهات نظر مختلفة، كيف تدير الموقف؟",
+        options: [
+            "A) أتجاهل وجهات النظر المختلفة وأمضي قدماً",
+            "B) أستمع لجميع الآراء وأبحث عن حل وسط",
+            "C) أختار أفضل فكرة وأتبعها",
+            "D) أطلب من الجميع التوافق على فكرة واحدة"
+        ],
+        correctAnswer: 1,
+        explanation: "الإجابة الصحيحة: B) الاستماع لجميع الآراء يساعد في التوصل إلى حلول مبتكرة."
+    },
+    {
+        question: "14. في بيئة عمل سريعة التغير، كيف تتعامل مع التحديات؟",
+        options: [
+            "A) أبحث عن حلول قصيرة المدى لحل المشاكل بسرعة",
+            "B) أركز على الحلول طويلة المدى للتأكد من الاستدامة",
+            "C) أستعين بالزملاء لإيجاد الحلول",
+            "D) أعمل بمفردي لحل التحديات بشكل أسرع"
+        ],
+        correctAnswer: 1,
+        explanation: "الإجابة الصحيحة: B) التفكير في الحلول طويلة المدى يساعد في الاستدامة."
+    },
+    {
+        question: "15. عندما تواجه تعارضًا في الأهداف، كيف تدير الموقف؟",
+        options: [
+            "A) أتجاهل التعارض وأواصل العمل",
+            "B) أبحث عن اتفاق وسط لتحقيق التوازن",
+            "C) أطلب من الجميع أن يتفقوا على هدف واحد",
+            "D) أطلب من الفريق اتخاذ القرار بشكل جماعي"
+        ],
+        correctAnswer: 1,
+        explanation: "الإجابة الصحيحة: B) التوصل إلى اتفاق وسط يساعد في توجيه الفريق نحو هدف مشترك."
+    },
+    {
+        question: "16. كيف تقيم النجاح في فريقك؟",
+        options: [
+            "A) بناءً على الأداء الفردي لكل عضو",
+            "B) بناءً على نجاح الفريق ككل",
+            "C) بناءً على عدد ساعات العمل",
+            "D) بناءً على رضا العملاء فقط"
+        ],
+        correctAnswer: 1,
+        explanation: "الإجابة الصحيحة: B) النجاح يعتمد على الفريق ككل."
+    },
+    {
+        question: "17. عندما تقوم بمشروع جديد، كيف تتعامل مع المخاطر؟",
+        options: [
+            "A) أتجاهل المخاطر وأكمل العمل",
+            "B) أبحث عن أفضل طرق لتقليل المخاطر",
+            "C) أطلب من الفريق أن يدير المخاطر",
+            "D) أتجنب المشاريع التي تحتوي على مخاطر"
+        ],
+        correctAnswer: 1,
+        explanation: "الإجابة الصحيحة: B) التعامل مع المخاطر هو جزء من التحليل واتخاذ القرار."
+    },
+    {
+        question: "18. كيف تتعامل مع مجموعة من الأشخاص ذوي الخبرات المختلفة؟",
+        options: [
+            "A) أتعامل مع الجميع بنفس الطريقة",
+            "B) أستفيد من خبرات كل شخص لتحقيق أفضل النتائج",
+            "C) أركز فقط على الخبرات الأكثر صلة بالمشروع",
+            "D) أطلب من الأشخاص العمل بشكل فردي"
+        ],
+        correctAnswer: 1,
+        explanation: "الإجابة الصحيحة: B) الاستفادة من تجارب متعددة يساهم في اتخاذ قرارات أفضل."
+    },
+    {
+        question: "19. في المواقف الضاغطة، كيف تتعامل؟",
+        options: [
+            "A) أركز على المهمة التي أمامي وأكملها بسرعة",
+            "B) أطلب من الفريق مساعدتي لتخفيف الضغط",
+            "C) أرتاح وأعود للمهمة بعد فترة قصيرة",
+            "D) أستعين بخبرتي السابقة لتجاوز الموقف"
+        ],
+        correctAnswer: 1,
+        explanation: "الإجابة الصحيحة: B) التعاون في المواقف الضاغطة يساعد في تخفيف الضغط."
+    },
+    {
+        question: "20. كيف تتعامل مع الابتكار في بيئة العمل؟",
+        options: [
+            "A) أرفض الابتكار وألتزم بالطرق التقليدية",
+            "B) أشجع الابتكار وأبحث عن طرق جديدة لتحسين الأداء",
+            "C) أتجاهل الابتكار وأترك الأمور تسير كما هي",
+            "D) أبحث عن حلول مبتكرة فقط عندما تكون ضرورية"
+        ],
+        correctAnswer: 1,
+        explanation: "الإجابة الصحيحة: B) الابتكار هو جزء أساسي من تحسين بيئة العمل."
+    },
+    {
+        question: "21. كيف تتعامل مع التحديات المجهولة في العمل؟",
+        options: [
+            "A) أبحث عن الخبرات السابقة للتعامل مع التحدي",
+            "B) أتخذ قرارًا سريعًا استنادًا إلى الحدس",
+            "C) أطلب الدعم من الزملاء",
+            "D) أدرس المشكلة بشكل دقيق قبل اتخاذ أي قرار"
+        ],
+        correctAnswer: 3,
+        explanation: "الإجابة الصحيحة: D) دراسة المشكلة بشكل دقيق يظهر القدرة على التفكير التحليلي."
+    },
+    {
+        question: "22. عند اتخاذ قرار مهم، كيف تقيم الخيارات المتاحة؟",
+        options: [
+            "A) أختار الخيار الذي يحقق أكبر مكسب سريع",
+            "B) أبحث عن حلول مبتكرة بشكل عشوائي",
+            "C) أوازن بين المزايا والعيوب لكل خيار",
+            "D) أستعين بآراء الآخرين فقط"
+        ],
+        correctAnswer: 2,
+        explanation: "الإجابة الصحيحة: C) تقييم الخيارات المتاحة بعناية يساعد في اتخاذ القرار الصائب."
+    },
+    {
+        question: "23. كيف تتعامل مع الأهداف التي تكون خارج نطاق سيطرتك؟",
+        options: [
+            "A) أعمل على تجاوزها بشكل سريع",
+            "B) أضع خطة بديلة لتحقيق أهداف أخرى متاحة",
+            "C) أتجاهلها وأركز على الأهداف التي أستطيع التحكم فيها",
+            "D) أبحث عن طرق للتأثير على الأهداف خارج نطاقي"
+        ],
+        correctAnswer: 1,
+        explanation: "الإجابة الصحيحة: B) وضع خطة بديلة يساعد في تحقيق الأهداف المتاحة."
+    },
+    {
+        question: "24. كيف تشجع فريقك على تحسين الأداء؟",
+        options: [
+            "A) أضع معايير أداء صارمة جدًا",
+            "B) أقدم الدعم المستمر وأوضح التوقعات",
+            "C) أركز على المكافآت دون الاهتمام بالتدريب",
+            "D) أتركهم يعملون دون تدخل"
+        ],
+        correctAnswer: 1,
+        explanation: "الإجابة الصحيحة: B) تقديم الدعم والتوجيه يسهم في تحسين الأداء."
+    },
+    {
+        question: "25. كيف تدير المشروعات التي تحتوي على الكثير من التحديات؟",
+        options: [
+            "A) أبحث عن الحلول السريعة لحل التحديات",
+            "B) أضع خطة مفصلة وأتابع كل خطوة",
+            "C) أترك الفريق يتعامل مع التحديات بنفسه",
+            "D) أركز فقط على الجانب الإبداعي"
+        ],
+        correctAnswer: 1,
+        explanation: "الإجابة الصحيحة: B) التخطيط المنظم ضروري لمواجهة التحديات."
+    },
+    {
+        question: "26. كيف تتعامل مع موظفين جدد في الفريق؟",
+        options: [
+            "A) أطلب منهم العمل بشكل مستقل من البداية",
+            "B) أقدم لهم التدريب اللازم وأوضح لهم مهامهم",
+            "C) أتركهم يكتشفون العمل بأنفسهم",
+            "D) أطلب منهم ملاحظة ما يفعله الآخرون"
+        ],
+        correctAnswer: 1,
+        explanation: "الإجابة الصحيحة: B) تقديم التدريب والدعم الجيد يساعد الموظفين الجدد على النجاح."
+    },
+    {
+        question: "27. كيف تقيم تأثير قراراتك على الفريق؟",
+        options: [
+            "A) بناءً على النتائج التي تم الحصول عليها",
+            "B) من خلال الملاحظات الشفهية من الأفراد",
+            "C) من خلال شعور الفريق بالرضا",
+            "D) باستخدام مؤشرات الأداء الرئيسية"
+        ],
+        correctAnswer: 0,
+        explanation: "الإجابة الصحيحة: A) النتائج التي يتم الحصول عليها تعد أفضل مقياس لتأثير القرارات."
+    },
+    {
+        question: "28. كيف تتعامل مع مسؤوليات متعددة في وقت واحد؟",
+        options: [
+            "A) أركز على مهمة واحدة وأكملها ثم أبدأ الأخرى",
+            "B) أستعين بفريق العمل لتوزيع المهام",
+            "C) أعمل على المهام بشكل متوازي وأخصص وقتًا لكل واحدة",
+            "D) أؤجل بعض المهام حتى أتمكن من إتمام المهام الأخرى"
+        ],
+        correctAnswer: 2,
+        explanation: "الإجابة الصحيحة: C) العمل على المهام بشكل متوازي يعزز الإنتاجية."
+    },
+    {
+        question: "29. عندما تواجه موقفًا يحتاج إلى اتخاذ قرارات حاسمة، كيف تتصرف؟",
+        options: [
+            "A) أتبع قراراتي الخاصة دون استشارة الآخرين",
+            "B) أستعين بمشورة الفريق قبل اتخاذ القرار",
+            "C) أتخذ القرار بناءً على الخبرة الشخصية فقط",
+            "D) أطلب الوقت الكافي للتفكير قبل اتخاذ أي قرار"
+        ],
+        correctAnswer: 1,
+        explanation: "الإجابة الصحيحة: B) الاستعانة برأي الفريق يساعد في اتخاذ قرارات مدروسة."
+    },
+    {
+        question: "30. كيف تضمن تقدم المشروع بشكل مستمر؟",
+        options: [
+            "A) أضع أهدافًا قصيرة المدى وأتابع تقدم المشروع يوميًا",
+            "B) أعمل على الانتهاء من المشروع في أقرب وقت دون متابعة مستمرة",
+            "C) أترك الفريق يتعامل مع التحديات بأنفسهم",
+            "D) أركز على النهاية وأتجاهل التفاصيل الصغيرة"
+        ],
+        correctAnswer: 0,
+        explanation: "الإجابة الصحيحة: A) تحديد أهداف قصيرة المدى والمتابعة المستمرة يساعد على ضمان التقدم."
+    },
+    {
+        question: "31. عندما تواجه مقاومة من الفريق، كيف تتعامل؟",
+        options: [
+            "A) أعمل على تجاوزها بسرعة دون التدخل",
+            "B) أبحث عن الأسباب وأقدم الدعم اللازم",
+            "C) أستعين بالإدارة العليا لحل المشكلة",
+            "D) أترك الأمور تسير كما هي دون تدخل"
+        ],
+        correctAnswer: 1,
+        explanation: "الإجابة الصحيحة: B) البحث عن الأسباب وتقديم الدعم يعزز التعاون."
+    },
+    {
+        question: "32. كيف تحدد أولويات العمل عندما تكون لديك مهام متعددة؟",
+        options: [
+            "A) أركز على المهمة الأكثر إلحاحًا فقط",
+            "B) أضع قائمة الأولويات وأتبعها بدقة",
+            "C) أبدأ بالمهمة التي أجدها أسهل",
+            "D) أستعين بفريق العمل لتحديد الأولويات"
+        ],
+        correctAnswer: 1,
+        explanation: "الإجابة الصحيحة: B) تحديد الأولويات بشكل منظم يساعد في إدارة الوقت."
+    },
+    {
+        question: "33. كيف تتعامل مع الموظفين الذين يواجهون صعوبة في التكيف مع ثقافة العمل؟",
+        options: [
+            "A) أتجاهل الأمر وأترك الموظف يتكيف بمفرده",
+            "B) أقدم لهم التدريب والدعم اللازم للتكيف",
+            "C) أطلب منهم مغادرة العمل إذا لم يستطيعوا التكيف",
+            "D) أضعهم في مهام لا تتطلب الكثير من التفاعل مع الآخرين"
+        ],
+        correctAnswer: 1,
+        explanation: "الإجابة الصحيحة: B) تقديم التدريب والدعم يساعد الموظفين على التكيف بشكل أفضل."
+    },
+    {
+        question: "34. كيف تتعامل مع المشروع الذي يواجه صعوبة في تحقيق أهدافه؟",
+        options: [
+            "A) أوقف المشروع وأبحث عن بديل",
+            "B) أعمل مع الفريق لتحديد المشكلات وإيجاد حلول",
+            "C) أستعين بخبراء خارجيين لحل المشكلة",
+            "D) أترك الأمور كما هي وأنتظر أن تتحسن"
+        ],
+        correctAnswer: 1,
+        explanation: "الإجابة الصحيحة: B) تحديد المشكلات والعمل مع الفريق لإيجاد حلول فعّالة."
+    },
+    {
+        question: "35. كيف تتعامل مع الموظف الذي يتحدى توجيهاتك؟",
+        options: [
+            "A) أواجهه بشكل مباشر وأوضح له عواقب تصرفه",
+            "B) أطلب منه تقديم أسباب لتحديه لتقييم الموقف",
+            "C) أتجاهل التحدي وأستمر في تنفيذ الخطط",
+            "D) أطلب من الإدارة العليا التدخل لحل المشكلة"
+        ],
+        correctAnswer: 1,
+        explanation: "الإجابة الصحيحة: B) استماع إلى أسباب الموظف يساعد على التوصل إلى تفاهم."
+    },
+    {
+        question: "36. كيف تتعامل مع الظروف غير المتوقعة في العمل؟",
+        options: [
+            "A) أظل هادئًا وأبحث عن حلول سريعة وفعّالة",
+            "B) أترك الأمور تسير كما هي دون محاولة التدخل",
+            "C) أستعين بخبراء لتقديم الحلول",
+            "D) أوقف العمل وأعيد تقييم الوضع"
+        ],
+        correctAnswer: 0,
+        explanation: "الإجابة الصحيحة: A) التعامل الهادئ مع الظروف غير المتوقعة يعكس مهارات القيادة."
+    },
+    {
+        question: "37. كيف تتعامل مع الضغط المرتفع خلال فترة حاسمة؟",
+        options: [
+            "A) أستعين بفريق العمل لتقليل الضغط",
+            "B) أترك الفريق يعمل دون التدخل في التفاصيل",
+            "C) أستجيب بشكل مباشر لاحتياجات الفريق لضمان الانتهاء من العمل",
+            "D) أؤجل المهام غير الضرورية"
+        ],
+        correctAnswer: 2,
+        explanation: "الإجابة الصحيحة: C) استجابة سريعة لاحتياجات الفريق تؤدي إلى تسريع الإنجاز."
+    },
+    {
+        question: "38. عندما تجد صعوبة في التواصل مع شخص آخر في العمل، ماذا تفعل؟",
+        options: [
+            "A) أتجاهل المشكلة وأكمل العمل بمفردي",
+            "B) أبحث عن طرق مختلفة للتواصل مع الشخص الآخر",
+            "C) أطلب من شخص آخر التدخل لحل المشكلة",
+            "D) أترك التواصل وأنتقل إلى مشروع آخر"
+        ],
+        correctAnswer: 1,
+        explanation: "الإجابة الصحيحة: B) البحث عن طرق جديدة للتواصل يعزز التعاون."
+    },
+    {
+        question: "39. في حالة حدوث خطأ في المشروع، كيف تتعامل؟",
+        options: [
+            "A) ألوم الآخرين وأتجنب المسؤولية",
+            "B) أبحث عن السبب وأعمل مع الفريق لتصحيح الخطأ",
+            "C) أتجاهل المشكلة وأتمنى أن تحل نفسها",
+            "D) أطلب من الإدارة العليا التدخل لتصحيح الخطأ"
+        ],
+        correctAnswer: 1,
+        explanation: "الإجابة الصحيحة: B) التعاون مع الفريق لحل المشكلة يعزز الثقة."
+    },
+    {
+        question: "40. كيف تضمن تحقيق أهداف الفريق بشكل مستمر؟",
+        options: [
+            "A) أضع أهدافًا صعبة وأتوقع من الفريق تحقيقها على الفور",
+            "B) أراجع الأداء بشكل دوري وأعزز التحسين المستمر",
+            "C) أترك الفريق يتبع طريقتهم الخاصة دون تدخل مني",
+            "D) أركز على النتائج النهائية دون النظر إلى التفاصيل"
+        ],
+        correctAnswer: 1,
+        explanation: "الإجابة الصحيحة: B) المراجعة الدورية للأداء تساعد في تحسين الأداء المستمر."
+    }
+
+        ];
+
         // دالة تحويل النص إلى كلام
         function speakText(text) {
             if (!('speechSynthesis' in window)) {
@@ -1425,6 +1962,7 @@
         // عرض الأسئلة عند تحميل الصفحة
         window.onload = function() {
             displayQuestions();
+            displayKornFerryQuestions();
             // تحميل الأصوات عند بدء الصفحة
             if ('speechSynthesis' in window) {
                 speechSynthesis.onvoiceschanged = function() {
@@ -1526,6 +2064,32 @@
                 `;
                 
                 listeningContainer.appendChild(questionDiv);
+    });
+}
+
+        // دالة لعرض أسئلة Korn-Ferry
+        function displayKornFerryQuestions() {
+            const container = document.getElementById('kornferry-container');
+            kornFerryQuestions.forEach((q, index) => {
+                const questionDiv = document.createElement('div');
+                questionDiv.className = 'question';
+                questionDiv.id = `kornferry-question-${index}`;
+                
+                let optionsHTML = q.options.map((option, i) => `
+                    <div class="option">
+                        <input type="radio" name="kornferry-${index}" id="kornferry-${index}-${i}" value="${i}">
+                        <label for="kornferry-${index}-${i}">${option}</label>
+                    </div>
+                `).join('');
+                
+                questionDiv.innerHTML = `
+                    <p>${q.question}</p>
+                    <div class="options">${optionsHTML}</div>
+                    <span class="show-explanation" onclick="toggleExplanation('kornferry-${index}')">عرض الشرح</span>
+                    <div class="explanation" id="explanation-kornferry-${index}">${q.explanation}</div>
+                `;
+                
+                container.appendChild(questionDiv);
             });
         }
 
@@ -1633,10 +2197,48 @@
             resultDiv.scrollIntoView({ behavior: 'smooth' });
         }
 
+        // دالة لحساب نتيجة Korn-Ferry
+        function calculateKornFerryScore() {
+            let score = 0;
+            
+            kornFerryQuestions.forEach((q, index) => {
+                const selectedOption = document.querySelector(`input[name="kornferry-${index}"]:checked`);
+                const questionDiv = document.getElementById(`kornferry-question-${index}`);
+
+                if (selectedOption && parseInt(selectedOption.value) === q.correctAnswer) {
+                    score++;
+                    if (questionDiv) questionDiv.style.borderLeft = '4px solid #2e7d32';
+                } else {
+                    if (questionDiv) questionDiv.style.borderLeft = '4px solid #c62828';
+                }
+                const explanation = document.getElementById(`explanation-kornferry-${index}`);
+                if (explanation) explanation.style.display = 'block';
+            });
+
+            const percentage = (score / kornFerryQuestions.length) * 100;
+            const resultDiv = document.getElementById('kornferry-result');
+            
+            resultDiv.innerHTML = `
+                <h3>نتيجة اختبار Korn-Ferry</h3>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: ${percentage}%">${percentage.toFixed(1)}%</div>
+                </div>
+                
+                <div class="score-section">
+                    <p>إجمالي النقاط: <strong>${score} / ${kornFerryQuestions.length}</strong></p>
+                    <p>النسبة المئوية: <strong>${percentage.toFixed(1)}%</strong></p>
+                </div>
+            `;
+            
+            resultDiv.style.display = 'block';
+            resultDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+
         // جعل الدوال متاحة على النطاق العام
         window.toggleExplanation = toggleExplanation;
         window.openSection = openSection;
         window.calculateScore = calculateScore;
+        window.calculateKornFerryScore = calculateKornFerryScore;
         window.speakText = speakText;
         window.startTimer = startTimer;
         window.stopTimer = stopTimer;
