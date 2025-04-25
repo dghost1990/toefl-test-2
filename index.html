@@ -437,7 +437,7 @@
 </div>
 <h1>TOEFL ITP Test</h1>
 <div class="tab">
-<button class="tablinks active" onclick="openSection(event, 'structure')">Structure (120 سؤالاً)</button>
+<button class="tablinks active" onclick="openSection(event, 'structure')">Structure (160 سؤالاً)</button>
 <button class="tablinks" onclick="openSection(event, 'reading')">Reading (20 سؤالاً)</button>
 <button class="tablinks" onclick="openSection(event, 'listening')">Listening (10 أسئلة)</button>
 <button class="tablinks" onclick="openSection(event, 'info')">شرح ومعلومات</button>
@@ -447,6 +447,23 @@
 <!-- قسم Structure -->
 <div class="tabcontent" id="structure" style="display: block;">
 <h2>القسم الأول: Structure and Written Expression</h2>
+
+<div class="question-types" style="margin: 20px 0; padding: 15px; background: #f5f5f5; border-radius: 8px;">
+  <div style="margin-bottom: 15px;">
+    <p style="color: #0061a8; font-weight: bold; margin-bottom: 5px;">1. Complete the Sentence:</p>
+    <p style="margin: 0; padding-right: 15px;">أكمل الجملة. يُطلب منك اختيار الإجابة الصحيحة لاستكمال الجملة بشكل صحيح بناءً على القواعد النحوية أو المعنى.</p>
+  </div>
+  
+  <div style="margin-bottom: 15px;">
+    <p style="color: #8B0000; font-weight: bold; margin-bottom: 5px;">2. Find the mistake that must be changed:</p>
+    <p style="margin: 0; padding-right: 15px;">العثور على الخطأ الذي يجب تغييره. يتطلب منك هذا النوع من الأسئلة تحديد الخطأ النحوي أو اللغوي في الجملة.</p>
+  </div>
+  
+  <div>
+    <p style="color: #800080; font-weight: bold; margin-bottom: 5px;">3. Vocabulary:</p>
+    <p style="margin: 0; padding-right: 15px;">المفردات. يُطلب منك اختيار الكلمة الصحيحة أو المناسبة استنادًا إلى السياق أو المعنى المقصود.</p>
+  </div>
+</div>
 <div class="section-info">
 <p>اختر الإجابة الصحيحة لاستكمال الجملة أو تصحيح الخطأ النحوي.</p>
 </div>
@@ -537,728 +554,970 @@ AI-generated content may be incorrect." height="92" src="https://i.postimg.cc/Sx
             document.getElementById('timer').style.color = '#8b0000';
         }
 
-        // Structure and Written Expression (120 سؤالاً)
+        // Structure and Written Expression (160 سؤالاً)
         const structureQuestions = [
-           {
-    question: "1. ____ the light rain, the baseball game continued.",
-    options: ["A) Although", "B) Even though", "C) Despite", "D) Because"],
-    correctAnswer: 2,
-    explanation: "الإجابة الصحيحة: C) Despite<br><br>الشرح: 'Despite' يليها اسم أو عبارة اسمية، مثل 'the light rain'."
-},
-{
-    question: "2. She ____ to school every day.",
-    options: ["A) go", "B) going", "C) goes", "D) gone"],
-    correctAnswer: 2,
-    explanation: "الإجابة الصحيحة: C) goes<br><br>الشرح: الفعل في المضارع البسيط مع 'she' يأخذ s في نهايته."
-},
-{
-    question: "3. I have been living here ____ five years.",
-    options: ["A) since", "B) for", "C) from", "D) during"],
-    correctAnswer: 1,
-    explanation: "الإجابة الصحيحة: B) for<br><br>الشرح: 'for' تُستخدم مع فترة زمنية، مثل 'five years'."
-},
-{
-    question: "4. If I ____ you, I would apologize.",
-    options: ["A) was", "B) were", "C) am", "D) be"],
-    correctAnswer: 1,
-    explanation: "الإجابة الصحيحة: B) were<br><br>الشرح: في الجمل الشرطية من النوع الثاني نستخدم 'were' مع جميع الضمائر."
-},
-{
-    question: "5. The book ____ on the table.",
-    options: ["A) is", "B) are", "C) were", "D) be"],
-    correctAnswer: 0,
-    explanation: "الإجابة الصحيحة: A) is<br><br>الشرح: الفاعل مفرد 'the book' لذلك نستخدم 'is'."
-},
-{
-    question: "6. We ____ dinner when the phone rang.",
-    options: ["A) had", "B) were having", "C) have", "D) has"],
-    correctAnswer: 1,
-    explanation: "الإجابة الصحيحة: B) were having<br><br>الشرح: نستخدم الماضي المستمر للتعبير عن حدث كان مستمراً عندما قاطعته حادثة أخرى."
-},
-{
-    question: "7. This is the man ____ car was stolen.",
-    options: ["A) who", "B) whom", "C) which", "D) whose"],
-    correctAnswer: 3,
-    explanation: "الإجابة الصحيحة: D) whose<br><br>الشرح: 'whose' تُستخدم للدلالة على الملكية."
-},
-{
-    question: "8. Not only ____ late, but he also forgot his homework.",
-    options: ["A) he was", "B) was he", "C) he is", "D) is he"],
-    correctAnswer: 1,
-    explanation: "الإجابة الصحيحة: B) was he<br><br>الشرح: بعد 'Not only' يأتي تركيب مقلوب (فعل ثم فاعل)."
-},
-{
-    question: "9. I don't have ____ money left.",
-    options: ["A) some", "B) many", "C) any", "D) few"],
-    correctAnswer: 2,
-    explanation: "الإجابة الصحيحة: C) any<br><br>الشرح: 'any' تُستخدم في الجمل المنفية."
-},
-{
-    question: "10. He is ____ than his brother.",
-    options: ["A) taller", "B) more tall", "C) tallest", "D) tall"],
-    correctAnswer: 0,
-    explanation: "الإجابة الصحيحة: A) taller<br><br>الشرح: نستخدم صيغة المقارنة -er مع الصفات القصيرة."
-},
-{
-    question: "11. A lot of tourists visit Paris ____ the summer.",
-    options: ["A) at", "B) on", "C) in", "D) by"],
-    correctAnswer: 2,
-    explanation: "الإجابة الصحيحة: C) in<br><br>الشرح: نستخدم 'in' مع الأشهر والفصول."
-},
-{
-    question: "12. She speaks English ____ than I do.",
-    options: ["A) good", "B) more good", "C) better", "D) best"],
-    correctAnswer: 2,
-    explanation: "الإجابة الصحيحة: C) better<br><br>الشرح: 'better' هي صيغة المقارنة الشاذة لـ 'good'."
-},
-{
-    question: "13. He has lived in London ____ 2015.",
-    options: ["A) for", "B) from", "C) since", "D) during"],
-    correctAnswer: 2,
-    explanation: "الإجابة الصحيحة: C) since<br><br>الشرح: 'since' تُستخدم مع نقطة بداية زمنية محددة."
-},
-{
-    question: "14. Neither the teacher nor the students ____ in the room.",
-    options: ["A) is", "B) are", "C) were", "D) be"],
-    correctAnswer: 1,
-    explanation: "الإجابة الصحيحة: B) are<br><br>الشرح: في 'neither...nor' يتبع الفعل الجزء الأقرب من الفاعل."
-},
-{
-    question: "15. He will call you when he ____ home.",
-    options: ["A) gets", "B) got", "C) will get", "D) get"],
-    correctAnswer: 0,
-    explanation: "الإجابة الصحيحة: A) gets<br><br>الشرح: في الجمل الزمنية، نستخدم المضارع البسيط مع 'when'."
-},
-{
-    question: "16. I prefer tea ____ coffee.",
-    options: ["A) than", "B) from", "C) over", "D) to"],
-    correctAnswer: 3,
-    explanation: "الإجابة الصحيحة: D) to<br><br>الشرح: نستخدم 'prefer X to Y'."
-},
-{
-    question: "17. She can't afford ____ a new car.",
-    options: ["A) buy", "B) to buy", "C) buying", "D) bought"],
-    correctAnswer: 1,
-    explanation: "الإجابة الصحيحة: B) to buy<br><br>الشرح: 'afford' يتبعها مصدر مع 'to'."
-},
-{
-    question: "18. The cake was ____ by my mother.",
-    options: ["A) make", "B) made", "C) making", "D) makes"],
-    correctAnswer: 1,
-    explanation: "الإجابة الصحيحة: B) made<br><br>الشرح: صيغة المبني للمجهول في الماضي البسيط: was + past participle."
-},
-{
-    question: "19. He apologized ____ being late.",
-    options: ["A) for", "B) of", "C) about", "D) to"],
-    correctAnswer: 0,
-    explanation: "الإجابة الصحيحة: A) for<br><br>الشرح: 'apologize for' تُستخدم مع الأفعال أو الأسماء."
-},
-{
-    question: "20. It's important ____ learn English.",
-    options: ["A) to", "B) that", "C) to be", "D) to"],
-    correctAnswer: 0,
-    explanation: "الإجابة الصحيحة: A) to<br><br>الشرح: بعد الصفات مثل 'important' يأتي مصدر مع 'to'."
-},
-{
-    question: "21. He usually ____ up at 7 AM.",
-    options: ["A) get", "B) gets", "C) getting", "D) got"],
-    correctAnswer: 1,
-    explanation: "الإجابة الصحيحة: B) gets<br><br>الشرح: مع الفاعل المفرد 'he' نستخدم 'gets' في المضارع البسيط."
-},
-{
-    question: "22. By the time we arrived, the movie ____.",
-    options: ["A) starts", "B) started", "C) had started", "D) has started"],
-    correctAnswer: 2,
-    explanation: "الإجابة الصحيحة: C) had started<br><br>الشرح: نستخدم الماضي التام للتعبير عن حدث وقع قبل حدث آخر في الماضي."
-},
-{
-    question: "23. This is the house ____ I grew up.",
-    options: ["A) when", "B) which", "C) where", "D) what"],
-    correctAnswer: 2,
-    explanation: "الإجابة الصحيحة: C) where<br><br>الشرح: 'where' تُستخدم للدلالة على المكان."
-},
-{
-    question: "24. I saw him ____ the building.",
-    options: ["A) enter", "B) entered", "C) entering", "D) to enter"],
-    correctAnswer: 0,
-    explanation: "الإجابة الصحيحة: A) enter<br><br>الشرح: بعد أفعال الحواس نستخدم المصدر بدون 'to'."
-},
-{
-    question: "25. The book is ____ interesting than the movie.",
-    options: ["A) more", "B) most", "C) much", "D) many"],
-    correctAnswer: 0,
-    explanation: "الإجابة الصحيحة: A) more<br><br>الشرح: نستخدم 'more' للمقارنة مع الصفات الطويلة مثل 'interesting'."
-},
-{
-    question: "26. He didn't know ____ to say.",
-    options: ["A) what", "B) which", "C) who", "D) that"],
-    correctAnswer: 0,
-    explanation: "الإجابة الصحيحة: A) what<br><br>الشرح: نستخدم 'what' للسؤال عن شيء غير معروف تحديدًا."
-},
-{
-    question: "27. I have never seen ____ elephant before.",
-    options: ["A) a", "B) an", "C) the", "D) one"],
-    correctAnswer: 1,
-    explanation: "الإجابة الصحيحة: B) an<br><br>الشرح: نستخدم 'an' قبل الكلمات التي تبدأ بحرف صوتي."
-},
-{
-    question: "28. He is interested ____ learning Spanish.",
-    options: ["A) to", "B) in", "C) on", "D) at"],
-    correctAnswer: 1,
-    explanation: "الإجابة الصحيحة: B) in<br><br>الشرح: 'interested in' هو التعبير الصحيح."
-},
-{
-    question: "29. There isn’t ____ milk left in the fridge.",
-    options: ["A) some", "B) much", "C) many", "D) a few"],
-    correctAnswer: 1,
-    explanation: "الإجابة الصحيحة: B) much<br><br>الشرح: 'milk' اسم غير معدود، نستخدم معه 'much' في النفي."
-},
-{
-    question: "30. How long ____ you lived here?",
-    options: ["A) do", "B) did", "C) have", "D) had"],
-    correctAnswer: 2,
-    explanation: "الإجابة الصحيحة: C) have<br><br>الشرح: نستخدم المضارع التام للسؤال عن مدة مستمرة حتى الآن."
-},
-{
-    question: "31. He was tired ____ he had worked all day.",
-    options: ["A) so", "B) because", "C) but", "D) although"],
-    correctAnswer: 1,
-    explanation: "الإجابة الصحيحة: B) because<br><br>الشرح: 'because' تُستخدم لتوضيح السبب."
-},
-{
-    question: "32. If she ____ earlier, she wouldn’t have missed the train.",
-    options: ["A) leave", "B) left", "C) had left", "D) leaves"],
-    correctAnswer: 2,
-    explanation: "الإجابة الصحيحة: C) had left<br><br>الشرح: هذا شرط من النوع الثالث (حدث لم يقع)."
-},
-{
-    question: "33. That was the ____ movie I’ve ever seen.",
-    options: ["A) bad", "B) worse", "C) worst", "D) badly"],
-    correctAnswer: 2,
-    explanation: "الإجابة الصحيحة: C) worst<br><br>الشرح: 'worst' هي صيغة التفضيل من 'bad'."
-},
-{
-    question: "34. I will help you after I ____ my homework.",
-    options: ["A) finish", "B) finished", "C) will finish", "D) finishes"],
-    correctAnswer: 0,
-    explanation: "الإجابة الصحيحة: A) finish<br><br>الشرح: بعد أدوات الزمن المستقبلية نستخدم المضارع البسيط."
-},
-{
-    question: "35. There are too ____ people in the room.",
-    options: ["A) much", "B) many", "C) more", "D) most"],
-    correctAnswer: 1,
-    explanation: "الإجابة الصحيحة: B) many<br><br>الشرح: 'people' اسم جمع نستخدم معه 'many'."
-},
-{
-    question: "36. Would you mind ____ the window?",
-    options: ["A) close", "B) to close", "C) closing", "D) closed"],
-    correctAnswer: 2,
-    explanation: "الإجابة الصحيحة: C) closing<br><br>الشرح: بعد 'Would you mind' يأتي فعل بإضافة ing."
-},
-{
-    question: "37. The teacher asked if we ____ our homework.",
-    options: ["A) do", "B) did", "C) have done", "D) had done"],
-    correctAnswer: 3,
-    explanation: "الإجابة الصحيحة: D) had done<br><br>الشرح: في الكلام غير المباشر نستخدم الماضي التام."
-},
-{
-    question: "38. He plays tennis ____ than his brother.",
-    options: ["A) more well", "B) weller", "C) better", "D) best"],
-    correctAnswer: 2,
-    explanation: "الإجابة الصحيحة: C) better<br><br>الشرح: 'better' هي المقارنة الصحيحة للفعل 'well'."
-},
-{
-    question: "39. ____ I was tired, I finished the work.",
-    options: ["A) Although", "B) Because", "C) Despite", "D) However"],
-    correctAnswer: 0,
-    explanation: "الإجابة الصحيحة: A) Although<br><br>الشرح: تُستخدم لربط جملتين متضادتين."
-},
-{
-    question: "40. I’m looking forward to ____ from you.",
-    options: ["A) hear", "B) hearing", "C) heard", "D) be hearing"],
-    correctAnswer: 1,
-    explanation: "الإجابة الصحيحة: B) hearing<br><br>الشرح: بعد 'look forward to' نستخدم الفعل + ing."
-},
-{
-    question: "41. She sings as ____ as a professional.",
-    options: ["A) good", "B) well", "C) better", "D) best"],
-    correctAnswer: 1,
-    explanation: "الإجابة الصحيحة: B) well<br><br>الشرح: 'well' هي الحال المناسب للفعل 'sings'."
-},
-{
-    question: "42. If I were you, I ____ take the job.",
-    options: ["A) will", "B) would", "C) can", "D) shall"],
-    correctAnswer: 1,
-    explanation: "الإجابة الصحيحة: B) would<br><br>الشرح: في الحالة الثانية الشرطية نستخدم 'would + base verb'."
-},
-{
-    question: "43. She has been working here ____ 2015.",
-    options: ["A) for", "B) since", "C) in", "D) from"],
-    correctAnswer: 1,
-    explanation: "الإجابة الصحيحة: B) since<br><br>الشرح: نستخدم 'since' مع نقطة بداية زمنية محددة."
-},
-{
-    question: "44. I don’t have ____ money left.",
-    options: ["A) some", "B) a few", "C) any", "D) few"],
-    correctAnswer: 2,
-    explanation: "الإجابة الصحيحة: C) any<br><br>الشرح: نستخدم 'any' في الجمل المنفية مع الأسماء غير المعدودة."
-},
-{
-    question: "45. They ____ a new car last week.",
-    options: ["A) buy", "B) bought", "C) have bought", "D) had bought"],
-    correctAnswer: 1,
-    explanation: "الإجابة الصحيحة: B) bought<br><br>الشرح: حدث مكتمل في الماضي يُستخدم معه الماضي البسيط."
-},
-{
-    question: "46. That’s the man ____ helped me.",
-    options: ["A) which", "B) whose", "C) who", "D) whom"],
-    correctAnswer: 2,
-    explanation: "الإجابة الصحيحة: C) who<br><br>الشرح: نستخدم 'who' مع الفاعل العاقل."
-},
-{
-    question: "47. We ____ to the mall when it started raining.",
-    options: ["A) went", "B) were going", "C) have gone", "D) go"],
-    correctAnswer: 1,
-    explanation: "الإجابة الصحيحة: B) were going<br><br>الشرح: يعبر عن حدث كان مستمرًا عندما قاطعته حادثة أخرى."
-},
-{
-    question: "48. The test was ____ difficult for most students.",
-    options: ["A) too", "B) so", "C) very", "D) enough"],
-    correctAnswer: 0,
-    explanation: "الإجابة الصحيحة: A) too<br><br>الشرح: 'too difficult' تعني أن الاختبار صعب جدًا بدرجة تمنع النجاح."
-},
-{
-    question: "49. I enjoy ____ to music in my free time.",
-    options: ["A) listen", "B) listening", "C) to listen", "D) listened"],
-    correctAnswer: 1,
-    explanation: "الإجابة الصحيحة: B) listening<br><br>الشرح: بعد 'enjoy' نستخدم الفعل + ing."
-},
-{
-    question: "50. She doesn’t like coffee, and I don’t ____.",
-    options: ["A) too", "B) also", "C) either", "D) neither"],
-    correctAnswer: 2,
-    explanation: "الإجابة الصحيحة: C) either<br><br>الشرح: 'either' تُستخدم في الجمل المنفية بمعنى 'أيضًا'."
-},
-{
-    question: "51. They arrived ____ time to catch the train.",
-    options: ["A) on", "B) in", "C) at", "D) by"],
-    correctAnswer: 0,
-    explanation: "الإجابة الصحيحة: A) on<br><br>الشرح: 'on time' تعني في الوقت المحدد تمامًا."
-},
-{
-    question: "52. My brother is taller ____ I am.",
-    options: ["A) as", "B) like", "C) than", "D) then"],
-    correctAnswer: 2,
-    explanation: "الإجابة الصحيحة: C) than<br><br>الشرح: 'than' تُستخدم للمقارنة بين شخصين."
-},
-{
-    question: "53. This is the pen with ____ I wrote the letter.",
-    options: ["A) which", "B) who", "C) that", "D) where"],
-    correctAnswer: 0,
-    explanation: "الإجابة الصحيحة: A) which<br><br>الشرح: 'which' تُستخدم مع الأشياء."
-},
-{
-    question: "54. We have lived here ____ five years.",
-    options: ["A) since", "B) for", "C) from", "D) during"],
-    correctAnswer: 1,
-    explanation: "الإجابة الصحيحة: B) for<br><br>الشرح: 'for' تُستخدم مع مدة زمنية."
-},
-{
-    question: "55. He’s the boy ____ father is a doctor.",
-    options: ["A) who", "B) whom", "C) which", "D) whose"],
-    correctAnswer: 3,
-    explanation: "الإجابة الصحيحة: D) whose<br><br>الشرح: 'whose' تُستخدم للدلالة على الملكية."
-},
-{
-    question: "56. Not only ____ smart, but also hardworking.",
-    options: ["A) he is", "B) is he", "C) he was", "D) was he"],
-    correctAnswer: 1,
-    explanation: "الإجابة الصحيحة: B) is he<br><br>الشرح: بعد 'Not only' يأتي التقديم inversion."
-},
-{
-    question: "57. She prefers tea ____ coffee.",
-    options: ["A) from", "B) than", "C) over", "D) to"],
-    correctAnswer: 3,
-    explanation: "الإجابة الصحيحة: D) to<br><br>الشرح: 'prefer' يتبعها 'to' عند المقارنة بين شيئين."
-},
-{
-    question: "58. This box is too heavy for me ____.",
-    options: ["A) carry", "B) to carry", "C) carrying", "D) carried"],
-    correctAnswer: 1,
-    explanation: "الإجابة الصحيحة: B) to carry<br><br>الشرح: التركيب الصحيح هو 'too + adjective + to + verb'."
-},
-{
-    question: "59. He always speaks ____ in class.",
-    options: ["A) polite", "B) politely", "C) politeness", "D) politeful"],
-    correctAnswer: 1,
-    explanation: "الإجابة الصحيحة: B) politely<br><br>الشرح: نستخدم الحال (adverb) لوصف الفعل 'speaks'."
-},
-{
-    question: "60. I haven’t seen her ____ Monday.",
-    options: ["A) since", "B) for", "C) during", "D) from"],
-    correctAnswer: 0,
-    explanation: "الإجابة الصحيحة: A) since<br><br>الشرح: نستخدم 'since' مع نقطة زمنية محددة."
-},
-{
-    question: "61. The movie was so boring that I ____ asleep.",
-    options: ["A) fall", "B) fell", "C) had fallen", "D) was falling"],
-    correctAnswer: 1,
-    explanation: "الإجابة الصحيحة: B) fell<br><br>الشرح: 'so...that' followed by past simple for a completed past action."
-},
-{
-    question: "62. If she had studied harder, she ____ the exam.",
-    options: ["A) will pass", "B) would pass", "C) would have passed", "D) passes"],
-    correctAnswer: 2,
-    explanation: "الإجابة الصحيحة: C) would have passed<br><br>الشرح: هذا النوع الثالث من الجمل الشرطية يستخدم للتعبير عن الندم."
-},
-{
-    question: "63. Let’s go out for dinner, ____?",
-    options: ["A) shall we", "B) do we", "C) will we", "D) don’t we"],
-    correctAnswer: 0,
-    explanation: "الإجابة الصحيحة: A) shall we<br><br>الشرح: بعد الاقتراح باستخدام 'Let's' نستخدم 'shall we' في السؤال التذييلي."
-},
-{
-    question: "64. He’s interested ____ learning Spanish.",
-    options: ["A) to", "B) in", "C) on", "D) at"],
-    correctAnswer: 1,
-    explanation: "الإجابة الصحيحة: B) in<br><br>الشرح: 'interested in' هو التعبير الصحيح."
-},
-{
-    question: "65. Neither the students nor the teacher ____ happy.",
-    options: ["A) are", "B) were", "C) is", "D) be"],
-    correctAnswer: 2,
-    explanation: "الإجابة الصحيحة: C) is<br><br>الشرح: الفعل يتبع الفاعل الأقرب وهو 'teacher'."
-},
-{
-    question: "66. There ____ a lot of traffic today.",
-    options: ["A) is", "B) are", "C) were", "D) have"],
-    correctAnswer: 0,
-    explanation: "الإجابة الصحيحة: A) is<br><br>الشرح: 'traffic' اسم غير معدود، نستخدم معه 'is'."
-},
-{
-    question: "67. She said that she ____ busy.",
-    options: ["A) is", "B) was", "C) has been", "D) will be"],
-    correctAnswer: 1,
-    explanation: "الإجابة الصحيحة: B) was<br><br>الشرح: عند تحويل الكلام المباشر إلى غير مباشر، يتحول المضارع إلى ماضي."
-},
-{
-    question: "68. I’d rather you ____ me the truth.",
-    options: ["A) tell", "B) told", "C) have told", "D) tells"],
-    correctAnswer: 1,
-    explanation: "الإجابة الصحيحة: B) told<br><br>الشرح: بعد 'I'd rather you' نستخدم الماضي البسيط رغم أن المعنى للمضارع."
-},
-{
-    question: "69. How long ____ you lived here?",
-    options: ["A) did", "B) do", "C) have", "D) are"],
-    correctAnswer: 2,
-    explanation: "الإجابة الصحيحة: C) have<br><br>الشرح: السؤال في المضارع التام لأنه يتحدث عن مدة مستمرة حتى الآن."
-},
-{
-    question: "70. The cake smells ____.",
-    options: ["A) delicious", "B) deliciously", "C) well", "D) goodly"],
-    correctAnswer: 0,
-    explanation: "الإجابة الصحيحة: A) delicious<br><br>الشرح: مع أفعال الحواس نستخدم الصفات وليس الظروف."
-},
-{
-    question: "71. He came late ____ the heavy traffic.",
-    options: ["A) because", "B) because of", "C) due", "D) so that"],
-    correctAnswer: 1,
-    explanation: "الإجابة الصحيحة: B) because of<br><br>الشرح: 'because of' يتبعها اسم وليس جملة."
-},
-{
-    question: "72. Not until he apologized ____ her forgive him.",
-    options: ["A) did", "B) was", "C) had", "D) does"],
-    correctAnswer: 0,
-    explanation: "الإجابة الصحيحة: A) did<br><br>الشرح: بعد 'Not until' نستخدم التقديم (inversion) للفعل المساعد."
-},
-{
-    question: "73. I have difficulty ____ his handwriting.",
-    options: ["A) to read", "B) read", "C) reading", "D) in read"],
-    correctAnswer: 2,
-    explanation: "الإجابة الصحيحة: C) reading<br><br>الشرح: بعد 'have difficulty' نستخدم الفعل + ing."
-},
-{
-    question: "74. The man ____ wallet was stolen reported to the police.",
-    options: ["A) who", "B) which", "C) whose", "D) whom"],
-    correctAnswer: 2,
-    explanation: "الإجابة الصحيحة: C) whose<br><br>الشرح: 'whose' تُستخدم للدلالة على الملكية."
-},
-{
-    question: "75. I wish I ____ more time to relax.",
-    options: ["A) have", "B) had", "C) will have", "D) has"],
-    correctAnswer: 1,
-    explanation: "الإجابة الصحيحة: B) had<br><br>الشرح: بعد 'I wish' نستخدم الماضي للتعبير عن التمني."
-},
-{
-    question: "76. The news ____ surprising.",
-    options: ["A) are", "B) were", "C) is", "D) be"],
-    correctAnswer: 2,
-    explanation: "الإجابة الصحيحة: C) is<br><br>الشرح: 'news' اسم غير معدود ويعامل كمفرد."
-},
-{
-    question: "77. He acted as if he ____ the boss.",
-    options: ["A) is", "B) was", "C) were", "D) has been"],
-    correctAnswer: 2,
-    explanation: "الإجابة الصحيحة: C) were<br><br>الشرح: بعد 'as if' نستخدم 'were' للتعبير عن موقف غير حقيقي."
-},
-{
-    question: "78. I haven’t finished my homework ____.",
-    options: ["A) already", "B) still", "C) yet", "D) anymore"],
-    correctAnswer: 2,
-    explanation: "الإجابة الصحيحة: C) yet<br><br>الشرح: 'yet' تُستخدم في النفي والأسئلة في المضارع التام."
-},
-{
-    question: "79. She was absent ____ she was sick.",
-    options: ["A) because", "B) because of", "C) due", "D) so"],
-    correctAnswer: 0,
-    explanation: "الإجابة الصحيحة: A) because<br><br>الشرح: 'because' يتبعها جملة كاملة."
-},
-{
-    question: "80. We’ll go for a walk ____ it doesn’t rain.",
-    options: ["A) if", "B) unless", "C) though", "D) although"],
-    correctAnswer: 0,
-    explanation: "الإجابة الصحيحة: A) if<br><br>الشرح: نستخدم 'if' للتعبير عن شرط محتمل الحدوث."
-},
-{
-    question: "81. By the time we arrived, the movie ____.",
-    options: ["A) has started", "B) had started", "C) started", "D) was starting"],
-    correctAnswer: 1,
-    explanation: "الإجابة الصحيحة: B) had started<br><br>الشرح: 'By the time' تستخدم مع الماضي التام لتوضيح أن الحدث وقع قبل نقطة زمنية في الماضي."
-},
-{
-    question: "82. She hardly ever ____ to parties.",
-    options: ["A) go", "B) goes", "C) going", "D) gone"],
-    correctAnswer: 1,
-    explanation: "الإجابة الصحيحة: B) goes<br><br>الشرح: الفاعل مفرد لذلك نستخدم 'goes' مع 'hardly ever'."
-},
-{
-    question: "83. I’d rather ____ at home tonight.",
-    options: ["A) staying", "B) stayed", "C) stay", "D) to stay"],
-    correctAnswer: 2,
-    explanation: "الإجابة الصحيحة: C) stay<br><br>الشرح: بعد 'I’d rather' نستخدم الفعل في صورته الأساسية (المجردة)."
-},
-{
-    question: "84. I won’t go out ____ it stops raining.",
-    options: ["A) if", "B) unless", "C) when", "D) although"],
-    correctAnswer: 1,
-    explanation: "الإجابة الصحيحة: B) unless<br><br>الشرح: 'unless' تعني 'if not'."
-},
-{
-    question: "85. The teacher asked if we ____ any questions.",
-    options: ["A) have", "B) had", "C) has", "D) having"],
-    correctAnswer: 1,
-    explanation: "الإجابة الصحيحة: B) had<br><br>الشرح: بعد أفعال الكلام مثل 'asked' نستخدم الماضي في reported speech."
-},
-{
-    question: "86. He hasn’t called me ____ last week.",
-    options: ["A) for", "B) during", "C) since", "D) from"],
-    correctAnswer: 2,
-    explanation: "الإجابة الصحيحة: C) since<br><br>الشرح: 'since' تُستخدم مع نقطة زمنية محددة."
-},
-{
-    question: "87. This soup tastes ____.",
-    options: ["A) well", "B) good", "C) better", "D) nicely"],
-    correctAnswer: 1,
-    explanation: "الإجابة الصحيحة: B) good<br><br>الشرح: مع أفعال الحواس نستخدم الصفات وليس الظروف."
-},
-{
-    question: "88. They ____ in this city for five years now.",
-    options: ["A) are living", "B) have lived", "C) live", "D) lives"],
-    correctAnswer: 1,
-    explanation: "الإجابة الصحيحة: B) have lived<br><br>الشرح: المضارع التام يُستخدم مع مدة زمنية بدأت في الماضي وما زالت مستمرة."
-},
-{
-    question: "89. I remember ____ him at the party.",
-    options: ["A) meet", "B) met", "C) to meet", "D) meeting"],
-    correctAnswer: 3,
-    explanation: "الإجابة الصحيحة: D) meeting<br><br>الشرح: 'remember' + verb-ing تشير لحدث وقع في الماضي."
-},
-{
-    question: "90. She is not tall enough ____ the shelf.",
-    options: ["A) reaching", "B) reach", "C) to reach", "D) reaches"],
-    correctAnswer: 2,
-    explanation: "الإجابة الصحيحة: C) to reach<br><br>الشرح: 'enough' يتبعها 'to + base verb' للتعبير عن القدرة."
-},
-{
-    question: "91. I don’t know what ____.",
-    options: ["A) do", "B) to do", "C) doing", "D) did"],
-    correctAnswer: 1,
-    explanation: "الإجابة الصحيحة: B) to do<br><br>الشرح: بعد 'what' نستخدم 'to + verb' عند عدم وجود فعل رئيسي."
-},
-{
-    question: "92. Would you mind ____ the window?",
-    options: ["A) close", "B) to close", "C) closing", "D) closed"],
-    correctAnswer: 2,
-    explanation: "الإجابة الصحيحة: C) closing<br><br>الشرح: بعد 'Would you mind' نستخدم الفعل + ing."
-},
-{
-    question: "93. I have two sisters. One is a teacher and ____ is a doctor.",
-    options: ["A) other", "B) the other", "C) another", "D) others"],
-    correctAnswer: 1,
-    explanation: "الإجابة الصحيحة: B) the other<br><br>الشرح: عندما تتحدث عن اثنين، نستخدم 'the other' للثاني."
-},
-{
-    question: "94. If I were you, I ____ take that job.",
-    options: ["A) will", "B) would", "C) should", "D) can"],
-    correctAnswer: 1,
-    explanation: "الإجابة الصحيحة: B) would<br><br>الشرح: الحالة الثانية من الجمل الشرطية (تخيّلية)."
-},
-{
-    question: "95. There is no point in ____ again.",
-    options: ["A) try", "B) trying", "C) to try", "D) tried"],
-    correctAnswer: 1,
-    explanation: "الإجابة الصحيحة: B) trying<br><br>الشرح: بعد 'no point in' نستخدم الفعل + ing."
-},
-{
-    question: "96. We’re used to ____ early.",
-    options: ["A) wake up", "B) waking up", "C) woke up", "D) to wake up"],
-    correctAnswer: 1,
-    explanation: "الإجابة الصحيحة: B) waking up<br><br>الشرح: 'used to' متبوعة بـ verb-ing تعني عادة حالية."
-},
-{
-    question: "97. She prefers tea ____ coffee.",
-    options: ["A) for", "B) than", "C) over", "D) to"],
-    correctAnswer: 3,
-    explanation: "الإجابة الصحيحة: D) to<br><br>الشرح: 'prefer X to Y' هو الاستخدام الصحيح."
-},
-{
-    question: "98. I saw him ____ the building.",
-    options: ["A) enters", "B) entered", "C) entering", "D) enter"],
-    correctAnswer: 3,
-    explanation: "الإجابة الصحيحة: D) enter<br><br>الشرح: بعد أفعال الإدراك نستخدم الفعل في صورته الأساسية بدون 'to'."
-},
-{
-    question: "99. The book was ____ by many people.",
-    options: ["A) writing", "B) wrote", "C) written", "D) write"],
-    correctAnswer: 2,
-    explanation: "الإجابة الصحيحة: C) written<br><br>الشرح: الجملة في المبني للمجهول (passive)."
-},
-{
-    question: "100. That’s the restaurant ____ we had dinner.",
-    options: ["A) which", "B) where", "C) that", "D) in which"],
-    correctAnswer: 1,
-    explanation: "الإجابة الصحيحة: B) where<br><br>الشرح: 'where' تُستخدم للدلالة على المكان في الجمل الموصولة."
-},
-{
-    question: "101. We couldn’t go out because it was snowing ____.",
-    options: ["A) heavy", "B) heavily", "C) heaviness", "D) heaviest"],
-    correctAnswer: 1,
-    explanation: "الإجابة الصحيحة: B) heavily<br><br>الشرح: نحتاج إلى حال (adverb) لوصف الفعل 'was snowing'."
-},
-{
-    question: "102. Not only ____ late, but he also forgot his homework.",
-    options: ["A) he was", "B) was he", "C) he is", "D) is he"],
-    correctAnswer: 1,
-    explanation: "الإجابة الصحيحة: B) was he<br><br>الشرح: بعد 'Not only' نستخدم تركيب الجملة المعكوس (inversion)."
-},
-{
-    question: "103. He apologized ____ being late.",
-    options: ["A) of", "B) about", "C) for", "D) to"],
-    correctAnswer: 2,
-    explanation: "الإجابة الصحيحة: C) for<br><br>الشرح: 'apologized for' هو الاستخدام الصحيح مع الفعل ing."
-},
-{
-    question: "104. The more you practice, the ____ you become.",
-    options: ["A) best", "B) better", "C) good", "D) well"],
-    correctAnswer: 1,
-    explanation: "الإجابة الصحيحة: B) better<br><br>الشرح: نستخدم 'the more..., the better' للمقارنة المتزايدة."
-},
-{
-    question: "105. It took me a long time to get used to ____ on the night shift.",
-    options: ["A) work", "B) working", "C) worked", "D) to work"],
-    correctAnswer: 1,
-    explanation: "الإجابة الصحيحة: B) working<br><br>الشرح: بعد 'get used to' نستخدم الفعل + ing."
-},
-{
-    question: "106. She asked me where ____ the keys.",
-    options: ["A) did I put", "B) I did put", "C) I had put", "D) had I put"],
-    correctAnswer: 2,
-    explanation: "الإجابة الصحيحة: C) I had put<br><br>الشرح: في الكلام غير المباشر نستخدم الماضي التام."
-},
-{
-    question: "107. He didn’t study; ____, he failed the test.",
-    options: ["A) although", "B) therefore", "C) because", "D) unless"],
-    correctAnswer: 1,
-    explanation: "الإجابة الصحيحة: B) therefore<br><br>الشرح: 'therefore' تعني 'لذلك' وتربط السبب بالنتيجة."
-},
-{
-    question: "108. If I had known, I ____ you.",
-    options: ["A) will tell", "B) would tell", "C) would have told", "D) told"],
-    correctAnswer: 2,
-    explanation: "الإجابة الصحيحة: C) would have told<br><br>الشرح: الحالة الثالثة من الجملة الشرطية (past unreal)."
-},
-{
-    question: "109. He works as a teacher, ____?",
-    options: ["A) does he", "B) doesn’t he", "C) is he", "D) isn’t he"],
-    correctAnswer: 1,
-    explanation: "الإجابة الصحيحة: B) doesn’t he<br><br>الشرح: نستخدم question tag مع الفعل الأساسي 'works'."
-},
-{
-    question: "110. Let’s go out, ____?",
-    options: ["A) shall we", "B) don’t we", "C) will we", "D) won’t we"],
-    correctAnswer: 0,
-    explanation: "الإجابة الصحيحة: A) shall we<br><br>الشرح: بعد الاقتراح باستخدام 'let’s' نستخدم 'shall we'."
-},
-{
-    question: "111. He is the man ____ car was stolen.",
-    options: ["A) which", "B) who", "C) whose", "D) whom"],
-    correctAnswer: 2,
-    explanation: "الإجابة الصحيحة: C) whose<br><br>الشرح: 'whose' تُستخدم للملكية."
-},
-{
-    question: "112. They made me ____ the form again.",
-    options: ["A) to fill", "B) filled", "C) filling", "D) fill"],
-    correctAnswer: 3,
-    explanation: "الإجابة الصحيحة: D) fill<br><br>الشرح: بعد make + مفعول، نستخدم الفعل مجردًا."
-},
-{
-    question: "113. I’ll keep studying ____ I pass the test.",
-    options: ["A) until", "B) during", "C) while", "D) when"],
-    correctAnswer: 0,
-    explanation: "الإجابة الصحيحة: A) until<br><br>الشرح: 'until' تعني 'حتى'."
-},
-{
-    question: "114. He’s interested ____ learning Spanish.",
-    options: ["A) in", "B) on", "C) at", "D) to"],
-    correctAnswer: 0,
-    explanation: "الإجابة الصحيحة: A) in<br><br>الشرح: 'interested in' هو الاستخدام الصحيح."
-},
-{
-    question: "115. I’m looking forward to ____ you.",
-    options: ["A) meet", "B) meeting", "C) met", "D) to meet"],
-    correctAnswer: 1,
-    explanation: "الإجابة الصحيحة: B) meeting<br><br>الشرح: بعد 'looking forward to' نستخدم الفعل + ing."
-},
-{
-    question: "116. This is the first time I ____ sushi.",
-    options: ["A) try", "B) tried", "C) have tried", "D) had tried"],
-    correctAnswer: 2,
-    explanation: "الإجابة الصحيحة: C) have tried<br><br>الشرح: بعد 'the first time' نستخدم المضارع التام."
-},
-{
-    question: "117. She has too many clothes ____.",
-    options: ["A) to wear", "B) wearing", "C) wear", "D) wore"],
-    correctAnswer: 0,
-    explanation: "الإجابة الصحيحة: A) to wear<br><br>الشرح: 'too many + noun + to + verb'."
-},
-{
-    question: "118. He denied ____ the vase.",
-    options: ["A) break", "B) to break", "C) breaking", "D) broke"],
-    correctAnswer: 2,
-    explanation: "الإجابة الصحيحة: C) breaking<br><br>الشرح: بعد 'deny' نستخدم الفعل + ing."
-},
-{
-    question: "119. ____ being tired, he finished the project.",
-    options: ["A) Although", "B) Because", "C) Despite", "D) Since"],
-    correctAnswer: 2,
-    explanation: "الإجابة الصحيحة: C) Despite<br><br>الشرح: 'Despite' يليها اسم أو gerund."
-},
-{
-    question: "120. I wish I ____ more money.",
-    options: ["A) have", "B) had", "C) will have", "D) has"],
-    correctAnswer: 1,
-    explanation: "الإجابة الصحيحة: B) had<br><br>الشرح: في جمل التمني (wish) نستخدم الماضي."
-}
+
+        {
+            "question": "<span style='color: #0061a8;'><b>1. Complete the Sentence</b></span>: She ____ to the park every weekend.",
+            "options": ["A) go", "B) goes", "C) going", "D) gone"],
+            "correctAnswer": 1,
+            "explanation": "الإجابة الصحيحة: B) 'goes' لأن الفاعل (She) يتطلب الفعل في صيغة المضارع البسيط 'goes'."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>2. Complete the Sentence</b></span>: I ____ my homework now.",
+            "options": ["A) do", "B) does", "C) am doing", "D) did"],
+            "correctAnswer": 2,
+            "explanation": "الإجابة الصحيحة: C) 'am doing' لأن الجملة في المضارع المستمر تشير إلى فعل يحدث الآن."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>3. Complete the Sentence</b></span>: They ____ (play) football every weekend.",
+            "options": ["A) play", "B) played", "C) are playing", "D) plays"],
+            "correctAnswer": 0,
+            "explanation": "الإجابة الصحيحة: A) 'play' لأن الفاعل (They) يتطلب الفعل في صيغة المضارع البسيط."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>4. Complete the Sentence</b></span>: She ____ (not, go) to the party last night.",
+            "options": ["A) didn't go", "B) don't go", "C) hasn't go", "D) wasn't going"],
+            "correctAnswer": 0,
+            "explanation": "الإجابة الصحيحة: A) 'didn't go' لأن الجملة تتحدث عن حدث في الماضي."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>5. Complete the Sentence</b></span>: I ____ my keys this morning.",
+            "options": ["A) lose", "B) lost", "C) have lost", "D) was losing"],
+            "correctAnswer": 2,
+            "explanation": "الإجابة الصحيحة: C) 'have lost' لأن الجملة تتطلب الفعل في المضارع التام."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>6. Complete the Sentence</b></span>: They ____ here since 10 AM.",
+            "options": ["A) are", "B) have been", "C) were", "D) will be"],
+            "correctAnswer": 1,
+            "explanation": "الإجابة الصحيحة: B) 'have been' لأن الجملة تتطلب المضارع التام المستمر."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>7. Complete the Sentence</b></span>: She ____ the book on the table yesterday.",
+            "options": ["A) put", "B) puts", "C) putting", "D) have put"],
+            "correctAnswer": 0,
+            "explanation": "الإجابة الصحيحة: A) 'put' لأن الفعل في الماضي البسيط."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>8. Complete the Sentence</b></span>: We ____ a new project next month.",
+            "options": ["A) start", "B) starting", "C) are starting", "D) will start"],
+            "correctAnswer": 3,
+            "explanation": "الإجابة الصحيحة: D) 'will start' لأن الجملة تتحدث عن المستقبل."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>9. Complete the Sentence</b></span>: He ____ already finished the test.",
+            "options": ["A) have", "B) had", "C) has", "D) is"],
+            "correctAnswer": 2,
+            "explanation": "الإجابة الصحيحة: C) 'has' لأن الفاعل (He) يتطلب الفعل المساعد 'has' في المضارع التام."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>10. Complete the Sentence</b></span>: I ____ a car last year.",
+            "options": ["A) bought", "B) buy", "C) was buying", "D) am buying"],
+            "correctAnswer": 0,
+            "explanation": "الإجابة الصحيحة: A) 'bought' لأن الفعل في الماضي البسيط."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>11. Complete the Sentence</b></span>: She ____ very happy about the news.",
+            "options": ["A) is", "B) was", "C) are", "D) were"],
+            "correctAnswer": 0,
+            "explanation": "الإجابة الصحيحة: A) 'is' لأن الجملة تتحدث عن الحاضر."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>12. Complete the Sentence</b></span>: I ____ never been to Paris.",
+            "options": ["A) have", "B) had", "C) am", "D) has"],
+            "correctAnswer": 0,
+            "explanation": "الإجابة الصحيحة: A) 'have' لأن الجملة في المضارع التام."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>13. Complete the Sentence</b></span>: They ____ the presentation by tomorrow.",
+            "options": ["A) watched", "B) will finish", "C) finished", "D) are finishing"],
+            "correctAnswer": 1,
+            "explanation": "الإجابة الصحيحة: B) 'will finish' لأن الجملة تتحدث عن المستقبل."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>14. Complete the Sentence</b></span>: I ____ my brother last weekend.",
+            "options": ["A) met", "B) meet", "C) meeting", "D) have met"],
+            "correctAnswer": 0,
+            "explanation": "الإجابة الصحيحة: A) 'met' لأن الجملة في الماضي البسيط."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>15. Complete the Sentence</b></span>: He ____ at 7 PM every day.",
+            "options": ["A) will be studying", "B) studies", "C) study", "D) is studying"],
+            "correctAnswer": 1,
+            "explanation": "الإجابة الصحيحة: B) 'studies' لأن الفاعل (He) يتطلب الفعل في صيغة المضارع البسيط."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>16. Complete the Sentence</b></span>: We ____ not finish our work yet.",
+            "options": ["A) did", "B) are", "C) has", "D) have"],
+            "correctAnswer": 3,
+            "explanation": "الإجابة الصحيحة: D) 'have' لأن الجملة في المضارع التام."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>17. Complete the Sentence</b></span>: I ____ going to visit my grandparents next summer.",
+            "options": ["A) am", "B) will", "C) am going", "D) going"],
+            "correctAnswer": 2,
+            "explanation": "الإجابة الصحيحة: C) 'am going' لأننا نتحدث عن خطة مؤكدة في المستقبل."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>18. Complete the Sentence</b></span>: They ____ having dinner at the moment.",
+            "options": ["A) is", "B) are", "C) were", "D) will"],
+            "correctAnswer": 1,
+            "explanation": "الإجابة الصحيحة: B) 'are' لأن الجملة في المضارع المستمر."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>19. Complete the Sentence</b></span>: She ____ the car when I called her.",
+            "options": ["A) was driving", "B) drives", "C) cooking", "D) has driven"],
+            "correctAnswer": 0,
+            "explanation": "الإجابة الصحيحة: A) 'was driving' لأن الجملة في الماضي المستمر."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>20. Complete the Sentence</b></span>: I ____ my phone last night.",
+            "options": ["A) forget", "B) forgotten", "C) forgot", "D) am forgetting"],
+            "correctAnswer": 2,
+            "explanation": "الإجابة الصحيحة: C) 'forgot' لأن الفعل في الماضي البسيط."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>21. Complete the Sentence</b></span>: I ____ a great time at the party yesterday.",
+            "options": ["A) have", "B) had", "C) has", "D) am having"],
+            "correctAnswer": 1,
+            "explanation": "الإجابة الصحيحة: B) 'had' لأن الجملة تتحدث عن حدث وقع في الماضي."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>22. Complete the Sentence</b></span>: They ____ to the new mall last weekend.",
+            "options": ["A) go", "B) went", "C) going", "D) gone"],
+            "correctAnswer": 1,
+            "explanation": "الإجابة الصحيحة: B) 'went' لأن الجملة تتحدث عن حدث في الماضي."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>23. Complete the Sentence</b></span>: We ____ (wait) for the bus now.",
+            "options": ["A) waited", "B) waiting", "C) are waiting", "D) wait"],
+            "correctAnswer": 2,
+            "explanation": "الإجابة الصحيحة: C) 'are waiting' لأن الجملة في المضارع المستمر."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>24. Complete the Sentence</b></span>: They ____ (eat) lunch right now.",
+            "options": ["A) eat", "B) eats", "C) are eating", "D) eating"],
+            "correctAnswer": 2,
+            "explanation": "الإجابة الصحيحة: C) 'are eating' لأن الجملة في المضارع المستمر."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>25. Complete the Sentence</b></span>: She ____ (speak) English very well.",
+            "options": ["A) speak", "B) speaks", "C) speaking", "D) spoken"],
+            "correctAnswer": 1,
+            "explanation": "الإجابة الصحيحة: B) 'speaks' لأن الجملة في المضارع البسيط."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>26. Complete the Sentence</b></span>: He ____ (play) the guitar every day.",
+            "options": ["A) play", "B) plays", "C) played", "D) playing"],
+            "correctAnswer": 1,
+            "explanation": "الإجابة الصحيحة: B) 'plays' لأن الجملة في المضارع البسيط."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>27. Complete the Sentence</b></span>: I ____ (be) here since 9 AM.",
+            "options": ["A) am", "B) was", "C) will be", "D) have been"],
+            "correctAnswer": 3,
+            "explanation": "الإجابة الصحيحة: D) 'have been' لأن الجملة في المضارع التام المستمر."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>28. Complete the Sentence</b></span>: We ____ (study) English for two years.",
+            "options": ["A) study", "B) studies", "C) have studied", "D) are studying"],
+            "correctAnswer": 2,
+            "explanation": "الإجابة الصحيحة: C) 'have studied' لأن الجملة في المضارع التام."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>29. Complete the Sentence</b></span>: I ____ (eat) breakfast when she arrived.",
+            "options": ["A) eat", "B) was eating", "C) ate", "D) is eating"],
+            "correctAnswer": 1,
+            "explanation": "الإجابة الصحيحة: B) 'was eating' لأن الجملة في الماضي المستمر."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>30. Complete the Sentence</b></span>: She ____ (write) a letter right now.",
+            "options": ["A) write", "B) writes", "C) writing", "D) is writing"],
+            "correctAnswer": 3,
+            "explanation": "الإجابة الصحيحة: D) 'is writing' لأن الجملة في المضارع المستمر."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>31. Complete the Sentence</b></span>: I ____ my phone this morning.",
+            "options": ["A) lost", "B) lose", "C) have lost", "D) am losing"],
+            "correctAnswer": 2,
+            "explanation": "الإجابة الصحيحة: C) 'have lost' لأن الجملة في المضارع التام."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>32. Complete the Sentence</b></span>: He ____ (play) football every weekend.",
+            "options": ["A) play", "B) played", "C) playing", "D) plays"],
+            "correctAnswer": 3,
+            "explanation": "الإجابة الصحيحة: D) 'plays' لأن الجملة في المضارع البسيط."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>33. Complete the Sentence</b></span>: They ____ (eat) dinner when I called.",
+            "options": ["A) eats", "B) is eating", "C) are eating", "D) were eating"],
+            "correctAnswer": 3,
+            "explanation": "الإجابة الصحيحة: D) 'were eating' لأن الجملة في الماضي المستمر."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>34. Complete the Sentence</b></span>: I ____ (not, finish) my homework yet.",
+            "options": ["A) didn’t finish", "B) don’t finish", "C) haven’t finished", "D) isn’t finishing"],
+            "correctAnswer": 2,
+            "explanation": "الإجابة الصحيحة: C) 'haven’t finished' لأن الجملة في المضارع التام."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>35. Complete the Sentence</b></span>: She ____ (study) for the exam right now.",
+            "options": ["A) studying", "B) studies", "C) is studying", "D) studied"],
+            "correctAnswer": 2,
+            "explanation": "الإجابة الصحيحة: C) 'is studying' لأن الجملة في المضارع المستمر."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>36. Complete the Sentence</b></span>: We ____ (arrive) at the station when the train left.",
+            "options": ["A) arrived", "B) have arrived", "C) were arriving", "D) had arrived"],
+            "correctAnswer": 3,
+            "explanation": "الإجابة الصحيحة: D) 'had arrived' لأن الجملة في الماضي التام."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>37. Complete the Sentence</b></span>: I ____ (see) him at the meeting yesterday.",
+            "options": ["A) see", "B) seen", "C) saw", "D) have seen"],
+            "correctAnswer": 2,
+            "explanation": "الإجابة الصحيحة: C) 'saw' لأن الجملة في الماضي البسيط."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>38. Complete the Sentence</b></span>: The children ____ (play) outside when I called them.",
+            "options": ["A) play", "B) plays", "C) playing", "D) were playing"],
+            "correctAnswer": 3,
+            "explanation": "الإجابة الصحيحة: D) 'were playing' لأن الجملة في الماضي المستمر."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>39. Complete the Sentence</b></span>: We ____ (go) to the cinema next weekend.",
+            "options": ["A) will go", "B) are going", "C) went", "D) go"],
+            "correctAnswer": 0,
+            "explanation": "الإجابة الصحيحة: A) 'will go' لأن الجملة تتحدث عن المستقبل."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>40. Complete the Sentence</b></span>: He ____ (not, understand) the instructions properly.",
+            "options": ["A) didn’t understand", "B) don’t understand", "C) hasn’t understood", "D) wasn’t understanding"],
+            "correctAnswer": 0,
+            "explanation": "الإجابة الصحيحة: A) 'didn’t understand' لأن الجملة في الماضي البسيط."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>41. Complete the Sentence</b></span>: He ____ (work) in the office right now.",
+            "options": ["A) works", "B) working", "C) is working", "D) worked"],
+            "correctAnswer": 2,
+            "explanation": "الإجابة الصحيحة: C) 'is working' لأن الجملة في المضارع المستمر."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>42. Complete the Sentence</b></span>: We ____ (finish) the project by next week.",
+            "options": ["A) finish", "B) finished", "C) will finish", "D) are finishing"],
+            "correctAnswer": 2,
+            "explanation": "الإجابة الصحيحة: C) 'will finish' لأن الجملة تتحدث عن المستقبل."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>43. Complete the Sentence</b></span>: She ____ (not, like) to eat vegetables.",
+            "options": ["A) does not like", "B) is not liking", "C) don’t like", "D) didn’t like"],
+            "correctAnswer": 0,
+            "explanation": "الإجابة الصحيحة: A) 'does not like' لأن الجملة في المضارع البسيط."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>44. Complete the Sentence</b></span>: I ____ (read) a book when you called.",
+            "options": ["A) read", "B) was reading", "C) reads", "D) have read"],
+            "correctAnswer": 1,
+            "explanation": "الإجابة الصحيحة: B) 'was reading' لأن الجملة في الماضي المستمر."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>45. Complete the Sentence</b></span>: They ____ (visit) the museum next weekend.",
+            "options": ["A) visit", "B) visited", "C) are visiting", "D) will visit"],
+            "correctAnswer": 3,
+            "explanation": "الإجابة الصحيحة: D) 'will visit' لأن الجملة تتحدث عن المستقبل."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>46. Complete the Sentence</b></span>: We ____ (already, complete) our homework.",
+            "options": ["A) already complete", "B) have already completed", "C) completed", "D) are already completing"],
+            "correctAnswer": 1,
+            "explanation": "الإجابة الصحيحة: B) 'have already completed' لأن الجملة في المضارع التام."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>47. Complete the Sentence</b></span>: He ____ (always, arrive) late to class.",
+            "options": ["A) always arrives", "B) always arrived", "C) always is arriving", "D) always arrive"],
+            "correctAnswer": 0,
+            "explanation": "الإجابة الصحيحة: A) 'always arrives' لأن الجملة في المضارع البسيط."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>48. Complete the Sentence</b></span>: I ____ (never, be) to Spain.",
+            "options": ["A) never been", "B) have never been", "C) never was", "D) have never went"],
+            "correctAnswer": 1,
+            "explanation": "الإجابة الصحيحة: B) 'have never been' لأن الجملة في المضارع التام."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>49. Complete the Sentence</b></span>: By the time we arrive, they ____ (leave).",
+            "options": ["A) leave", "B) will leave", "C) had left", "D) have left"],
+            "correctAnswer": 2,
+            "explanation": "الإجابة الصحيحة: C) 'had left' لأن الجملة في الماضي التام."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>50. Complete the Sentence</b></span>: They ____ (study) all afternoon yesterday.",
+            "options": ["A) study", "B) studies", "C) studied", "D) were studying"],
+            "correctAnswer": 3,
+            "explanation": "الإجابة الصحيحة: D) 'were studying' لأن الجملة في الماضي المستمر."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>51. Complete the Sentence</b></span>: I ____ (not, visit) my grandmother in a while.",
+            "options": ["A) don’t visit", "B) didn’t visit", "C) haven’t visited", "D) wasn’t visiting"],
+            "correctAnswer": 2,
+            "explanation": "الإجابة الصحيحة: C) 'haven’t visited' لأن الجملة في المضارع التام."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>52. Complete the Sentence</b></span>: He ____ (already, finish) his homework.",
+            "options": ["A) has already finished", "B) finished already", "C) has finished already", "D) already finished"],
+            "correctAnswer": 0,
+            "explanation": "الإجابة الصحيحة: A) 'has already finished' لأن الجملة في المضارع التام."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>53. Complete the Sentence</b></span>: I ____ (see) him yesterday.",
+            "options": ["A) see", "B) seeing", "C) saw", "D) have seen"],
+            "correctAnswer": 2,
+            "explanation": "الإجابة الصحيحة: C) 'saw' لأن الجملة في الماضي البسيط."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>54. Complete the Sentence</b></span>: She ____ (speak) French fluently.",
+            "options": ["A) speaks", "B) speak", "C) is speaking", "D) spoken"],
+            "correctAnswer": 0,
+            "explanation": "الإجابة الصحيحة: A) 'speaks' لأن الجملة في المضارع البسيط."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>55. Complete the Sentence</b></span>: We ____ (not, go) to the park yesterday.",
+            "options": ["A) don’t go", "B) didn’t go", "C) haven’t gone", "D) weren’t going"],
+            "correctAnswer": 1,
+            "explanation": "الإجابة الصحيحة: B) 'didn’t go' لأن الجملة في الماضي البسيط."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>56. Complete the Sentence</b></span>: I ____ (meet) him tomorrow.",
+            "options": ["A) met", "B) meet", "C) am meeting", "D) will meet"],
+            "correctAnswer": 3,
+            "explanation": "الإجابة الصحيحة: D) 'will meet' لأن الجملة تتحدث عن المستقبل."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>57. Complete the Sentence</b></span>: She ____ (be) to the market this morning.",
+            "options": ["A) has been", "B) was", "C) will be", "D) is"],
+            "correctAnswer": 0,
+            "explanation": "الإجابة الصحيحة: A) 'has been' لأن الجملة في المضارع التام."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>58. Complete the Sentence</b></span>: They ____ (not, eat) lunch yet.",
+            "options": ["A) don’t eat", "B) haven’t eaten", "C) didn’t eat", "D) aren’t eating"],
+            "correctAnswer": 1,
+            "explanation": "الإجابة الصحيحة: B) 'haven’t eaten' لأن الجملة في المضارع التام."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>59. Complete the Sentence</b></span>: I ____ (enjoy) my vacation last month.",
+            "options": ["A) enjoyed", "B) enjoys", "C) am enjoying", "D) have enjoyed"],
+            "correctAnswer": 0,
+            "explanation": "الإجابة الصحيحة: A) 'enjoyed' لأن الجملة في الماضي البسيط."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>60. Complete the Sentence</b></span>: He ____ (study) when I saw him yesterday.",
+            "options": ["A) was studying", "B) studied", "C) studies", "D) is studying"],
+            "correctAnswer": 0,
+            "explanation": "الإجابة الصحيحة: A) 'was studying' لأن الجملة في الماضي المستمر."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>61. Complete the Sentence</b></span>: We ____ (have) breakfast when the phone rang.",
+            "options": ["A) had", "B) have", "C) were having", "D) have had"],
+            "correctAnswer": 2,
+            "explanation": "الإجابة الصحيحة: C) 'were having' لأن الجملة في الماضي المستمر."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>62. Complete the Sentence</b></span>: They ____ (live) in this city for five years.",
+            "options": ["A) live", "B) lived", "C) will live", "D) have lived"],
+            "correctAnswer": 3,
+            "explanation": "الإجابة الصحيحة: D) 'have lived' لأن الجملة في المضارع التام."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>63. Complete the Sentence</b></span>: I ____ (buy) a new laptop yesterday.",
+            "options": ["A) buys", "B) bought", "C) am buying", "D) have bought"],
+            "correctAnswer": 1,
+            "explanation": "الإجابة الصحيحة: B) 'bought' لأن الجملة في الماضي البسيط."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>64. Complete the Sentence</b></span>: He ____ (not, like) to eat vegetables.",
+            "options": ["A) didn’t like", "B) doesn’t like", "C) isn’t liking", "D) doesn’t liked"],
+            "correctAnswer": 1,
+            "explanation": "الإجابة الصحيحة: B) 'doesn’t like' لأن الجملة في المضارع البسيط."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>65. Complete the Sentence</b></span>: I ____ (wait) for you for an hour.",
+            "options": ["A) waited", "B) waiting", "C) have waited", "D) am waiting"],
+            "correctAnswer": 2,
+            "explanation": "الإجابة الصحيحة: C) 'have waited' لأن الجملة في المضارع التام."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>66. Complete the Sentence</b></span>: If it ____ tomorrow, I will stay at home.",
+            "options": ["A) rains", "B) rain", "C) raining", "D) will rain"],
+            "correctAnswer": 0,
+            "explanation": "الإجابة الصحيحة: A) 'rains' لأن الجملة في الشرط الأول (First Conditional)."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>67. Complete the Sentence</b></span>: If I ____ you, I would go to the party.",
+            "options": ["A) am", "B) were", "C) was", "D) would"],
+            "correctAnswer": 1,
+            "explanation": "الإجابة الصحيحة: B) 'were' لأن الجملة في الشرط الثاني (Second Conditional)."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>68. Complete the Sentence</b></span>: If they ____ known about the traffic, they would have left earlier.",
+            "options": ["A) knows", "B) have known", "C) known", "D) had known"],
+            "correctAnswer": 3,
+            "explanation": "الإجابة الصحيحة: D) 'had known' لأن الجملة في الشرط الثالث (Third Conditional)."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>69. Complete the Sentence</b></span>: The letter ____ (send) tomorrow.",
+            "options": ["A) is sent", "B) is being sent", "C) will be sent", "D) was sent"],
+            "correctAnswer": 2,
+            "explanation": "الإجابة الصحيحة: C) 'will be sent' لأن الجملة في المستقبل المبني للمجهول."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>70. Complete the Sentence</b></span>: The book ____ (read) by many people every year.",
+            "options": ["A) is read", "B) reads", "C) has been read", "D) was read"],
+            "correctAnswer": 0,
+            "explanation": "الإجابة الصحيحة: A) 'is read' لأن الجملة في المضارع المبني للمجهول."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>71. Complete the Sentence</b></span>: The homework ____ (finish) by the students last week.",
+            "options": ["A) finished", "B) is finished", "C) was finished", "D) has finished"],
+            "correctAnswer": 2,
+            "explanation": "الإجابة الصحيحة: C) 'was finished' لأن الجملة في الماضي المبني للمجهول."
+        },
+        {
+            "question": "<span style='color: #0061a8;'><b>72. Complete the Sentence</b></span>: The project ____ (complete) by next month.",
+            "options": ["A) will have completed", "B) will be completed", "C) is completed", "D) is being completed"],
+            "correctAnswer": 1,
+            "explanation": "الإجابة الصحيحة: B) 'will be completed' لأن الجملة في المستقبل المبني للمجهول."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>73. Find the mistake that must be changed</b></span>: She don't like coffee.",
+            "options": ["A) She", "B) don't", "C) like", "D) coffee"],
+            "correctAnswer": 1,
+            "explanation": "الإجابة الصحيحة: B) 'don't' لأن الفاعل (She) يتطلب الفعل المساعد 'doesn't' في الجملة."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>74. Find the mistake that must be changed</b></span>: He go to the gym every morning.",
+            "options": ["A) He", "B) go", "C) to", "D) gym"],
+            "correctAnswer": 1,
+            "explanation": "الإجابة الصحيحة: B) 'go' يجب أن تكون 'goes' لأن الفاعل (He) يتطلب الفعل بصيغة المفرد في المضارع."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>75. Find the mistake that must be changed</b></span>: They was late to the meeting.",
+            "options": ["A) They", "B) was", "C) late", "D) meeting"],
+            "correctAnswer": 1,
+            "explanation": "الإجابة الصحيحة: B) 'was' يجب أن تكون 'were' لأن الفاعل (They) يتطلب الفعل المساعد 'were'."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>76. Find the mistake that must be changed</b></span>: She is more better than him in tennis.",
+            "options": ["A) She", "B) is", "C) more", "D) better"],
+            "correctAnswer": 2,
+            "explanation": "الإجابة الصحيحة: C) 'more' يجب أن تكون 'better' لأن 'better' هو صيغة المقارنة الخاصة بـ 'good' ولا يحتاج إلى 'more'."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>77. Find the mistake that must be changed</b></span>: I can plays the piano.",
+            "options": ["A) I", "B) can", "C) plays", "D) the piano"],
+            "correctAnswer": 2,
+            "explanation": "الإجابة الصحيحة: C) 'plays' يجب أن تكون 'play' لأن 'can' لا يتطلب إضافة 's' للفعل."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>78. Find the mistake that must be changed</b></span>: The children was playing in the park.",
+            "options": ["A) The", "B) children", "C) was", "D) playing"],
+            "correctAnswer": 2,
+            "explanation": "الإجابة الصحيحة: C) 'was' يجب أن تكون 'were' لأن 'children' هو جمع ويحتاج إلى 'were'."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>79. Find the mistake that must be changed</b></span>: She doesn't knows the answer.",
+            "options": ["A) She", "B) doesn't", "C) knows", "D) the answer"],
+            "correctAnswer": 2,
+            "explanation": "الإجابة الصحيحة: C) 'knows' يجب أن تكون 'know' لأن 'doesn't' لا يتطلب إضافة 's' للفعل."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>80. Find the mistake that must be changed</b></span>: We was going to the market when it started to rain.",
+            "options": ["A) We", "B) was", "C) going", "D) market"],
+            "correctAnswer": 1,
+            "explanation": "الإجابة الصحيحة: B) 'was' يجب أن تكون 'were' لأن الفاعل (We) يتطلب الفعل المساعد 'were'."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>81. Find the mistake that must be changed</b></span>: He is the most smartest student in the class.",
+            "options": ["A) He", "B) is", "C) most", "D) smartest"],
+            "correctAnswer": 2,
+            "explanation": "الإجابة الصحيحة: C) 'most' يجب أن تُحذف لأن 'smartest' هي صيغة التفضيل ولا تحتاج إلى 'most'."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>82. Find the mistake that must be changed</b></span>: I have seen him yesterday.",
+            "options": ["A) I", "B) have", "C) seen", "D) yesterday"],
+            "correctAnswer": 1,
+            "explanation": "الإجابة الصحيحة: B) 'have' يجب أن تُستبدل بـ 'did' لأن الجملة تتحدث عن حدث في الماضي."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>83. Find the mistake that must be changed</b></span>: She don't have any brothers.",
+            "options": ["A) She", "B) don't", "C) have", "D) any brothers"],
+            "correctAnswer": 1,
+            "explanation": "الإجابة الصحيحة: B) 'don't' يجب أن تكون 'doesn't' لأن الفاعل (She) يتطلب الفعل المساعد 'doesn't'."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>84. Find the mistake that must be changed</b></span>: The book are on the table.",
+            "options": ["A) The", "B) book", "C) are", "D) on the table"],
+            "correctAnswer": 2,
+            "explanation": "الإجابة الصحيحة: C) 'are' يجب أن تكون 'is' لأن 'book' مفرد."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>85. Find the mistake that must be changed</b></span>: I have been reading a book since two hours.",
+            "options": ["A) I", "B) have", "C) reading", "D) since two hours"],
+            "correctAnswer": 3,
+            "explanation": "الإجابة الصحيحة: D) 'since two hours' يجب أن تكون 'for two hours' لأن 'since' تُستخدم مع الوقت المحدد، بينما 'for' تُستخدم مع الفترات الزمنية."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>86. Find the mistake that must be changed</b></span>: He studied every day for three years.",
+            "options": ["A) He", "B) studied", "C) every day", "D) for three years"],
+            "correctAnswer": 1,
+            "explanation": "الإجابة الصحيحة: B) 'studied' يجب أن تكون 'has studied' لأن الجملة تشير إلى فعل بدأ في الماضي ويستمر حتى الآن."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>87. Find the mistake that must be changed</b></span>: She didn't went to the store yesterday.",
+            "options": ["A) She", "B) didn't", "C) went", "D) to the store"],
+            "correctAnswer": 2,
+            "explanation": "الإجابة الصحيحة: C) 'went' يجب أن تكون 'go' لأن 'didn't' يتطلب الفعل في الشكل الأساسي."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>88. Find the mistake that must be changed</b></span>: They have been working hard last week.",
+            "options": ["A) They", "B) have", "C) been", "D) last week"],
+            "correctAnswer": 3,
+            "explanation": "الإجابة الصحيحة: D) 'last week' يجب أن تكون 'for the last week' لأننا لا نستخدم 'last week' مع المضارع التام المستمر."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>89. Find the mistake that must be changed</b></span>: The teacher gave us a homework yesterday.",
+            "options": ["A) The", "B) gave", "C) us", "D) homework"],
+            "correctAnswer": 1,
+            "explanation": "الإجابة الصحيحة: B) 'gave' يجب أن تكون 'give' لأن الجملة في الزمن الحاضر."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>90. Find the mistake that must be changed</b></span>: The children enjoys playing outside.",
+            "options": ["A) The", "B) children", "C) enjoys", "D) playing"],
+            "correctAnswer": 2,
+            "explanation": "الإجابة الصحيحة: C) 'enjoys' يجب أن تكون 'enjoy' لأن الفاعل (children) جمع."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>91. Find the mistake that must be changed</b></span>: She don't like swimming in cold water.",
+            "options": ["A) She", "B) don't", "C) like", "D) swimming"],
+            "correctAnswer": 1,
+            "explanation": "الإجابة الصحيحة: B) 'don't' يجب أن تكون 'doesn't' لأن الفاعل (She) يتطلب الفعل المساعد 'doesn't'."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>92. Find the mistake that must be changed</b></span>: I will been waiting for you for an hour.",
+            "options": ["A) will", "B) been", "C) waiting", "D) for an hour"],
+            "correctAnswer": 1,
+            "explanation": "الإجابة الصحيحة: B) 'been' يجب أن تكون 'be' لأن الجملة في المستقبل المستمر."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>93. Find the mistake that must be changed</b></span>: She can plays the piano very well.",
+            "options": ["A) She", "B) can", "C) plays", "D) the piano"],
+            "correctAnswer": 2,
+            "explanation": "الإجابة الصحيحة: C) 'plays' يجب أن تكون 'play' لأن 'can' لا يتطلب إضافة 's' للفعل."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>94. Find the mistake that must be changed</b></span>: They have went to the cinema.",
+            "options": ["A) They", "B) have", "C) went", "D) to the cinema"],
+            "correctAnswer": 2,
+            "explanation": "الإجابة الصحيحة: C) 'went' يجب أن تكون 'gone' لأن 'have' يتطلب استخدام التصريف الثالث للفعل."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>95. Find the mistake that must be changed</b></span>: I’m waiting for you since two hours.",
+            "options": ["A) I’m", "B) waiting", "C) for", "D) since two hours"],
+            "correctAnswer": 3,
+            "explanation": "الإجابة الصحيحة: D) 'since two hours' يجب أن تكون 'for two hours' لأن 'since' تُستخدم مع الوقت المحدد، بينما 'for' تُستخدم مع الفترات الزمنية."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>96. Find the mistake that must be changed</b></span>: She didn’t liked the movie.",
+            "options": ["A) She", "B) didn’t", "C) liked", "D) the movie"],
+            "correctAnswer": 2,
+            "explanation": "الإجابة الصحيحة: C) 'liked' يجب أن تكون 'like' لأن 'didn't' يتطلب الفعل في الشكل الأساسي."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>97. Find the mistake that must be changed</b></span>: He told me he can’t to do it.",
+            "options": ["A) He", "B) told", "C) can’t", "D) to do it"],
+            "correctAnswer": 3,
+            "explanation": "الإجابة الصحيحة: D) 'to do it' يجب أن تُحذف 'to' لأن 'can' لا يتطلب 'to' بعده."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>98. Find the mistake that must be changed</b></span>: I’m interesting in learning new languages.",
+            "options": ["A) I’m", "B) interesting", "C) in", "D) learning"],
+            "correctAnswer": 1,
+            "explanation": "الإجابة الصحيحة: B) 'interesting' يجب أن تكون 'interested' لأن 'I’m' يتطلب صفة تدل على الشعور."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>99. Find the mistake that must be changed</b></span>: He plays tennis rarely.",
+            "options": ["A) He", "B) plays", "C) tennis", "D) rarely"],
+            "correctAnswer": 3,
+            "explanation": "الإجابة الصحيحة: D) 'rarely' يجب أن تكون 'rarely' في البداية أو 'He rarely plays tennis' لتحسين التدفق."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>100. Find the mistake that must be changed</b></span>: I have been to the park yesterday.",
+            "options": ["A) I", "B) have", "C) been", "D) yesterday"],
+            "correctAnswer": 3,
+            "explanation": "الإجابة الصحيحة: D) 'yesterday' يجب أن تكون 'yesterday' تُستخدم مع الماضي البسيط، وليس مع المضارع التام."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>101. Find the mistake that must be changed</b></span>: They doesn’t have enough time to finish the project.",
+            "options": ["A) They", "B) doesn’t", "C) have", "D) time"],
+            "correctAnswer": 1,
+            "explanation": "الإجابة الصحيحة: B) 'doesn’t' يجب أن تكون 'don’t' لأن الفاعل 'They' يتطلب 'don’t'."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>102. Find the mistake that must be changed</b></span>: The children enjoy playing soccer in the evening.",
+            "options": ["A) The", "B) children", "C) enjoy", "D) playing"],
+            "correctAnswer": 0,
+            "explanation": "الإجابة الصحيحة: A) 'The' يجب أن تكون 'The children' لأنها تشير إلى مجموعة معينة."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>103. Find the mistake that must be changed</b></span>: She didn’t went to the store last week.",
+            "options": ["A) She", "B) didn’t", "C) went", "D) to the store"],
+            "correctAnswer": 2,
+            "explanation": "الإجابة الصحيحة: C) 'went' يجب أن تكون 'go' لأن 'didn't' يتطلب الفعل في الشكل الأساسي."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>104. Find the mistake that must be changed</b></span>: We is going to the cinema tomorrow.",
+            "options": ["A) We", "B) is", "C) going", "D) to the cinema"],
+            "correctAnswer": 1,
+            "explanation": "الإجابة الصحيحة: B) 'is' يجب أن تكون 'are' لأن الفاعل (We) يتطلب الفعل المساعد 'are'."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>105. Find the mistake that must be changed</b></span>: They have meet him at the party.",
+            "options": ["A) They", "B) have", "C) meet", "D) him"],
+            "correctAnswer": 2,
+            "explanation": "الإجابة الصحيحة: C) 'meet' يجب أن تكون 'met' لأن الجملة في المضارع التام."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>106. Find the mistake that must be changed</b></span>: I was waiting for you when you had arrived.",
+            "options": ["A) I", "B) was", "C) waiting", "D) had arrived"],
+            "correctAnswer": 3,
+            "explanation": "الإجابة الصحيحة: D) 'had arrived' يجب أن تكون 'arrived' لأن الجملة في الماضي المستمر."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>107. Find the mistake that must be changed</b></span>: He is the most fastest runner in the team.",
+            "options": ["A) He", "B) is", "C) most", "D) fastest"],
+            "correctAnswer": 2,
+            "explanation": "الإجابة الصحيحة: C) 'most' يجب أن تُحذف لأن 'fastest' هي صيغة التفضيل ولا تحتاج إلى 'most'."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>108. Find the mistake that must be changed</b></span>: They didn’t went to the concert last night.",
+            "options": ["A) They", "B) didn’t", "C) went", "D) to the concert"],
+            "correctAnswer": 2,
+            "explanation": "الإجابة الصحيحة: C) 'went' يجب أن تكون 'go' لأن 'didn't' يتطلب الفعل في الشكل الأساسي."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>109. Find the mistake that must be changed</b></span>: She is the most better student in the class.",
+            "options": ["A) She", "B) is", "C) most", "D) better"],
+            "correctAnswer": 2,
+            "explanation": "الإجابة الصحيحة: C) 'most' يجب أن تُحذف لأن 'better' هي صيغة التفضيل الخاصة بـ 'good' ولا تحتاج إلى 'most'."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>110. Find the mistake that must be changed</b></span>: I have read it since Monday.",
+            "options": ["A) have", "B) read", "C) it", "D) since"],
+            "correctAnswer": 3,
+            "explanation": "الإجابة الصحيحة: D) 'since' يجب أن تُستبدل بـ 'for' لأننا لا نستخدم 'since' مع الزمن المستمر."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>111. Find the mistake that must be changed</b></span>: They has been to the museum last week.",
+            "options": ["A) They", "B) has", "C) been", "D) to the museum"],
+            "correctAnswer": 1,
+            "explanation": "الإجابة الصحيحة: B) 'has' يجب أن تكون 'have' لأن الفاعل (They) يتطلب 'have'."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>112. Find the mistake that must be changed</b></span>: We didn't go to the cinema yesterday because of the rain.",
+            "options": ["A) We", "B) didn't", "C) go", "D) of the rain"],
+            "correctAnswer": 3,
+            "explanation": "الإجابة الصحيحة: D) 'of the rain' يجب أن تكون 'because of the rain' لأنه لا نحتاج إلى 'of' بعد 'because'."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>113. Find the mistake that must be changed</b></span>: This is the most easiest question on the test.",
+            "options": ["A) This", "B) is", "C) most", "D) easiest"],
+            "correctAnswer": 2,
+            "explanation": "الإجابة الصحيحة: C) 'most' يجب أن تُحذف لأن 'easiest' هي صيغة التفضيل الخاصة بـ 'easy' ولا تحتاج إلى 'most'."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>114. Find the mistake that must be changed</b></span>: He didn't arrived on time for the meeting.",
+            "options": ["A) He", "B) didn't", "C) arrived", "D) on time"],
+            "correctAnswer": 2,
+            "explanation": "الإجابة الصحيحة: C) 'arrived' يجب أن تكون 'arrive' لأن 'didn't' يتطلب الفعل في الشكل الأساسي."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>115. Find the mistake that must be changed</b></span>: I am interesting in learning new languages.",
+            "options": ["A) am", "B) interesting", "C) in", "D) learning"],
+            "correctAnswer": 1,
+            "explanation": "الإجابة الصحيحة: B) 'interesting' يجب أن تكون 'interested' لأن 'am' يتطلب صفة تدل على الشعور."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>116. Find the mistake that must be changed</b></span>: They was playing football when it started to rain.",
+            "options": ["A) They", "B) was", "C) playing", "D) when"],
+            "correctAnswer": 1,
+            "explanation": "الإجابة الصحيحة: B) 'was' يجب أن تكون 'were' لأن الفاعل (They) يتطلب الفعل المساعد 'were'."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>117. Find the mistake that must be changed</b></span>: He goes to school every days.",
+            "options": ["A) He", "B) goes", "C) to", "D) every days"],
+            "correctAnswer": 3,
+            "explanation": "الإجابة الصحيحة: D) 'every days' يجب أن تكون 'every day' لأن 'every' لا يتطلب الجمع."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>118. Find the mistake that must be changed</b></span>: She is more better than her sister at singing.",
+            "options": ["A) She", "B) is", "C) more", "D) better"],
+            "correctAnswer": 2,
+            "explanation": "الإجابة الصحيحة: C) 'more' يجب أن تُحذف لأن 'better' هي صيغة التفضيل الخاصة بـ 'good' ولا تحتاج إلى 'more'."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>119. Find the mistake that must be changed</b></span>: She is a most talented artist.",
+            "options": ["A) She", "B) is", "C) a", "D) most"],
+            "correctAnswer": 3,
+            "explanation": "الإجابة الصحيحة: D) 'most' يجب أن تُحذف لأن 'most' لا تستخدم مع 'a'."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>120. Find the mistake that must be changed</b></span>: He is the best player of the team.",
+            "options": ["A) He", "B) is", "C) best", "D) of the team"],
+            "correctAnswer": 3,
+            "explanation": "الإجابة الصحيحة: D) 'of the team' يجب أن تُحذف لأننا نقول 'the best player in the team'."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>121. Find the mistake that must be changed</b></span>: I have many informations about the project.",
+            "options": ["A) I", "B) have", "C) many", "D) informations"],
+            "correctAnswer": 3,
+            "explanation": "الإجابة الصحيحة: D) 'informations' يجب أن تكون 'information' لأنها اسم غير معدود."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>122. Find the mistake that must be changed</b></span>: There are much cars in the parking lot.",
+            "options": ["A) There", "B) are", "C) much", "D) cars"],
+            "correctAnswer": 2,
+            "explanation": "الإجابة الصحيحة: C) 'much' يجب أن تكون 'many' لأن 'cars' اسم معدود."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>123. Find the mistake that must be changed</b></span>: He is interested in playing tennis on the weekends.",
+            "options": ["A) He", "B) is", "C) interested", "D) on the weekends"],
+            "correctAnswer": 3,
+            "explanation": "الإجابة الصحيحة: D) 'on the weekends' يجب أن تكون 'at the weekends' لأننا نستخدم 'at' مع العطلات."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>124. Find the mistake that must be changed</b></span>: I will arrive at London tomorrow.",
+            "options": ["A) I", "B) will", "C) arrive", "D) at London"],
+            "correctAnswer": 3,
+            "explanation": "الإجابة الصحيحة: D) 'at London' يجب أن تكون 'in London' لأننا نستخدم 'in' مع المدن."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>125. Find the mistake that must be changed</b></span>: Where you are going?",
+            "options": ["A) Where", "B) you", "C) are", "D) going"],
+            "correctAnswer": 1,
+            "explanation": "الإجابة الصحيحة: B) 'you' يجب أن تكون 'are you' لأن ترتيب السؤال الصحيح هو: 'Where are you going?'"
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>126. Find the mistake that must be changed</b></span>: Does she likes reading books?",
+            "options": ["A) Does", "B) she", "C) likes", "D) reading"],
+            "correctAnswer": 2,
+            "explanation": "الإجابة الصحيحة: C) 'likes' يجب أن تكون 'like' لأن 'does' لا يتطلب إضافة 's' للفعل."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>127. Find the mistake that must be changed</b></span>: There is many sugar in the bowl.",
+            "options": ["A) There", "B) is", "C) many", "D) sugar"],
+            "correctAnswer": 2,
+            "explanation": "الإجابة الصحيحة: C) 'many' يجب أن تكون 'much' لأن 'sugar' اسم غير معدود."
+        },
+        {
+            "question": "<span style='color: #8B0000;'><b>128. Find the mistake that must be changed</b></span>: I don’t have much books on this shelf.",
+            "options": ["A) I", "B) don’t", "C) much", "D) books"],
+            "correctAnswer": 2,
+            "explanation": "الإجابة الصحيحة: C) 'much' يجب أن تكون 'many' لأن 'books' اسم معدود."
+        },
+      {
+        "question": "<span style='color: #800080;'><b>129. Vocabulary</b></span>: The new manager's leadership style was ____ and well-received by the team.",
+        "options": ["A) aggressive", "B) authoritarian", "C) collaborative", "D) disorganized"],
+        "correctAnswer": 2,
+        "explanation": "الإجابة الصحيحة: C) 'collaborative' لأن الجملة تشير إلى أسلوب قيادة تعاوني."
+    },
+    {
+        "question": "<span style='color: #800080;'><b>130. Vocabulary</b></span>: The team is facing a major ____ in its operations due to the new regulations.",
+        "options": ["A) advantage", "B) obstacle", "C) opportunity", "D) success"],
+        "correctAnswer": 1,
+        "explanation": "الإجابة الصحيحة: B) 'obstacle' لأن الجملة تشير إلى تحديات أو صعوبات تواجهها الفريق."
+    },
+    {
+        "question": "<span style='color: #800080;'><b>131. Vocabulary</b></span>: His response was very ____; he immediately solved the problem without hesitation.",
+        "options": ["A) effective", "B) ineffective", "C) ambiguous", "D) weak"],
+        "correctAnswer": 0,
+        "explanation": "الإجابة الصحيحة: A) 'effective' لأن الجملة تشير إلى رد فعل سريع وناجح."
+    },
+    {
+        "question": "<span style='color: #800080;'><b>132. Vocabulary</b></span>: The new software is designed to ____ the process of data analysis.",
+        "options": ["A) hinder", "B) facilitate", "C) delay", "D) complicate"],
+        "correctAnswer": 1,
+        "explanation": "الإجابة الصحيحة: B) 'facilitate' لأن الجملة تشير إلى تحسين أو تسهيل عملية التحليل."
+    },
+    {
+        "question": "<span style='color: #800080;'><b>133. Vocabulary</b></span>: The company's ____ efforts led to significant growth in the market.",
+        "options": ["A) careful", "B) negligent", "C) strategic", "D) reckless"],
+        "correctAnswer": 2,
+        "explanation": "الإجابة الصحيحة: C) 'strategic' لأن الجملة تشير إلى جهود مخطط لها جيداً."
+    },
+    {
+        "question": "<span style='color: #800080;'><b>134. Vocabulary</b></span>: The new policy will ____ employees' performance and encourage better productivity.",
+        "options": ["A) impede", "B) enhance", "C) damage", "D) ignore"],
+        "correctAnswer": 1,
+        "explanation": "الإجابة الصحيحة: B) 'enhance' لأن الجملة تشير إلى تحسين أداء الموظفين."
+    },
+    {
+        "question": "<span style='color: #800080;'><b>135. Vocabulary</b></span>: The manager was known for her ____ decision-making skills and ability to lead the team effectively.",
+        "options": ["A) poor", "B) excellent", "C) weak", "D) indecisive"],
+        "correctAnswer": 1,
+        "explanation": "الإجابة الصحيحة: B) 'excellent' لأن الجملة تشير إلى مهارات اتخاذ قرارات جيدة."
+    },
+    {
+        "question": "<span style='color: #800080;'><b>136. Vocabulary</b></span>: The company is looking to ____ its operations to several new countries next year.",
+        "options": ["A) expand", "B) reduce", "C) close", "D) maintain"],
+        "correctAnswer": 0,
+        "explanation": "الإجابة الصحيحة: A) 'expand' لأن الجملة تشير إلى توسيع نطاق العمليات."
+    },
+    {
+        "question": "<span style='color: #800080;'><b>137. Vocabulary</b></span>: The team worked together to ____ the project on time and within budget.",
+        "options": ["A) finish", "B) delay", "C) initiate", "D) abandon"],
+        "correctAnswer": 0,
+        "explanation": "الإجابة الصحيحة: A) 'finish' لأن الجملة تشير إلى إنهاء المشروع بنجاح."
+    },
+    {
+        "question": "<span style='color: #800080;'><b>138. Vocabulary</b></span>: The CEO's ____ vision for the future has inspired the entire company.",
+        "options": ["A) unclear", "B) ambitious", "C) uncertain", "D) indifferent"],
+        "correctAnswer": 1,
+        "explanation": "الإجابة الصحيحة: B) 'ambitious' لأن الجملة تشير إلى رؤية طموحة للمستقبل."
+    },
+        {
+        "question": "<span style='color: #800080;'><b>139. Vocabulary</b></span>: She ____ (be) a doctor for ten years.",
+        "options": ["A) was", "B) has been", "C) is", "D) will be"],
+        "correctAnswer": 1,
+        "explanation": "الإجابة الصحيحة: B) 'has been' لأن الجملة تتحدث عن مدة زمنية تبدأ في الماضي وتستمر حتى الآن."
+    },
+    {
+        "question": "<span style='color: #800080;'><b>140. Vocabulary</b></span>: He was always ____ (help) to his colleagues.",
+        "options": ["A) helpful", "B) help", "C) helped", "D) helping"],
+        "correctAnswer": 0,
+        "explanation": "الإجابة الصحيحة: A) 'helpful' لأن الجملة تشير إلى صفة الشخص."
+    },
+    {
+        "question": "<span style='color: #800080;'><b>141. Vocabulary</b></span>: The manager's decision was ____ (good) for the company's growth.",
+        "options": ["A) better", "B) best", "C) well", "D) good"],
+        "correctAnswer": 3,
+        "explanation": "الإجابة الصحيحة: D) 'good' لأن الجملة تتطلب صفة للمقارنة."
+    },
+    {
+        "question": "<span style='color: #800080;'><b>142. Vocabulary</b></span>: They were ____ (busy) preparing the proposal last week.",
+        "options": ["A) busy", "B) busyly", "C) busier", "D) busiest"],
+        "correctAnswer": 0,
+        "explanation": "الإجابة الصحيحة: A) 'busy' لأن الجملة تتحدث عن حالة مستمرة في الماضي."
+    },
+    {
+        "question": "<span style='color: #800080;'><b>143. Vocabulary</b></span>: The event will be ____ (plan) by the marketing team.",
+        "options": ["A) planned", "B) plan", "C) planning", "D) plans"],
+        "correctAnswer": 0,
+        "explanation": "الإجابة الصحيحة: A) 'planned' لأن الجملة في المستقبل المبني للمجهول."
+    },
+    {
+        "question": "<span style='color: #800080;'><b>144. Vocabulary</b></span>: The project manager was very ____ (organize) during the event.",
+        "options": ["A) organized", "B) organize", "C) organizing", "D) organizes"],
+        "correctAnswer": 0,
+        "explanation": "الإجابة الصحيحة: A) 'organized' لأن الجملة تتحدث عن صفة شخصية."
+    },
+    {
+        "question": "<span style='color: #800080;'><b>145. Vocabulary</b></span>: We ____ (begin) the project last year.",
+        "options": ["A) began", "B) begins", "C) will begin", "D) have begun"],
+        "correctAnswer": 0,
+        "explanation": "الإجابة الصحيحة: A) 'began' لأن الجملة تتحدث عن فعل حدث في الماضي."
+    },
+    {
+        "question": "<span style='color: #800080;'><b>146. Vocabulary</b></span>: The new policy will ____ (affect) the overall performance of the company.",
+        "options": ["A) affects", "B) affecting", "C) affected", "D) affect"],
+        "correctAnswer": 3,
+        "explanation": "الإجابة الصحيحة: D) 'affect' لأن الجملة في المستقبل."
+    },
+    {
+        "question": "<span style='color: #800080;'><b>147. Vocabulary</b></span>: We have ____ (learn) many useful strategies during the training.",
+        "options": ["A) learn", "B) learning", "C) learned", "D) learns"],
+        "correctAnswer": 2,
+        "explanation": "الإجابة الصحيحة: C) 'learned' لأن الجملة في المضارع التام."
+    },
+    {
+        "question": "<span style='color: #800080;'><b>148. Vocabulary</b></span>: He ____ (work) for this company for five years.",
+        "options": ["A) works", "B) working", "C) is working", "D) has worked"],
+        "correctAnswer": 3,
+        "explanation": "الإجابة الصحيحة: D) 'has worked' لأن الجملة تشير إلى فعل بدأ في الماضي ويستمر حتى الآن."
+    },
+        {
+        "question": "<span style='color: #800080;'><b>149. Vocabulary</b></span>: He is ____ (good) than anyone else in the team.",
+        "options": ["A) better", "B) best", "C) good", "D) well"],
+        "correctAnswer": 0,
+        "explanation": "الإجابة الصحيحة: A) 'better' لأن الجملة في مقارنة بين شخصين أو أكثر."
+    },
+    {
+        "question": "<span style='color: #800080;'><b>150. Vocabulary</b></span>: She ____ (know) the answer to the question.",
+        "options": ["A) knew", "B) knows", "C) is knowing", "D) know"],
+        "correctAnswer": 1,
+        "explanation": "الإجابة الصحيحة: B) 'knows' لأن الجملة تتحدث عن الحاضر."
+    },
+    {
+        "question": "<span style='color: #800080;'><b>151. Vocabulary</b></span>: They ____ (be) here since 9 AM.",
+        "options": ["A) were", "B) are", "C) has been", "D) have been"],
+        "correctAnswer": 3,
+        "explanation": "الإجابة الصحيحة: D) 'have been' لأن الجملة في المضارع التام المستمر."
+    },
+    {
+        "question": "<span style='color: #800080;'><b>152. Vocabulary</b></span>: She ____ (visit) the museum yesterday.",
+        "options": ["A) visits", "B) visited", "C) visiting", "D) will visit"],
+        "correctAnswer": 1,
+        "explanation": "الإجابة الصحيحة: B) 'visited' لأن الجملة في الماضي البسيط."
+    },
+    {
+        "question": "<span style='color: #800080;'><b>153. Vocabulary</b></span>: I ____ (meet) him tomorrow.",
+        "options": ["A) meets", "B) met", "C) meeting", "D) will meet"],
+        "correctAnswer": 3,
+        "explanation": "الإجابة الصحيحة: D) 'will meet' لأن الجملة في المستقبل."
+    },
+    {
+        "question": "<span style='color: #800080;'><b>154. Vocabulary</b></span>: They ____ (not, be) ready yet.",
+        "options": ["A) don’t be", "B) isn’t", "C) aren’t", "D) hasn’t"],
+        "correctAnswer": 2,
+        "explanation": "الإجابة الصحيحة: C) 'aren’t' لأن الفاعل (They) يتطلب 'aren’t'."
+    },
+    {
+        "question": "<span style='color: #800080;'><b>155. Vocabulary</b></span>: The new technology ____ (improve) the efficiency of the system.",
+        "options": ["A) improves", "B) improved", "C) is improving", "D) will improve"],
+        "correctAnswer": 0,
+        "explanation": "الإجابة الصحيحة: A) 'improves' لأن الجملة في المضارع البسيط."
+    },
+    {
+        "question": "<span style='color: #800080;'><b>156. Vocabulary</b></span>: I ____ (not, understand) why she is upset.",
+        "options": ["A) don’t understand", "B) doesn’t understand", "C) didn’t understand", "D) am not understanding"],
+        "correctAnswer": 0,
+        "explanation": "الإجابة الصحيحة: A) 'don’t understand' لأن الجملة في المضارع البسيط."
+    },
+    {
+        "question": "<span style='color: #800080;'><b>157. Vocabulary</b></span>: We ____ (complete) the report by the end of the day.",
+        "options": ["A) will complete", "B) completes", "C) completed", "D) are completing"],
+        "correctAnswer": 0,
+        "explanation": "الإجابة الصحيحة: A) 'will complete' لأن الجملة تتحدث عن المستقبل."
+    },
+    {
+        "question": "<span style='color: #800080;'><b>158. Vocabulary</b></span>: She ____ (teach) at the university for five years.",
+        "options": ["A) has taught", "B) teaches", "C) is teaching", "D) taught"],
+        "correctAnswer": 0,
+        "explanation": "الإجابة الصحيحة: A) 'has taught' لأن الجملة في المضارع التام."
+    },
+    {
+        "question": "<span style='color: #800080;'><b>159. Vocabulary</b></span>: I ____ (never, go) to that restaurant before.",
+        "options": ["A) never went", "B) have never gone", "C) never go", "D) never gone"],
+        "correctAnswer": 1,
+        "explanation": "الإجابة الصحيحة: B) 'have never gone' لأن الجملة في المضارع التام."
+    },
+{
+    "question": "<span style='color: #800080;'><b>160. Vocabulary</b></span>: He ____ (study) English for five years before he moved to Paris.",
+    "options": ["A) studies", "B) is studying", "C) has studied", "D) had studied"],
+    "correctAnswer": 3,
+    "explanation": "الإجابة الصحيحة: D) 'had studied' لأن الجملة تشير إلى فعل قد اكتمل في الماضي قبل حدث آخر."
+},
+
         ];
 
         // Reading Comprehension (20 سؤالاً)
@@ -2171,7 +2430,7 @@ AI-generated content may be incorrect." height="92" src="https://i.postimg.cc/Sx
 
             // عرض النتيجة النهائية
             const totalScore = structureScore + readingScore + listeningScore;
-            const percentage = (totalScore / 150) * 100;
+            const percentage = (totalScore / 190) * 100;
             const resultDiv = document.getElementById('result');
             
             resultDiv.innerHTML = `
@@ -2181,13 +2440,13 @@ AI-generated content may be incorrect." height="92" src="https://i.postimg.cc/Sx
                 </div>
                 
                 <div class="score-section">
-                    <p>إجمالي النقاط: <strong>${totalScore} / 150</strong></p>
+                    <p>إجمالي النقاط: <strong>${totalScore} / 190</strong></p>
                     <p>النسبة المئوية: <strong>${percentage.toFixed(1)}%</strong></p>
                 </div>
                 
                 <div class="score-section">
                     <h4>تفصيل النتائج:</h4>
-                    <p>Structure: ${structureScore} / 120 (${(structureScore/120*100).toFixed(1)}%)</p>
+                    <p>Structure: ${structureScore} / 160 (${(structureScore/160*100).toFixed(1)}%)</p>
                     <p>Reading: ${readingScore} / 20 (${(readingScore/20*100).toFixed(1)}%)</p>
                     <p>Listening: ${listeningScore} / 10 (${(listeningScore/10*100).toFixed(1)}%)</p>
                 </div>
