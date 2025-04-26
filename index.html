@@ -489,11 +489,3347 @@
 </div>
 
 <!-- قسم المعلومات -->
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تعديل الجداول بالكامل</title>
+    <style>
+        /* إعدادات الجدول */
+        table {
+            width: 100%;
+            border-collapse: collapse; /* توحيد الحدود */
+        }
+
+        /* تنسيق الأعمدة */
+        table td, table th {
+            padding: 10px;
+            text-align: right; /* محاذاة النص من اليمين */
+            border: 1px solid #ddd;
+        }
+
+        /* توحيد عرض الأعمدة */
+        table th, table td {
+            width: auto;
+        }
+
+        /* تظليل العناوين */
+        table th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        /* تأثير مرن للأجهزة المحمولة */
+        @media screen and (max-width: 600px) {
+            table {
+                width: 100%;
+                display: block;
+                overflow-x: auto; /* تمكين التمرير الأفقي */
+            }
+        }
+
+        /* تأثيرات تصميمية */
+        table tr:nth-child(even) {
+            background-color: #f9f9f9; /* تظليل الصفوف بالتناوب */
+        }
+
+        table tr:hover {
+            background-color: #f1f1f1; /* تأثير التمرير */
+        }
+    </style>
+</head>
+<body>
+
+<!-- قسم المعلومات -->
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تعديل الجداول بالكامل</title>
+    <style>
+        /* إعدادات الجدول */
+        table {
+            width: 100%;
+            border-collapse: collapse; /* توحيد الحدود */
+        }
+
+        /* تنسيق الأعمدة */
+        table td, table th {
+            padding: 10px;
+            text-align: right; /* محاذاة النص من اليمين */
+            border: 1px solid #ddd;
+        }
+
+        /* توحيد عرض الأعمدة */
+        table th, table td {
+            width: auto;
+        }
+
+        /* تظليل العناوين */
+        table th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        /* تأثير مرن للأجهزة المحمولة */
+        @media screen and (max-width: 600px) {
+            table {
+                width: 100%;
+                display: block;
+                overflow-x: auto; /* تمكين التمرير الأفقي */
+            }
+            
+            #desktopButton {
+                display: inline-block;
+                padding: 10px 20px;
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                cursor: pointer;
+                font-size: 16px;
+                margin-top: 10px;
+            }
+        }
+
+        /* إخفاء الزر في وضع سطح المكتب */
+        @media screen and (min-width: 601px) {
+            #desktopButton {
+                display: none;
+            }
+        }
+
+        /* تأثيرات تصميمية */
+        table tr:nth-child(even) {
+            background-color: #f9f9f9; /* تظليل الصفوف بالتناوب */
+        }
+
+        table tr:hover {
+            background-color: #f1f1f1; /* تأثير التمرير */
+        }
+    </style>
+</head>
+<body>
+    <!-- التبويب مع الزر داخل التبويب -->
+    <div style="text-align: center;">
+        <button id="desktopButton" onclick="toggleDesktopView()">عرض كسطح مكتب</button>
+    </div>
+
+    <script>
+        // JavaScript function to toggle between mobile and desktop view
+        function toggleDesktopView() {
+            if (window.innerWidth <= 600) {
+                document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=1024');
+                document.getElementById('desktopButton').style.display = 'none'; // Hide button after click
+            }
+        }
+    </script>
+
+
+<!-- قسم المعلومات -->
 <div class="tabcontent" id="info">
-
-<div><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span><span dir="ltr" style="font-weight:bold"><span dir="ltr"></span>TOEFL ITP (Institutional Testing Program)</span><span style="font-weight:bold"><span dir="rtl"></span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">يقيس مهاراتك في اللغة الإنجليزية الأكاديمية، ويتكون من ثلاث أقسام</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold">1. </span><span dir="ltr" style="font-weight:bold"><span dir="ltr"></span>Listening Comprehension</span><span style="font-weight:bold"><span dir="rtl"></span> (</span><span style="font-family:Arial; font-weight:bold">الاستماع</span><span style="font-weight:bold">)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold">2. </span><span dir="ltr" style="font-weight:bold"><span dir="ltr"></span>Structure and Written Expression</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold">(</span><span style="font-family:Arial; font-weight:bold">التركيب والتعبير الكتابي</span><span style="font-weight:bold">)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold">3. </span><span dir="ltr" style="font-weight:bold"><span dir="ltr"></span>Reading Comprehension</span><span style="font-weight:bold"><span dir="rtl"></span> (</span><span style="font-family:Arial; font-weight:bold">القراءة</span><span style="font-weight:bold">)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">راح أشرح لك كل قسم، وأعطيك نصائح مهمة تساعدك في التحضير</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial; font-weight:bold; text-decoration:underline">أولاً</span><span style="font-weight:bold; text-decoration:underline">: </span><span dir="ltr" style="font-weight:bold; text-decoration:underline"><span dir="ltr"></span>Listening Comprehension</span><span><span dir="rtl"></span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">محادثات قصيرة </span><span>(</span><span dir="ltr"><span dir="ltr"></span>Short Conversations</span><span><span dir="rtl"></span>)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">محادثات طويلة </span><span>(</span><span dir="ltr"><span dir="ltr"></span>Long Conversations</span><span><span dir="rtl"></span>)</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">نصائح</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">ركز على الفكرة الرئيسية</span><span>: </span><span style="font-family:Arial">لا تحاول فهم كل كلمة، أهم شيء تستوعب الموضوع العام</span><span>.</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">استمع بتركيز للموقف</span><span>: </span><span style="font-family:Arial">مثلاً إذا شخص يسأل عن شيء، ما هو رد الطرف الآخر؟ هل يوافق؟ يرفض؟ يعطي حل؟</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">تدرب على الأسئلة الشائعة</span><span>: </span><span style="font-family:Arial">مثل</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span>"</span><span dir="ltr"><span dir="ltr"></span>What does the woman mean</span><span><span dir="rtl"></span>?" </span><span style="font-family:Arial">أو</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span>"</span><span dir="ltr"><span dir="ltr"></span>What will the man probably do next</span><span><span dir="rtl"></span>?"</span><br/><span style="-aw-import:ignore"> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial; font-weight:bold; text-decoration:underline">ثانياً</span><span style="font-weight:bold; text-decoration:underline">: </span><span dir="ltr" style="font-weight:bold; text-decoration:underline"><span dir="ltr"></span>Structure and Written Expression</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial; font-weight:bold; text-decoration:underline">ينقسم إلى قسمين</span><span style="font-weight:bold; text-decoration:underline">:</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr" style="font-weight:bold">Structure</span><span style="font-weight:bold"><span dir="rtl"></span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">تختار الكلمة أو العبارة الصحيحة لتكمل الجملة</span><span>.</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr" style="font-weight:bold">Written Expression</span><span style="font-weight:bold"><span dir="rtl"></span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">تحدد الخطأ في الجملة</span><span>.</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">نصائح</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">راجع قواعد أساسية مثل</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">ترتيب الجملة الإنجليزية </span><span>(</span><span style="font-family:Arial">فاعل </span><span>+ </span><span style="font-family:Arial">فعل </span><span>+ </span><span style="font-family:Arial">مفعول</span><span>)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">الفرق بين الجمل المبنية للمعلوم والمجهول</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">الأزمنة</span><span>: </span><span style="font-family:Arial">خاصة الماضي البسيط والمضارع التام</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">أدوات الربط </span><span>(</span><span dir="ltr"><span><span dir="ltr"></span>because, although, however, </span><span>etc</span></span><span><span dir="rtl"></span>.)</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="-aw-import:ignore"> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial; font-weight:bold">احذر من الأخطاء الشائعة</span><span style="font-weight:bold">:</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">مطابقة الفعل مع الفاعل </span><span>(</span><span dir="ltr"><span dir="ltr"></span>Singular vs. Plural</span><span><span dir="rtl"></span>)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">استخدام أدوات التعريف </span><span>(</span><span dir="ltr"><span dir="ltr"></span>a, an, the</span><span><span dir="rtl"></span>)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">أخطاء الضمائر والملكية </span><span>(</span><span dir="ltr"><span dir="ltr"></span>he/him, their/there/they</span><span><span dir="rtl"></span>’</span><span dir="ltr"><span dir="ltr"></span>re</span><span><span dir="rtl"></span>)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span><br/><span style="-aw-import:ignore"> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial; font-weight:bold; text-decoration:underline">ثالثاً</span><span style="font-weight:bold; text-decoration:underline">: </span><span dir="ltr" style="font-weight:bold; text-decoration:underline"><span dir="ltr"></span>Reading Comprehension</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">تعتمد على فقرات أكاديمية تليها أسئلة متنوعة</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">نصائح</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">اقرأ السؤال أولاً قبل الفقرة</span><span>: </span><span style="font-family:Arial">عشان تعرف تدور على إيش</span><span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">استخدم تقنية </span><span dir="ltr"><span dir="ltr"></span>Skimming</span><span><span dir="rtl"></span> </span><span style="font-family:Arial">و</span><span dir="ltr"><span dir="ltr"></span>Scanning</span><span><span dir="rtl"></span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">Skimming</span><span><span dir="rtl"></span>: </span><span style="font-family:Arial">تقرأ الفقرة بسرعة لالتقاط الفكرة العامة</span><span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">Scanning</span><span><span dir="rtl"></span>: </span><span style="font-family:Arial">تبحث عن معلومة محددة </span><span>(</span><span style="font-family:Arial">مثلاً رقم أو اسم</span><span>).</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">احذر من أسئلة الكلمات</span><span>: </span><span style="font-family:Arial">ممكن يسألونك</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span>"</span><span dir="ltr"><span dir="ltr"></span>What is the meaning of the word 'X</span><span><span dir="rtl"></span>'</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">in line Y</span><span><span dir="rtl"></span>?"</span><span style="font-family:Arial">،</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span><span style="font-family:Arial">حاول تتوقع المعنى من السياق</span><span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="-aw-import:ignore"> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial; font-weight:bold">أهم القواعد والنقاط اللي لازم تركز عليها قبل اختبار </span><span dir="ltr" style="font-weight:bold"><span dir="ltr"></span>TOEFL ITP</span><span style="font-family:Arial; font-weight:bold"><span dir="rtl"></span>، مع شرح بسيط وسهل</span><span style="font-weight:bold">:</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="-aw-import:ignore"> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="-aw-import:ignore"> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold; text-decoration:underline">1. </span><span style="font-family:Arial; font-weight:bold; text-decoration:underline">الضمائر </span><span style="font-weight:bold; text-decoration:underline">(</span><span dir="ltr" style="font-weight:bold; text-decoration:underline"><span dir="ltr"></span>Pronouns</span><span style="font-weight:bold; text-decoration:underline"><span dir="rtl"></span>)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial; font-weight:bold">أ</span><span style="font-weight:bold">. </span><span style="font-family:Arial; font-weight:bold">ضمائر الفاعل </span><span style="font-weight:bold">(</span><span dir="ltr" style="font-weight:bold"><span dir="ltr"></span>Subject Pronouns</span><span style="font-weight:bold"><span dir="rtl"></span>)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">تأتي قبل الفعل وتدل على من يقوم بالفعل</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">I, You, He, She, It, We, They</span><span><span dir="rtl"></span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">مثال</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">She goes to school</span><span><span dir="rtl"></span>. → </span><span style="font-family:Arial">هي تذهب للمدرسة</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial; font-weight:bold">ب</span><span style="font-weight:bold">. </span><span style="font-family:Arial; font-weight:bold">ضمائر المفعول </span><span style="font-weight:bold">(</span><span dir="ltr" style="font-weight:bold"><span dir="ltr"></span>Object Pronouns</span><span style="font-weight:bold"><span dir="rtl"></span>)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">تأتي بعد الفعل أو حرف الجر وتدل على من وقع عليه الفعل</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">Me, You, Him, Her, It, Us, Them</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">مثال</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">I saw him yesterday</span><span><span dir="rtl"></span>. → </span><span style="font-family:Arial">رأيته أمس</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial; font-weight:bold">ج</span><span style="font-weight:bold">. </span><span style="font-family:Arial; font-weight:bold">ضمائر الملكية</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">My, Your, His, Her, Our, Their</span><span><span dir="rtl"></span> → </span><span style="font-family:Arial">قبل الاسم</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">Mine, Yours, His, Hers, Ours, Theirs</span><span><span dir="rtl"></span> →</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span><span style="font-family:Arial">بدون اسم بعدها</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">مثال</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">That is my book</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">That book is mine</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="-aw-import:ignore"> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold; text-decoration:underline">2. </span><span style="font-family:Arial; font-weight:bold; text-decoration:underline">الأفعال المساعدة </span><span style="font-weight:bold; text-decoration:underline">(</span><span dir="ltr" style="font-weight:bold; text-decoration:underline"><span dir="ltr"></span>Helping Verbs</span><span style="font-weight:bold; text-decoration:underline"><span dir="rtl"></span>)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">تُستخدم لتكوين الأزمنة أو الأسئلة أو النفي</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">Be: am, is, are, was, were</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">Have: have, has, had</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr"><span>Do: do, does, did</span></span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">Modals: can, will, would, should, might, must</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">مثال</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">She is cooking</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">They have finished</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">Do you like tea</span><span><span dir="rtl"></span>?</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="-aw-import:ignore"> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold; text-decoration:underline">3. </span><span style="font-family:Arial; font-weight:bold; text-decoration:underline">ترتيب الجملة </span><span style="font-weight:bold; text-decoration:underline">(</span><span dir="ltr" style="font-weight:bold; text-decoration:underline"><span dir="ltr"></span>Sentence Order</span><span style="font-weight:bold; text-decoration:underline"><span dir="rtl"></span>)</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">الترتيب الطبيعي للجملة في اللغة الإنجليزية</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">فاعل </span><span>+ </span><span style="font-family:Arial">فعل </span><span>+ </span><span style="font-family:Arial">مفعول به</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">مثال</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">They play football</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">She drinks water</span><span><span dir="rtl"></span>.</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold; text-decoration:underline">4. </span><span style="font-family:Arial; font-weight:bold; text-decoration:underline">الأزمنة الأساسية </span><span style="font-weight:bold; text-decoration:underline">(</span><span dir="ltr" style="font-weight:bold; text-decoration:underline"><span dir="ltr"></span>Key Tenses</span><span style="font-weight:bold; text-decoration:underline"><span dir="rtl"></span>)</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">الأزمنة الأساسية في اللغة الإنجليزية وهي</span><span>: </span><span style="font-family:Arial">الماضي </span><span>(</span><span dir="ltr"><span dir="ltr"></span>Past</span><span><span dir="rtl"></span>)</span><span style="font-family:Arial">، الحاضر </span><span>(</span><span dir="ltr"><span dir="ltr"></span>Present</span><span><span dir="rtl"></span>)</span><span style="font-family:Arial">، والمستقبل </span><span>(</span><span dir="ltr"><span dir="ltr"></span>Future</span><span><span dir="rtl"></span>)</span><span style="font-family:Arial">، مع أمثلة وتفاصيل لكل زمن</span><span>.</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="-aw-import:ignore"> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold; text-decoration:underline">1. </span><span style="font-family:Arial; font-weight:bold; text-decoration:underline">الزمن الحاضر </span><span style="font-weight:bold; text-decoration:underline">(</span><span dir="ltr" style="font-weight:bold; text-decoration:underline"><span dir="ltr"></span>Present</span><span style="font-weight:bold; text-decoration:underline"><span dir="rtl"></span>)</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial; font-weight:bold">أ</span><span style="font-weight:bold">. </span><span dir="ltr" style="font-weight:bold"><span dir="ltr"></span>Present Simple</span><span style="font-weight:bold"><span dir="rtl"></span> – </span><span style="font-family:Arial; font-weight:bold">المضارع البسيط</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">الاستخدام</span><span>: </span><span style="font-family:Arial">للحقائق، العادات، والجداول</span><span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span><span style="font-family:Arial">التركيب</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span>(</span><span dir="ltr"><span dir="ltr"></span>Subject + base verb</span><span><span dir="rtl"></span>)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">نضيف </span><span dir="ltr"><span dir="ltr"></span>s</span><span><span dir="rtl"></span> </span><span style="font-family:Arial">للفعل إذا كان الفاعل مفردًا </span><span>(</span><span dir="ltr"><span dir="ltr"></span>He/She/It</span><span><span dir="rtl"></span>)</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">أمثلة</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">I go to school every day</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">He plays football on Fridays</span><span><span dir="rtl"></span>.</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial; font-weight:bold">ب</span><span style="font-weight:bold">. </span><span dir="ltr" style="font-weight:bold"><span dir="ltr"></span>Present Continuous</span><span style="font-weight:bold"><span dir="rtl"></span> – </span><span style="font-family:Arial; font-weight:bold">المضارع المستمر</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">الاستخدام</span><span>: </span><span style="font-family:Arial">لحدث يحدث الآن</span><span>.</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">التركيب</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span>(</span><span dir="ltr"><span><span dir="ltr"></span>Subject + am/is/are + </span><span>verb+ing</span></span><span><span dir="rtl"></span>)</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">أمثلة</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">I am studying English now</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">She is cooking dinner</span><span><span dir="rtl"></span>.</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial; font-weight:bold">ج</span><span style="font-weight:bold">. </span><span dir="ltr" style="font-weight:bold"><span dir="ltr"></span>Present Perfect</span><span style="font-weight:bold"><span dir="rtl"></span> – </span><span style="font-family:Arial; font-weight:bold">المضارع التام</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">الاستخدام</span><span>: </span><span style="font-family:Arial">لحدث بدأ في الماضي وما زال مستمرًا أو نتيجته ظاهرة الآن</span><span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">التركيب</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span>(</span><span dir="ltr"><span dir="ltr"></span>Subject + has/have + past participle</span><span><span dir="rtl"></span>)</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">أمثلة</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">I have finished my homework</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">He has lived here for 5 years</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold; text-decoration:underline">2. </span><span style="font-family:Arial; font-weight:bold; text-decoration:underline">الزمن الماضي </span><span style="font-weight:bold; text-decoration:underline">(</span><span dir="ltr" style="font-weight:bold; text-decoration:underline"><span dir="ltr"></span>Past</span><span style="font-weight:bold; text-decoration:underline"><span dir="rtl"></span>)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial; font-weight:bold">أ</span><span style="font-weight:bold">. </span><span dir="ltr" style="font-weight:bold"><span dir="ltr"></span>Past Simple</span><span style="font-weight:bold"><span dir="rtl"></span> – </span><span style="font-family:Arial; font-weight:bold">الماضي البسيط</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">الاستخدام</span><span>: </span><span style="font-family:Arial">لحدث وقع وانتهى في الماضي</span><span>.</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">التركيب</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span>(</span><span dir="ltr"><span dir="ltr"></span>Subject + past form of verb</span><span><span dir="rtl"></span>)</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">أمثلة</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">I visited my grandmother yesterday</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">They watched a movie last night</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial; font-weight:bold">ب</span><span style="font-weight:bold">. </span><span dir="ltr" style="font-weight:bold"><span dir="ltr"></span>Past Continuous</span><span style="font-weight:bold"><span dir="rtl"></span> – </span><span style="font-family:Arial; font-weight:bold">الماضي المستمر</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">الاستخدام</span><span>: </span><span style="font-family:Arial">لحدث كان مستمرًا في وقت معين بالماضي</span><span>.</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">التركيب</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span>(</span><span dir="ltr"><span><span dir="ltr"></span>Subject + was/were + </span><span>verb+ing</span></span><span><span dir="rtl"></span>)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">أمثلة</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">I was reading at 8 PM</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">They were playing when it started to rain</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial; font-weight:bold">ج</span><span style="font-weight:bold">. </span><span dir="ltr" style="font-weight:bold"><span dir="ltr"></span>Past Perfect</span><span style="font-weight:bold"><span dir="rtl"></span> – </span><span style="font-family:Arial; font-weight:bold">الماضي التام</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">الاستخدام</span><span>: </span><span style="font-family:Arial">لحدث وقع قبل حدث آخر في الماضي</span><span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">التركيب</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span>(</span><span dir="ltr"><span dir="ltr"></span>Subject + had + past participle</span><span><span dir="rtl"></span>)</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">أمثلة</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">I had eaten before they arrived</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">She had finished her work before noon</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold">3. </span><span style="font-family:Arial; font-weight:bold">الزمن المستقبل </span><span style="font-weight:bold">(</span><span dir="ltr" style="font-weight:bold"><span dir="ltr"></span>Future</span><span style="font-weight:bold"><span dir="rtl"></span>)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial; font-weight:bold">أ</span><span style="font-weight:bold">. </span><span dir="ltr" style="font-weight:bold"><span dir="ltr"></span>Future Simple</span><span style="font-weight:bold"><span dir="rtl"></span> – </span><span style="font-family:Arial; font-weight:bold">المستقبل البسيط</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">الاستخدام</span><span>: </span><span style="font-family:Arial">لحدث سيقع في المستقبل</span><span>.</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">التركيب</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span>(</span><span dir="ltr"><span dir="ltr"></span>Subject + will + base verb</span><span><span dir="rtl"></span>)</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">أمثلة</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">I will travel tomorrow</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">She will help you</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial; font-weight:bold">ب</span><span style="font-weight:bold">. </span><span dir="ltr" style="font-weight:bold"><span dir="ltr"></span>Be going to</span><span style="font-weight:bold"><span dir="rtl"></span> – </span><span style="font-family:Arial; font-weight:bold">نية مسبقة أو شيء مخطط له</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">الاستخدام</span><span>: </span><span style="font-family:Arial">لخطط مؤكدة في المستقبل أو توقع بناء على دليل</span><span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">التركيب</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span>(</span><span dir="ltr"><span dir="ltr"></span>Subject + am/is/are going to + base verb</span><span><span dir="rtl"></span>)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">أمثلة</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">I am going to start a new job next week</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">It is going to rain soon</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial; font-weight:bold">ج</span><span style="font-weight:bold">. </span><span dir="ltr" style="font-weight:bold"><span dir="ltr"></span>Future Continuous</span><span style="font-weight:bold"><span dir="rtl"></span> – </span><span style="font-family:Arial; font-weight:bold">المستقبل المستمر</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">الاستخدام</span><span>: </span><span style="font-family:Arial">لحدث سيكون مستمرًا في وقت معين بالمستقبل</span><span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">التركيب</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span>(</span><span dir="ltr"><span><span dir="ltr"></span>Subject + will be + </span><span>verb+ing</span></span><span><span dir="rtl"></span>)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">أمثلة</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">I will be studying at 10 PM</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">They will be waiting for you</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold; text-decoration:underline">5. </span><span style="font-family:Arial; font-weight:bold; text-decoration:underline">أدوات الربط </span><span style="font-weight:bold; text-decoration:underline">(</span><span dir="ltr" style="font-weight:bold; text-decoration:underline"><span dir="ltr"></span>Conjunctions</span><span style="font-weight:bold; text-decoration:underline"><span dir="rtl"></span>)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">and</span><span><span dir="rtl"></span> = </span><span style="font-family:Arial">و</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">but</span><span><span dir="rtl"></span> = </span><span style="font-family:Arial">لكن</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">because</span><span><span dir="rtl"></span> = </span><span style="font-family:Arial">لأن</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">although</span><span><span dir="rtl"></span> = </span><span style="font-family:Arial">رغم أن</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">مثال</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">I</span><span><span dir="rtl"></span>’</span><span dir="ltr"><span dir="ltr"></span>m tired but I</span><span><span dir="rtl"></span>’</span><span dir="ltr"><span><span dir="ltr"></span>ll</span><span> study</span></span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">She stayed home because she was sick</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold; text-decoration:underline">6. </span><span style="font-family:Arial; font-weight:bold; text-decoration:underline">المبني للمجهول </span><span style="font-weight:bold; text-decoration:underline">(</span><span dir="ltr" style="font-weight:bold; text-decoration:underline"><span dir="ltr"></span>Passive Voice</span><span style="font-weight:bold; text-decoration:underline"><span dir="rtl"></span>)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">القاعدة</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">Object + be + past participle</span><span><span dir="rtl"></span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">مثال</span><span>:</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">The cake was eaten</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">English is spoken worldwide</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold; text-decoration:underline">7. </span><span style="font-family:Arial; font-weight:bold; text-decoration:underline">أدوات التعريف </span><span style="font-weight:bold; text-decoration:underline">(</span><span dir="ltr" style="font-weight:bold; text-decoration:underline"><span dir="ltr"></span>Articles</span><span style="font-weight:bold; text-decoration:underline"><span dir="rtl"></span>)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">a / an</span><span><span dir="rtl"></span>: </span><span style="font-family:Arial">لأول مرة ولشيء غير معروف</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">a book, an orange</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">the</span><span><span dir="rtl"></span>: </span><span style="font-family:Arial">لشيء معروف</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">The sun, the teacher</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold; text-decoration:underline">8. </span><span style="font-family:Arial; font-weight:bold; text-decoration:underline">أسماء تعد وغير تعد</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold; text-decoration:underline">(</span><span dir="ltr" style="font-weight:bold; text-decoration:underline"><span dir="ltr"></span>Countable vs. Uncountable Nouns</span><span><span dir="rtl"></span>)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr" style="font-weight:bold">Countable</span><span style="font-weight:bold"><span dir="rtl"></span>: </span><span dir="ltr"><span dir="ltr"></span>book, apple</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">تستعمل</span><span>: </span><span dir="ltr"><span dir="ltr"></span>a, many, few</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr" style="font-weight:bold">Uncountable</span><span style="font-weight:bold"><span dir="rtl"></span>:</span><span> </span><span dir="ltr"><span dir="ltr"></span>water, advice</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">تستعمل</span><span>: </span><span dir="ltr"><span dir="ltr"></span>much, little</span><span><span dir="rtl"></span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">خطأ شائع</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr"><span>I have many advices</span></span><span><span dir="rtl"></span> </span><span style="font-family:'Segoe UI Emoji'">❌</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">I have much advice</span><span><span dir="rtl"></span> </span><span style="font-family:'Segoe UI Emoji'">✅</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold; text-decoration:underline">9. </span><span style="font-family:Arial; font-weight:bold; text-decoration:underline">الصفات والظروف </span><span style="font-weight:bold; text-decoration:underline">(</span><span dir="ltr" style="font-weight:bold; text-decoration:underline"><span dir="ltr"></span>Adjectives vs. Adverbs</span><span style="font-weight:bold; text-decoration:underline"><span dir="rtl"></span>)</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">Adjective</span><span><span dir="rtl"></span> (</span><span style="font-family:Arial">صفة</span><span>): </span><span style="font-family:Arial">تصف اسم </span><span>– </span><span dir="ltr"><span dir="ltr"></span>She is happy</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">Adverb</span><span><span dir="rtl"></span> (</span><span style="font-family:Arial">حال</span><span>): </span><span style="font-family:Arial">تصف فعل </span><span>– </span><span dir="ltr"><span dir="ltr"></span>She sings beautifully</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold; text-decoration:underline">10. </span><span style="font-family:Arial; font-weight:bold; text-decoration:underline">حروف الجر المهمة </span><span style="font-weight:bold; text-decoration:underline">(</span><span dir="ltr" style="font-weight:bold; text-decoration:underline"><span dir="ltr"></span>Prepositions</span><span style="font-weight:bold; text-decoration:underline"><span dir="rtl"></span>)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><img alt="A white grid with black text" height="292" src="https://i.postimg.cc/G3VPMnHR/1.jpg" style="" width="282"/><span> </span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial; font-weight:bold">نصائح سريعة لحروف الجر في الاختبار</span><span style="font-weight:bold">:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">دائمًا راجع التعبيرات الثابتة </span><span>(</span><span dir="ltr"><span dir="ltr"></span>Fixed Expressions</span><span><span dir="rtl"></span>)</span><span style="font-family:Arial">، مثل</span><span>:</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">good at</span><span><span dir="rtl"></span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">interested in</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">afraid of</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">depend on</span><span><span dir="rtl"></span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span><span style="font-family:Arial">احفظ الاستخدام مع الكلمات، مثل</span><span>:</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">arrive at a place</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">arrive in a city/country</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr"><span>think about something</span></span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">listen to music</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span><span> </span><span style="font-weight:bold; text-decoration:underline">11. </span><span style="font-family:Arial; font-weight:bold; text-decoration:underline">المقارنة والتفضيل</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold; text-decoration:underline">(</span><span dir="ltr" style="font-weight:bold; text-decoration:underline"><span dir="ltr"></span>Comparative</span><span style="font-weight:bold; text-decoration:underline"><span dir="rtl"></span> &amp; </span><span dir="ltr" style="font-weight:bold; text-decoration:underline"><span dir="ltr"></span>Superlative</span><span style="font-weight:bold; text-decoration:underline"><span dir="rtl"></span>)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr" style="font-weight:bold">Comparative</span><span style="font-weight:bold"><span dir="rtl"></span> (</span><span style="font-family:Arial; font-weight:bold">مقارنة بين اثنين</span><span style="font-weight:bold">):</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">taller, more expensive</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">مثال</span><span>: </span><span dir="ltr"><span dir="ltr"></span>Ali is</span><span><span dir="rtl"></span> </span><span dir="ltr" style="font-weight:bold"><span dir="ltr"></span>taller</span><span><span dir="rtl"></span> </span><span dir="ltr"><span dir="ltr"></span>than Omar</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr" style="font-weight:bold">Superlative</span><span style="font-weight:bold"><span dir="rtl"></span> (</span><span style="font-family:Arial; font-weight:bold">الأفضل بين مجموعة</span><span style="font-weight:bold">):</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr"><span>the tallest, the most expensive</span></span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">مثال</span><span>: </span><span dir="ltr"><span dir="ltr"></span>This is</span><span><span dir="rtl"></span> </span><span dir="ltr" style="font-weight:bold"><span dir="ltr"></span>the best</span><span><span dir="rtl"></span> </span><span dir="ltr"><span dir="ltr"></span>movie</span><span><span dir="rtl"></span>.</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold; text-decoration:underline">12. </span><span style="font-family:Arial; font-weight:bold; text-decoration:underline">النفي </span><span style="font-weight:bold; text-decoration:underline">(</span><span dir="ltr" style="font-weight:bold; text-decoration:underline"><span dir="ltr"></span>Negation</span><span style="font-weight:bold; text-decoration:underline"><span dir="rtl"></span>)</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr" style="font-weight:bold">Present Simple</span><span style="font-weight:bold"><span dir="rtl"></span>:</span><span> </span><span dir="ltr"><span><span dir="ltr"></span>He </span><span>doesn</span></span><span><span dir="rtl"></span>’</span><span dir="ltr"><span dir="ltr"></span>t like tea</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr" style="font-weight:bold">Past Simple</span><span style="font-weight:bold"><span dir="rtl"></span>:</span><span> </span><span dir="ltr"><span><span dir="ltr"></span>She </span><span>didn</span></span><span><span dir="rtl"></span>’</span><span dir="ltr"><span dir="ltr"></span>t go out</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr" style="font-weight:bold">To be</span><span style="font-weight:bold"><span dir="rtl"></span>:</span><span> </span><span dir="ltr"><span><span dir="ltr"></span>They </span><span>aren</span></span><span><span dir="rtl"></span>’</span><span dir="ltr"><span dir="ltr"></span>t here</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr" style="font-weight:bold">Modals</span><span style="font-weight:bold"><span dir="rtl"></span>: </span><span dir="ltr"><span dir="ltr"></span>You can</span><span><span dir="rtl"></span>’</span><span dir="ltr"><span dir="ltr"></span>t do that</span><span><span dir="rtl"></span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold; text-decoration:underline">13. </span><span style="font-family:Arial; font-weight:bold; text-decoration:underline">الأسئلة </span><span style="font-weight:bold; text-decoration:underline">(</span><span dir="ltr" style="font-weight:bold; text-decoration:underline"><span dir="ltr"></span>Questions</span><span style="font-weight:bold; text-decoration:underline"><span dir="rtl"></span>)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr"><span style="font-weight:bold">Wh-Questions</span></span><span style="font-weight:bold"><span dir="rtl"></span>:</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr"><span>What, Where, When, Why, How</span></span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">مثال</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">Where do you live</span><span><span dir="rtl"></span>?</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr" style="font-weight:bold">Yes/No Questions</span><span style="font-weight:bold"><span dir="rtl"></span>:</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">Do you like coffee</span><span><span dir="rtl"></span>?</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">Is she your sister</span><span><span dir="rtl"></span>?</span><span> </span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="-aw-import:ignore"> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial; font-weight:bold; text-decoration:underline">نصائح عامة مهمة جداً</span><span style="font-weight:bold; text-decoration:underline">:</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold; text-decoration:underline">1. </span><span style="font-family:Arial; font-weight:bold; text-decoration:underline">ركز على الزمن في الأسئلة </span><span style="font-weight:bold; text-decoration:underline">(</span><span dir="ltr" style="font-weight:bold; text-decoration:underline"><span dir="ltr"></span>past, present, future</span><span style="font-weight:bold; text-decoration:underline"><span dir="rtl"></span>):</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span>&gt; </span><span style="font-family:Arial">إذا شفت </span><span>"</span><span dir="ltr"><span dir="ltr"></span>yesterday</span><span><span dir="rtl"></span>" → </span><span style="font-family:Arial">الماضي</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">إذا شفت </span><span>"</span><span dir="ltr"><span dir="ltr"></span>will</span><span><span dir="rtl"></span>" </span><span style="font-family:Arial">أو </span><span>"</span><span dir="ltr"><span dir="ltr"></span>tomorrow</span><span><span dir="rtl"></span>" → </span><span style="font-family:Arial">المستقبل</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">إذا ما في مؤشرات </span><span>→ </span><span style="font-family:Arial">الغالب المضارع البسيط</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold; text-decoration:underline">2. </span><span style="font-family:Arial; font-weight:bold; text-decoration:underline">الضمائر</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span>(</span><span dir="ltr"><span dir="ltr"></span>he, she, it, they</span><span><span dir="rtl"></span>...) → </span><span style="font-family:Arial">احذر من الخطأ في التوافق مع الأفعال </span><span>(</span><span dir="ltr"><span dir="ltr"></span>he wants / they want</span><span><span dir="rtl"></span>)</span><span> </span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold; text-decoration:underline">3. </span><span style="font-family:Arial; font-weight:bold; text-decoration:underline">الأفعال المساعدة</span><span style="font-weight:bold; text-decoration:underline">:</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span>&gt; </span><span dir="ltr"><span dir="ltr"></span>do/does</span><span><span dir="rtl"></span> → </span><span style="font-family:Arial">للمضارع</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">did</span><span><span dir="rtl"></span> → </span><span style="font-family:Arial">للماضي</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">will</span><span><span dir="rtl"></span> → </span><span style="font-family:Arial">للمستقبل</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">don't</span><span><span dir="rtl"></span> </span><span style="font-family:Arial">تستخدم فعل ثاني بعدهم بصيغة مجردة</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span><span>(</span><span dir="ltr"><span dir="ltr"></span>He does not eat, NOT eats</span><span><span dir="rtl"></span>)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold; text-decoration:underline">4. </span><span style="font-family:Arial; font-weight:bold; text-decoration:underline">الربط بين الجمل</span><span style="font-weight:bold; text-decoration:underline">:</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span>&gt; </span><span dir="ltr"><span dir="ltr"></span>because</span><span><span dir="rtl"></span> = </span><span style="font-family:Arial">لأن</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">although</span><span><span dir="rtl"></span> = </span><span style="font-family:Arial">رغم أن</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">so</span><span><span dir="rtl"></span> = </span><span style="font-family:Arial">لذلك</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">however</span><span><span dir="rtl"></span> = </span><span style="font-family:Arial">مع ذلك</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-weight:bold; text-decoration:underline">5. </span><span style="font-family:Arial; font-weight:bold; text-decoration:underline">كلمات تجيك كثير بالاختبار</span><span style="font-weight:bold; text-decoration:underline">:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">according to</span><span><span dir="rtl"></span> = </span><span style="font-family:Arial">وفقاً لـ</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr"><span>for example</span></span><span><span dir="rtl"></span> = </span><span style="font-family:Arial">على سبيل المثال</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">in contrast</span><span><span dir="rtl"></span> = </span><span style="font-family:Arial">في المقابل</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr"><span>in addition</span></span><span><span dir="rtl"></span> = </span><span style="font-family:Arial">بالإضافة إلى</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">such as</span><span><span dir="rtl"></span> = </span><span style="font-family:Arial">مثل</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial; font-weight:bold; text-decoration:underline">الاستماع </span><span dir="ltr" style="font-weight:bold; text-decoration:underline"><span dir="ltr"></span>Listening</span><span style="font-weight:bold; text-decoration:underline"><span dir="rtl"></span>:</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">ركز على الفكرة العامة وليس كل كلمة</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">حاول تميز النبرة </span><span>(</span><span style="font-family:Arial">هل الشخص متفاجئ؟ ينصح؟ يرفض؟</span><span>)</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">راقب الكلمات المفتاحية زي</span><span>: </span><span dir="ltr"><span dir="ltr"></span>I think, maybe, should, let's</span><span><span dir="rtl"></span>...</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial; font-weight:bold; text-decoration:underline">القراءة </span><span dir="ltr" style="font-weight:bold; text-decoration:underline"><span dir="ltr"></span>Reading</span><span style="font-weight:bold; text-decoration:underline"><span dir="rtl"></span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">اقرأ السؤال أولاً قبل القطعة</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">خذ نظرة عامة على القطعة </span><span>(</span><span style="font-family:Arial">لا تحاول تترجم كل شيء</span><span>)</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">ابحث عن الكلمات المطابقة من السؤال في النص</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">الاختيارات الخادعة</span><span>:</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">غالباً يكون في خيار </span><span>"</span><span style="font-family:Arial">يشبه الجواب الصح بس في كلمة وحدة تغير المعنى</span><span>"</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">لا تختار الجواب بسرعة إلا إذا كنت متأكد</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial; font-weight:bold; text-decoration:underline">أخطاء شائعة تجنبها</span><span style="font-weight:bold; text-decoration:underline">:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><img alt="" height="340" src="https://i.postimg.cc/W45ggQQQ/2.jpg" style="" width="342"/></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="-aw-import:ignore"> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span><img alt="" height="302" src="https://i.postimg.cc/JngXdj7x/3.jpg" style="" width="322"/></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="-aw-import:ignore"> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><img alt="" height="321" src="https://i.postimg.cc/nVC1hHX8/4.jpg" style="" width="376"/></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><img alt="" height="285" src="https://i.postimg.cc/44qQKrcY/5.jpg" style="" width="355"/></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><img alt="" height="508" src="https://i.postimg.cc/bwj0gk38/6.jpg" style="" width="339"/><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><img alt="" height="293" src="https://i.postimg.cc/bvyxcP7B/7.jpg" style="" width="324"/></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial; font-weight:bold; text-decoration:underline">أشياء غالبًا يغفل عنها</span><span style="font-weight:bold; text-decoration:underline">:</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">أ</span><span>) </span><span style="font-family:Arial; font-weight:bold">الكلمات الانتقالية </span><span style="font-weight:bold">(</span><span dir="ltr" style="font-weight:bold"><span dir="ltr"></span>Transition Words</span><span style="font-weight:bold"><span dir="rtl"></span>)</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">too, either, although, in fact, instead of</span><span><span dir="rtl"></span>,</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr">such as</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">سبب أهميتها؟ تسهل فهم السياق في الاستماع والقراءة </span><span>+ </span><span style="font-family:Arial">تساعدك تفهم معنى الجملة بدقة</span><span>.</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">ب</span><span>) </span><span style="font-family:Arial; font-weight:bold">العبارات الاصطلاحية </span><span style="font-weight:bold">(</span><span dir="ltr" style="font-weight:bold"><span dir="ltr"></span>Idioms</span><span style="font-weight:bold"><span dir="rtl"></span>)</span><span> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="font-family:Arial">أشهر </span><span>20 </span><span dir="ltr"><span dir="ltr"></span>Idiom</span><span><span dir="rtl"></span> </span><span style="font-family:Arial">مع المعنى العربي</span><span>:</span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span> </span><span> </span><span> </span><img alt="" height="518" src="https://i.postimg.cc/2504CJm8/8.jpg" style="" width="624"/></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span style="-aw-import:ignore"> </span></p><p dir="rtl" style="margin-right:36pt; text-align:left"><img alt="" height="240" src="https://i.postimg.cc/hjwTddfk/9.jpg" style="width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px; margin: 10px 0;" width="624"/></p><p dir="rtl" style="margin-right:36pt; text-align:left"><img alt="" height="184" src="https://i.postimg.cc/NG91wpnB/10.jpg" style="" width="624"/></p><p dir="rtl" style="margin-right:36pt; text-align:left"><img alt="" height="275" src="https://i.postimg.cc/3rs2r2Mp/11.jpg" style="" width="544"/></p><p dir="rtl" style="margin-right:36pt; text-align:left"><img alt="" height="364" src="https://i.postimg.cc/CLbkRdY2/12.jpg" style="" width="448"/><img alt="A close-up of a stamp
-
-AI-generated content may be incorrect." height="92" src="https://i.postimg.cc/Sxq8Cqxx/13.jpg" style="" width="586"/></p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr" style="-aw-import:ignore"> </span></p></div></div><button onclick="calculateScore()">عرض النتيجة النهائية</button>
+<p align="right" dir="RTL">
+    <strong>TOEFL  ITP (Institutional Testing Program)</strong>
+</p>
+<p align="right" dir="RTL">
+    يقيس مهاراتك في اللغة الإنجليزية الأكاديمية، ويتكون من ثلاث أقسام:
+</p>
+<p align="right" dir="RTL">
+    <strong>1.</strong><strong>Listening Comprehension</strong>
+    <strong>
+        (الاستماع)
+    </strong>
+</p>
+<p align="right" dir="RTL">
+    <strong>2.</strong> <strong>Structure and Written Expression</strong>
+</p>
+<p align="right" dir="RTL">
+    <strong>(التركيب والتعبير الكتابي)</strong>
+</p>
+<p align="right" dir="RTL">
+    <strong>3.</strong><strong>Reading Comprehension</strong>
+    <strong>
+        (القراءة)
+    </strong>
+</p>
+<p align="right" dir="RTL">
+    راح أشرح لك كل قسم، وأعطيك نصائح مهمة تساعدك في التحضير:
+</p>
+<p align="right" dir="RTL">
+    <strong><u>أولاً:</u></strong>
+    <strong>
+        <u>Listening Comprehension</u>
+    </strong>
+</p>
+<p align="right" dir="RTL">
+    محادثات قصيرة (Short Conversations)
+</p>
+<p align="right" dir="RTL">
+    محادثات طويلة (Long Conversations)
+</p>
+<p align="right" dir="RTL">
+    نصائح:
+</p>
+<p align="right" dir="RTL">
+    ركز على الفكرة الرئيسية: لا تحاول فهم كل كلمة، أهم شيء تستوعب  الموضوع
+    العام.
+</p>
+<p align="right" dir="RTL">
+    استمع بتركيز للموقف: مثلاً إذا شخص يسأل عن شيء، ما هو رد الطرف  الآخر؟ هل
+    يوافق؟ يرفض؟ يعطي حل؟
+</p>
+<p align="right" dir="RTL">
+    تدرب على الأسئلة الشائعة: مثل
+</p>
+<p align="right" dir="RTL">
+    What does the woman mean? <br/>
+    أو <br/>
+    What will the man probably do next? <br/>
+    <br/>
+</p>
+<p align="right" dir="RTL">
+    <strong><u>ثانياً:</u></strong>
+    <strong>
+        <u>Structure and Written  Expression</u>
+    </strong>
+</p>
+<p align="right" dir="RTL">
+    <strong><u>ينقسم إلى قسمين:</u></strong>
+</p>
+<p align="right" dir="RTL">
+    <strong>Structure</strong> <strong>:</strong>
+</p>
+<p align="right" dir="RTL">
+    تختار الكلمة أو العبارة الصحيحة لتكمل الجملة.
+</p>
+<p align="right" dir="RTL">
+    <strong>Written Expression</strong> <strong>:</strong>
+</p>
+<p align="right" dir="RTL">
+    تحدد الخطأ في الجملة.
+</p>
+<p align="right" dir="RTL">
+    نصائح:
+</p>
+<p align="right" dir="RTL">
+    راجع قواعد أساسية مثل:
+</p>
+<p align="right" dir="RTL">
+    ترتيب الجملة الإنجليزية (فاعل + فعل + مفعول)
+</p>
+<p align="right" dir="RTL">
+    الفرق بين الجمل المبنية للمعلوم والمجهول
+</p>
+<p align="right" dir="RTL">
+    الأزمنة: خاصة الماضي البسيط والمضارع التام
+</p>
+<p align="right" dir="RTL">
+    أدوات الربط (because, although, however, etc.)
+</p>
+<p align="right" dir="RTL">
+    <strong>احذر من الأخطاء الشائعة:</strong>
+</p>
+<p align="right" dir="RTL">
+    مطابقة الفعل مع الفاعل (Singular vs. Plural)
+</p>
+<p align="right" dir="RTL">
+    استخدام أدوات التعريف (a, an, the)
+</p>
+<p align="right" dir="RTL">
+    أخطاء الضمائر والملكية (he/him,  their/there/they’re)
+</p>
+<p align="right" dir="RTL">
+    <strong><u>ثالثاً:</u></strong><strong><u>Reading Comprehension</u></strong>
+    <strong></strong>
+</p>
+<p align="right" dir="RTL">
+    تعتمد على فقرات أكاديمية تليها أسئلة متنوعة
+</p>
+<p align="right" dir="RTL">
+    نصائح:
+</p>
+<p align="right" dir="RTL">
+    اقرأ السؤال أولاً قبل الفقرة: عشان تعرف تدور على إيش.
+</p>
+<p align="right" dir="RTL">
+    استخدم تقنية Skimming وScanning:
+</p>
+<p align="right" dir="RTL">
+    Skimming: تقرأ الفقرة بسرعة لالتقاط الفكرة العامة.
+</p>
+<p align="right" dir="RTL">
+    Scanning: تبحث عن معلومة محددة (مثلاً رقم أو اسم).
+</p>
+<p align="right" dir="RTL">
+    احذر من أسئلة الكلمات: ممكن يسألونك
+</p>
+<p align="right" dir="RTL">
+    "What is the meaning of the word 'X'
+</p>
+<p align="right" dir="RTL">
+    in line Y?"،
+</p>
+<p align="right" dir="RTL">
+    حاول تتوقع المعنى من السياق.
+</p>
+<p align="right" dir="RTL">
+    <strong>أهم القواعد والنقاط اللي لازم تركز عليها قبل اختبار</strong><strong>TOEFL 
+    ITP</strong> <strong>،  مع شرح بسيط وسهل:</strong> <br/>
+</p>
+<p align="right" dir="RTL">
+    <strong><u>1. الضمائر (</u></strong><strong><u>Pronouns</u></strong>
+    <strong><u>)</u></strong>
+</p>
+<p align="right" dir="RTL">
+    <strong>أ. ضمائر الفاعل (</strong><strong>Subject Pronouns</strong> <strong>
+    )</strong>
+</p>
+<p align="right" dir="RTL">
+    تأتي قبل الفعل وتدل على من يقوم بالفعل:
+</p>
+<p align="right" dir="RTL">
+    I, You, He, She, It, We,  They
+</p>
+<p align="right" dir="RTL">
+    مثال:
+</p>
+<p align="right" dir="RTL">
+    She goes to school. → هي تذهب للمدرسة
+</p>
+<p align="right" dir="RTL">
+    <strong>ب. ضمائر المفعول (</strong><strong>Object Pronouns</strong> <strong>
+    )</strong>
+</p>
+<p align="right" dir="RTL">
+    تأتي بعد الفعل أو حرف الجر وتدل على من وقع عليه الفعل:
+</p>
+<p align="right" dir="RTL">
+    Me, You, Him, Her, It, Us,  Them
+</p>
+<p align="right" dir="RTL">
+    مثال:
+</p>
+<p align="right" dir="RTL">
+    I saw him yesterday. → رأيته أمس
+</p>
+<p align="right" dir="RTL">
+    <strong>ج. ضمائر الملكية</strong>
+</p>
+<p align="right" dir="RTL">
+    My, Your, His, Her, Our,  Their →  قبل الاسم
+</p>
+<p align="right" dir="RTL">
+    Mine, Yours, His, Hers,  Ours, Theirs →
+</p>
+<p align="right" dir="RTL">
+    بدون اسم بعدها
+</p>
+<p align="right" dir="RTL">
+    مثال:
+</p>
+<p align="right" dir="RTL">
+    That is my book.
+</p>
+<p align="right" dir="RTL">
+    That book is mine.
+</p>
+<p align="right" dir="RTL">
+    <strong><u>2. الأفعال المساعدة (</u></strong><strong><u>Helping Verbs</u></strong>
+    <strong><u>)</u></strong>
+</p>
+<p align="right" dir="RTL">
+    تُستخدم لتكوين الأزمنة أو الأسئلة أو النفي:
+</p>
+<p align="right" dir="RTL">
+    Be: am, is, are, was, were
+</p>
+<p align="right" dir="RTL">
+    Have: have, has, had
+</p>
+<p align="right" dir="RTL">
+    Do: do, does, did
+</p>
+<p align="right" dir="RTL">
+    Modals: can, will, would,  should, might, must
+</p>
+<p align="right" dir="RTL">
+    مثال:
+</p>
+<p align="right" dir="RTL">
+    She is cooking.
+</p>
+<p align="right" dir="RTL">
+    They have finished.
+</p>
+<p align="right" dir="RTL">
+    Do you like tea?
+</p>
+<p align="right" dir="RTL">
+    <strong><u>3. ترتيب الجملة (</u></strong><strong><u>Sentence Order</u></strong>
+    <strong><u>)</u></strong>
+</p>
+<p align="right" dir="RTL">
+    الترتيب الطبيعي للجملة في اللغة الإنجليزية:
+</p>
+<p align="right" dir="RTL">
+    فاعل + فعل + مفعول به
+</p>
+<p align="right" dir="RTL">
+    مثال:
+</p>
+<p align="right" dir="RTL">
+    They play football.
+</p>
+<p align="right" dir="RTL">
+    She drinks water. <br/>
+</p>
+<p align="right" dir="RTL">
+    <strong><u>4. الأزمنة الأساسية (</u></strong><strong><u>Key Tenses</u></strong>
+    <strong><u>)</u></strong>
+</p>
+<p align="right" dir="RTL">
+    الأزمنة الأساسية في اللغة الإنجليزية وهي: الماضي (Past)،  الحاضر (Present)،
+    والمستقبل (Future)، مع أمثلة وتفاصيل لكل زمن.
+</p>
+<p align="right" dir="RTL">
+    <strong><u>1. الزمن الحاضر (</u></strong><strong><u>Present</u></strong>
+    <strong><u>)</u></strong> <br/>
+</p>
+<p align="right" dir="RTL">
+    <strong>أ.</strong><strong>Present Simple</strong>
+    <strong>
+        – المضارع البسيط
+    </strong>
+</p>
+<p align="right" dir="RTL">
+    الاستخدام: للحقائق، العادات، والجداول.
+</p>
+<p align="right" dir="RTL">
+    التركيب:
+</p>
+<p align="right" dir="RTL">
+    (Subject + base verb)
+</p>
+<p align="right" dir="RTL">
+    نضيف s للفعل إذا كان الفاعل مفردًا (He/She/It)
+</p>
+<p align="right" dir="RTL">
+    أمثلة:
+</p>
+<p align="right" dir="RTL">
+    I go to school every day.
+</p>
+<p align="right" dir="RTL">
+    He plays football on  Fridays. <br/>
+</p>
+<p align="right" dir="RTL">
+    <strong>ب.</strong><strong>Present Continuous</strong>
+    <strong>
+        – المضارع المستمر
+    </strong>
+</p>
+<p align="right" dir="RTL">
+    الاستخدام: لحدث يحدث الآن.
+</p>
+<p align="right" dir="RTL">
+    التركيب:
+</p>
+<p align="right" dir="RTL">
+    (Subject + am/is/are + verb+ing)
+</p>
+<p align="right" dir="RTL">
+    أمثلة:
+</p>
+<p align="right" dir="RTL">
+    I am studying English now.
+</p>
+<p align="right" dir="RTL">
+    She is cooking dinner. <br/>
+</p>
+<p align="right" dir="RTL">
+    <strong>ج.</strong><strong>Present Perfect</strong>
+    <strong>
+        – المضارع التام
+    </strong>
+</p>
+<p align="right" dir="RTL">
+    الاستخدام: لحدث بدأ في الماضي وما زال مستمرًا أو نتيجته ظاهرة الآن.
+</p>
+<p align="right" dir="RTL">
+    التركيب:
+</p>
+<p align="right" dir="RTL">
+    (Subject + has/have + past participle)
+</p>
+<p align="right" dir="RTL">
+    أمثلة:
+</p>
+<p align="right" dir="RTL">
+    I have finished my  homework.
+</p>
+<p align="right" dir="RTL">
+    He has lived here for 5  years.
+</p>
+<p align="right" dir="RTL">
+    <strong><u>2. الزمن الماضي (</u></strong><strong><u>Past</u></strong>
+    <strong><u>)</u></strong>
+</p>
+<p align="right" dir="RTL">
+    <strong>أ.</strong><strong>Past Simple</strong>
+    <strong>
+        – الماضي البسيط
+    </strong>
+</p>
+<p align="right" dir="RTL">
+    الاستخدام: لحدث وقع وانتهى في الماضي.
+</p>
+<p align="right" dir="RTL">
+    التركيب:
+</p>
+<p align="right" dir="RTL">
+    (Subject + past form of verb)
+</p>
+<p align="right" dir="RTL">
+    أمثلة:
+</p>
+<p align="right" dir="RTL">
+    I visited my grandmother  yesterday.
+</p>
+<p align="right" dir="RTL">
+    They watched a movie last  night.
+</p>
+<p align="right" dir="RTL">
+    <strong>ب.</strong><strong>Past Continuous</strong>
+    <strong>
+        – الماضي المستمر
+    </strong>
+</p>
+<p align="right" dir="RTL">
+    الاستخدام: لحدث كان مستمرًا في وقت معين بالماضي.
+</p>
+<p align="right" dir="RTL">
+    التركيب:
+</p>
+<p align="right" dir="RTL">
+    (Subject + was/were + verb+ing)
+</p>
+<p align="right" dir="RTL">
+    أمثلة:
+</p>
+<p align="right" dir="RTL">
+    I was reading at 8 PM.
+</p>
+<p align="right" dir="RTL">
+    They were playing when it  started to rain.
+</p>
+<p align="right" dir="RTL">
+    <strong>ج.</strong><strong>Past Perfect</strong>
+    <strong>
+        – الماضي التام
+    </strong>
+</p>
+<p align="right" dir="RTL">
+    الاستخدام: لحدث وقع قبل حدث آخر في الماضي.
+</p>
+<p align="right" dir="RTL">
+    التركيب:
+</p>
+<p align="right" dir="RTL">
+    (Subject + had + past participle)
+</p>
+<p align="right" dir="RTL">
+    أمثلة:
+</p>
+<p align="right" dir="RTL">
+    I had eaten before they  arrived.
+</p>
+<p align="right" dir="RTL">
+    She had finished her work  before noon.
+</p>
+<p align="right" dir="RTL">
+    <strong>3. الزمن المستقبل (</strong><strong>Future</strong>
+    <strong>
+        )
+    </strong>
+</p>
+<p align="right" dir="RTL">
+    <strong>أ.</strong><strong>Future Simple</strong>
+    <strong>
+        – المستقبل البسيط
+    </strong>
+</p>
+<p align="right" dir="RTL">
+    الاستخدام: لحدث سيقع في المستقبل.
+</p>
+<p align="right" dir="RTL">
+    التركيب:
+</p>
+<p align="right" dir="RTL">
+    (Subject + will + base verb)
+</p>
+<p align="right" dir="RTL">
+    أمثلة:
+</p>
+<p align="right" dir="RTL">
+    I will travel tomorrow.
+</p>
+<p align="right" dir="RTL">
+    She will help you.
+</p>
+<p align="right" dir="RTL">
+    <strong>ب.</strong><strong>Be going to</strong>
+    <strong>
+        – نية مسبقة أو شيء مخطط له
+    </strong>
+</p>
+<p align="right" dir="RTL">
+    الاستخدام: لخطط مؤكدة في المستقبل أو توقع بناء على دليل.
+</p>
+<p align="right" dir="RTL">
+    التركيب:
+</p>
+<p align="right" dir="RTL">
+    (Subject + am/is/are going to + base verb)
+</p>
+<p align="right" dir="RTL">
+    أمثلة:
+</p>
+<p align="right" dir="RTL">
+    I am going to start a new  job next week.
+</p>
+<p align="right" dir="RTL">
+    It is going to rain soon.
+</p>
+<p align="right" dir="RTL">
+    <strong>ج.</strong><strong>Future Continuous</strong>
+    <strong>
+        – المستقبل المستمر
+    </strong>
+</p>
+<p align="right" dir="RTL">
+    الاستخدام: لحدث سيكون مستمرًا في وقت معين بالمستقبل.
+</p>
+<p align="right" dir="RTL">
+    التركيب:
+</p>
+<p align="right" dir="RTL">
+    (Subject + will be + verb+ing)
+</p>
+<p align="right" dir="RTL">
+    أمثلة:
+</p>
+<p align="right" dir="RTL">
+    I will be studying at 10  PM.
+</p>
+<p align="right" dir="RTL">
+    They will be waiting for  you.
+</p>
+<p align="right" dir="RTL">
+    <strong><u>5. أدوات الربط (</u></strong><strong><u>Conjunctions</u></strong>
+    <strong><u>)</u></strong>
+</p>
+<p align="right" dir="RTL">
+    and = و
+</p>
+<p align="right" dir="RTL">
+    but = لكن
+</p>
+<p align="right" dir="RTL">
+    because = لأن
+</p>
+<p align="right" dir="RTL">
+    although = رغم أن
+</p>
+<p align="right" dir="RTL">
+    مثال:
+</p>
+<p align="right" dir="RTL">
+    I'm tired, but I'll study.
+</p>
+<p align="right" dir="RTL">
+    She stayed home because  she was sick.
+</p>
+<p align="right" dir="RTL">
+    <strong><u>6. المبني للمجهول (</u></strong><strong><u>Passive Voice</u></strong>
+    <strong><u>)</u></strong>
+</p>
+<p align="right" dir="RTL">
+    القاعدة:
+</p>
+<p align="right" dir="RTL">
+    Object + be + past  participle
+</p>
+<p align="right" dir="RTL">
+    مثال:
+</p>
+<p align="right" dir="RTL">
+    The cake was eaten.
+</p>
+<p align="right" dir="RTL">
+    English is spoken  worldwide.
+</p>
+<p align="right" dir="RTL">
+    <strong><u>7. أدوات التعريف (</u></strong><strong><u>Articles</u></strong>
+    <strong><u>)</u></strong>
+</p>
+<p align="right" dir="RTL">
+    a / an: لأول مرة ولشيء غير معروف <br/>
+    <br/>
+    a book, an orange <br/>
+    <br/>
+    the: لشيء معروف <br/>
+    <br/>
+    The sun, the teacher
+</p>
+<p align="right" dir="RTL">
+    <strong><u>8. أسماء تعد وغير تعد</u></strong>
+</p>
+<p align="right" dir="RTL">
+    <strong><u>(</u></strong><strong><u>Countable vs. Uncountable Nouns</u></strong>)
+</p>
+<p dir="RTL">
+    <strong>Countable</strong>: book, apple
+</p>
+<p dir="RTL">
+    تستعمل: a, many,  few
+</p>
+<p dir="RTL">
+    <strong>Uncountable</strong>: water, advice
+</p>
+<p dir="RTL">
+    تستعمل: much,  little
+</p>
+<strong> <br/>
+</strong>
+<p align="right" dir="RTL">
+    خطأ شائع:
+</p>
+<p align="right" dir="RTL">
+    I have many advices ❌
+</p>
+<p align="right" dir="RTL">
+    I have much advice ✅
+</p>
+<p align="right" dir="RTL">
+    <strong><u>9. الصفات والظروف (</u></strong><strong><u>Adjectives vs. Adverbs</u></strong>
+    <strong><u>)</u></strong>
+</p>
+<p align="right" dir="RTL">
+    Adjective (صفة): تصف اسم – She  is happy.
+</p>
+<p align="right" dir="RTL">
+    Adverb (حال): تصف فعل – She  sings beautifully.
+</p>
+<p align="right" dir="RTL">
+    <strong><u>10. حروف الجر المهمة (</u></strong><strong><u>Prepositions</u></strong>
+    <strong><u>)</u></strong>
+</p>
+<div>
+    <br/>
+</div>
+<div>
+    <div align="right">
+        <table dir="rtl" border="1" cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr>
+                    <td width="77">
+                        <p align="center" dir="RTL">
+                            <strong>حرف الجر</strong>
+                        </p>
+                    </td>
+                    <td width="125">
+                        <p align="right" dir="RTL">
+                            <strong>الاستخدام</strong>
+                        </p>
+                    </td>
+                    <td width="184">
+                        <p align="right" dir="RTL">
+                            <strong>مثال</strong>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="77">
+                        <p align="center" dir="RTL">
+                            <u>in</u> <u></u>
+                        </p>
+                    </td>
+                    <td width="125">
+                        <p align="right" dir="RTL">
+                            <u>شهور/سنوات</u>
+                        </p>
+                    </td>
+                    <td width="184">
+                        <p align="right" dir="RTL">
+                            <u>in 2020, in    July</u> <u></u>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="77">
+                        <p align="center" dir="RTL">
+                            <u>on</u> <u></u>
+                        </p>
+                    </td>
+                    <td width="125">
+                        <p align="right" dir="RTL">
+                            <u>أيام/تواريخ</u>
+                        </p>
+                    </td>
+                    <td width="184">
+                        <p align="right" dir="RTL">
+                            <u>on Monday, on    Jan 1st</u> <u></u>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="77">
+                        <p align="center" dir="RTL">
+                            <u>at</u> <u></u>
+                        </p>
+                    </td>
+                    <td width="125">
+                        <p align="right" dir="RTL">
+                            <u>ساعة/مكان    دقيق</u>
+                        </p>
+                    </td>
+                    <td width="184">
+                        <p align="right" dir="RTL">
+                            <u>at 5 PM, at    home</u> <u></u>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="77">
+                        <p align="center" dir="RTL">
+                            <u>by</u> <u></u>
+                        </p>
+                    </td>
+                    <td width="125">
+                        <p align="right" dir="RTL">
+                            <u>وسيلة أو وقت    نهائي</u>
+                        </p>
+                    </td>
+                    <td width="184">
+                        <p align="right" dir="RTL">
+                            <u>by car, by    tomorrow</u> <u></u>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="77">
+                        <p align="center" dir="RTL">
+                            <u>for</u> <u></u>
+                        </p>
+                    </td>
+                    <td width="125">
+                        <p align="right" dir="RTL">
+                            <u>مدة أو هدف</u>
+                        </p>
+                    </td>
+                    <td width="184">
+                        <p align="right" dir="RTL">
+                            <u>for 2 hours,    for you</u> <u></u>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br/>
+</div>
+<div>
+    <br/>
+</div>
+<p align="right" dir="RTL">
+    <strong>نصائح سريعة لحروف الجر في الاختبار:</strong>
+</p>
+<p align="right" dir="RTL">
+    دائمًا راجع التعبيرات الثابتة (Fixed  Expressions)،  مثل:
+</p>
+<p align="right" dir="RTL">
+    good at
+</p>
+<p align="right" dir="RTL">
+    interested in
+</p>
+<p align="right" dir="RTL">
+    afraid of
+</p>
+<p align="right" dir="RTL">
+    depend on
+</p>
+<p align="right" dir="RTL">
+    احفظ الاستخدام مع الكلمات، مثل:
+</p>
+<p align="right" dir="RTL">
+    arrive at a place
+</p>
+<p align="right" dir="RTL">
+    arrive in a city/country
+</p>
+<p align="right" dir="RTL">
+    think about something
+</p>
+<p align="right" dir="RTL">
+    listen to music
+</p>
+<p align="right" dir="RTL">
+    <strong><u>11. المقارنة والتفضيل</u></strong>
+</p>
+<p align="right" dir="RTL">
+    <strong><u>(</u></strong><strong><u>Comparative</u></strong><strong><u>&amp;</u></strong><strong><u>Superlative</u></strong>
+    <strong><u>)</u></strong>
+</p>
+<p align="right" dir="RTL">
+    <strong>Comparative</strong> <strong>(مقارنة بين اثنين):</strong>
+</p>
+<p align="right" dir="RTL">
+    taller, more expensive
+</p>
+<p align="right" dir="RTL">
+    مثال:
+</p>
+<p align="right" dir="RTL">
+    Ali is taller than Omar.
+</p>
+<p align="right" dir="RTL">
+    <strong>Superlative</strong> <strong>(الأفضل بين مجموعة):</strong>
+</p>
+<p align="right" dir="RTL">
+    the <strong>tallest</strong>, the <strong>most</strong> expensive
+</p>
+<p align="right" dir="RTL">
+    مثال:
+</p>
+<p align="right" dir="RTL">
+    This is the <strong>best</strong> movie.
+</p>
+<p align="right" dir="RTL">
+    <strong><u>12. النفي (</u></strong><strong><u>Negation</u></strong>
+    <strong><u>)</u></strong>
+</p>
+<p align="right" dir="RTL">
+    <strong>Present Simple:</strong>He  doesn’t like tea. <strong></strong>
+</p>
+<p align="right" dir="RTL">
+    <strong>Past Simple:</strong>She  didn’t go out <strong>.</strong>
+</p>
+<p align="right" dir="RTL">
+    <strong>To be:</strong>They  aren’t here <strong>.</strong>
+</p>
+<p align="right" dir="RTL">
+    <strong>Modals:</strong>You can’t  do that <strong>.</strong>
+</p>
+<p align="right" dir="RTL">
+    <strong></strong> <strong></strong>
+</p>
+<p align="right" dir="RTL">
+    <strong><u>13. الأسئلة (</u></strong><strong><u>Questions</u></strong>
+    <strong><u>)</u></strong>
+</p>
+<p align="right" dir="RTL">
+    Wh-Questions:
+</p>
+<p align="right" dir="RTL">
+    <strong>What, Where, When, Why,  How</strong>
+</p>
+<p align="right" dir="RTL">
+    مثال:
+</p>
+<p align="right" dir="RTL">
+    Where do you live?
+</p>
+<p align="right" dir="RTL">
+    Yes/No Questions:
+</p>
+<p align="right" dir="RTL">
+    Do you like coffee?
+</p>
+<p align="right" dir="RTL">
+    Is she your sister?
+</p>
+<p align="right" dir="RTL">
+    <strong><u>نصائح عامة مهمة جداً:</u></strong> <br/>
+</p>
+<p align="right" dir="RTL">
+    <strong><u>1. ركز على الزمن في الأسئلة (</u></strong><strong><u>past,
+    present,  future</u></strong> <strong><u>):</u></strong>
+</p>
+<p align="right" dir="RTL">
+    &gt; إذا شفت "yesterday" → الماضي
+</p>
+<p align="right" dir="RTL">
+    إذا شفت "will" أو "tomorrow" → المستقبل
+</p>
+<p align="right" dir="RTL">
+    إذا ما في مؤشرات → الغالب المضارع البسيط
+</p>
+<p align="right" dir="RTL">
+    <strong><u>2. الضمائر</u></strong>
+</p>
+<p align="right" dir="RTL">
+    (he, she, it, they...) → احذر من الخطأ في التوافق مع الأفعال  (he wants /
+    they want)
+</p>
+<p align="right" dir="RTL">
+    <strong><u>3. الأفعال المساعدة:</u></strong>
+</p>
+<p align="right" dir="RTL">
+    &gt; do/does → للمضارع
+</p>
+<p align="right" dir="RTL">
+    did → للماضي
+</p>
+<p align="right" dir="RTL">
+    will → للمستقبل
+</p>
+<p align="right" dir="RTL">
+    don't تستخدم فعل ثاني بعدهم بصيغة مجردة
+</p>
+<p align="right" dir="RTL">
+    (He does not eat, NOT eats)
+</p>
+<p align="right" dir="RTL">
+    <strong><u>4. الربط بين الجمل:</u></strong>
+</p>
+<p align="right" dir="RTL">
+    &gt; because = لأن
+</p>
+<p align="right" dir="RTL">
+    although = رغم أن
+</p>
+<p align="right" dir="RTL">
+    so = لذلك
+</p>
+<p align="right" dir="RTL">
+    however = مع ذلك
+</p>
+<p align="right" dir="RTL">
+    <strong><u>5. كلمات تجيك كثير بالاختبار:</u></strong>
+</p>
+<p align="right" dir="RTL">
+    according to = وفقاً لـ
+</p>
+<p align="right" dir="RTL">
+    for example = على سبيل المثال
+</p>
+<p align="right" dir="RTL">
+    in contrast = في المقابل
+</p>
+<p align="right" dir="RTL">
+    in addition = بالإضافة إلى
+</p>
+<p align="right" dir="RTL">
+    such as = مثل
+</p>
+<p align="right" dir="RTL">
+    <strong><u>الاستماع</u></strong><strong><u>Listening</u></strong>
+    <strong><u>:</u></strong>
+</p>
+<p align="right" dir="RTL">
+    ركز على الفكرة العامة وليس كل كلمة
+</p>
+<p align="right" dir="RTL">
+    حاول تميز النبرة (هل الشخص متفاجئ؟ ينصح؟ يرفض؟)
+</p>
+<p align="right" dir="RTL">
+    راقب الكلمات المفتاحية زي: I think, maybe,  should, let's...
+</p>
+<p align="right" dir="RTL">
+    <strong><u>القراءة</u></strong><strong><u>Reading</u></strong>
+    <strong>
+        <u>:</u>
+    </strong>
+</p>
+<p align="right" dir="RTL">
+    اقرأ السؤال أولاً قبل القطعة
+</p>
+<p align="right" dir="RTL">
+    خذ نظرة عامة على القطعة (لا تحاول تترجم كل شيء)
+</p>
+<p align="right" dir="RTL">
+    ابحث عن الكلمات المطابقة من السؤال في النص
+</p>
+<p align="right" dir="RTL">
+    الاختيارات الخادعة:
+</p>
+<p align="right" dir="RTL">
+    غالباً يكون في خيار "يشبه الجواب الصح بس في كلمة وحدة تغير  المعنى"
+</p>
+<p align="right" dir="RTL">
+    لا تختار الجواب بسرعة إلا إذا كنت متأكد
+</p>
+<p align="right" dir="RTL">
+    <strong><u>أخطاء شائعة تجنبها:</u></strong>
+</p>
+<p align="right" dir="RTL">
+    <strong>Much , Many</strong> <strong>الفرق بين</strong>
+</p>
+<div align="right">
+    <table dir="rtl" border="1" cellspacing="0" cellpadding="0">
+        <tbody>
+            <tr>
+                <td width="62">
+                    <p align="center" dir="RTL">
+                        <strong>الكلمة</strong>
+                    </p>
+                </td>
+                <td width="296">
+                    <p align="center" dir="RTL">
+                        <strong>متى تستخدم؟</strong>
+                    </p>
+                </td>
+                <td width="188">
+                    <p align="center" dir="RTL">
+                        <strong>مثال</strong>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="62">
+                    <p align="center" dir="RTL">
+                        Much
+                    </p>
+                </td>
+                <td width="296">
+                    <p align="center" dir="RTL">
+                        مع الأشياء    غير المعدودة (money, time, water)
+                    </p>
+                </td>
+                <td width="188">
+                    <p align="center" dir="RTL">
+                        I don’t have much    time.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="62">
+                    <p align="center" dir="RTL">
+                        Many
+                    </p>
+                </td>
+                <td width="296">
+                    <p align="center" dir="RTL">
+                        مع الأسماء    المعدودة (apples, cars, books)
+                    </p>
+                </td>
+                <td width="188">
+                    <p align="center" dir="RTL">
+                        She has many    friends.
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<p dir="RTL">
+    🔺 <strong>خطأ شائع</strong>:
+</p>
+<p dir="RTL">
+    ❌ I have <strong>much</strong> books.
+</p>
+<p dir="RTL">
+    ✅ I have <strong>many</strong> books
+</p>
+<p dir="RTL">
+    .
+</p>
+<p align="right" dir="RTL">
+    <strong>Since, For</strong> <strong>الفرق بين</strong>
+</p>
+<div align="right">
+    <table dir="rtl" border="1" cellspacing="0" cellpadding="0">
+        <tbody>
+            <tr>
+                <td width="57">
+                    <p align="right" dir="RTL">
+                        <strong>الكلمة</strong>
+                    </p>
+                </td>
+                <td width="150">
+                    <p align="right" dir="RTL">
+                        <strong>متى تستخدم؟</strong>
+                    </p>
+                </td>
+                <td width="207">
+                    <p align="right" dir="RTL">
+                        <strong>مثال</strong>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="57">
+                    <p align="right" dir="RTL">
+                        Since
+                    </p>
+                </td>
+                <td width="150">
+                    <p align="right" dir="RTL">
+                        منذ (تاريخ أو نقطة بداية)
+                    </p>
+                </td>
+                <td width="207">
+                    <p align="right" dir="RTL">
+                        I    have lived here <strong>since</strong> 2020.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="57">
+                    <p align="right" dir="RTL">
+                        For
+                    </p>
+                </td>
+                <td width="150">
+                    <p align="right" dir="RTL">
+                        لمدة (فترة زمنية)
+                    </p>
+                </td>
+                <td width="207">
+                    <p align="right" dir="RTL">
+                        I    have lived here <strong>for</strong> 3 years
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<p dir="RTL">
+    🔺 <strong>خطأ شائع</strong>:
+</p>
+<p dir="RTL">
+    ❌ I have worked  here <strong>since</strong> two years
+</p>
+<p align="right" dir="RTL">
+    ✅ I have worked  here <strong>for</strong> two years
+</p>
+<p dir="RTL">
+    .
+</p>
+<p align="right" dir="RTL">
+    <strong>Make, Do</strong> <strong>الفرق بين</strong>
+</p>
+<div align="right">
+    <table dir="rtl" border="1" cellspacing="0" cellpadding="0">
+        <tbody>
+            <tr>
+                <td width="60">
+                    <p align="right" dir="RTL">
+                        <strong>الفعل</strong>
+                    </p>
+                </td>
+                <td width="137">
+                    <p align="right" dir="RTL">
+                        <strong>متى نستخدمه؟</strong>
+                    </p>
+                </td>
+                <td width="202">
+                    <p align="right" dir="RTL">
+                        <strong>مثال</strong>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="60">
+                    <p align="right" dir="RTL">
+                        Make
+                    </p>
+                </td>
+                <td width="137">
+                    <p align="right" dir="RTL">
+                        عند الإنشاء أو الإنتاج
+                    </p>
+                </td>
+                <td width="202">
+                    <p align="right" dir="RTL">
+                        He <strong>made</strong> a cake.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="60">
+                    <p align="right" dir="RTL">
+                        Do
+                    </p>
+                </td>
+                <td width="137">
+                    <p align="right" dir="RTL">
+                        عند تنفيذ مهمة أو عمل
+                    </p>
+                </td>
+                <td width="202">
+                    <p align="right" dir="RTL">
+                        I    need to <strong>do</strong> my homework.
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<p align="right" dir="RTL">
+    🔺 <strong>خطأ شائع</strong>:
+</p>
+<p align="right" dir="RTL">
+    ❌ I need to <strong>make</strong> my homework
+</p>
+<p align="right" dir="RTL">
+    ✅ I need to <strong>do</strong> my homework.
+</p>
+<p align="right" dir="RTL">
+    .
+</p>
+<p align="right" dir="RTL">
+    <strong>Tell, Say</strong><strong>الفرق بين</strong> <strong></strong>
+</p>
+<div align="right">
+    <table dir="rtl" border="1" cellspacing="0" cellpadding="0">
+        <tbody>
+            <tr>
+                <td width="48">
+                    <p align="right" dir="RTL">
+                        <strong>الفعل</strong>
+                    </p>
+                </td>
+                <td width="174">
+                    <p align="right" dir="RTL">
+                        <strong>القاعدة</strong>
+                    </p>
+                </td>
+                <td width="161">
+                    <p align="right" dir="RTL">
+                        <strong>مثال</strong>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="48">
+                    <p align="right" dir="RTL">
+                        Say
+                    </p>
+                </td>
+                <td width="174">
+                    <p align="right" dir="RTL">
+                        لا يجي بعدها مفعول به مباشر
+                    </p>
+                </td>
+                <td width="161">
+                    <p align="right" dir="RTL">
+                        He <strong>said</strong> "hello".
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="48">
+                    <p align="right" dir="RTL">
+                        Tell
+                    </p>
+                </td>
+                <td width="174">
+                    <p align="right" dir="RTL">
+                        لازم بعدها شخص
+                    </p>
+                </td>
+                <td width="161">
+                    <p align="right" dir="RTL">
+                        He <strong>told    me</strong> the truth.
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<p align="right" dir="RTL">
+    . <br/>
+</p>
+<p align="right" dir="RTL">
+    🔺 <strong>خطأ شائع</strong>:
+</p>
+<p align="right" dir="RTL">
+    ❌ He <strong>said me</strong> the story
+</p>
+<p align="right" dir="RTL">
+    ✅ He <strong>told me</strong> the story
+</p>
+<p align="center" dir="RTL">
+    . <br/>
+</p>
+<p align="right" dir="RTL">
+    <strong>Tell, Say</strong><strong>الفرق بين</strong> <strong></strong>
+</p>
+<div align="right">
+    <table dir="rtl" border="1" cellspacing="0" cellpadding="0">
+        <tbody>
+            <tr>
+                <td width="67">
+                    <p align="right" dir="RTL">
+                        <strong>الكلمة</strong>
+                    </p>
+                </td>
+                <td width="138">
+                    <p align="right" dir="RTL">
+                        <strong>وظيفتها</strong>
+                    </p>
+                </td>
+                <td width="283">
+                    <p align="right" dir="RTL">
+                        <strong>مثال</strong>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="67">
+                    <p align="right" dir="RTL">
+                        Who
+                    </p>
+                </td>
+                <td width="138">
+                    <p align="right" dir="RTL">
+                        فاعل (للناس)
+                    </p>
+                </td>
+                <td width="283">
+                    <p align="right" dir="RTL">
+                        The    man <strong>who</strong> called me is my boss.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="67">
+                    <p align="right" dir="RTL">
+                        Whom
+                    </p>
+                </td>
+                <td width="138">
+                    <p align="right" dir="RTL">
+                        مفعول به (رسمي)
+                    </p>
+                </td>
+                <td width="283">
+                    <p align="right" dir="RTL">
+                        The    person <strong>whom</strong> you met is my
+                        friend.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="67">
+                    <p align="right" dir="RTL">
+                        Whose
+                    </p>
+                </td>
+                <td width="138">
+                    <p align="right" dir="RTL">
+                        ملكية
+                    </p>
+                </td>
+                <td width="283">
+                    <p align="right" dir="RTL">
+                        The    girl <strong>whose</strong> phone rang is here.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="67">
+                    <p align="right" dir="RTL">
+                        Which
+                    </p>
+                </td>
+                <td width="138">
+                    <p align="right" dir="RTL">
+                        لغير العاقل أو للاختيار
+                    </p>
+                </td>
+                <td width="283">
+                    <p align="right" dir="RTL">
+                        I    took the book <strong>which</strong> was new.
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<p align="right" dir="RTL">
+    🔺 <strong>خطأ شائع</strong>:
+</p>
+<p align="right" dir="RTL">
+    ❌ The man <strong>which</strong> helped me is kind
+</p>
+<p dir="RTL">
+    ✅ The man <strong>who</strong> helped me is kind
+</p>
+<p align="right" dir="RTL">
+    .
+</p>
+<p align="right" dir="RTL">
+    <strong>Less, Fewer</strong><strong>الفرق بين</strong> <strong></strong>
+</p>
+<div align="right">
+    <table dir="rtl" border="1" cellspacing="0" cellpadding="0">
+        <tbody>
+            <tr>
+                <td width="63">
+                    <p align="right" dir="RTL">
+                        <strong>الكلمة</strong>
+                    </p>
+                </td>
+                <td width="77">
+                    <p align="right" dir="RTL">
+                        <strong>مع ماذا؟</strong>
+                    </p>
+                </td>
+                <td width="201">
+                    <p align="right" dir="RTL">
+                        <strong>مثال</strong>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="63">
+                    <p align="right" dir="RTL">
+                        Less
+                    </p>
+                </td>
+                <td width="77">
+                    <p align="right" dir="RTL">
+                        غير معدود
+                    </p>
+                </td>
+                <td width="201">
+                    <p align="right" dir="RTL">
+                        There    is <strong>less</strong> water.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="63">
+                    <p align="right" dir="RTL">
+                        Fewer
+                    </p>
+                </td>
+                <td width="77">
+                    <p align="right" dir="RTL">
+                        معدود
+                    </p>
+                </td>
+                <td width="201">
+                    <p align="right" dir="RTL">
+                        There    are <strong>fewer</strong> cars today.
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<p align="right" dir="RTL">
+    🔺 <strong>خطأ شائع</strong>:
+</p>
+<p align="right" dir="RTL">
+    ❌ I have <strong>less</strong> books
+</p>
+<p align="right" dir="RTL">
+    ✅ I have <strong>fewer</strong> books
+</p>
+<p align="right" dir="RTL">
+    .
+</p>
+<p align="right" dir="RTL">
+    <strong><u>أشياء غالبًا يغفل عنها:</u></strong>
+</p>
+<p align="right" dir="RTL">
+    أ) <strong>الكلمات الانتقالية (</strong><strong>Transition Words</strong>
+    <strong>)</strong>
+</p>
+<p align="right" dir="RTL">
+    too, either, although, in  fact, instead of,
+</p>
+<p align="right" dir="RTL">
+    such as
+</p>
+<p align="right" dir="RTL">
+    سبب أهميتها؟ تسهل فهم السياق في الاستماع والقراءة + تساعدك تفهم  معنى الجملة
+    بدقة.
+</p>
+<p align="right" dir="RTL">
+    . <br/>
+</p>
+<p align="right" dir="RTL">
+    ب) <strong>العبارات الاصطلاحية (</strong><strong>Idioms</strong>
+    <strong>
+        )
+    </strong>
+</p>
+<p align="right" dir="RTL">
+    أشهر 20 Idiom مع المعنى العربي:
+</p>
+<div align="right">
+    <table dir="rtl" border="1" cellspacing="0" cellpadding="0" width="840">
+        <tbody>
+            <tr>
+                <td width="48">
+                    <p align="right" dir="RTL">
+                        <strong>الرقم</strong>
+                    </p>
+                </td>
+                <td width="207">
+                    <p align="right" dir="RTL">
+                        <strong>العبارة باللغة الإنجليزية</strong>
+                    </p>
+                </td>
+                <td width="195">
+                    <p align="right" dir="RTL">
+                        <strong>الترجمة باللغة العربية</strong>
+                    </p>
+                </td>
+                <td width="388">
+                    <p align="right" dir="RTL">
+                        <strong>المثال باللغة الإنجليزية</strong>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="48">
+                    <p align="right" dir="RTL">
+                        1
+                    </p>
+                </td>
+                <td width="207">
+                    <p align="right" dir="RTL">
+                        Break    the ice
+                    </p>
+                </td>
+                <td width="195">
+                    <p align="right" dir="RTL">
+                        يكسر الجليد
+                    </p>
+                </td>
+                <td width="388">
+                    <p align="right" dir="RTL">
+                        He    told a joke to break the ice.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="48">
+                    <p align="right" dir="RTL">
+                        2
+                    </p>
+                </td>
+                <td width="207">
+                    <p align="right" dir="RTL">
+                        Under    the weather
+                    </p>
+                </td>
+                <td width="195">
+                    <p align="right" dir="RTL">
+                        مريض / مو على ما يرام
+                    </p>
+                </td>
+                <td width="388">
+                    <p align="right" dir="RTL">
+                        I’m    feeling under the weather today.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="48">
+                    <p align="right" dir="RTL">
+                        3
+                    </p>
+                </td>
+                <td width="207">
+                    <p align="right" dir="RTL">
+                        Hit    the books
+                    </p>
+                </td>
+                <td width="195">
+                    <p align="right" dir="RTL">
+                        يبدأ الدراسة بجدية
+                    </p>
+                </td>
+                <td width="388">
+                    <p align="right" dir="RTL">
+                        I    have to hit the books before my exam.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="48">
+                    <p align="right" dir="RTL">
+                        4
+                    </p>
+                </td>
+                <td width="207">
+                    <p align="right" dir="RTL">
+                        Once    in a blue moon
+                    </p>
+                </td>
+                <td width="195">
+                    <p align="right" dir="RTL">
+                        نادرًا جدًا
+                    </p>
+                </td>
+                <td width="388">
+                    <p align="right" dir="RTL">
+                        She    visits us once in a blue moon.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="48">
+                    <p align="right" dir="RTL">
+                        5
+                    </p>
+                </td>
+                <td width="207">
+                    <p align="right" dir="RTL">
+                        Piece    of cake
+                    </p>
+                </td>
+                <td width="195">
+                    <p align="right" dir="RTL">
+                        شيء سهل جدًا
+                    </p>
+                </td>
+                <td width="388">
+                    <p align="right" dir="RTL">
+                        The    test was a piece of cake.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="48">
+                    <p align="right" dir="RTL">
+                        6
+                    </p>
+                </td>
+                <td width="207">
+                    <p align="right" dir="RTL">
+                        Cost    an arm and a leg
+                    </p>
+                </td>
+                <td width="195">
+                    <p align="right" dir="RTL">
+                        غالي جدًا
+                    </p>
+                </td>
+                <td width="388">
+                    <p align="right" dir="RTL">
+                        That    phone cost me an arm and a leg.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="48">
+                    <p align="right" dir="RTL">
+                        7
+                    </p>
+                </td>
+                <td width="207">
+                    <p align="right" dir="RTL">
+                        Let    the cat out of the bag
+                    </p>
+                </td>
+                <td width="195">
+                    <p align="right" dir="RTL">
+                        يفضح السر
+                    </p>
+                </td>
+                <td width="388">
+                    <p align="right" dir="RTL">
+                        She    let the cat out of the bag about the party.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="48">
+                    <p align="right" dir="RTL">
+                        8
+                    </p>
+                </td>
+                <td width="207">
+                    <p align="right" dir="RTL">
+                        Bite    the bullet
+                    </p>
+                </td>
+                <td width="195">
+                    <p align="right" dir="RTL">
+                        يتحمل شيئًا صعبًا أو مؤلمًا
+                    </p>
+                </td>
+                <td width="388">
+                    <p align="right" dir="RTL">
+                        I had    to bite the bullet and go to the dentist.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="48">
+                    <p align="right" dir="RTL">
+                        9
+                    </p>
+                </td>
+                <td width="207">
+                    <p align="right" dir="RTL">
+                        Burn    the midnight oil
+                    </p>
+                </td>
+                <td width="195">
+                    <p align="right" dir="RTL">
+                        يسهر لوقت متأخر
+                    </p>
+                </td>
+                <td width="388">
+                    <p align="right" dir="RTL">
+                        I    burned the midnight oil last night for the exam.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="48">
+                    <p align="right" dir="RTL">
+                        10
+                    </p>
+                </td>
+                <td width="207">
+                    <p align="right" dir="RTL">
+                        Call    it a day
+                    </p>
+                </td>
+                <td width="195">
+                    <p align="right" dir="RTL">
+                        يكتفي أو ينهي العمل اليوم
+                    </p>
+                </td>
+                <td width="388">
+                    <p align="right" dir="RTL">
+                        Let’s    call it a day and go home.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="48">
+                    <p align="right" dir="RTL">
+                        11
+                    </p>
+                </td>
+                <td width="207">
+                    <p align="right" dir="RTL">
+                        On    the same page
+                    </p>
+                </td>
+                <td width="195">
+                    <p align="right" dir="RTL">
+                        متفقين أو فاهمين نفس الشيء
+                    </p>
+                </td>
+                <td width="388">
+                    <p align="right" dir="RTL">
+                        We’re    finally on the same page about the project.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="48">
+                    <p align="right" dir="RTL">
+                        12
+                    </p>
+                </td>
+                <td width="207">
+                    <p align="right" dir="RTL">
+                        Back    to square one
+                    </p>
+                </td>
+                <td width="195">
+                    <p align="right" dir="RTL">
+                        الرجوع للبداية بعد الفشل
+                    </p>
+                </td>
+                <td width="388">
+                    <p align="right" dir="RTL">
+                        The    plan failed. We’re back to square one.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="48">
+                    <p align="right" dir="RTL">
+                        13
+                    </p>
+                </td>
+                <td width="207">
+                    <p align="right" dir="RTL">
+                        Spill    the beans
+                    </p>
+                </td>
+                <td width="195">
+                    <p align="right" dir="RTL">
+                        يكشف السر
+                    </p>
+                </td>
+                <td width="388">
+                    <p align="right" dir="RTL">
+                        He    spilled the beans about the surprise.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="48">
+                    <p align="right" dir="RTL">
+                        14
+                    </p>
+                </td>
+                <td width="207">
+                    <p align="right" dir="RTL">
+                        The    ball is in your court
+                    </p>
+                </td>
+                <td width="195">
+                    <p align="right" dir="RTL">
+                        القرار عندك
+                    </p>
+                </td>
+                <td width="388">
+                    <p align="right" dir="RTL">
+                        I’ve    said my part. Now the ball is in your court.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="48">
+                    <p align="right" dir="RTL">
+                        15
+                    </p>
+                </td>
+                <td width="207">
+                    <p align="right" dir="RTL">
+                        Kill    two birds with one stone
+                    </p>
+                </td>
+                <td width="195">
+                    <p align="right" dir="RTL">
+                        يحقق هدفين في مرة واحدة
+                    </p>
+                </td>
+                <td width="388">
+                    <p align="right" dir="RTL">
+                        By    studying and eating, I killed two birds with one
+                        stone.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="48">
+                    <p align="right" dir="RTL">
+                        16
+                    </p>
+                </td>
+                <td width="207">
+                    <p align="right" dir="RTL">
+                        Get    cold feet
+                    </p>
+                </td>
+                <td width="195">
+                    <p align="right" dir="RTL">
+                        يتردد
+                    </p>
+                </td>
+                <td width="388">
+                    <p align="right" dir="RTL">
+                        He    got cold feet before the wedding.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="48">
+                    <p align="right" dir="RTL">
+                        17
+                    </p>
+                </td>
+                <td width="207">
+                    <p align="right" dir="RTL">
+                        A    blessing in disguise
+                    </p>
+                </td>
+                <td width="195">
+                    <p align="right" dir="RTL">
+                        خبر جيد جاء من أمر ظاهره سيء
+                    </p>
+                </td>
+                <td width="388">
+                    <p align="right" dir="RTL">
+                        Losing    that job was a blessing in disguise.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="48">
+                    <p align="right" dir="RTL">
+                        18
+                    </p>
+                </td>
+                <td width="207">
+                    <p align="right" dir="RTL">
+                        Cut    corners
+                    </p>
+                </td>
+                <td width="195">
+                    <p align="right" dir="RTL">
+                        يختصر بشكل سيء / يقتصد
+                    </p>
+                </td>
+                <td width="388">
+                    <p align="right" dir="RTL">
+                        Don’t    cut corners on your homework.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="48">
+                    <p align="right" dir="RTL">
+                        19
+                    </p>
+                </td>
+                <td width="207">
+                    <p align="right" dir="RTL">
+                        Pull    someone’s leg
+                    </p>
+                </td>
+                <td width="195">
+                    <p align="right" dir="RTL">
+                        يمازح شخصًا
+                    </p>
+                </td>
+                <td width="388">
+                    <p align="right" dir="RTL">
+                        I’m    just pulling your leg!
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="48">
+                    <p align="right" dir="RTL">
+                        20
+                    </p>
+                </td>
+                <td width="207">
+                    <p align="right" dir="RTL">
+                        Go    the extra mile
+                    </p>
+                </td>
+                <td width="195">
+                    <p align="right" dir="RTL">
+                        يبذل جهدًا إضافيًا
+                    </p>
+                </td>
+                <td width="388">
+                    <p align="right" dir="RTL">
+                        She    always goes the extra mile to help others.
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<p align="right" dir="RTL">
+    ---------------------
+</p>
+<div align="right">
+    <table dir="rtl" border="1" cellspacing="0" cellpadding="0" width="887">
+        <tbody>
+            <tr>
+                <td width="48">
+                    <p align="right" dir="RTL">
+                        <strong>الرقم</strong>
+                    </p>
+                </td>
+                <td width="175">
+                    <p align="right" dir="RTL">
+                        <strong>الكلمة / القاعدة</strong>
+                    </p>
+                </td>
+                <td width="230">
+                    <p align="right" dir="RTL">
+                        <strong>اسم القاعدة</strong>
+                    </p>
+                </td>
+                <td width="237">
+                    <p align="right" dir="RTL">
+                        <strong>المثال</strong>
+                    </p>
+                </td>
+                <td width="195">
+                    <p align="right" dir="RTL">
+                        <strong>الترجمة</strong>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="48">
+                    <p align="right" dir="RTL">
+                        1
+                    </p>
+                </td>
+                <td width="175">
+                    <p align="right" dir="RTL">
+                        believed
+                    </p>
+                </td>
+                <td width="230">
+                    <p align="right" dir="RTL">
+                        Passive    + Infinitive
+                    </p>
+                </td>
+                <td width="237">
+                    <p align="right" dir="RTL">
+                        He is    believed to be rich.
+                    </p>
+                </td>
+                <td width="195">
+                    <p align="right" dir="RTL">
+                        يُعتقد أنه غني.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="48">
+                    <p align="right" dir="RTL">
+                        2
+                    </p>
+                </td>
+                <td width="175">
+                    <p align="right" dir="RTL">
+                        about
+                    </p>
+                </td>
+                <td width="230">
+                    <p align="right" dir="RTL">
+                        Preposition    + Gerund
+                    </p>
+                </td>
+                <td width="237">
+                    <p align="right" dir="RTL">
+                        She’s    thinking about leaving.
+                    </p>
+                </td>
+                <td width="195">
+                    <p align="right" dir="RTL">
+                        هي تفكر في المغادرة.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="48">
+                    <p align="right" dir="RTL">
+                        3
+                    </p>
+                </td>
+                <td width="175">
+                    <p align="right" dir="RTL">
+                        about    to
+                    </p>
+                </td>
+                <td width="230">
+                    <p align="right" dir="RTL">
+                        Immediate    Future
+                    </p>
+                </td>
+                <td width="237">
+                    <p align="right" dir="RTL">
+                        I am    about to sleep.
+                    </p>
+                </td>
+                <td width="195">
+                    <p align="right" dir="RTL">
+                        أنا على وشك النوم.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="48">
+                    <p align="right" dir="RTL">
+                        4
+                    </p>
+                </td>
+                <td width="175">
+                    <p align="right" dir="RTL">
+                        can
+                    </p>
+                </td>
+                <td width="230">
+                    <p align="right" dir="RTL">
+                        Modal    Verb
+                    </p>
+                </td>
+                <td width="237">
+                    <p align="right" dir="RTL">
+                        You    can go now.
+                    </p>
+                </td>
+                <td width="195">
+                    <p align="right" dir="RTL">
+                        يمكنك الذهاب الآن.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="48">
+                    <p align="right" dir="RTL">
+                        5
+                    </p>
+                </td>
+                <td width="175">
+                    <p align="right" dir="RTL">
+                        to
+                    </p>
+                </td>
+                <td width="230">
+                    <p align="right" dir="RTL">
+                        Infinitive    Verb
+                    </p>
+                </td>
+                <td width="237">
+                    <p align="right" dir="RTL">
+                        I    want to learn.
+                    </p>
+                </td>
+                <td width="195">
+                    <p align="right" dir="RTL">
+                        أريد أن أتعلم.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="48">
+                    <p align="right" dir="RTL">
+                        6
+                    </p>
+                </td>
+                <td width="175">
+                    <p align="right" dir="RTL">
+                        at /    in / on
+                    </p>
+                </td>
+                <td width="230">
+                    <p align="right" dir="RTL">
+                        Prepositions    of Time &amp; Place
+                    </p>
+                </td>
+                <td width="237">
+                    <p align="right" dir="RTL">
+                        He’s    in the room.
+                    </p>
+                </td>
+                <td width="195">
+                    <p align="right" dir="RTL">
+                        هو في الغرفة.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="48">
+                    <p align="right" dir="RTL">
+                        7
+                    </p>
+                </td>
+                <td width="175">
+                    <p align="right" dir="RTL">
+                        that
+                    </p>
+                </td>
+                <td width="230">
+                    <p align="right" dir="RTL">
+                        Reported    Speech / Noun Clause
+                    </p>
+                </td>
+                <td width="237">
+                    <p align="right" dir="RTL">
+                        I    think that he’s right.
+                    </p>
+                </td>
+                <td width="195">
+                    <p align="right" dir="RTL">
+                        أعتقد أنه على صواب.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="48">
+                    <p align="right" dir="RTL">
+                        8
+                    </p>
+                </td>
+                <td width="175">
+                    <p align="right" dir="RTL">
+                        many    / much
+                    </p>
+                </td>
+                <td width="230">
+                    <p align="right" dir="RTL">
+                        Countable    / Uncountable Nouns
+                    </p>
+                </td>
+                <td width="237">
+                    <p align="right" dir="RTL">
+                        Many    books, much water.
+                    </p>
+                </td>
+                <td width="195">
+                    <p align="right" dir="RTL">
+                        الكثير من الكتب، الكثير من الماء.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="48">
+                    <p align="right" dir="RTL">
+                        9
+                    </p>
+                </td>
+                <td width="175">
+                    <p align="right" dir="RTL">
+                        is /    are
+                    </p>
+                </td>
+                <td width="230">
+                    <p align="right" dir="RTL">
+                        To Be    Verbs
+                    </p>
+                </td>
+                <td width="237">
+                    <p align="right" dir="RTL">
+                        He is    a teacher.
+                    </p>
+                </td>
+                <td width="195">
+                    <p align="right" dir="RTL">
+                        هو معلم.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="48">
+                    <p align="right" dir="RTL">
+                        10
+                    </p>
+                </td>
+                <td width="175">
+                    <p align="right" dir="RTL">
+                        will
+                    </p>
+                </td>
+                <td width="230">
+                    <p align="right" dir="RTL">
+                        Future    Simple Tense
+                    </p>
+                </td>
+                <td width="237">
+                    <p align="right" dir="RTL">
+                        I    will go tomorrow.
+                    </p>
+                </td>
+                <td width="195">
+                    <p align="right" dir="RTL">
+                        سأذهب غدًا.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="48">
+                    <p align="right" dir="RTL">
+                        11
+                    </p>
+                </td>
+                <td width="175">
+                    <p align="right" dir="RTL">
+                        if
+                    </p>
+                </td>
+                <td width="230">
+                    <p align="right" dir="RTL">
+                        Conditional    Sentences
+                    </p>
+                </td>
+                <td width="237">
+                    <p align="right" dir="RTL">
+                        If I    study, I will pass.
+                    </p>
+                </td>
+                <td width="195">
+                    <p align="right" dir="RTL">
+                        إذا درست، سأجتاز.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="48">
+                    <p align="right" dir="RTL">
+                        12
+                    </p>
+                </td>
+                <td width="175">
+                    <p align="right" dir="RTL">
+                        who /    which / that
+                    </p>
+                </td>
+                <td width="230">
+                    <p align="right" dir="RTL">
+                        Relative    Clauses
+                    </p>
+                </td>
+                <td width="237">
+                    <p align="right" dir="RTL">
+                        The    man who called is my friend.
+                    </p>
+                </td>
+                <td width="195">
+                    <p align="right" dir="RTL">
+                        الرجل الذي اتصل بي هو صديقي.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="48">
+                    <p align="right" dir="RTL">
+                        13
+                    </p>
+                </td>
+                <td width="175">
+                    <p align="right" dir="RTL">
+                        because    / so / although
+                    </p>
+                </td>
+                <td width="230">
+                    <p align="right" dir="RTL">
+                        Connectors
+                    </p>
+                </td>
+                <td width="237">
+                    <p align="right" dir="RTL">
+                        I    stayed because I was tired.
+                    </p>
+                </td>
+                <td width="195">
+                    <p align="right" dir="RTL">
+                        بقيت لأنني كنت متعبًا.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="48">
+                    <p align="right" dir="RTL">
+                        14
+                    </p>
+                </td>
+                <td width="175">
+                    <p align="right" dir="RTL">
+                        the /    a / an
+                    </p>
+                </td>
+                <td width="230">
+                    <p align="right" dir="RTL">
+                        Articles
+                    </p>
+                </td>
+                <td width="237">
+                    <p align="right" dir="RTL">
+                        A car    / The sun
+                    </p>
+                </td>
+                <td width="195">
+                    <p align="right" dir="RTL">
+                        سيارة / الشمس
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="48">
+                    <p align="right" dir="RTL">
+                        15
+                    </p>
+                </td>
+                <td width="175">
+                    <p align="right" dir="RTL">
+                        do /    does / did
+                    </p>
+                </td>
+                <td width="230">
+                    <p align="right" dir="RTL">
+                        Question    &amp; Negation Helpers
+                    </p>
+                </td>
+                <td width="237">
+                    <p align="right" dir="RTL">
+                        Do    you play? Did she come?
+                    </p>
+                </td>
+                <td width="195">
+                    <p align="right" dir="RTL">
+                        هل تلعب؟ هل جاءت؟
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="48">
+                    <p align="right" dir="RTL">
+                        16
+                    </p>
+                </td>
+                <td width="175">
+                    <p align="right" dir="RTL">
+                        was /    were
+                    </p>
+                </td>
+                <td width="230">
+                    <p align="right" dir="RTL">
+                        Past    Simple (to be)
+                    </p>
+                </td>
+                <td width="237">
+                    <p align="right" dir="RTL">
+                        She    was happy.
+                    </p>
+                </td>
+                <td width="195">
+                    <p align="right" dir="RTL">
+                        كانت سعيدة.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="48">
+                    <p align="right" dir="RTL">
+                        17
+                    </p>
+                </td>
+                <td width="175">
+                    <p align="right" dir="RTL">
+                        been    / gone
+                    </p>
+                </td>
+                <td width="230">
+                    <p align="right" dir="RTL">
+                        Past    Participles
+                    </p>
+                </td>
+                <td width="237">
+                    <p align="right" dir="RTL">
+                        She    has been to London.
+                    </p>
+                </td>
+                <td width="195">
+                    <p align="right" dir="RTL">
+                        لقد كانت في لندن.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="48">
+                    <p align="right" dir="RTL">
+                        18
+                    </p>
+                </td>
+                <td width="175">
+                    <p align="right" dir="RTL">
+                        have    / has
+                    </p>
+                </td>
+                <td width="230">
+                    <p align="right" dir="RTL">
+                        Present    Perfect
+                    </p>
+                </td>
+                <td width="237">
+                    <p align="right" dir="RTL">
+                        I    have eaten.
+                    </p>
+                </td>
+                <td width="195">
+                    <p align="right" dir="RTL">
+                        لقد أكلت.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="48">
+                    <p align="right" dir="RTL">
+                        19
+                    </p>
+                </td>
+                <td width="175">
+                    <p align="right" dir="RTL">
+                        ing
+                    </p>
+                </td>
+                <td width="230">
+                    <p align="right" dir="RTL">
+                        Gerund
+                    </p>
+                </td>
+                <td width="237">
+                    <p align="right" dir="RTL">
+                        Swimming    is fun.
+                    </p>
+                </td>
+                <td width="195">
+                    <p align="right" dir="RTL">
+                        السباحة ممتعة.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="48">
+                    <p align="right" dir="RTL">
+                        20
+                    </p>
+                </td>
+                <td width="175">
+                    <p align="right" dir="RTL">
+                        not
+                    </p>
+                </td>
+                <td width="230">
+                    <p align="right" dir="RTL">
+                        Negation
+                    </p>
+                </td>
+                <td width="237">
+                    <p align="right" dir="RTL">
+                        I do    not like it.
+                    </p>
+                </td>
+                <td width="195">
+                    <p align="right" dir="RTL">
+                        لا أحب ذلك.
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<p align="right" dir="RTL">
+    .
+</p>
+<p align="right" dir="RTL">
+    <strong>استخدامات صيغة</strong><strong>ing</strong> <strong>:</strong>
+</p>
+<div align="right">
+    <table dir="rtl" border="1" cellspacing="0" cellpadding="0" width="896">
+        <tbody>
+            <tr>
+                <td width="416">
+                    <p align="right" dir="RTL">
+                        <strong>الاستخدام</strong>
+                    </p>
+                </td>
+                <td width="204">
+                    <p align="right" dir="RTL">
+                        <strong>القاعدة</strong>
+                    </p>
+                </td>
+                <td width="162">
+                    <p align="right" dir="RTL">
+                        <strong>المثال</strong>
+                    </p>
+                </td>
+                <td width="114">
+                    <p align="right" dir="RTL">
+                        <strong>الترجمة</strong>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="416">
+                    <p align="right" dir="RTL">
+                        1. بعد <strong>am/is/are/was/were</strong>
+                        <strong>
+                        </strong>
+                    </p>
+                </td>
+                <td width="204">
+                    <p align="right" dir="RTL">
+                        زمن المضارع أو الماضي المستمر <strong></strong>
+                    </p>
+                </td>
+                <td width="162">
+                    <p align="right" dir="RTL">
+                        She    is running. <strong></strong>
+                    </p>
+                </td>
+                <td width="114">
+                    <p align="right" dir="RTL">
+                        هي تركض الآن. <strong></strong>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="416">
+                    <p align="right" dir="RTL">
+                        2. بعد حروف الجر (in, on, at, about, for, without,
+                        after, before, by, instead    of) <strong></strong>
+                    </p>
+                </td>
+                <td width="204">
+                    <p align="right" dir="RTL">
+                        Preposition    + verb-ing <strong></strong>
+                    </p>
+                </td>
+                <td width="162">
+                    <p align="right" dir="RTL">
+                        He is    good at drawing. <strong></strong>
+                    </p>
+                </td>
+                <td width="114">
+                    <p align="right" dir="RTL">
+                        هو جيد في الرسم. <strong></strong>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="416">
+                    <p align="right" dir="RTL">
+                        3. كفاعل في الجملة <strong></strong>
+                    </p>
+                </td>
+                <td width="204">
+                    <p align="right" dir="RTL">
+                        Gerund    as subject <strong></strong>
+                    </p>
+                </td>
+                <td width="162">
+                    <p align="right" dir="RTL">
+                        Reading    is fun. <strong></strong>
+                    </p>
+                </td>
+                <td width="114">
+                    <p align="right" dir="RTL">
+                        القراءة ممتعة. <strong></strong>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="416">
+                    <p align="right" dir="RTL">
+                        4. بعد أفعال معينة (مثل enjoy, like, love, hate, mind,
+                        finish, avoid, suggest,    recommend, keep, consider,
+                        miss, deny, practice) <strong></strong>
+                    </p>
+                </td>
+                <td width="204">
+                    <p align="right" dir="RTL">
+                        ing بعد الأفعال <strong></strong>
+                    </p>
+                </td>
+                <td width="162">
+                    <p align="right" dir="RTL">
+                        I    enjoy reading. <strong></strong>
+                    </p>
+                </td>
+                <td width="114">
+                    <p align="right" dir="RTL">
+                        استمتعت بالقراءة. <strong></strong>
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<p align="right" dir="RTL">
+    .
+</p>
+<p align="right" dir="RTL">
+    <strong>استخدامات إضافة</strong><strong>S</strong><strong>في نهاية الكلمة</strong>
+    <strong>:</strong>
+</p>
+<div align="right">
+    <table dir="rtl" border="1" cellspacing="0" cellpadding="0">
+        <tbody>
+            <tr>
+                <td width="156">
+                    <p dir="RTL">
+                        <strong>النوع</strong>
+                    </p>
+                </td>
+                <td width="156">
+                    <p dir="RTL">
+                        <strong>القاعدة</strong>
+                    </p>
+                </td>
+                <td width="156">
+                    <p dir="RTL">
+                        <strong>المثال</strong>
+                    </p>
+                </td>
+                <td width="156">
+                    <p dir="RTL">
+                        <strong>الترجمة</strong>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="156">
+                    <p dir="RTL">
+                        1. <strong>فعل</strong> <strong>(Verb)</strong>
+                    </p>
+                </td>
+                <td width="156">
+                    <p dir="RTL">
+                        تُضاف <strong>S</strong>للفعل مع الضمير المفرد
+                        (he/she/it) في    المضارع البسيط
+                    </p>
+                </td>
+                <td width="156">
+                    <p dir="RTL">
+                        She likes    coffee.
+                    </p>
+                </td>
+                <td width="156">
+                    <p dir="RTL">
+                        هي تحب القهوة.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="156">
+                    <p dir="RTL">
+                        <strong>you/we/they</strong> +
+                    </p>
+                    <p dir="RTL">
+                        الفعل بدون <strong>S</strong>
+                    </p>
+                </td>
+                <td width="156">
+                    <p dir="RTL">
+                        They like    coffee.
+                    </p>
+                </td>
+                <td width="156">
+                    <p dir="RTL">
+                        هم يحبون القهوة.
+                    </p>
+                </td>
+                <td width="156">
+                    <p dir="RTL">
+                        <strong>you/we/they</strong> +
+                    </p>
+                    <p dir="RTL">
+                        الفعل بدون <strong>S</strong>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="156">
+                    <p dir="RTL">
+                        2. <strong>اسم</strong> <strong>(Noun)</strong>
+                    </p>
+                </td>
+                <td width="156">
+                    <p dir="RTL">
+                        تُضاف <strong>S</strong> للاسم    المعدود في الجمع
+                    </p>
+                </td>
+                <td width="156">
+                    <p dir="RTL">
+                        Two cats.
+                    </p>
+                </td>
+                <td width="156">
+                    <p dir="RTL">
+                        قطتان
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="156">
+                    <p dir="RTL">
+                        <strong>irregular    plural</strong>
+                    </p>
+                    <p dir="RTL">
+                        جمع غير منتظم
+                    </p>
+                </td>
+                <td width="156">
+                    <p dir="RTL">
+                        Men, not    "mens".
+                    </p>
+                </td>
+                <td width="156">
+                    <p dir="RTL">
+                        رجال (وليس    "mens").
+                    </p>
+                </td>
+                <td width="156">
+                    <p dir="RTL">
+                        <strong>irregular    plural</strong> (جمع غير منتظم)
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<p align="right" dir="RTL">
+    .
+</p>
+<p dir="RTL">
+    <strong>مقارنة سريعة بين استخدام</strong><strong></strong><strong>- ing</strong><strong>و</strong>
+    <strong>S <br/>
+    </strong>
+</p>
+<div align="right">
+    <table dir="rtl" border="1" cellspacing="0" cellpadding="0">
+        <tbody>
+            <tr>
+                <td width="56">
+                    <p align="right" dir="RTL">
+                        <strong>النهاية</strong>
+                    </p>
+                </td>
+                <td width="206">
+                    <p align="right" dir="RTL">
+                        <strong>تستخدم مع</strong>
+                    </p>
+                </td>
+                <td width="151">
+                    <p align="right" dir="RTL">
+                        <strong>المثال</strong>
+                    </p>
+                </td>
+                <td width="120">
+                    <p align="right" dir="RTL">
+                        <strong>الترجمة</strong>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="56">
+                    <p align="right" dir="RTL">
+                        -ing
+                    </p>
+                </td>
+                <td width="206">
+                    <p align="right" dir="RTL">
+                        فعل بدلًا عن الاستمرار أو اسم للفعل
+                    </p>
+                </td>
+                <td width="151">
+                    <p align="right" dir="RTL">
+                        I am eating.
+                    </p>
+                </td>
+                <td width="120">
+                    <p align="right" dir="RTL">
+                        أنا آكل الآن.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td width="56">
+                    <p align="right" dir="RTL">
+                        -S
+                    </p>
+                </td>
+                <td width="206">
+                    <p align="right" dir="RTL">
+                        جمع الأسماء / الفعل مع he/she/it
+                    </p>
+                </td>
+                <td width="151">
+                    <p align="right" dir="RTL">
+                        She eats / two cars.
+                    </p>
+                </td>
+                <td width="120">
+                    <p align="right" dir="RTL">
+                        هي تأكل / سيارتان
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<p align="right" dir="RTL">
+    .
+</p>
+<p align="right" dir="RTL">
+    <strong>Irregular Plural Nouns:</strong> <strong></strong>
+</p>
+<div>
+    <br/>
+</div>
+<div>
+    <div align="right">
+        <table dir="rtl" border="1" cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr>
+                    <td width="48">
+                        <p align="right" dir="RTL">
+                            <strong>الرقم</strong>
+                        </p>
+                    </td>
+                    <td width="124">
+                        <p align="right" dir="RTL">
+                            <strong>المفرد</strong> <strong>(Singular)</strong>
+                        </p>
+                    </td>
+                    <td width="106">
+                        <p align="right" dir="RTL">
+                            <strong>الجمع</strong> <strong>(Plural)</strong>
+                        </p>
+                    </td>
+                    <td width="199">
+                        <p align="right" dir="RTL">
+                            <strong>المعنى بالعربية</strong>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="48">
+                        <p align="right" dir="RTL">
+                            1
+                        </p>
+                    </td>
+                    <td width="124">
+                        <p align="right" dir="RTL">
+                            man
+                        </p>
+                    </td>
+                    <td width="106">
+                        <p align="right" dir="RTL">
+                            men
+                        </p>
+                    </td>
+                    <td width="199">
+                        <p align="right" dir="RTL">
+                            رجل → رجال
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="48">
+                        <p align="right" dir="RTL">
+                            2
+                        </p>
+                    </td>
+                    <td width="124">
+                        <p align="right" dir="RTL">
+                            woman
+                        </p>
+                    </td>
+                    <td width="106">
+                        <p align="right" dir="RTL">
+                            women
+                        </p>
+                    </td>
+                    <td width="199">
+                        <p align="right" dir="RTL">
+                            امرأة → نساء
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="48">
+                        <p align="right" dir="RTL">
+                            3
+                        </p>
+                    </td>
+                    <td width="124">
+                        <p align="right" dir="RTL">
+                            child
+                        </p>
+                    </td>
+                    <td width="106">
+                        <p align="right" dir="RTL">
+                            children
+                        </p>
+                    </td>
+                    <td width="199">
+                        <p align="right" dir="RTL">
+                            طفل → أطفال
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="48">
+                        <p align="right" dir="RTL">
+                            4
+                        </p>
+                    </td>
+                    <td width="124">
+                        <p align="right" dir="RTL">
+                            foot
+                        </p>
+                    </td>
+                    <td width="106">
+                        <p align="right" dir="RTL">
+                            feet
+                        </p>
+                    </td>
+                    <td width="199">
+                        <p align="right" dir="RTL">
+                            قدم → أقدام
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="48">
+                        <p align="right" dir="RTL">
+                            5
+                        </p>
+                    </td>
+                    <td width="124">
+                        <p align="right" dir="RTL">
+                            tooth
+                        </p>
+                    </td>
+                    <td width="106">
+                        <p align="right" dir="RTL">
+                            teeth
+                        </p>
+                    </td>
+                    <td width="199">
+                        <p align="right" dir="RTL">
+                            سن → أسنان
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="48">
+                        <p align="right" dir="RTL">
+                            6
+                        </p>
+                    </td>
+                    <td width="124">
+                        <p align="right" dir="RTL">
+                            mouse
+                        </p>
+                    </td>
+                    <td width="106">
+                        <p align="right" dir="RTL">
+                            mice
+                        </p>
+                    </td>
+                    <td width="199">
+                        <p align="right" dir="RTL">
+                            قارض → فئران
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="48">
+                        <p align="right" dir="RTL">
+                            7
+                        </p>
+                    </td>
+                    <td width="124">
+                        <p align="right" dir="RTL">
+                            goose
+                        </p>
+                    </td>
+                    <td width="106">
+                        <p align="right" dir="RTL">
+                            geese
+                        </p>
+                    </td>
+                    <td width="199">
+                        <p align="right" dir="RTL">
+                            وزة → آوز
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="48">
+                        <p align="right" dir="RTL">
+                            8
+                        </p>
+                    </td>
+                    <td width="124">
+                        <p align="right" dir="RTL">
+                            person
+                        </p>
+                    </td>
+                    <td width="106">
+                        <p align="right" dir="RTL">
+                            people
+                        </p>
+                    </td>
+                    <td width="199">
+                        <p align="right" dir="RTL">
+                            شخص → ناس
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="48">
+                        <p align="right" dir="RTL">
+                            9
+                        </p>
+                    </td>
+                    <td width="124">
+                        <p align="right" dir="RTL">
+                            ox
+                        </p>
+                    </td>
+                    <td width="106">
+                        <p align="right" dir="RTL">
+                            oxen
+                        </p>
+                    </td>
+                    <td width="199">
+                        <p align="right" dir="RTL">
+                            ثور → ثيران
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="48">
+                        <p align="right" dir="RTL">
+                            10
+                        </p>
+                    </td>
+                    <td width="124">
+                        <p align="right" dir="RTL">
+                            cactus
+                        </p>
+                    </td>
+                    <td width="106">
+                        <p align="right" dir="RTL">
+                            cacti
+                        </p>
+                    </td>
+                    <td width="199">
+                        <p align="right" dir="RTL">
+                            صبار → صباريات (علمي)
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="48">
+                        <p align="right" dir="RTL">
+                            11
+                        </p>
+                    </td>
+                    <td width="124">
+                        <p align="right" dir="RTL">
+                            focus
+                        </p>
+                    </td>
+                    <td width="106">
+                        <p align="right" dir="RTL">
+                            foci
+                        </p>
+                    </td>
+                    <td width="199">
+                        <p align="right" dir="RTL">
+                            تركيز → مراكز
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="48">
+                        <p align="right" dir="RTL">
+                            12
+                        </p>
+                    </td>
+                    <td width="124">
+                        <p align="right" dir="RTL">
+                            phenomenon
+                        </p>
+                    </td>
+                    <td width="106">
+                        <p align="right" dir="RTL">
+                            phenomena
+                        </p>
+                    </td>
+                    <td width="199">
+                        <p align="right" dir="RTL">
+                            ظاهرة → ظواهر (علمي/رياضي)
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="48">
+                        <p align="right" dir="RTL">
+                            13
+                        </p>
+                    </td>
+                    <td width="124">
+                        <p align="right" dir="RTL">
+                            crisis
+                        </p>
+                    </td>
+                    <td width="106">
+                        <p align="right" dir="RTL">
+                            crises
+                        </p>
+                    </td>
+                    <td width="199">
+                        <p align="right" dir="RTL">
+                            أزمة → أزمات
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="48">
+                        <p align="right" dir="RTL">
+                            14
+                        </p>
+                    </td>
+                    <td width="124">
+                        <p align="right" dir="RTL">
+                            analysis
+                        </p>
+                    </td>
+                    <td width="106">
+                        <p align="right" dir="RTL">
+                            analyses
+                        </p>
+                    </td>
+                    <td width="199">
+                        <p align="right" dir="RTL">
+                            تحليل → تحليلات
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="48">
+                        <p align="right" dir="RTL">
+                            15
+                        </p>
+                    </td>
+                    <td width="124">
+                        <p align="right" dir="RTL">
+                            datum
+                        </p>
+                    </td>
+                    <td width="106">
+                        <p align="right" dir="RTL">
+                            data
+                        </p>
+                    </td>
+                    <td width="199">
+                        <p align="right" dir="RTL">
+                            معلومة → بيانات (علمي)
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br/>
+</div>
+<p align="right" dir="RTL">
+    <strong></strong>
+</p>
+<p align="right" dir="RTL">
+    <strong></strong>
+</p>
+<p align="right" dir="RTL">
+    <strong></strong>
+</p>
+</p><p dir="rtl" style="margin-right:36pt; text-align:left"><span dir="ltr" style="-aw-import:ignore"> </span></p></div></div><button onclick="calculateScore()">عرض النتيجة النهائية</button>
 <div id="result"></div>
 </div>
 
