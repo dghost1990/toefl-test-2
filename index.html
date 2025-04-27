@@ -439,7 +439,7 @@
 <div class="tab">
 <button class="tablinks active" onclick="openSection(event, 'structure')">Structure (160 سؤالاً)</button>
 <button class="tablinks" onclick="openSection(event, 'reading')">Reading (20 سؤالاً)</button>
-<button class="tablinks" onclick="openSection(event, 'listening')">Listening (10 أسئلة)</button>
+<button class="tablinks" onclick="openSection(event, 'listening')">Listening (100 سؤال)</button>
 <button class="tablinks" onclick="openSection(event, 'info')">شرح ومعلومات</button>
 <button class="tablinks" onclick="openSection(event, 'kornferry')">اختبار Korn-Ferry (40 سؤالاً)</button>
 </div>
@@ -5006,78 +5006,710 @@
             // ... (بقية المقاطع بنفس الهيكل)
         ];
 
-        // Listening Comprehension (10 أسئلة)
+        // Listening Comprehension (100 سؤال)
         const listeningQuestions = [
-            {
-    "audioText": "Man: Where did you put the keys? Woman: They’re on the kitchen counter, next to the fruit bowl.",
-    "question": "1. Where are the keys?",
-    "options": ["A) In the drawer", "B) On the table", "C) On the kitchen counter", "D) In the car"],
-    "correctAnswer": 2,
-    "explanation": "الإجابة الصحيحة: C) On the kitchen counter<br><br>الشرح: المرأة قالت إن المفاتيح على طاولة المطبخ بجانب سلة الفاكهة."
+{
+    "audioText": "Man: I’m thinking about going to the park this afternoon. Woman: That sounds fun! What will you do there? Man: I’ll probably go for a walk and relax by the lake. Woman: That sounds nice. I hope the weather will be good for you.",
+    "question": "1. What does the man plan to do at the park?",
+    "options": ["A) Go for a walk and relax by the lake", "B) Play sports", "C) Have a picnic", "D) Meet friends"],
+    "correctAnswer": 0,
+    "explanation": "الإجابة الصحيحة: A) Go for a walk and relax by the lake<br><br>الشرح: الرجل يخطط للمشي في الحديقة والاسترخاء بجانب البحيرة."
   },
   {
-    "audioText": "Woman: Are you coming to the office party tonight? Man: I’m not sure. I have a lot of work to finish.",
-    "question": "2. Why might the man not attend the party?",
-    "options": ["A) He is feeling sick", "B) He has too much work", "C) He doesn’t like parties", "D) He is out of town"],
+    "audioText": "Man: I’m going to try a new recipe for dinner tonight. Woman: That sounds great! What are you making? Man: I’m making pasta with tomato sauce and cheese. Woman: Yummy! I hope it turns out well.",
+    "question": "2. What is the man making for dinner?",
+    "options": ["A) Pizza", "B) Pasta with tomato sauce and cheese", "C) Salad", "D) Soup"],
     "correctAnswer": 1,
-    "explanation": "الإجابة الصحيحة: B) He has too much work<br><br>الشرح: الرجل قال إنه غير متأكد بسبب كثرة العمل المتبقي عليه."
+    "explanation": "الإجابة الصحيحة: B) Pasta with tomato sauce and cheese<br><br>الشرح: الرجل يخطط لعمل معكرونة مع صلصة الطماطم والجبن."
   },
   {
-    "audioText": "Man: The traffic was terrible this morning. Woman: I know, I was stuck on the highway for over an hour.",
-    "question": "3. What happened to the woman this morning?",
-    "options": ["A) She missed a meeting", "B) She had car trouble", "C) She was delayed by traffic", "D) She overslept"],
-    "correctAnswer": 2,
-    "explanation": "الإجابة الصحيحة: C) She was delayed by traffic<br><br>الشرح: المرأة قالت إنها علقت في الطريق السريع لأكثر من ساعة."
+    "audioText": "Man: I have a meeting at 3 PM today. Woman: Don’t forget to bring your presentation. Man: I won’t. I’m almost finished with it. Woman: That’s great. I’m sure it will go well.",
+    "question": "3. What is the man preparing for?",
+    "options": ["A) A presentation", "B) A report", "C) A speech", "D) A project"],
+    "correctAnswer": 0,
+    "explanation": "الإجابة الصحيحة: A) A presentation<br><br>الشرح: الرجل يستعد لتقديم عرض في الاجتماع."
   },
   {
-    "audioText": "Woman: I can’t find my phone. Man: Did you check your bag?",
-    "question": "4. What does the man suggest the woman do?",
-    "options": ["A) Call her phone", "B) Buy a new one", "C) Check her bag", "D) Go back to the office"],
-    "correctAnswer": 2,
-    "explanation": "الإجابة الصحيحة: C) Check her bag<br><br>الشرح: الرجل سألها إن كانت قد فتشت حقيبتها."
-  },
-  {
-    "audioText": "Man: What time does the movie start? Woman: At 7:30, but we should get there early to find good seats.",
-    "question": "5. Why does the woman want to arrive early?",
-    "options": ["A) To buy snacks", "B) To meet friends", "C) To get good seats", "D) To avoid traffic"],
-    "correctAnswer": 2,
-    "explanation": "الإجابة الصحيحة: C) To get good seats<br><br>الشرح: المرأة قالت أنه من الأفضل أن يصلوا مبكرًا لإيجاد مقاعد جيدة."
-  },
-  {
-    "audioText": "Woman: The elevator is out of service again. Man: I guess we’ll have to take the stairs.",
-    "question": "6. What will they probably do?",
-    "options": ["A) Wait for the elevator", "B) Take the stairs", "C) Call maintenance", "D) Go home"],
+    "audioText": "Man: I’m planning to go on a trip next month. Woman: That sounds exciting! Where are you going? Man: I’m going to Italy. I’ve always wanted to visit there. Woman: Italy is beautiful. I’m sure you’ll have a great time.",
+    "question": "4. Where is the man planning to go?",
+    "options": ["A) Spain", "B) Italy", "C) France", "D) Germany"],
     "correctAnswer": 1,
-    "explanation": "الإجابة الصحيحة: B) Take the stairs<br><br>الشرح: الرجل قال إنهم سيضطرون لاستخدام الدرج."
+    "explanation": "الإجابة الصحيحة: B) Italy<br><br>الشرح: الرجل يخطط للذهاب إلى إيطاليا في الشهر المقبل."
   },
   {
-    "audioText": "Man: Do you want to go hiking this weekend? Woman: That sounds great! I’ve been wanting to get some fresh air.",
-    "question": "7. What does the woman think about going hiking?",
-    "options": ["A) She’s not interested", "B) She has other plans", "C) She thinks it’s a good idea", "D) She’s afraid of hiking"],
-    "correctAnswer": 2,
-    "explanation": "الإجابة الصحيحة: C) She thinks it’s a good idea<br><br>الشرح: المرأة قالت إنه يبدو رائعًا وأنها كانت ترغب في الخروج للهواء النقي."
-  },
-  {
-    "audioText": "Woman: I’m going to the grocery store. Do we need anything? Man: Yes, we’re out of milk and eggs.",
-    "question": "8. What does the man ask the woman to buy?",
-    "options": ["A) Bread and cheese", "B) Milk and eggs", "C) Vegetables and fruit", "D) Juice and cereal"],
+    "audioText": "Man: I need to buy a new phone. Woman: What’s wrong with your current phone? Man: It’s really old, and the battery doesn’t last long anymore. Woman: You should check out the new models. They have great features.",
+    "question": "5. Why does the man need a new phone?",
+    "options": ["A) It’s too expensive", "B) It’s old and the battery doesn’t last", "C) He wants a bigger screen", "D) It’s broken"],
     "correctAnswer": 1,
-    "explanation": "الإجابة الصحيحة: B) Milk and eggs<br><br>الشرح: الرجل قال إن الحليب والبيض غير متوفرين."
+    "explanation": "الإجابة الصحيحة: B) It’s old and the battery doesn’t last<br><br>الشرح: الرجل بحاجة إلى هاتف جديد لأن هاتفه الحالي قديم والبطارية لا تدوم."
   },
   {
-    "audioText": "Man: How was your vacation in Spain? Woman: It was amazing! The beaches were beautiful.",
-    "question": "9. What did the woman like most about her vacation?",
-    "options": ["A) The food", "B) The culture", "C) The beaches", "D) The shopping"],
-    "correctAnswer": 2,
-    "explanation": "الإجابة الصحيحة: C) The beaches<br><br>الشرح: المرأة قالت إن الشواطئ كانت جميلة، مما يدل على إعجابها بها."
-  },
-  {
-    "audioText": "Woman: I have to give a presentation tomorrow. Man: Good luck! I’m sure you’ll do great.",
-    "question": "10. What is the man doing?",
-    "options": ["A) Offering help", "B) Wishing her luck", "C) Giving advice", "D) Criticizing her"],
+    "audioText": "Man: I’ve been studying for the exam all week. Woman: That’s a lot of work! Are you feeling ready? Man: I think so. I’ve gone over all the material. Woman: Good luck! I’m sure you’ll do great.",
+    "question": "6. How has the man been preparing for the exam?",
+    "options": ["A) By attending extra classes", "B) By studying all week", "C) By reading a book", "D) By practicing online tests"],
     "correctAnswer": 1,
-    "explanation": "الإجابة الصحيحة: B) Wishing her luck<br><br>الشرح: الرجل قال 'حظًا سعيدًا' مما يعني أنه يتمنى لها التوفيق."
-  }
+    "explanation": "الإجابة الصحيحة: B) By studying all week<br><br>الشرح: الرجل كان يدرس طوال الأسبوع استعدادًا للاختبار."
+  },
+  {
+    "audioText": "Man: I’m thinking about joining the gym next month. Woman: That’s a good idea! Are you planning to work out regularly? Man: Yes, I want to start a fitness routine. Woman: It’ll be great for your health. I’m sure you’ll feel better.",
+    "question": "7. What is the man planning to do next month?",
+    "options": ["A) Take a dance class", "B) Join the gym", "C) Start running", "D) Join a sports team"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) Join the gym<br><br>الشرح: الرجل يخطط للانضمام إلى صالة الألعاب الرياضية في الشهر المقبل."
+  },
+  {
+    "audioText": "Man: I don’t know where I left my keys. Woman: Have you checked your pockets? Man: Yes, they’re not there. Woman: Try checking the kitchen counter. You often leave them there.",
+    "question": "8. Where does the woman suggest the man check for his keys?",
+    "options": ["A) In his bag", "B) In his car", "C) On the kitchen counter", "D) In the living room"],
+    "correctAnswer": 2,
+    "explanation": "الإجابة الصحيحة: C) On the kitchen counter<br><br>الشرح: المرأة اقترحت على الرجل التحقق من طاولة المطبخ حيث يترك غالبًا مفاتيحه."
+  },
+  {
+    "audioText": "Man: I’m planning to visit my parents this weekend. Woman: That sounds nice! How long will you stay? Man: I’ll stay for two days. Woman: I’m sure they’ll be happy to see you.",
+    "question": "9. How long does the man plan to stay with his parents?",
+    "options": ["A) One day", "B) Two days", "C) Three days", "D) A week"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) Two days<br><br>الشرح: الرجل يخطط للبقاء مع والديه لمدة يومين."
+  },
+  {
+    "audioText": "Man: I just finished reading a great book. Woman: What was it about? Man: It was a mystery novel about a detective solving a crime. Woman: That sounds interesting! I love mystery books.",
+    "question": "10. What type of book did the man read?",
+    "options": ["A) Romance", "B) Mystery", "C) Science fiction", "D) History"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) Mystery<br><br>الشرح: الرجل قرأ رواية غموض عن محقق يحل جريمة."
+  },
+  {
+    "audioText": "Man: I’ve been thinking about taking a cooking class. Woman: That sounds like fun! What kind of cooking do you want to learn? Man: I want to learn how to make desserts. Woman: That’s a great choice. Everyone loves desserts!",
+    "question": "11. What type of cooking does the man want to learn?",
+    "options": ["A) Baking bread", "B) Making desserts", "C) Cooking pasta", "D) Making salads"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) Making desserts<br><br>الشرح: الرجل يريد تعلم كيفية صنع الحلويات."
+  },
+  {
+    "audioText": "Man: I’m thinking of going to a concert this weekend. Woman: That sounds exciting! What band is playing? Man: It’s a rock band. I’ve heard their music before, and it’s amazing. Woman: I’m sure it will be a great show.",
+    "question": "12. What type of concert is the man planning to attend?",
+    "options": ["A) A classical music concert", "B) A rock concert", "C) A jazz concert", "D) A pop concert"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) A rock concert<br><br>الشرح: الرجل يخطط لحضور حفلة موسيقية لفرقة روك."
+  },
+  {
+    "audioText": "Man: I’m planning to take a trip to the mountains next month. Woman: That sounds like a great adventure! Are you going alone? Man: No, I’m going with a group of friends. Woman: That will be a lot of fun!",
+    "question": "13. Who is the man going on the trip with?",
+    "options": ["A) By himself", "B) With his family", "C) With a group of friends", "D) With his coworkers"],
+    "correctAnswer": 2,
+    "explanation": "الإجابة الصحيحة: C) With a group of friends<br><br>الشرح: الرجل يخطط للذهاب في رحلة إلى الجبال مع مجموعة من الأصدقاء."
+  },
+  {
+    "audioText": "Man: I’ve been feeling a bit tired lately. Woman: Maybe you need more sleep. How many hours are you sleeping each night? Man: I usually sleep about six hours. Woman: You should aim for at least seven or eight hours.",
+    "question": "14. How many hours does the man usually sleep?",
+    "options": ["A) Six hours", "B) Seven hours", "C) Eight hours", "D) Five hours"],
+    "correctAnswer": 0,
+    "explanation": "الإجابة الصحيحة: A) Six hours<br><br>الشرح: الرجل ينام عادة حوالي ست ساعات."
+  },
+  {
+    "audioText": "Man: I’m learning about chemical reactions in my chemistry class. Woman: That sounds interesting! What type of reactions are you studying? Man: Right now, we’re focusing on exothermic and endothermic reactions. Woman: Oh, I see. Exothermic reactions release energy, and endothermic reactions absorb energy.",
+    "question": "15. What is the difference between exothermic and endothermic reactions?",
+    "options": ["A) Exothermic reactions absorb energy, and endothermic reactions release energy.", "B) Exothermic reactions release energy, and endothermic reactions absorb energy.", "C) Exothermic reactions and endothermic reactions are the same.", "D) Exothermic reactions involve oxygen, and endothermic reactions do not."],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) Exothermic reactions release energy, and endothermic reactions absorb energy.<br><br>الشرح: التفاعلات الطاردة للحرارة (exothermic) تطلق الطاقة، بينما التفاعلات الممتصة للطاقة (endothermic) تمتص الطاقة."
+  },
+  {
+    "audioText": "Man: I’ve been studying the functions of different organ systems in the body. Woman: That’s really interesting! What systems have you studied so far? Man: I’ve studied the circulatory system and the respiratory system. Woman: Both are essential for transporting oxygen throughout the body.",
+    "question": "16. What systems have the man studied?",
+    "options": ["A) The digestive and immune systems", "B) The circulatory and respiratory systems", "C) The nervous and muscular systems", "D) The skeletal and endocrine systems"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) The circulatory and respiratory systems<br><br>الشرح: الرجل درس النظام الدوري (circulatory) والتنفس (respiratory)."
+  },
+  {
+    "audioText": "Man: I’ve been reading about the different states of matter in physics. Woman: That sounds like fun! What states are you studying? Man: I’m studying solid, liquid, and gas. Woman: Those are the basic states of matter. You also learned about how energy affects them, right?",
+    "question": "17. What states of matter is the man studying?",
+    "options": ["A) Solid, liquid, and gas", "B) Solid, plasma, and gas", "C) Liquid, plasma, and gas", "D) Solid, liquid, and vapor"],
+    "correctAnswer": 0,
+    "explanation": "الإجابة الصحيحة: A) Solid, liquid, and gas<br><br>الشرح: الرجل يدرس الحالات الأساسية للمادة: الصلبة والسائلة والغازية."
+  },
+  {
+    "audioText": "Man: I read an article about deforestation and its effects on the environment. Woman: That’s a serious issue. What did the article say? Man: It said that deforestation leads to loss of biodiversity and affects the carbon cycle. Woman: I see. It’s important to protect our forests to maintain a healthy environment.",
+    "question": "18. What is one effect of deforestation mentioned in the conversation?",
+    "options": ["A) It increases biodiversity", "B) It affects the carbon cycle", "C) It improves air quality", "D) It helps reduce carbon emissions"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) It affects the carbon cycle<br><br>الشرح: المقال ذكر أن إزالة الغابات تؤثر على دورة الكربون."
+  },
+  {
+    "audioText": "Man: I’ve been learning about the water cycle in science class. Woman: That’s a very important process. Can you explain how it works? Man: Sure! Water evaporates, then condenses into clouds, and finally falls as precipitation. Woman: Right! The water cycle is essential for maintaining life on Earth.",
+    "question": "19. What is the first step of the water cycle according to the conversation?",
+    "options": ["A) Precipitation", "B) Condensation", "C) Evaporation", "D) Transpiration"],
+    "correctAnswer": 2,
+    "explanation": "الإجابة الصحيحة: C) Evaporation<br><br>الشرح: الخطوة الأولى في دورة المياه هي التبخر."
+  },
+ {
+    "audioText": "Man: I’ve been reading about the impact of society on individual behavior. Woman: That’s an interesting topic. What did you learn? Man: I learned that societal norms and expectations play a huge role in shaping how people act. Woman: Yes, society has a strong influence on how individuals behave in public and private.",
+    "question": "20. What did the man learn about society’s impact on behavior?",
+    "options": ["A) Society has no impact on behavior", "B) Societal norms and expectations shape individual behavior", "C) Society only affects public behavior", "D) People act independently of society"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) Societal norms and expectations shape individual behavior<br><br>الشرح: الرجل تعلم أن المعايير المجتمعية والتوقعات تلعب دورًا كبيرًا في تشكيل سلوك الأفراد."
+  },
+  {
+    "audioText": "Man: I’ve been reading about the effects of stress on mental health. Woman: That sounds important. What did you find? Man: I found that chronic stress can lead to anxiety and depression. Woman: It’s so important to manage stress before it affects our health.",
+    "question": "21. What does chronic stress lead to according to the man?",
+    "options": ["A) Increased energy", "B) Anxiety and depression", "C) Improved focus", "D) Physical strength"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) Anxiety and depression<br><br>الشرح: الرجل ذكر أن التوتر المزمن يمكن أن يؤدي إلى القلق والاكتئاب."
+  },
+  {
+    "audioText": "Man: I’ve been studying the Industrial Revolution in history class. Woman: That’s an important period. What were some of the effects? Man: The Industrial Revolution drastically changed economies, increased urbanization, and led to the rise of factories. Woman: It also brought about significant social changes.",
+    "question": "22. What was one effect of the Industrial Revolution mentioned in the conversation?",
+    "options": ["A) The decline of cities", "B) A decrease in factory production", "C) Increased urbanization and rise of factories", "D) A decrease in population growth"],
+    "correctAnswer": 2,
+    "explanation": "الإجابة الصحيحة: C) Increased urbanization and rise of factories<br><br>الشرح: الرجل ذكر أن الثورة الصناعية ساهمت في زيادة التوسع الحضري وظهور المصانع."
+  },
+  {
+    "audioText": "Man: I’ve been studying the concept of existentialism in philosophy. Woman: That’s a deep topic. What’s existentialism about? Man: It’s about finding meaning in life through personal choice and responsibility. Woman: That’s powerful. It focuses on individual freedom and the responsibility that comes with it.",
+    "question": "23. What is existentialism about?",
+    "options": ["A) The belief in fate", "B) Finding meaning through personal choice and responsibility", "C) The importance of religion", "D) The belief in predetermined destiny"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) Finding meaning through personal choice and responsibility<br><br>الشرح: الرجل يدرس الفلسفة الوجودية التي تركز على إيجاد معنى الحياة من خلال الاختيار الشخصي والمسؤولية."
+  },
+  {
+    "audioText": "Man: I’ve been reading about the concept of social change. Woman: That’s interesting! What is social change? Man: Social change refers to significant changes in the social structure and cultural practices within a society over time. Woman: I see, like how societies evolve and adapt to new ideas.",
+    "question": "24. What is social change?",
+    "options": ["A) Changes in government laws", "B) Changes in the social structure and cultural practices", "C) Changes in technology", "D) Changes in the economy"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) Changes in the social structure and cultural practices<br><br>الشرح: الرجل يقرأ عن التغيير الاجتماعي الذي يشير إلى التغيرات الكبيرة في الهيكل الاجتماعي والممارسات الثقافية في المجتمع."
+  },
+{
+    "audioText": "Man: I’ve been studying the concept of supply and demand in economics. Woman: That’s an essential topic. What did you learn? Man: I learned that when the supply of a product is higher than the demand, prices tend to decrease. Woman: Yes, and when demand exceeds supply, prices usually increase.",
+    "question": "25. What happens when supply exceeds demand?",
+    "options": ["A) Prices increase", "B) Prices stay the same", "C) Prices decrease", "D) Prices fluctuate unpredictably"],
+    "correctAnswer": 2,
+    "explanation": "الإجابة الصحيحة: C) Prices decrease<br><br>الشرح: عندما يتجاوز العرض الطلب، tend tend الأسعار إلى الانخفاض."
+  },
+  {
+    "audioText": "Man: I’ve been reading about inflation and its impact on the economy. Woman: That’s an important issue. What did you find? Man: Inflation causes the general level of prices to rise, which reduces the purchasing power of money. Woman: Exactly. It can lead to higher living costs for everyone.",
+    "question": "26. What does inflation cause in the economy?",
+    "options": ["A) A decrease in prices", "B) An increase in wages", "C) An increase in prices", "D) A decrease in interest rates"],
+    "correctAnswer": 2,
+    "explanation": "الإجابة الصحيحة: C) An increase in prices<br><br>الشرح: التضخم يؤدي إلى زيادة في الأسعار وتقليص القوة الشرائية للنقود."
+  },
+  {
+    "audioText": "Man: I’ve been studying exchange rates and their impact on international trade. Woman: That’s interesting. What did you learn? Man: I learned that when a country's currency is stronger, its goods become more expensive for foreign buyers, which can reduce exports. Woman: Yes, that’s why exchange rates are so important for global trade.",
+    "question": "27. How does a stronger currency affect exports?",
+    "options": ["A) It increases exports", "B) It reduces exports", "C) It has no effect on exports", "D) It makes exports more affordable"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) It reduces exports<br><br>الشرح: العملة الأقوى تجعل السلع أكثر تكلفة للمشترين الأجانب مما يقلل من الصادرات."
+  },
+  {
+    "audioText": "Man: I’m learning about fiscal policy and how it affects the economy. Woman: What have you learned so far? Man: I learned that fiscal policy involves government spending and taxation. By adjusting these, the government can influence economic activity. Woman: Yes, fiscal policy is used to control inflation and reduce unemployment.",
+    "question": "28. What does fiscal policy involve?",
+    "options": ["A) Changing interest rates", "B) Government spending and taxation", "C) Currency exchange rates", "D) Trade regulations"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) Government spending and taxation<br><br>الشرح: السياسة المالية تتضمن إنفاق الحكومة وفرض الضرائب للسيطرة على النشاط الاقتصادي."
+  },
+  {
+    "audioText": "Man: I’ve been studying the concept of economic growth. Woman: That’s an important topic. What did you learn? Man: I learned that economic growth is the increase in the production of goods and services in an economy over time. Woman: That’s right. It usually leads to higher standards of living.",
+    "question": "29. What does economic growth lead to?",
+    "options": ["A) A decrease in production", "B) Lower standards of living", "C) Higher standards of living", "D) A decrease in exports"],
+    "correctAnswer": 2,
+    "explanation": "الإجابة الصحيحة: C) Higher standards of living<br><br>الشرح: النمو الاقتصادي يؤدي عادة إلى زيادة في مستوى معيشة الناس."
+  },
+{
+    "audioText": "Man: I’ve been reading about the impact of artificial intelligence on various industries. Woman: That’s fascinating! How do you think AI will change the job market? Man: AI will automate many tasks, but it will also create new types of jobs. Woman: Yes, the challenge will be to help people adapt to these changes.",
+    "question": "30. What is the man reading about?",
+    "options": ["A) The impact of artificial intelligence", "B) The impact of social media", "C) The future of computer programming", "D) New job opportunities in the future"],
+    "correctAnswer": 0,
+    "explanation": "الإجابة الصحيحة: A) The impact of artificial intelligence<br><br>الشرح: الرجل يقرأ عن تأثير الذكاء الاصطناعي على الصناعات المختلفة."
+  },
+  {
+    "audioText": "Man: I’m thinking of upgrading my computer with a faster processor. Woman: That’s a good idea. A faster processor can improve your computer’s performance. Man: I also want more storage space for my files. Woman: You might want to consider an SSD. They’re faster and more reliable than regular hard drives.",
+    "question": "31. What is the man planning to upgrade on his computer?",
+    "options": ["A) The graphics card", "B) The processor and storage space", "C) The monitor", "D) The operating system"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) The processor and storage space<br><br>الشرح: الرجل يخطط لترقية معالج الكمبيوتر ومساحة التخزين."
+  },
+  {
+    "audioText": "Man: I’ve been using cloud storage to save my files lately. Woman: That’s smart. Cloud storage allows you to access your files from any device. Man: Yes, and I don’t have to worry about losing data if something happens to my computer. Woman: Exactly, and it’s also easy to share files with others.",
+    "question": "32. What does the man use cloud storage for?",
+    "options": ["A) To back up his files", "B) To store photos only", "C) To play games", "D) To store movies and music"],
+    "correctAnswer": 0,
+    "explanation": "الإجابة الصحيحة: A) To back up his files<br><br>الشرح: الرجل يستخدم التخزين السحابي لحفظ الملفات الاحتياطية."
+  },
+  {
+    "audioText": "Man: Have you heard about the latest smartphone? Woman: Yes, I’ve seen some ads for it. What’s special about it? Man: It has a built-in AI assistant that can control most of the phone’s functions. Woman: That sounds amazing! Technology keeps improving so quickly.",
+    "question": "33. What is special about the latest smartphone?",
+    "options": ["A) It has a large screen", "B) It has a built-in AI assistant", "C) It has a high-quality camera", "D) It’s waterproof"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) It has a built-in AI assistant<br><br>الشرح: الهاتف الجديد يحتوي على مساعد ذكي مدمج يمكنه التحكم في معظم وظائف الهاتف."
+  },
+  {
+    "audioText": "Man: I’ve been reading about the effects of technology on society. Woman: That’s an interesting topic. What did you learn? Man: I learned that technology has both positive and negative effects. It improves communication, but it can also cause social isolation. Woman: Yes, it’s important to use technology wisely to avoid its negative impact.",
+    "question": "34. What is one effect of technology mentioned in the conversation?",
+    "options": ["A) It only improves communication", "B) It causes social isolation", "C) It increases job opportunities", "D) It reduces social media usage"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) It causes social isolation<br><br>الشرح: الرجل تعلم أن التكنولوجيا يمكن أن تحسن التواصل، ولكنها قد تؤدي أيضًا إلى العزلة الاجتماعية."
+  },
+ {
+    "audioText": "Man: I’m planning a trip to Japan next year. Woman: That sounds exciting! What cities do you plan to visit? Man: I want to visit Tokyo, Kyoto, and Osaka. Woman: Those are great cities! Tokyo is so modern, and Kyoto is full of history.",
+    "question": "35. Where is the man planning to go on his trip?",
+    "options": ["A) France", "B) Japan", "C) Italy", "D) Spain"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) Japan<br><br>الشرح: الرجل يخطط للذهاب إلى اليابان في السنة القادمة."
+  },
+  {
+    "audioText": "Man: I’m thinking about going on a road trip this summer. Woman: That sounds fun! Where do you plan to go? Man: I’m thinking of driving down the coast. I’ve heard the beaches are beautiful. Woman: That will be an amazing experience. You’ll have great views along the way.",
+    "question": "36. Where does the man plan to go on his road trip?",
+    "options": ["A) Through the mountains", "B) Down the coast", "C) Across the desert", "D) To the countryside"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) Down the coast<br><br>الشرح: الرجل يخطط للقيادة على طول الساحل لأنه سمع أن الشواطئ جميلة."
+  },
+  {
+    "audioText": "Man: I’m planning to travel to Italy for a week. Woman: That sounds amazing! What are you most excited about? Man: I’m excited to see the historic sites in Rome and the canals in Venice. Woman: Italy has so much history. You’ll have a fantastic time!",
+    "question": "37. What is the man excited to see in Italy?",
+    "options": ["A) Beaches", "B) Mountains", "C) Historic sites and canals", "D) Modern architecture"],
+    "correctAnswer": 2,
+    "explanation": "الإجابة الصحيحة: C) Historic sites and canals<br><br>الشرح: الرجل متحمس لرؤية المواقع التاريخية في روما وقنوات فينيسيا."
+  },
+  {
+    "audioText": "Man: I’m traveling to New York next week. Woman: That’s great! Have you been there before? Man: No, this will be my first time. I’m excited to see all the famous landmarks. Woman: You’ll love it! Be sure to visit Central Park and the Statue of Liberty.",
+    "question": "38. What is the man excited to see in New York?",
+    "options": ["A) The Statue of Liberty", "B) The Eiffel Tower", "C) The Great Wall", "D) The Colosseum"],
+    "correctAnswer": 0,
+    "explanation": "الإجابة الصحيحة: A) The Statue of Liberty<br><br>الشرح: الرجل متحمس لرؤية معالم نيويورك الشهيرة مثل تمثال الحرية."
+  },
+  {
+    "audioText": "Man: I’m having some trouble booking my flight for the vacation. Woman: What’s the problem? Man: The flights are too expensive. I might have to change my travel dates. Woman: You could also check if there are any discount deals or special offers.",
+    "question": "39. What is the man having trouble with?",
+    "options": ["A) Finding a place to stay", "B) Booking his flight", "C) Packing for the trip", "D) Getting a visa"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) Booking his flight<br><br>الشرح: الرجل يواجه مشكلة في حجز رحلته لأن الأسعار مرتفعة جدًا."
+  },
+ {
+    "audioText": "Man: I’m looking for a new laptop. Woman: What features are you looking for? Man: I need something with a fast processor and a lot of storage. Woman: You should check out the laptops on sale. They’re offering discounts on some models.",
+    "question": "40. What is the man looking for in a new laptop?",
+    "options": ["A) A large screen", "B) A fast processor and a lot of storage", "C) A lightweight design", "D) A high-definition camera"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) A fast processor and a lot of storage<br><br>الشرح: الرجل يبحث عن كمبيوتر محمول بمعالج سريع ومساحة تخزين كبيرة."
+  },
+  {
+    "audioText": "Man: I found this shirt, but I’m not sure if it’s worth the price. Woman: Have you compared it with similar shirts at other stores? Man: Not yet. I’ll check a few other stores to see if I can find a better deal.",
+    "question": "41. What is the man planning to do?",
+    "options": ["A) Buy the shirt immediately", "B) Compare prices at other stores", "C) Try the shirt on", "D) Look for a different product"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) Compare prices at other stores<br><br>الشرح: الرجل يخطط لمقارنة الأسعار في متاجر أخرى."
+  },
+  {
+    "audioText": "Man: I’ve been looking for a new phone, but the prices are so high. Woman: Have you checked for any special promotions? Man: I looked, but I haven’t found any. Woman: Sometimes you can find great deals during holiday sales.",
+    "question": "42. What does the woman suggest the man look for?",
+    "options": ["A) A cheaper phone", "B) Special promotions", "C) A different brand", "D) A new accessory"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) Special promotions<br><br>الشرح: المرأة تقترح على الرجل البحث عن عروض ترويجية خاصة."
+  },
+  {
+    "audioText": "Man: I’m thinking of buying this jacket, but I’m not sure if it’s a good deal. Woman: You should wait for the next sale. Jackets usually go on discount during the end of the season. Man: That’s a good idea. I’ll check again in a couple of weeks.",
+    "question": "43. What does the woman suggest the man do?",
+    "options": ["A) Buy the jacket now", "B) Wait for the next sale", "C) Compare jackets at other stores", "D) Try a different color"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) Wait for the next sale<br><br>الشرح: المرأة تقترح على الرجل الانتظار حتى يأتي العرض الترويجي التالي."
+  },
+  {
+    "audioText": "Man: I’m thinking of buying this TV, but it’s a bit expensive. Woman: You should look for a coupon or a promo code. Sometimes stores offer discounts online. Man: I’ll check for any available coupons. Thanks for the suggestion!",
+    "question": "44. What does the woman suggest the man look for?",
+    "options": ["A) A new TV", "B) A coupon or promo code", "C) A cheaper store", "D) A different brand of TV"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) A coupon or promo code<br><br>الشرح: المرأة تقترح على الرجل البحث عن قسائم خصم أو أكواد ترويجية."
+  },
+ {
+    "audioText": "Man: I’m trying to eat healthier these days. Woman: That’s a great goal! What kind of foods are you focusing on? Man: I’m eating more vegetables and fruits, and I’ve cut down on processed foods. Woman: That sounds like a smart choice. It’s important to eat a balanced diet.",
+    "question": "45. What is the man focusing on in his diet?",
+    "options": ["A) More processed foods", "B) More vegetables and fruits", "C) Less protein", "D) More sugary snacks"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) More vegetables and fruits<br><br>الشرح: الرجل يركز على تناول المزيد من الخضروات والفواكه."
+  },
+  {
+    "audioText": "Man: I’m thinking of trying a new recipe for dinner. Woman: What are you planning to cook? Man: I want to make a vegetable stir-fry with some tofu. Woman: That sounds healthy! Tofu is a great source of protein.",
+    "question": "46. What is the man planning to cook?",
+    "options": ["A) A chicken stew", "B) A vegetable stir-fry with tofu", "C) A pasta dish", "D) A beef stew"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) A vegetable stir-fry with tofu<br><br>الشرح: الرجل يخطط لتحضير طبق مقلي بالخضروات مع التوفو."
+  },
+  {
+    "audioText": "Man: I’ve been trying to avoid sugary drinks. Woman: That’s a good idea. Have you tried drinking flavored water instead? Man: Yes, I’ve been drinking water with lemon and mint. Woman: That’s refreshing and healthy! It’s a great alternative.",
+    "question": "47. What is the man drinking instead of sugary drinks?",
+    "options": ["A) Lemon and mint flavored water", "B) Sweetened tea", "C) Fruit juice", "D) Soda"],
+    "correctAnswer": 0,
+    "explanation": "الإجابة الصحيحة: A) Lemon and mint flavored water<br><br>الشرح: الرجل يشرب الماء المنكه بالليمون والنعناع بدلاً من المشروبات المحلاة."
+  },
+  {
+    "audioText": "Man: I’m thinking of going vegetarian for a month. Woman: That’s an interesting idea! Are you going to cut out all animal products? Man: No, I’ll still have dairy, but I’m going to avoid meat. Woman: That sounds like a good way to try eating more plant-based foods.",
+    "question": "48. What is the man planning to cut out of his diet?",
+    "options": ["A) Dairy products", "B) Meat", "C) All plant-based foods", "D) Fruits"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) Meat<br><br>الشرح: الرجل يخطط للتخلي عن اللحوم ولكن سيتناول منتجات الألبان."
+  },
+  {
+    "audioText": "Man: I’ve been craving something sweet, but I don’t want to eat a lot of sugar. Woman: How about some fruit? It’s sweet and healthy. Man: That sounds like a great idea! I’ll have an apple. Woman: Apples are delicious and full of vitamins.",
+    "question": "49. What does the woman suggest the man eat?",
+    "options": ["A) Candy", "B) Ice cream", "C) Fruit", "D) Chocolate"],
+    "correctAnswer": 2,
+    "explanation": "الإجابة الصحيحة: C) Fruit<br><br>الشرح: المرأة اقترحت على الرجل تناول الفاكهة كبديل صحي."
+  },
+{
+    "audioText": "Man: I’ve made a lot of new friends since I moved here. Woman: That’s great! How did you meet them? Man: I met some of them through work and others at social events. Woman: It’s nice to have a variety of friends from different places.",
+    "question": "50. How did the man meet his new friends?",
+    "options": ["A) Through family", "B) Through work and social events", "C) Through school", "D) Through his neighbors"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) Through work and social events<br><br>الشرح: الرجل قابل أصدقاءه الجدد من خلال العمل والفعاليات الاجتماعية."
+  },
+  {
+    "audioText": "Man: I’ve been spending a lot of time with my family lately. Woman: That’s wonderful! What do you usually do together? Man: We like to cook meals together and watch movies on the weekends. Woman: That sounds like a lot of fun! It’s important to spend time with family.",
+    "question": "51. What do the man and his family do together?",
+    "options": ["A) Go shopping", "B) Cook meals and watch movies", "C) Go to the gym", "D) Travel around the world"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) Cook meals and watch movies<br><br>الشرح: الرجل وعائلته يحبون طهي الطعام معًا ومشاهدة الأفلام في عطلة نهاية الأسبوع."
+  },
+  {
+    "audioText": "Man: My friend is from a completely different culture. Woman: That’s interesting. How do you get along with him? Man: We have some differences, but we always respect each other’s values. Woman: That’s great. It’s important to understand and appreciate cultural differences.",
+    "question": "52. What does the man think is important in his friendship?",
+    "options": ["A) To agree on everything", "B) To respect each other’s values", "C) To avoid discussing cultural differences", "D) To share the same hobbies"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) To respect each other’s values<br><br>الشرح: الرجل يعتقد أن الاحترام المتبادل للقيم هو الأمر الأهم في صداقته."
+  },
+  {
+    "audioText": "Man: My family is really close-knit. Woman: That sounds lovely. What does that mean? Man: It means we spend a lot of time together, and we support each other no matter what. Woman: That’s beautiful! Family support is really important.",
+    "question": "53. What does the man mean by a 'close-knit' family?",
+    "options": ["A) They don’t spend much time together", "B) They support each other and spend a lot of time together", "C) They don’t communicate much", "D) They have many arguments"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) They support each other and spend a lot of time together<br><br>الشرح: العائلة القريبة تعني أنهم يدعمون بعضهم البعض ويقضون وقتًا طويلاً معًا."
+  },
+  {
+    "audioText": "Man: I’ve noticed some cultural differences between my friends from different countries. Woman: That must be interesting! How do you handle those differences? Man: We talk about them openly and try to understand each other better. Woman: That’s a good approach. It’s important to appreciate different perspectives.",
+    "question": "54. How does the man handle cultural differences with his friends?",
+    "options": ["A) By avoiding the topic", "B) By talking openly and trying to understand each other", "C) By ignoring the differences", "D) By arguing about them"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) By talking openly and trying to understand each other<br><br>الشرح: الرجل يتعامل مع الاختلافات الثقافية من خلال التحدث عنهم بصراحة ومحاولة فهم بعضهم البعض."
+  },
+  {
+    "audioText": "Man: I’ve been trying to exercise more regularly. Woman: That’s great! What kind of exercise are you doing? Man: I’ve been doing jogging in the mornings. It helps me start the day with energy. Woman: Jogging is a great way to improve your cardiovascular health!",
+    "question": "55. What exercise is the man doing?",
+    "options": ["A) Swimming", "B) Weightlifting", "C) Jogging", "D) Yoga"],
+    "correctAnswer": 2,
+    "explanation": "الإجابة الصحيحة: C) Jogging<br><br>الشرح: الرجل يركض في الصباح لتحسين صحته البدنية."
+  },
+  {
+    "audioText": "Man: I’ve been following a healthier diet recently. Woman: That’s awesome! What changes have you made? Man: I’ve started eating more vegetables and cutting back on sugary snacks. Woman: That’s a smart choice. Eating more vegetables helps with digestion and energy.",
+    "question": "56. What changes has the man made to his diet?",
+    "options": ["A) Eating more sugar", "B) Eating more vegetables and cutting back on sugary snacks", "C) Eating more fast food", "D) Eating more meat"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) Eating more vegetables and cutting back on sugary snacks<br><br>الشرح: الرجل بدأ بتناول المزيد من الخضروات وتقليل الوجبات الخفيفة المحلاة."
+  },
+  {
+    "audioText": "Man: I’ve been trying to sleep earlier to improve my health. Woman: That’s a great habit. How do you feel about it? Man: I feel more rested and less tired throughout the day. Woman: Good sleep is so important for overall health and well-being.",
+    "question": "57. What has the man been trying to improve?",
+    "options": ["A) His diet", "B) His sleep habits", "C) His physical fitness", "D) His mental health"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) His sleep habits<br><br>الشرح: الرجل يحاول تحسين عادات نومه ليشعر بمزيد من الراحة والطاقة."
+  },
+  {
+    "audioText": "Man: I’ve joined a local gym to work on my fitness. Woman: That’s awesome! What types of exercises are you doing? Man: I’m focusing on strength training and cardio. Woman: That’s a great combination for overall fitness and health.",
+    "question": "58. What is the man focusing on at the gym?",
+    "options": ["A) Flexibility exercises", "B) Strength training and cardio", "C) Yoga", "D) Swimming"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) Strength training and cardio<br><br>الشرح: الرجل يركز على تمارين القوة والكارديو لتحسين لياقته البدنية."
+  },
+  {
+    "audioText": "Man: I’ve heard that regular exercise has a big impact on mental health. Woman: Yes, exercise can reduce stress and anxiety. Man: I’ve definitely noticed that after my workouts, I feel more relaxed and focused. Woman: That’s great! Physical activity is good for both the body and mind.",
+    "question": "59. How does the man feel after his workouts?",
+    "options": ["A) More stressed", "B) More relaxed and focused", "C) More tired and anxious", "D) More distracted"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) More relaxed and focused<br><br>الشرح: الرجل يشعر بالاسترخاء والتركيز بعد تمارينه الرياضية."
+  },
+  {
+    "audioText": "Man: I’ve been learning a lot about different cultures lately. Woman: That’s great! What have you learned? Man: I learned that some cultures place a strong emphasis on family, while others value individualism more. Woman: Yes, cultural differences shape the way people live and interact with each other.",
+    "question": "60. What have the man and woman been discussing?",
+    "options": ["A) Family traditions", "B) Cultural differences and values", "C) Travel destinations", "D) Popular foods around the world"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) Cultural differences and values<br><br>الشرح: الرجل والمرأة يناقشان الاختلافات الثقافية والقيم في المجتمعات المختلفة."
+  },
+  {
+    "audioText": "Man: I’ve noticed that in some cultures, food is a big part of social gatherings. Woman: Yes, in many places, meals are a time for families and friends to bond. Man: Exactly! In my country, we often have big family dinners on holidays. Woman: That’s wonderful. Food can really bring people together.",
+    "question": "61. What is the role of food in the cultures mentioned?",
+    "options": ["A) It is just for nourishment", "B) It is part of social gatherings", "C) It is not very important", "D) It is used for religious purposes only"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) It is part of social gatherings<br><br>الشرح: في الثقافات المذكورة، الطعام هو جزء من التجمعات الاجتماعية حيث يجتمع الأفراد معًا."
+  },
+  {
+    "audioText": "Man: I’ve been learning about different wedding traditions around the world. Woman: Oh, that sounds interesting! What have you found? Man: In some cultures, weddings are big, elaborate affairs, while in others, they are smaller and more intimate. Woman: Yes, every culture has its own unique way of celebrating.",
+    "question": "62. What is the man learning about?",
+    "options": ["A) Wedding traditions around the world", "B) Different types of ceremonies", "C) Food traditions at weddings", "D) Dress codes for weddings"],
+    "correctAnswer": 0,
+    "explanation": "الإجابة الصحيحة: A) Wedding traditions around the world<br><br>الشرح: الرجل يتعلم عن تقاليد الزواج المختلفة حول العالم."
+  },
+  {
+    "audioText": "Man: I’ve been thinking a lot about cultural misunderstandings. Woman: That’s an interesting topic. What do you mean by cultural misunderstandings? Man: I mean when people from different cultures misinterpret each other’s actions or words because they have different backgrounds. Woman: Yes, it’s important to learn about other cultures to avoid misunderstandings.",
+    "question": "63. What is the man thinking about?",
+    "options": ["A) Cultural misunderstandings", "B) Cultural similarities", "C) International travel", "D) Learning new languages"],
+    "correctAnswer": 0,
+    "explanation": "الإجابة الصحيحة: A) Cultural misunderstandings<br><br>الشرح: الرجل يفكر في سوء الفهم الثقافي بين الأشخاص من ثقافات مختلفة."
+  },
+  {
+    "audioText": "Man: I recently moved to a new country, and I’m trying to understand their customs. Woman: That’s a good idea. What customs are you curious about? Man: I’m curious about the holiday traditions here and the way people greet each other. Woman: Every culture has its unique customs. It’s important to respect them.",
+    "question": "64. What is the man trying to understand?",
+    "options": ["A) The language of the new country", "B) The holiday traditions and greetings", "C) The local food culture", "D) The weather conditions"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) The holiday traditions and greetings<br><br>الشرح: الرجل يحاول فهم التقاليد الخاصة بالعطلات وطرق التحية في البلد الجديد."
+  },
+  {
+    "audioText": "Man: I’ve been reading about the effects of climate change on global weather patterns. Woman: Yes, the impact is becoming more visible every year. Man: It’s causing extreme weather events like floods and droughts. Woman: That’s true. We need to take action to reduce carbon emissions and protect the environment.",
+    "question": "65. What is the man reading about?",
+    "options": ["A) The effects of climate change on weather patterns", "B) The history of global warming", "C) The impact of deforestation", "D) The rise in global temperatures"],
+    "correctAnswer": 0,
+    "explanation": "الإجابة الصحيحة: A) The effects of climate change on weather patterns<br><br>الشرح: الرجل يقرأ عن تأثير التغيرات المناخية على الأنماط الجوية العالمية."
+  },
+  {
+    "audioText": "Man: I’ve been thinking a lot about poverty and its causes. Woman: That’s a serious issue. What do you think causes it? Man: I think it’s a combination of factors like lack of education, unemployment, and limited access to healthcare. Woman: Yes, these issues often contribute to the cycle of poverty.",
+    "question": "66. What does the man think causes poverty?",
+    "options": ["A) Lack of education, unemployment, and limited healthcare", "B) Lack of government support", "C) Overpopulation", "D) Limited resources in some countries"],
+    "correctAnswer": 0,
+    "explanation": "الإجابة الصحيحة: A) Lack of education, unemployment, and limited healthcare<br><br>الشرح: الرجل يعتقد أن الفقر ناتج عن قلة التعليم، البطالة، وغياب الوصول إلى الرعاية الصحية."
+  },
+  {
+    "audioText": "Man: Have you been following the news about immigration policies? Woman: Yes, it’s a hot topic. What do you think about it? Man: I think we should have more open policies to help people fleeing from conflict zones. Woman: I agree, immigration can provide people with better opportunities and safety.",
+    "question": "67. What is the man’s opinion on immigration policies?",
+    "options": ["A) He thinks immigration should be restricted", "B) He believes in more open policies for people fleeing conflict", "C) He is against any form of immigration", "D) He thinks immigration should be based on economic status"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) He believes in more open policies for people fleeing conflict<br><br>الشرح: الرجل يؤمن بسياسات أكثر انفتاحًا لمساعدة الأشخاص الفارين من مناطق النزاع."
+  },
+  {
+    "audioText": "Man: I’ve been reading about the importance of renewable energy sources. Woman: That’s crucial for the future. What did you learn? Man: I learned that renewable energy, like solar and wind, can help reduce our reliance on fossil fuels. Woman: Yes, and it’s a cleaner, more sustainable option for the environment.",
+    "question": "68. What did the man learn about renewable energy?",
+    "options": ["A) It is unreliable and expensive", "B) It can help reduce reliance on fossil fuels", "C) It only works in sunny regions", "D) It is harmful to the environment"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) It can help reduce reliance on fossil fuels<br><br>الشرح: الرجل تعلم أن الطاقة المتجددة يمكن أن تساعد في تقليل الاعتماد على الوقود الأحفوري."
+  },
+  {
+    "audioText": "Man: I’ve been reading about the global water crisis. Woman: That’s alarming. What’s causing it? Man: Overuse of water resources, pollution, and climate change are contributing factors. Woman: We need to address this issue before it becomes even worse. Water is essential for life.",
+    "question": "69. What are some causes of the global water crisis?",
+    "options": ["A) Overuse of water resources, pollution, and climate change", "B) Population growth and deforestation", "C) Overfishing and water wastage", "D) Urbanization and industrialization"],
+    "correctAnswer": 0,
+    "explanation": "الإجابة الصحيحة: A) Overuse of water resources, pollution, and climate change<br><br>الشرح: الرجل يذكر أن الإفراط في استخدام موارد المياه، التلوث، والتغيرات المناخية هي عوامل تساهم في أزمة المياه العالمية."
+  },
+  {
+    "audioText": "Man: I’ve been thinking a lot about the importance of honesty in society. Woman: That’s a good point. Honesty is essential for building trust between people. Man: Exactly, without trust, relationships, whether personal or professional, can’t function properly. Woman: I agree. Honesty is a foundation for any healthy relationship.",
+    "question": "70. What does the man believe is essential for building trust?",
+    "options": ["A) Communication", "B) Honesty", "C) Sharing opinions", "D) Understanding each other"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) Honesty<br><br>الشرح: الرجل يعتقد أن الصدق هو الأساس لبناء الثقة بين الأشخاص."
+  },
+  {
+    "audioText": "Man: I’ve been reading about the importance of empathy in human relationships. Woman: That’s very true. Empathy allows us to understand and connect with others on a deeper level. Man: Yes, it helps build compassion and reduces conflict. Woman: It’s a key value in fostering harmony in society.",
+    "question": "71. What is empathy important for, according to the conversation?",
+    "options": ["A) Understanding and connecting with others", "B) Achieving success in business", "C) Reducing personal goals", "D) Increasing productivity in work"],
+    "correctAnswer": 0,
+    "explanation": "الإجابة الصحيحة: A) Understanding and connecting with others<br><br>الشرح: التعاطف يساعد على فهم الآخرين والتواصل معهم بشكل أعمق."
+  },
+  {
+    "audioText": "Man: I’ve been reflecting on how cultural differences shape our beliefs and values. Woman: That’s fascinating. What have you learned? Man: I learned that cultural backgrounds influence how we perceive right and wrong. Woman: Yes, ethics and values are deeply rooted in cultural contexts.",
+    "question": "72. What do cultural differences influence according to the man?",
+    "options": ["A) Our physical appearance", "B) Our behavior in society", "C) How we perceive right and wrong", "D) Our personal interests"],
+    "correctAnswer": 2,
+    "explanation": "الإجابة الصحيحة: C) How we perceive right and wrong<br><br>الشرح: الاختلافات الثقافية تؤثر على كيفية تصورنا للصواب والخطأ."
+  },
+  {
+    "audioText": "Man: I think that integrity is one of the most important values for individuals and societies. Woman: I agree. People with integrity are trusted, and their word is valued. Man: Yes, integrity also builds a strong moral character. Woman: It is the foundation of ethical behavior in all areas of life.",
+    "question": "73. What value does the man believe is important for individuals and societies?",
+    "options": ["A) Integrity", "B) Wealth", "C) Intelligence", "D) Ambition"],
+    "correctAnswer": 0,
+    "explanation": "الإجابة الصحيحة: A) Integrity<br><br>الشرح: الرجل يعتقد أن النزاهة هي قيمة أساسية للأفراد والمجتمعات."
+  },
+  {
+    "audioText": "Man: I’ve been thinking about how personal beliefs shape our identity. Woman: That’s an interesting thought. How do you think beliefs shape our identity? Man: I believe our personal values, beliefs, and experiences define who we are as individuals. Woman: Yes, they play a huge role in shaping our decisions and actions.",
+    "question": "74. What shapes our identity, according to the man?",
+    "options": ["A) Our personal values, beliefs, and experiences", "B) Our family background", "C) Our career choices", "D) Our social media presence"],
+    "correctAnswer": 0,
+    "explanation": "الإجابة الصحيحة: A) Our personal values, beliefs, and experiences<br><br>الشرح: الرجل يعتقد أن القيم الشخصية والمعتقدات والتجارب تحدد هويتنا."
+  },
+  {
+    "audioText": "Man: I’ve been reading a lot about climate change and its causes. Woman: That’s an important topic. What are the main causes? Man: The burning of fossil fuels, deforestation, and industrial activities are major contributors. Woman: Yes, they release greenhouse gases that trap heat in the atmosphere.",
+    "question": "75. What are the main causes of climate change mentioned in the conversation?",
+    "options": ["A) Increased solar activity", "B) Burning fossil fuels, deforestation, and industrial activities", "C) Increased volcanic activity", "D) Natural cycles of the Earth"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) Burning fossil fuels, deforestation, and industrial activities<br><br>الشرح: الرجل يذكر أن حرق الوقود الأحفوري وإزالة الغابات والأنشطة الصناعية هي الأسباب الرئيسية للتغير المناخي."
+  },
+  {
+    "audioText": "Man: The effects of climate change are becoming more visible. Woman: Yes, we’re seeing more frequent and severe storms, floods, and droughts. Man: Not to mention the melting of polar ice caps and rising sea levels. Woman: These changes are affecting ecosystems and human societies worldwide.",
+    "question": "76. What are some effects of climate change mentioned in the conversation?",
+    "options": ["A) More earthquakes and tornadoes", "B) More frequent storms, floods, droughts, and rising sea levels", "C) Higher agricultural production", "D) Reduced sunlight"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) More frequent storms, floods, droughts, and rising sea levels<br><br>الشرح: المرأة والرجل يناقشان التأثيرات المتزايدة للتغير المناخي مثل العواصف والفيضانات والجفاف وارتفاع مستويات البحار."
+  },
+  {
+    "audioText": "Man: I’ve been thinking a lot about how we can reduce climate change. Woman: That’s a good question. What do you think we can do? Man: I think switching to renewable energy sources, reducing waste, and planting trees can help. Woman: Yes, and we also need to reduce our reliance on fossil fuels.",
+    "question": "77. What solutions to climate change are mentioned in the conversation?",
+    "options": ["A) Burning more fossil fuels", "B) Using renewable energy sources, reducing waste, and planting trees", "C) Increasing industrial activities", "D) Ignoring the problem"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) Using renewable energy sources, reducing waste, and planting trees<br><br>الشرح: الرجل والمرأة يتناولان حلولًا محتملة مثل استخدام مصادر الطاقة المتجددة وتقليل النفايات وزراعة الأشجار."
+  },
+  {
+    "audioText": "Man: Climate change is a global issue. Woman: Yes, it affects everyone, but some countries are more vulnerable than others. Man: Developing countries often suffer the most because they don’t have the resources to adapt. Woman: It’s important for wealthier nations to help and share resources for solutions.",
+    "question": "78. Which countries are most affected by climate change according to the conversation?",
+    "options": ["A) Wealthy nations", "B) Developing countries", "C) Industrialized nations", "D) All countries equally"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) Developing countries<br><br>الشرح: المرأة والرجل يتحدثان عن تأثيرات التغير المناخي على البلدان النامية التي تعاني أكثر بسبب نقص الموارد."
+  },
+  {
+    "audioText": "Man: It’s clear that we need to take action against climate change. Woman: Absolutely. Governments, businesses, and individuals all need to contribute. Man: I think we also need to raise awareness and educate people on how to reduce their carbon footprint. Woman: Yes, small actions can make a big difference when done collectively.",
+    "question": "79. What does the woman think is important in addressing climate change?",
+    "options": ["A) Only government actions", "B) Raising awareness and educating people", "C) Ignoring the problem", "D) Relying solely on businesses to fix it"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) Raising awareness and educating people<br><br>الشرح: المرأة تعتقد أن رفع الوعي وتعليم الناس كيفية تقليل بصمتهم الكربونية هو أمر مهم لمواجهة التغير المناخي."
+  },
+  {
+    "audioText": "Man: I’ve been thinking about how we can reduce waste and protect the environment. Woman: That’s a good idea. What do you suggest? Man: I think we should recycle more and avoid using single-use plastics. Woman: Absolutely! Recycling helps conserve natural resources and reduce pollution.",
+    "question": "80. What does the man suggest to help protect the environment?",
+    "options": ["A) Use more plastic", "B) Recycle more and avoid single-use plastics", "C) Burn more waste", "D) Use more paper products"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) Recycle more and avoid single-use plastics<br><br>الشرح: الرجل يقترح زيادة التدوير وتجنب استخدام البلاستيك أحادي الاستخدام لحماية البيئة."
+  },
+  {
+    "audioText": "Man: I’ve been learning about the importance of conserving water. Woman: That’s really important. How can we save water? Man: Simple actions like fixing leaks, taking shorter showers, and using water-efficient appliances can make a big difference. Woman: Yes, every little bit helps in conserving this precious resource.",
+    "question": "81. What are some ways to conserve water mentioned in the conversation?",
+    "options": ["A) Using more water", "B) Fixing leaks and using water-efficient appliances", "C) Wasting water in the garden", "D) Drinking less water"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) Fixing leaks and using water-efficient appliances<br><br>الشرح: الرجل والمرأة يتناولان بعض الطرق البسيطة لتوفير الماء مثل إصلاح التسريبات واستخدام الأجهزة الموفرة للمياه."
+  },
+  {
+    "audioText": "Man: I’m trying to use less energy at home. Woman: That’s a great goal! What changes have you made? Man: I’ve started turning off lights when I leave a room and unplugging electronics when I’m not using them. Woman: Those are simple actions that can have a huge impact on energy conservation.",
+    "question": "82. What changes has the man made to use less energy?",
+    "options": ["A) Turning off lights and unplugging electronics", "B) Using more appliances", "C) Using more lighting", "D) Turning on more electronics"],
+    "correctAnswer": 0,
+    "explanation": "الإجابة الصحيحة: A) Turning off lights and unplugging electronics<br><br>الشرح: الرجل بدأ بإيقاف الأنوار عندما يغادر الغرفة وفصل الأجهزة الإلكترونية عندما لا يستخدمها."
+  },
+  {
+    "audioText": "Man: I’ve been reading about the benefits of composting. Woman: That’s interesting! How does composting help the environment? Man: Composting reduces the amount of organic waste in landfills and turns it into nutrient-rich soil for plants. Woman: Yes, it’s a great way to recycle organic waste and help the environment.",
+    "question": "83. How does composting help the environment?",
+    "options": ["A) It increases waste in landfills", "B) It turns organic waste into nutrient-rich soil", "C) It harms the soil", "D) It uses more energy"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) It turns organic waste into nutrient-rich soil<br><br>الشرح: التسميد يساعد في تحويل النفايات العضوية إلى تربة غنية بالعناصر الغذائية للنباتات."
+  },
+  {
+    "audioText": "Man: I’ve been thinking about how to reduce my carbon footprint. Woman: That’s a good idea. How do you plan to do that? Man: I’ve started using public transportation instead of driving and eating more plant-based meals. Woman: Those are great ways to reduce your carbon footprint and help the planet.",
+    "question": "84. What is the man doing to reduce his carbon footprint?",
+    "options": ["A) Driving more", "B) Using public transportation and eating plant-based meals", "C) Using more plastic", "D) Using more electricity"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) Using public transportation and eating plant-based meals<br><br>الشرح: الرجل يستخدم وسائل النقل العامة ويأكل وجبات نباتية لتقليل بصمته الكربونية."
+  },
+  {
+    "audioText": "Man: I’ve been reading about how artificial intelligence is changing everyday life. Woman: It’s fascinating! How is it affecting our daily activities? Man: AI is being used in everything from virtual assistants like Siri to smart home devices. Woman: Yes, AI is making life more convenient by automating simple tasks.",
+    "question": "85. How is artificial intelligence affecting everyday life?",
+    "options": ["A) By making life more difficult", "B) By automating simple tasks like using virtual assistants and smart devices", "C) By reducing the use of technology", "D) By eliminating the need for human workers"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) By automating simple tasks like using virtual assistants and smart devices<br><br>الشرح: الذكاء الاصطناعي يجعل الحياة أكثر راحة عن طريق أتمتة المهام البسيطة مثل استخدام المساعدين الافتراضيين والأجهزة الذكية."
+  },
+  {
+    "audioText": "Man: I think AI will play a huge role in healthcare in the future. Woman: That’s true. AI can help doctors make faster and more accurate diagnoses. Man: And it can assist in analyzing medical data to predict potential health issues. Woman: Yes, AI could revolutionize the healthcare system by improving patient care.",
+    "question": "86. How will AI impact healthcare in the future?",
+    "options": ["A) By reducing the need for doctors", "B) By helping doctors make faster and more accurate diagnoses", "C) By making healthcare less affordable", "D) By eliminating medical research"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) By helping doctors make faster and more accurate diagnoses<br><br>الشرح: الذكاء الاصطناعي سيساعد الأطباء على إجراء تشخيصات أسرع وأكثر دقة."
+  },
+  {
+    "audioText": "Man: Have you heard about AI being used in self-driving cars? Woman: Yes, it’s incredible! AI is helping cars drive themselves without human input. Man: In the future, this could reduce accidents and make transportation more efficient. Woman: Exactly, AI could revolutionize the entire transportation industry.",
+    "question": "87. What is the potential benefit of AI in self-driving cars?",
+    "options": ["A) It will make cars more expensive", "B) It will reduce accidents and make transportation more efficient", "C) It will eliminate the need for drivers", "D) It will cause more traffic congestion"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) It will reduce accidents and make transportation more efficient<br><br>الشرح: الذكاء الاصطناعي في السيارات ذاتية القيادة قد يقلل من الحوادث ويجعل وسائل النقل أكثر كفاءة."
+  },
+  {
+    "audioText": "Man: I’ve been reading about AI in education. Woman: Really? How is it being used? Man: AI is helping teachers personalize learning for students by analyzing their strengths and weaknesses. Woman: That’s great! AI can help create a more tailored and effective education system.",
+    "question": "88. How is AI being used in education?",
+    "options": ["A) By replacing teachers", "B) By personalizing learning based on students’ strengths and weaknesses", "C) By making classes longer", "D) By increasing the cost of education"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) By personalizing learning based on students’ strengths and weaknesses<br><br>الشرح: الذكاء الاصطناعي يساعد في تخصيص التعليم بناءً على نقاط القوة والضعف لدى الطلاب."
+  },
+  {
+    "audioText": "Man: I think AI could greatly improve customer service in the future. Woman: Yes, it already helps in online customer support. Man: With AI, companies can provide 24/7 service and quickly respond to customer inquiries. Woman: AI could make customer service faster and more efficient, improving overall satisfaction.",
+    "question": "89. How could AI improve customer service in the future?",
+    "options": ["A) By replacing all customer service workers", "B) By providing 24/7 service and quickly responding to inquiries", "C) By making customer service more expensive", "D) By limiting customer service options"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) By providing 24/7 service and quickly responding to inquiries<br><br>الشرح: الذكاء الاصطناعي يمكن أن يحسن خدمة العملاء من خلال توفير الخدمة على مدار الساعة والرد السريع على الاستفسارات."
+  },
+  {
+    "audioText": "Man: I’ve been learning about the role of genetics in determining our health. Woman: That’s interesting! What have you discovered? Man: I learned that certain diseases can be inherited through genes, and genetic testing can help predict the risk of developing those diseases. Woman: Yes, genetics plays a huge role in understanding health conditions.",
+    "question": "90. What can genetic testing help predict?",
+    "options": ["A) The color of your eyes", "B) The risk of developing certain diseases", "C) Your personality", "D) The weather"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) The risk of developing certain diseases<br><br>الشرح: الاختبارات الجينية يمكن أن تساعد في التنبؤ بخطر الإصابة ببعض الأمراض."
+  },
+  {
+    "audioText": "Man: I’ve been reading about the advancements in gene therapy. Woman: That’s fascinating! How does it work? Man: Gene therapy involves altering the genes inside a person’s cells to treat or prevent diseases. It has the potential to cure genetic disorders. Woman: That sounds like a breakthrough in medicine.",
+    "question": "91. What does gene therapy involve?",
+    "options": ["A) Taking medication to treat diseases", "B) Altering genes to treat or prevent diseases", "C) Surgery to remove affected cells", "D) Using external machines to monitor health"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) Altering genes to treat or prevent diseases<br><br>الشرح: العلاج الجيني يتضمن تعديل الجينات لعلاج أو منع الأمراض."
+  },
+  {
+    "audioText": "Man: I’ve been studying the use of artificial intelligence in diagnosing diseases. Woman: That’s an exciting area of research. How is AI used in medicine? Man: AI algorithms can analyze medical data like X-rays and scans to identify potential issues faster and more accurately than human doctors. Woman: AI could revolutionize how we approach healthcare.",
+    "question": "92. How is artificial intelligence used in medicine?",
+    "options": ["A) By performing surgeries", "B) By analyzing medical data like X-rays and scans", "C) By prescribing medication", "D) By replacing doctors"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) By analyzing medical data like X-rays and scans<br><br>الشرح: الذكاء الاصطناعي يُستخدم لتحليل البيانات الطبية مثل الأشعة السينية والماسحات لاكتشاف المشكلات بسرعة ودقة."
+  },
+  {
+    "audioText": "Man: I’ve been following the development of new vaccines. Woman: That’s an important topic, especially in today’s world. What have you learned? Man: I learned that new vaccines are being developed using mRNA technology, which helps the body produce proteins to fight off infections. Woman: mRNA vaccines are a huge advancement in medicine.",
+    "question": "93. What technology is being used in the development of new vaccines?",
+    "options": ["A) DNA technology", "B) mRNA technology", "C) Stem cell technology", "D) Nanotechnology"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) mRNA technology<br><br>الشرح: تم تطوير اللقاحات الجديدة باستخدام تكنولوجيا mRNA التي تساعد الجسم على إنتاج البروتينات لمحاربة العدوى."
+  },
+  {
+    "audioText": "Man: I’ve been reading about the use of robotic surgery. Woman: That’s fascinating! How does it work? Man: Robotic surgery allows surgeons to perform operations with greater precision using robotic systems controlled by computers. It’s less invasive and has a quicker recovery time for patients. Woman: That sounds like a major improvement in surgery.",
+    "question": "94. What is the main advantage of robotic surgery?",
+    "options": ["A) It requires no anesthesia", "B) It is more precise and less invasive", "C) It is cheaper", "D) It eliminates the need for surgeons"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) It is more precise and less invasive<br><br>الشرح: الجراحة الروبوتية توفر دقة أكبر وتقلل من التداخل الجراحي، مما يؤدي إلى وقت تعافي أسرع."
+  },
+  {
+    "audioText": "Man: I’ve been trying to improve my communication skills. Woman: That’s a great goal! How are you practicing? Man: I’ve been attending public speaking workshops. Woman: That’s a great way to practice. You’ll feel more confident in no time.",
+    "question": "95. How is the man practicing his communication skills?",
+    "options": ["A) By writing more", "B) By attending public speaking workshops", "C) By having more meetings", "D) By reading books"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) By attending public speaking workshops<br><br>الشرح: الرجل يحسن مهاراته في التواصل من خلال حضور ورش عمل للتحدث أمام الجمهور."
+  },
+  {
+    "audioText": "Man: I’m planning to do some volunteer work at a local food bank. Woman: That’s wonderful! How will you be helping? Man: I’ll help sort and distribute food to those in need. Woman: You’ll be making such a positive impact in your community.",
+    "question": "96. What will the man do at the food bank?",
+    "options": ["A) Donate food", "B) Sort and distribute food", "C) Collect donations", "D) Cook meals"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) Sort and distribute food<br><br>الشرح: الرجل سيقوم بفرز وتوزيع الطعام في بنك الطعام."
+  },
+  {
+    "audioText": "Man: I’ve been planning to write a novel. Woman: That’s exciting! What will your novel be about? Man: It will be a mystery novel set in a small town. Woman: That sounds intriguing! I’m sure people will love it.",
+    "question": "97. What will the man’s novel be about?",
+    "options": ["A) A romance story", "B) A mystery novel set in a small town", "C) A historical fiction", "D) A fantasy adventure"],
+    "correctAnswer": 1,
+    "explanation": "الإجابة الصحيحة: B) A mystery novel set in a small town<br><br>الشرح: الرجل يخطط لكتابة رواية غموض تدور أحداثها في مدينة صغيرة."
+  },
+{
+  "audioText": "Man: I’ve been learning about the role of technology in education. Woman: That’s an interesting topic! How is technology being used in schools? Man: Technology is being used for online learning, interactive lessons, and even virtual field trips. Woman: That’s amazing! Technology makes education more engaging and accessible.",
+  "question": "98. How is technology being used in education?",
+  "options": ["A) For online learning, interactive lessons, and virtual field trips", "B) For physical exercises", "C) For teaching traditional subjects only", "D) For increasing textbook use"],
+  "correctAnswer": 0,
+  "explanation": "الإجابة الصحيحة: A) For online learning, interactive lessons, and virtual field trips<br><br>الشرح: التكنولوجيا تُستخدم في التعليم من خلال التعلم عبر الإنترنت، الدروس التفاعلية، والرحلات الميدانية الافتراضية."
+},
+{
+  "audioText": "Man: I’ve been reading about how social media affects our relationships. Woman: That’s a topic we all experience. What did you find out? Man: Social media helps people stay connected, but it can also cause misunderstandings and stress. Woman: Yes, sometimes it creates unrealistic expectations and pressure.",
+  "question": "99. What effect does social media have on relationships?",
+  "options": ["A) It always helps build stronger relationships", "B) It can cause misunderstandings and stress", "C) It removes the need for face-to-face communication", "D) It has no effect on relationships"],
+  "correctAnswer": 1,
+  "explanation": "الإجابة الصحيحة: B) It can cause misunderstandings and stress<br><br>الشرح: وسائل التواصل الاجتماعي تساعد في الحفاظ على الاتصال، لكنها يمكن أن تسبب أيضًا سوء الفهم والضغط."
+},
+{
+  "audioText": "Man: Have you heard about Faisal? Woman: No, what about him? Man: He’s creating a website to help people learn English using AI. Woman: Really? But Faisal doesn’t know coding or programming! Man: That’s true, but he’s using AI tools to guide him step-by-step. Woman: That’s impressive. So he’s learning while building? Man: Exactly. He asks AI for help with codes, and little by little, he’s understanding how websites work.",
+  "question": "100. What is Faisal doing despite not knowing coding?",
+  "options": ["A) He is learning to code before starting his project", "B) He gave up on creating a website", "C) He is building a website with AI assistance", "D) He hired a professional developer"],
+  "correctAnswer": 2,
+  "explanation": "الإجابة الصحيحة: C) He is building a website with AI assistance<br><br>🌹 الشرح: فيصل لا يعرف البرمجة، لكنه استخدم الذكاء الصناعي ,ويسلم عليكم والله يوفقكم "
+},
+
+
         ];
 
         // أسئلة اختبار Korn-Ferry (40 سؤالاً)
@@ -5776,7 +6408,7 @@
                 </div>
                 
                 <div class="score-section">
-                    <p>إجمالي النقاط: <strong>${totalScore} / 190</strong></p>
+                    <p>إجمالي النقاط: <strong>${totalScore} / 290</strong></p>
                     <p>النسبة المئوية: <strong>${percentage.toFixed(1)}%</strong></p>
                 </div>
                 
@@ -5784,7 +6416,7 @@
                     <h4>تفصيل النتائج:</h4>
                     <p>Structure: ${structureScore} / 160 (${(structureScore/160*100).toFixed(1)}%)</p>
                     <p>Reading: ${readingScore} / 20 (${(readingScore/20*100).toFixed(1)}%)</p>
-                    <p>Listening: ${listeningScore} / 10 (${(listeningScore/10*100).toFixed(1)}%)</p>
+                    <p>Listening: ${listeningScore} / 100 (${(listeningScore/10*100).toFixed(1)}%)</p>
                 </div>
             `;
             
